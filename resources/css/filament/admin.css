@@ -1,0 +1,15 @@
+/* Custom styles for Filament Admin Panel */
+
+/* Make RichEditor (Trix) taller by default and resizable */
+trix-editor {
+    min-height: 400px !important;
+    resize: vertical;
+    overflow: auto;
+}
+
+/* Ensure the container allows resizing */
+.fi-fo-rich-editor trix-editor {
+    min-height: 400px !important;
+    resize: vertical;
+    overflow: auto;
+}

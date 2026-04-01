@@ -1,0 +1,6481 @@
+---
+bimobject:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Bimobject
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f378
+  voted: false
+battle-net:
+  changes:
+    - 5.8.0
+    - 7.0.0
+  label: Battle Net
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f835
+  voted: false
+square-facebook:
+  aliases:
+    names:
+      - facebook-square
+  changes:
+    - 1.0.0
+    - 5.0.0
+    - 5.8.2
+    - 6.1.2
+    - 6.5.0
+    - 7.0.0
+  label: Square Facebook
+  search:
+    terms:
+      - fabook
+      - fb
+      - social network
+  styles:
+    - brands
+  unicode: f082
+  voted: false
+black-tie:
+  changes:
+    - 4.4.0
+    - 5.0.0
+    - 7.0.0
+  label: Black Tie
+  search:
+    terms:
+      - administrator
+  styles:
+    - brands
+  unicode: f27e
+  voted: false
+discourse:
+  changes:
+    - 5.0.0
+    - 5.0.3
+    - 7.0.0
+  label: Discourse
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f393
+  voted: false
+cc-mastercard:
+  changes:
+    - 4.2.0
+    - 5.0.0
+    - 7.0.0
+  label: Cc Mastercard
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1f1
+  voted: false
+goodreads-g:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Goodreads G
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3a9
+  voted: false
+square-lastfm:
+  aliases:
+    names:
+      - lastfm-square
+  changes:
+    - 4.2.0
+    - 5.0.0
+    - 5.0.11
+    - 6.1.2
+    - 6.5.0
+    - 7.0.0
+  label: Square Lastfm
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f203
+  voted: false
+edge-legacy:
+  changes:
+    - 5.13.1
+    - 5.14.0
+    - 7.0.0
+  label: Edge Legacy
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e078
+  voted: false
+padlet:
+  changes:
+    - 6.0.0
+    - 7.0.0
+  label: Padlet
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e4a0
+  voted: false
+aviato:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Aviato
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f421
+  voted: false
+gofore:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Gofore
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3a7
+  voted: false
+yelp:
+  changes:
+    - 4.2.0
+    - 5.0.0
+    - 5.7.0
+    - 5.8.0
+    - 7.0.0
+  label: Yelp
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1e9
+  voted: false
+gulp:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Gulp
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3ae
+  voted: false
+stack-exchange:
+  changes:
+    - 4.0.0
+    - 5.0.0
+    - 5.0.3
+    - 7.0.0
+  label: Stack Exchange
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f18d
+  voted: false
+golang:
+  changes:
+    - 6.0.0-beta2
+    - 7.0.0
+  label: Golang
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e40f
+  voted: true
+readme:
+  changes:
+    - 5.0.9
+    - 5.0.10
+    - 7.0.0
+  label: Readme
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f4d5
+  voted: false
+weibo:
+  changes:
+    - 3.2.0
+    - 5.0.0
+    - 7.0.0
+  label: Weibo
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f18a
+  voted: false
+opera:
+  changes:
+    - 4.4.0
+    - 5.0.0
+    - 7.0.0
+  label: Opera
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f26a
+  voted: false
+letterboxd:
+  changes:
+    - 6.5.0
+    - 7.0.0
+  label: Letterboxd
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e62d
+  voted: false
+pied-piper-alt:
+  changes:
+    - 4.1.0
+    - 5.0.0
+    - 5.7.0
+    - 7.0.0
+  label: Pied Piper Alt
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1a8
+  voted: false
+cc-amex:
+  changes:
+    - 4.2.0
+    - 5.0.0
+    - 5.7.0
+    - 6.1.2
+    - 6.5.0
+    - 7.0.0
+  label: Cc Amex
+  search:
+    terms:
+      - amex
+  styles:
+    - brands
+  unicode: f1f3
+  voted: false
+alipay:
+  changes:
+    - 5.3.0
+    - 7.0.0
+  label: Alipay
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f642
+  voted: false
+ravelry:
+  changes:
+    - 4.7.0
+    - 5.0.0
+    - 5.15.1
+    - 7.0.0
+  label: Ravelry
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f2d9
+  voted: false
+codepen:
+  changes:
+    - 4.1.0
+    - 5.0.0
+    - 7.0.0
+  label: Codepen
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1cb
+  voted: false
+node:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Node
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f419
+  voted: true
+space-awesome:
+  changes:
+    - 6.1.2
+    - 7.0.0
+  label: Space Awesome
+  search:
+    terms:
+      - adventure
+      - rocket
+      - ship
+      - shuttle
+  styles:
+    - brands
+  unicode: e5ac
+  voted: false
+safari:
+  changes:
+    - 4.4.0
+    - 5.0.0
+    - 5.12.0
+    - 7.0.0
+  label: Safari
+  search:
+    terms:
+      - browser
+  styles:
+    - brands
+  unicode: f267
+  voted: false
+cc-discover:
+  changes:
+    - 4.2.0
+    - 5.0.0
+    - 7.0.0
+  label: Cc Discover
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1f2
+  voted: false
+erlang:
+  changes:
+    - 5.0.0
+    - 5.0.3
+    - 5.7.0
+    - 7.0.0
+  label: Erlang
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f39d
+  voted: false
+accusoft:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Accusoft
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f369
+  voted: false
+linode:
+  changes:
+    - 4.7.0
+    - 5.0.0
+    - 6.0.0-beta1
+    - 7.0.0
+  label: Linode
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f2b8
+  voted: false
+envira:
+  changes:
+    - 4.6.0
+    - 5.0.0
+    - 7.0.0
+  label: Envira
+  search:
+    terms:
+      - leaf
+  styles:
+    - brands
+  unicode: f299
+  voted: false
+amazon:
+  changes:
+    - 4.4.0
+    - 5.0.0
+    - 7.0.0
+  label: Amazon
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f270
+  voted: false
+pagelines:
+  changes:
+    - 4.0.0
+    - 5.0.0
+    - 7.0.0
+  label: Pagelines
+  search:
+    terms:
+      - eco
+      - flora
+      - leaf
+      - leaves
+      - nature
+      - plant
+      - tree
+  styles:
+    - brands
+  unicode: f18c
+  voted: false
+vnv:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Vnv
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f40b
+  voted: false
+patreon:
+  changes:
+    - 5.0.0
+    - 5.0.3
+    - 6.5.0
+    - 7.0.0
+  label: Patreon
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3d9
+  voted: false
+audible:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Audible
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f373
+  voted: false
+facebook-messenger:
+  changes:
+    - 5.0.0
+    - 5.8.2
+    - 5.9.0
+    - 7.0.0
+  label: Facebook Messenger
+  search:
+    terms:
+      - fabook
+      - fb
+  styles:
+    - brands
+  unicode: f39f
+  voted: false
+kaggle:
+  changes:
+    - 5.2.0
+    - 5.8.0
+    - 7.0.0
+  label: Kaggle
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f5fa
+  voted: true
+firefox:
+  changes:
+    - 4.4.0
+    - 5.0.0
+    - 5.0.1
+    - 5.12.0
+    - 7.0.0
+  label: Firefox
+  search:
+    terms:
+      - browser
+  styles:
+    - brands
+  unicode: f269
+  voted: false
+less:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Less
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f41d
+  voted: false
+itunes-note:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Itunes Note
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3b5
+  voted: false
+telegram:
+  aliases:
+    names:
+      - telegram-plane
+    unicodes:
+      composite:
+        - f3fe
+      secondary:
+        - 10f3fe
+  changes:
+    - 4.7.0
+    - 5.0.0
+    - 6.0.0-beta1
+    - 7.0.0
+  label: Telegram
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f2c6
+  voted: false
+gitkraken:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Gitkraken
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3a6
+  voted: false
+microblog:
+  changes:
+    - 5.12.0
+    - 5.14.0
+    - 7.0.0
+  label: Microblog
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e01a
+  voted: true
+playstation:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Playstation
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3df
+  voted: false
+uncharted:
+  changes:
+    - 5.15.0
+    - 7.0.0
+  label: Uncharted
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e084
+  voted: false
+node-js:
+  changes:
+    - 5.0.0
+    - 5.0.3
+    - 7.0.0
+  label: Node Js
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3d3
+  voted: false
+artstation:
+  changes:
+    - 5.6.0
+    - 5.8.0
+    - 7.0.0
+  label: Artstation
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f77a
+  voted: true
+apple-pay:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Apple Pay
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f415
+  voted: true
+lyft:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Lyft
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3c3
+  voted: false
+mixer:
+  changes:
+    - 5.12.1
+    - 5.14.0
+    - 7.0.0
+  label: Mixer
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e056
+  voted: true
+fort-awesome:
+  changes:
+    - 4.5.0
+    - 5.0.0
+    - 5.0.3
+    - 7.0.0
+  label: Fort Awesome
+  search:
+    terms:
+      - castle
+  styles:
+    - brands
+  unicode: f286
+  voted: false
+twitter:
+  changes:
+    - 2.0.0
+    - 5.0.0
+    - 7.0.0
+  label: Twitter
+  search:
+    terms:
+      - social network
+      - tweet
+  styles:
+    - brands
+  unicode: f099
+  voted: false
+red-river:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Red River
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3e3
+  voted: false
+affiliatetheme:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Affiliatetheme
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f36b
+  voted: false
+500px:
+  changes:
+    - 4.4.0
+    - 5.0.0
+    - 7.0.0
+  label: 500px
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f26e
+  voted: false
+disqus:
+  changes:
+    - 7.0.0
+  label: Disqus
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e7d5
+  voted: false
+php:
+  changes:
+    - 5.0.5
+    - 7.0.0
+  label: Php
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f457
+  voted: true
+hornbill:
+  changes:
+    - 5.1.0
+    - 5.8.0
+    - 7.0.0
+  label: Hornbill
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f592
+  voted: false
+rust:
+  changes:
+    - 5.13.1
+    - 5.14.0
+    - 7.0.0
+  label: Rust
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e07a
+  voted: true
+html5:
+  changes:
+    - 3.1.0
+    - 5.0.0
+    - 7.0.0
+  label: Html5
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f13b
+  voted: false
+linkedin-in:
+  changes:
+    - 2.0.0
+    - 5.0.0
+    - 5.4.1
+    - 5.8.0
+    - 5.8.1
+    - 7.0.0
+  label: Linkedin In
+  search:
+    terms:
+      - linkedin
+      - linkin
+  styles:
+    - brands
+  unicode: f0e1
+  voted: false
+sourcetree:
+  changes:
+    - 5.6.0
+    - 5.8.0
+    - 7.0.0
+  label: Sourcetree
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f7d3
+  voted: true
+salesforce:
+  changes:
+    - 5.8.0
+    - 7.0.0
+  label: Salesforce
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f83b
+  voted: false
+symfony:
+  changes:
+    - 5.8.0
+    - 7.0.0
+  label: Symfony
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f83d
+  voted: false
+stumbleupon-circle:
+  changes:
+    - 4.1.0
+    - 5.0.0
+    - 7.0.0
+  label: Stumbleupon Circle
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1a3
+  voted: false
+42-group:
+  aliases:
+    names:
+      - innosoft
+  changes:
+    - 5.15.0
+    - 6.0.0-beta2
+    - 7.0.0
+  label: 42 Group
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e080
+  voted: false
+forumbee:
+  changes:
+    - 4.3.0
+    - 5.0.0
+    - 7.0.0
+  label: Forumbee
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f211
+  voted: false
+square-font-awesome:
+  changes:
+    - 5.0.0
+    - 5.0.1
+    - 6.0.0-beta1
+    - 6.1.2
+    - 6.5.2
+    - 7.0.0
+  label: Square Font Awesome
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e5ad
+  voted: false
+square-x-twitter:
+  changes:
+    - 6.4.2
+    - 7.0.0
+  label: Square X Twitter
+  search:
+    terms:
+      - elon
+      - twitter
+      - x
+  styles:
+    - brands
+  unicode: e61a
+  voted: false
+adn:
+  changes:
+    - 3.2.0
+    - 5.0.0
+    - 7.0.0
+  label: Adn
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f170
+  voted: false
+btc:
+  changes:
+    - 3.2.0
+    - 5.0.0
+    - 7.0.0
+  label: Btc
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f15a
+  voted: false
+etsy:
+  changes:
+    - 4.7.0
+    - 5.0.0
+    - 7.0.0
+  label: Etsy
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f2d7
+  voted: false
+brave:
+  changes:
+    - 6.5.0
+    - 7.0.0
+  label: Brave
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e63c
+  voted: false
+cc-apple-pay:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Cc Apple Pay
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f416
+  voted: false
+mix:
+  changes:
+    - 5.0.0
+    - 5.0.3
+    - 7.0.0
+  label: Mix
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3cb
+  voted: false
+sellcast:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Sellcast
+  search:
+    terms:
+      - eercast
+  styles:
+    - brands
+  unicode: f2da
+  voted: false
+shoelace:
+  changes:
+    - 6.4.1
+    - 6.5.1
+    - 7.0.0
+  label: Shoelace
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e60c
+  voted: false
+square-gitlab:
+  aliases:
+    names:
+      - gitlab-square
+  changes:
+    - 6.1.2
+    - 6.5.0
+    - 7.0.0
+  label: Square Gitlab
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e5ae
+  voted: false
+sitrox:
+  changes:
+    - 6.0.0-beta2
+    - 7.0.0
+  label: Sitrox
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e44a
+  voted: false
+wikipedia-w:
+  changes:
+    - 4.4.0
+    - 5.0.0
+    - 7.0.0
+  label: Wikipedia W
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f266
+  voted: false
+chromecast:
+  changes:
+    - 5.8.0
+    - 7.0.0
+  label: Chromecast
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f838
+  voted: false
+notion:
+  changes:
+    - 7.0.0
+  label: Notion
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e7d9
+  voted: false
+creative-commons:
+  changes:
+    - 4.4.0
+    - 5.0.0
+    - 5.0.11
+    - 5.1.0
+    - 7.0.0
+  label: Creative Commons
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f25e
+  voted: false
+adversal:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Adversal
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f36a
+  voted: false
+quinscape:
+  changes:
+    - 5.0.5
+    - 5.7.0
+    - 5.8.0
+    - 7.0.0
+  label: Quinscape
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f459
+  voted: false
+js:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Js
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3b8
+  voted: false
+airbnb:
+  changes:
+    - 5.8.0
+    - 7.0.0
+  label: Airbnb
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f834
+  voted: false
+internet-explorer:
+  changes:
+    - 4.4.0
+    - 5.0.0
+    - 7.0.0
+  label: Internet Explorer
+  search:
+    terms:
+      - browser
+      - ie
+  styles:
+    - brands
+  unicode: f26b
+  voted: false
+pied-piper-hat:
+  changes:
+    - 5.0.10
+    - 7.0.0
+  label: Pied Piper Hat
+  search:
+    terms:
+      - clothing
+  styles:
+    - brands
+  unicode: f4e5
+  voted: false
+atlassian:
+  changes:
+    - 5.6.0
+    - 7.0.0
+  label: Atlassian
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f77b
+  voted: true
+square-youtube:
+  aliases:
+    names:
+      - youtube-square
+    unicodes:
+      composite:
+        - f166
+  changes:
+    - 5.0.3
+    - 6.1.2
+    - 6.5.0
+    - 7.0.0
+  label: Square Youtube
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f431
+  voted: false
+joget:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Joget
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3b7
+  voted: false
+whmcs:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Whmcs
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f40d
+  voted: false
+pinterest-p:
+  changes:
+    - 4.3.0
+    - 5.0.0
+    - 7.0.0
+  label: Pinterest P
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f231
+  voted: false
+cash-app:
+  changes:
+    - 7.0.0
+  label: Cash App
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e7d4
+  voted: false
+python:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Python
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3e2
+  voted: false
+imdb:
+  changes:
+    - 4.7.0
+    - 5.0.0
+    - 6.1.2
+    - 7.0.0
+  label: Imdb
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f2d8
+  voted: false
+whatsapp:
+  changes:
+    - 4.3.0
+    - 5.0.0
+    - 7.0.0
+  label: Whatsapp
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f232
+  voted: false
+square-pied-piper:
+  aliases:
+    names:
+      - pied-piper-square
+  changes:
+    - 5.12.0
+    - 5.14.0
+    - 6.1.2
+    - 7.0.0
+  label: Square Pied Piper
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e01e
+  voted: false
+redhat:
+  changes:
+    - 5.6.0
+    - 5.8.2
+    - 7.0.0
+  label: Redhat
+  search:
+    terms:
+      - linux
+      - operating system
+      - os
+  styles:
+    - brands
+  unicode: f7bc
+  voted: true
+creative-commons-sampling-plus:
+  changes:
+    - 5.0.11
+    - 7.0.0
+  label: Creative Commons Sampling Plus
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f4f1
+  voted: false
+nutritionix:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Nutritionix
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3d6
+  voted: false
+lumon:
+  changes:
+    - 7.0.0
+  label: Lumon
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e7e2
+  voted: false
+mailchimp:
+  changes:
+    - 5.1.0
+    - 5.7.0
+    - 5.8.0
+    - 5.8.2
+    - 7.0.0
+  label: Mailchimp
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f59e
+  voted: true
+steam-symbol:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Steam Symbol
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3f6
+  voted: false
+critical-role:
+  changes:
+    - 5.4.0
+    - 5.8.0
+    - 7.0.0
+  label: Critical Role
+  search:
+    terms:
+      - Dungeons & Dragons
+      - d&d
+      - dnd
+      - fantasy
+      - game
+      - gaming
+      - tabletop
+  styles:
+    - brands
+  unicode: f6c9
+  voted: false
+kickstarter-k:
+  changes:
+    - 5.0.0
+    - 6.5.2
+    - 7.0.0
+  label: Kickstarter K
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3bc
+  voted: false
+twitch:
+  changes:
+    - 4.2.0
+    - 5.0.0
+    - 5.12.0
+    - 7.0.0
+  label: Twitch
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1e8
+  voted: false
+sticker-mule:
+  changes:
+    - 5.0.0
+    - 5.7.0
+    - 7.0.0
+  label: Sticker Mule
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3f7
+  voted: false
+x-twitter:
+  changes:
+    - 6.4.2
+    - 7.0.0
+  label: X Twitter
+  search:
+    terms:
+      - elon
+      - twitter
+      - x
+  styles:
+    - brands
+  unicode: e61b
+  voted: false
+free-code-camp:
+  changes:
+    - 4.7.0
+    - 5.0.0
+    - 5.12.0
+    - 7.0.0
+  label: Free Code Camp
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f2c5
+  voted: false
+tencent-weibo:
+  changes:
+    - 4.1.0
+    - 5.0.0
+    - 7.0.0
+  label: Tencent Weibo
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1d5
+  voted: false
+unity:
+  changes:
+    - 5.12.0
+    - 5.14.0
+    - 6.0.0-beta3
+    - 7.0.0
+  label: Unity
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e049
+  voted: true
+tidal:
+  changes:
+    - 7.0.0
+  label: Tidal
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e7dc
+  voted: false
+goodreads:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Goodreads
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3a8
+  voted: false
+cloudversify:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Cloudversify
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f385
+  voted: false
+hips:
+  changes:
+    - 5.0.5
+    - 7.0.0
+  label: Hips
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f452
+  voted: false
+watchman-monitoring:
+  changes:
+    - 5.15.0
+    - 7.0.0
+  label: Watchman Monitoring
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e087
+  voted: false
+buy-n-large:
+  changes:
+    - 5.11.0
+    - 7.0.0
+  label: Buy N Large
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f8a6
+  voted: false
+flipboard:
+  changes:
+    - 5.0.5
+    - 5.0.9
+    - 7.0.0
+  label: Flipboard
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f44d
+  voted: true
+deploydog:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Deploydog
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f38e
+  voted: false
+dart-lang:
+  changes:
+    - 6.6.0
+    - 7.0.0
+  label: Dart Lang
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e693
+  voted: false
+themeisle:
+  changes:
+    - 4.6.0
+    - 5.0.0
+    - 7.0.0
+  label: Themeisle
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f2b2
+  voted: false
+square-snapchat:
+  aliases:
+    names:
+      - snapchat-square
+  changes:
+    - 4.6.0
+    - 5.0.0
+    - 6.0.0-beta1
+    - 6.1.2
+    - 7.0.0
+  label: Square Snapchat
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f2ad
+  voted: false
+creative-commons-zero:
+  changes:
+    - 5.0.11
+    - 5.4.0
+    - 7.0.0
+  label: Creative Commons Zero
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f4f3
+  voted: false
+hive:
+  changes:
+    - 5.15.0
+    - 7.0.0
+  label: Hive
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e07f
+  voted: false
+yandex-international:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Yandex International
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f414
+  voted: false
+mixcloud:
+  changes:
+    - 4.5.0
+    - 5.0.0
+    - 6.1.2
+    - 7.0.0
+  label: Mixcloud
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f289
+  voted: false
+pushed:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Pushed
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3e1
+  voted: false
+square-vimeo:
+  aliases:
+    names:
+      - vimeo-square
+  changes:
+    - 4.0.0
+    - 5.0.0
+    - 6.1.2
+    - 6.5.0
+    - 7.0.0
+  label: Square Vimeo
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f194
+  voted: false
+perbyte:
+  changes:
+    - 5.15.0
+    - 7.0.0
+  label: Perbyte
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e083
+  voted: false
+instagram:
+  changes:
+    - 4.6.0
+    - 5.0.0
+    - 7.0.0
+  label: Instagram
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f16d
+  voted: false
+figma:
+  changes:
+    - 5.6.0
+    - 5.7.0
+    - 5.8.0
+    - 5.15.4
+    - 6.0.0-beta2
+    - 7.0.0
+  label: Figma
+  search:
+    terms:
+      - app
+      - design
+      - interface
+  styles:
+    - brands
+  unicode: f799
+  voted: false
+monero:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Monero
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3d0
+  voted: false
+behance:
+  changes:
+    - 4.1.0
+    - 5.0.0
+    - 7.0.0
+  label: Behance
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1b4
+  voted: false
+orcid:
+  changes:
+    - 5.11.0
+    - 7.0.0
+  label: Orcid
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f8d2
+  voted: false
+creative-commons-pd-alt:
+  changes:
+    - 5.0.11
+    - 7.0.0
+  label: Creative Commons Pd Alt
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f4ed
+  voted: false
+square-hacker-news:
+  aliases:
+    names:
+      - hacker-news-square
+  changes:
+    - 5.0.0
+    - 6.1.2
+    - 6.5.0
+    - 7.0.0
+  label: Square Hacker News
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3af
+  voted: false
+hire-a-helper:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Hire A Helper
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3b0
+  voted: false
+keycdn:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Keycdn
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3ba
+  voted: false
+rev:
+  changes:
+    - 5.1.0
+    - 5.1.1
+    - 5.8.0
+    - 7.0.0
+  label: Rev
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f5b2
+  voted: false
+renren:
+  changes:
+    - 3.2.0
+    - 5.0.0
+    - 7.0.0
+  label: Renren
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f18b
+  voted: false
+webflow:
+  changes:
+    - 6.5.0
+    - 6.5.1
+    - 7.0.0
+  label: Webflow
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e65c
+  voted: false
+staylinked:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Staylinked
+  search:
+    terms:
+      - linkin
+  styles:
+    - brands
+  unicode: f3f5
+  voted: false
+mintbit:
+  changes:
+    - 6.5.0
+    - 7.0.0
+  label: Mintbit
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e62f
+  voted: false
+shirtsinbulk:
+  changes:
+    - 4.3.0
+    - 5.0.0
+    - 5.7.0
+    - 7.0.0
+  label: Shirtsinbulk
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f214
+  voted: false
+foursquare:
+  changes:
+    - 3.2.0
+    - 5.0.0
+    - 7.0.0
+  label: Foursquare
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f180
+  voted: false
+google-wallet:
+  changes:
+    - 4.2.0
+    - 5.0.0
+    - 7.0.0
+  label: Google Wallet
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1ee
+  voted: false
+cotton-bureau:
+  changes:
+    - 5.10.0
+    - 7.0.0
+  label: Cotton Bureau
+  search:
+    terms:
+      - clothing
+      - t-shirts
+      - tshirts
+  styles:
+    - brands
+  unicode: f89e
+  voted: false
+linux:
+  changes:
+    - 3.2.0
+    - 5.0.0
+    - 7.0.0
+  label: Linux
+  search:
+    terms:
+      - tux
+  styles:
+    - brands
+  unicode: f17c
+  voted: false
+fantasy-flight-games:
+  changes:
+    - 5.4.0
+    - 7.0.0
+  label: Fantasy Flight Games
+  search:
+    terms:
+      - Dungeons & Dragons
+      - d&d
+      - dnd
+      - fantasy
+      - game
+      - gaming
+      - tabletop
+  styles:
+    - brands
+  unicode: f6dc
+  voted: false
+speakap:
+  changes:
+    - 5.0.0
+    - 5.4.0
+    - 5.8.0
+    - 7.0.0
+  label: Speakap
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3f3
+  voted: false
+square-font-awesome-stroke:
+  aliases:
+    names:
+      - font-awesome-alt
+  changes:
+    - 5.0.0
+    - 6.0.0-beta1
+    - 6.5.2
+    - 7.0.0
+  label: Square Font Awesome Stroke
+  search:
+    terms:
+      - awesome
+      - flag
+      - font
+      - icons
+      - typeface
+  styles:
+    - brands
+  unicode: f35c
+  voted: false
+maxcdn:
+  changes:
+    - 3.1.0
+    - 5.0.0
+    - 7.0.0
+  label: Maxcdn
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f136
+  voted: false
+vimeo:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Vimeo
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f40a
+  voted: false
+dochub:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Dochub
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f394
+  voted: false
+hotjar:
+  changes:
+    - 5.0.0
+    - 6.4.1
+    - 7.0.0
+  label: Hotjar
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3b1
+  voted: false
+dev:
+  changes:
+    - 5.4.0
+    - 7.0.0
+  label: Dev
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f6cc
+  voted: true
+neos:
+  changes:
+    - 5.2.0
+    - 5.8.0
+    - 7.0.0
+  label: Neos
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f612
+  voted: true
+bilibili:
+  changes:
+    - 6.0.0-beta2
+    - 7.0.0
+  label: Bilibili
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e3d9
+  voted: true
+buromobelexperte:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Buromobelexperte
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f37f
+  voted: false
+fort-awesome-alt:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Fort Awesome Alt
+  search:
+    terms:
+      - castle
+  styles:
+    - brands
+  unicode: f3a3
+  voted: false
+ussunnah:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Ussunnah
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f407
+  voted: false
+pied-piper-pp:
+  changes:
+    - 4.1.0
+    - 5.0.0
+    - 7.0.0
+  label: Pied Piper Pp
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1a7
+  voted: false
+ideal:
+  changes:
+    - 5.12.0
+    - 5.14.0
+    - 7.0.0
+  label: Ideal
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e013
+  voted: true
+wordpress:
+  changes:
+    - 4.1.0
+    - 5.0.0
+    - 7.0.0
+  label: Wordpress
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f19a
+  voted: false
+tiktok:
+  changes:
+    - 5.13.1
+    - 5.14.0
+    - 7.0.0
+  label: Tiktok
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e07b
+  voted: true
+reddit-alien:
+  changes:
+    - 4.5.0
+    - 5.0.0
+    - 6.5.1
+    - 7.0.0
+  label: Reddit Alien
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f281
+  voted: false
+hashnode:
+  changes:
+    - 6.0.0
+    - 7.0.0
+  label: Hashnode
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e499
+  voted: false
+css:
+  changes:
+    - 6.7.0
+  label: Css
+  search:
+    terms:
+      - rebecca purple
+  styles:
+    - brands
+  unicode: e6a2
+  voted: false
+square-linkedin:
+  changes:
+    - 7.0.0
+  label: Square Linkedin
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e7d0
+  voted: false
+jxl:
+  changes:
+    - 6.5.2
+    - 7.0.0
+  label: Jxl
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e67b
+  voted: false
+react:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: React
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f41b
+  voted: false
+square-tumblr:
+  aliases:
+    names:
+      - tumblr-square
+  changes:
+    - 3.2.0
+    - 5.0.0
+    - 6.1.2
+    - 6.5.0
+    - 7.0.0
+  label: Square Tumblr
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f174
+  voted: false
+pix:
+  changes:
+    - 6.0.0-beta2
+    - 7.0.0
+  label: Pix
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e43a
+  voted: true
+medapps:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Medapps
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3c6
+  voted: false
+cuttlefish:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Cuttlefish
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f38c
+  voted: false
+square-upwork:
+  changes:
+    - 6.5.2
+    - 7.0.0
+  label: Square Upwork
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e67c
+  voted: false
+product-hunt:
+  changes:
+    - 4.5.0
+    - 5.0.0
+    - 7.0.0
+  label: Product Hunt
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f288
+  voted: false
+diaspora:
+  changes:
+    - 5.6.0
+    - 5.8.0
+    - 7.0.0
+  label: Diaspora
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f791
+  voted: true
+wpbeginner:
+  changes:
+    - 4.6.0
+    - 5.0.0
+    - 7.0.0
+  label: Wpbeginner
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f297
+  voted: false
+palfed:
+  changes:
+    - 5.0.0
+    - 5.0.3
+    - 7.0.0
+  label: Palfed
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3d8
+  voted: false
+fonticons-fi:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Fonticons Fi
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3a2
+  voted: false
+meetup:
+  changes:
+    - 4.7.0
+    - 5.0.0
+    - 7.0.0
+  label: Meetup
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f2e0
+  voted: false
+android:
+  changes:
+    - 3.2.0
+    - 5.0.0
+    - 5.12.0
+    - 7.0.0
+  label: Android
+  search:
+    terms:
+      - robot
+  styles:
+    - brands
+  unicode: f17b
+  voted: false
+angellist:
+  changes:
+    - 4.2.0
+    - 5.0.0
+    - 7.0.0
+  label: Angellist
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f209
+  voted: false
+slack:
+  aliases:
+    names:
+      - slack-hash
+    unicodes:
+      composite:
+        - f3ef
+  changes:
+    - 4.1.0
+    - 5.0.0
+    - 5.7.0
+    - 7.0.0
+  label: Slack
+  search:
+    terms:
+      - anchor
+      - hash
+      - hashtag
+  styles:
+    - brands
+  unicode: f198
+  voted: false
+mandalorian:
+  changes:
+    - 5.0.12
+    - 5.8.0
+    - 7.0.0
+  label: Mandalorian
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f50f
+  voted: false
+square-letterboxd:
+  changes:
+    - 6.5.0
+    - 7.0.0
+  label: Square Letterboxd
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e62e
+  voted: false
+usps:
+  changes:
+    - 5.6.0
+    - 5.8.0
+    - 7.0.0
+  label: Usps
+  search:
+    terms:
+      - american
+      - package
+      - shipping
+      - usa
+  styles:
+    - brands
+  unicode: f7e1
+  voted: false
+creative-commons-nd:
+  changes:
+    - 5.0.11
+    - 7.0.0
+  label: Creative Commons Nd
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f4eb
+  voted: false
+wizards-of-the-coast:
+  changes:
+    - 5.4.0
+    - 7.0.0
+  label: Wizards Of The Coast
+  search:
+    terms:
+      - Dungeons & Dragons
+      - d&d
+      - dnd
+      - fantasy
+      - game
+      - gaming
+      - tabletop
+  styles:
+    - brands
+  unicode: f730
+  voted: false
+cloudsmith:
+  changes:
+    - 5.0.0
+    - 6.4.1
+    - 7.0.0
+  label: Cloudsmith
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f384
+  voted: false
+firefox-browser:
+  changes:
+    - 5.12.0
+    - 5.14.0
+    - 7.0.0
+  label: Firefox Browser
+  search:
+    terms:
+      - browser
+  styles:
+    - brands
+  unicode: e007
+  voted: false
+git-alt:
+  changes:
+    - 5.8.2
+    - 7.0.0
+  label: Git Alt
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f841
+  voted: false
+tor-browser:
+  changes:
+    - 7.1.0
+  label: Tor Browser
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e838
+  voted: false
+magento:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Magento
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3c4
+  voted: false
+docker:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Docker
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f395
+  voted: false
+weebly:
+  changes:
+    - 5.1.0
+    - 7.0.0
+  label: Weebly
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f5cc
+  voted: true
+lumon-drop:
+  changes:
+    - 7.0.0
+  label: Lumon Drop
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e7e3
+  voted: false
+keybase:
+  changes:
+    - 5.0.11
+    - 5.8.0
+    - 5.10.2
+    - 5.11.0
+    - 7.0.0
+  label: Keybase
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f4f5
+  voted: true
+jsfiddle:
+  changes:
+    - 4.1.0
+    - 5.0.0
+    - 7.0.0
+  label: Jsfiddle
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1cc
+  voted: false
+glide-g:
+  changes:
+    - 4.6.0
+    - 5.0.0
+    - 7.0.0
+  label: Glide G
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f2a6
+  voted: false
+aws:
+  changes:
+    - 5.0.0
+    - 5.1.0
+    - 7.0.0
+  label: Aws
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f375
+  voted: false
+grav:
+  changes:
+    - 4.7.0
+    - 5.0.0
+    - 7.0.0
+  label: Grav
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f2d6
+  voted: false
+w3c:
+  changes:
+    - 7.0.0
+  label: W3c
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e7de
+  voted: false
+korvue:
+  changes:
+    - 5.0.2
+    - 7.0.0
+  label: Korvue
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f42f
+  voted: false
+google-play:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Google Play
+  search:
+    terms:
+      - playstore
+  styles:
+    - brands
+  unicode: f3ab
+  voted: false
+themeco:
+  changes:
+    - 5.1.0
+    - 5.8.0
+    - 7.0.0
+  label: Themeco
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f5c6
+  voted: false
+cloudscale:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Cloudscale
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f383
+  voted: false
+npm:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Npm
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3d4
+  voted: false
+creative-commons-nc-eu:
+  changes:
+    - 5.0.11
+    - 7.0.0
+  label: Creative Commons Nc Eu
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f4e9
+  voted: false
+square-steam:
+  aliases:
+    names:
+      - steam-square
+  changes:
+    - 4.1.0
+    - 5.0.0
+    - 6.1.2
+    - 6.5.0
+    - 7.0.0
+  label: Square Steam
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1b7
+  voted: false
+wodu:
+  changes:
+    - 5.15.0
+    - 7.0.0
+  label: Wodu
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e088
+  voted: false
+nfc-symbol:
+  changes:
+    - 6.1.0
+    - 6.2.0
+    - 6.3.0
+    - 6.4.0
+    - 6.5.0
+    - 6.6.0
+    - 6.7.0
+    - 7.0.0
+  label: Nfc Symbol
+  search:
+    terms:
+      - connect
+      - data
+      - near field communication
+      - nfc
+      - scan
+      - signal
+      - transfer
+      - wireless
+  styles:
+    - brands
+  unicode: e531
+  voted: false
+java:
+  changes:
+    - 5.0.10
+    - 5.7.0
+    - 5.8.0
+    - 7.0.0
+  label: Java
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f4e4
+  voted: false
+leanpub:
+  changes:
+    - 4.3.0
+    - 5.0.0
+    - 7.0.0
+  label: Leanpub
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f212
+  voted: false
+spotify:
+  changes:
+    - 4.1.0
+    - 5.0.0
+    - 7.0.0
+  label: Spotify
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1bc
+  voted: false
+kickstarter:
+  aliases:
+    names:
+      - square-kickstarter
+  changes:
+    - 5.0.0
+    - 6.5.2
+    - 7.0.0
+  label: Kickstarter
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3bb
+  voted: false
+viber:
+  changes:
+    - 5.0.0
+    - 5.0.3
+    - 7.0.0
+  label: Viber
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f409
+  voted: false
+houzz:
+  changes:
+    - 4.4.0
+    - 5.0.0
+    - 5.0.9
+    - 5.8.0
+    - 7.0.0
+  label: Houzz
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f27c
+  voted: false
+ethereum:
+  changes:
+    - 5.0.2
+    - 7.0.0
+  label: Ethereum
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f42e
+  voted: true
+canadian-maple-leaf:
+  changes:
+    - 5.6.0
+    - 5.8.0
+    - 7.0.0
+  label: Canadian Maple Leaf
+  search:
+    terms:
+      - canada
+      - flag
+      - flora
+      - nature
+      - plant
+  styles:
+    - brands
+  unicode: f785
+  voted: false
+instalod:
+  changes:
+    - 5.15.0
+    - 7.0.0
+  label: Instalod
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e081
+  voted: false
+r-project:
+  changes:
+    - 5.0.11
+    - 5.0.12
+    - 7.0.0
+  label: R Project
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f4f7
+  voted: true
+jedi-order:
+  changes:
+    - 5.0.12
+    - 5.7.0
+    - 7.0.0
+  label: Jedi Order
+  search:
+    terms:
+      - star wars
+  styles:
+    - brands
+  unicode: f50e
+  voted: false
+creative-commons-sampling:
+  changes:
+    - 5.0.11
+    - 7.0.0
+  label: Creative Commons Sampling
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f4f0
+  voted: false
+deezer:
+  changes:
+    - 5.13.1
+    - 5.14.0
+    - 7.0.0
+  label: Deezer
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e077
+  voted: true
+dropbox:
+  changes:
+    - 3.2.0
+    - 5.0.0
+    - 5.0.1
+    - 7.0.0
+  label: Dropbox
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f16b
+  voted: false
+opensuse:
+  changes:
+    - 6.5.0
+    - 7.0.0
+  label: Opensuse
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e62b
+  voted: false
+angular:
+  changes:
+    - 5.0.0
+    - 5.8.0
+    - 7.0.0
+  label: Angular
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f420
+  voted: false
+skype:
+  changes:
+    - 3.2.0
+    - 5.0.0
+    - 7.0.0
+  label: Skype
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f17e
+  voted: false
+square-whatsapp:
+  aliases:
+    names:
+      - whatsapp-square
+  changes:
+    - 5.0.0
+    - 6.1.2
+    - 6.5.0
+    - 7.0.0
+  label: Square Whatsapp
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f40c
+  voted: false
+sass:
+  changes:
+    - 5.0.0
+    - 5.8.0
+    - 7.0.0
+  label: Sass
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f41e
+  voted: false
+web-awesome:
+  changes:
+    - 6.5.2
+    - 6.6.0
+    - 6.7.0
+    - 7.0.0
+  label: Web Awesome
+  search:
+    terms:
+      - awesome
+      - coding
+      - components
+      - crown
+      - web
+  styles:
+    - brands
+  unicode: e682
+  voted: false
+sketch:
+  changes:
+    - 5.6.0
+    - 5.8.0
+    - 7.0.0
+  label: Sketch
+  search:
+    terms:
+      - app
+      - design
+      - interface
+  styles:
+    - brands
+  unicode: f7c6
+  voted: false
+mastodon:
+  changes:
+    - 5.0.11
+    - 5.8.0
+    - 7.0.0
+  label: Mastodon
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f4f6
+  voted: true
+debian:
+  changes:
+    - 6.4.1
+    - 6.5.0
+    - 7.0.0
+  label: Debian
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e60b
+  voted: false
+centercode:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Centercode
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f380
+  voted: false
+phoenix-squadron:
+  changes:
+    - 5.0.12
+    - 5.8.0
+    - 7.0.0
+  label: Phoenix Squadron
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f511
+  voted: false
+tumblr:
+  changes:
+    - 3.2.0
+    - 5.0.0
+    - 7.0.0
+  label: Tumblr
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f173
+  voted: false
+apple:
+  changes:
+    - 3.2.0
+    - 5.0.0
+    - 5.0.7
+    - 5.8.0
+    - 7.0.0
+  label: Apple
+  search:
+    terms:
+      - fruit
+      - ios
+      - mac
+      - operating system
+      - os
+      - osx
+  styles:
+    - brands
+  unicode: f179
+  voted: false
+google-pay:
+  changes:
+    - 5.13.1
+    - 5.14.0
+    - 7.0.0
+  label: Google Pay
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e079
+  voted: false
+gratipay:
+  changes:
+    - 3.2.0
+    - 5.0.0
+    - 7.0.0
+  label: Gratipay
+  search:
+    terms:
+      - favorite
+      - heart
+      - like
+      - love
+  styles:
+    - brands
+  unicode: f184
+  voted: false
+buffer:
+  changes:
+    - 5.8.0
+    - 7.0.0
+  label: Buffer
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f837
+  voted: false
+flutter:
+  changes:
+    - 6.6.0
+    - 7.0.0
+  label: Flutter
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e694
+  voted: false
+kakao-talk:
+  changes:
+    - 7.0.0
+  label: Kakao Talk
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e7d7
+  voted: false
+upwork:
+  changes:
+    - 6.5.0
+    - 6.5.2
+    - 7.0.0
+  label: Upwork
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e641
+  voted: false
+cc-visa:
+  changes:
+    - 4.2.0
+    - 5.0.0
+    - 7.0.0
+  label: Cc Visa
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1f0
+  voted: false
+flickr:
+  changes:
+    - 3.2.0
+    - 5.0.0
+    - 7.0.0
+  label: Flickr
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f16e
+  voted: false
+speaker-deck:
+  changes:
+    - 5.8.0
+    - 7.0.0
+  label: Speaker Deck
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f83c
+  voted: false
+wpforms:
+  changes:
+    - 4.6.0
+    - 5.0.0
+    - 7.0.0
+  label: Wpforms
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f298
+  voted: false
+laravel:
+  changes:
+    - 5.0.0
+    - 5.0.3
+    - 5.11.2
+    - 6.7.1
+    - 7.0.0
+  label: Laravel
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3bd
+  voted: false
+files-pinwheel:
+  changes:
+    - 6.7.0
+    - 7.0.0
+  label: Files Pinwheel
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e69f
+  voted: false
+swift:
+  changes:
+    - 5.11.0
+    - 7.0.0
+  label: Swift
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f8e1
+  voted: false
+bitcoin:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Bitcoin
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f379
+  voted: false
+screenpal:
+  changes:
+    - 6.1.0
+    - 7.0.0
+  label: Screenpal
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e570
+  voted: false
+google-plus:
+  changes:
+    - 4.6.0
+    - 5.0.0
+    - 5.13.1
+    - 7.0.0
+  label: Google Plus
+  search:
+    terms:
+      - google-plus-circle
+      - google-plus-official
+  styles:
+    - brands
+  unicode: f2b3
+  voted: false
+buysellads:
+  changes:
+    - 4.3.0
+    - 5.0.0
+    - 7.0.0
+  label: Buysellads
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f20d
+  voted: false
+gg:
+  changes:
+    - 4.4.0
+    - 5.0.0
+    - 7.0.0
+  label: Gg
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f260
+  voted: false
+osi:
+  changes:
+    - 5.0.0
+    - 5.8.0
+    - 7.0.0
+  label: Osi
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f41a
+  voted: false
+medrt:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Medrt
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3c8
+  voted: false
+vine:
+  changes:
+    - 4.1.0
+    - 5.0.0
+    - 7.0.0
+  label: Vine
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1ca
+  voted: false
+bots:
+  changes:
+    - 6.0.0-beta1
+    - 7.0.0
+  label: Bots
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e340
+  voted: false
+phabricator:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Phabricator
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3db
+  voted: false
+asymmetrik:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Asymmetrik
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f372
+  voted: false
+amilia:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Amilia
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f36d
+  voted: false
+line:
+  changes:
+    - 5.0.0
+    - 6.3.0
+    - 7.0.0
+  label: Line
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3c0
+  voted: false
+y-combinator:
+  changes:
+    - 4.4.0
+    - 5.0.0
+    - 7.0.0
+  label: Y Combinator
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f23b
+  voted: false
+opencart:
+  changes:
+    - 4.4.0
+    - 5.0.0
+    - 7.0.0
+  label: Opencart
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f23d
+  voted: false
+medium:
+  aliases:
+    names:
+      - medium-m
+    unicodes:
+      composite:
+        - f3c7
+  changes:
+    - 4.3.0
+    - 5.0.0
+    - 6.0.0-beta1
+    - 7.0.0
+  label: Medium
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f23a
+  voted: false
+deviantart:
+  changes:
+    - 4.1.0
+    - 5.0.0
+    - 7.0.0
+  label: Deviantart
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1bd
+  voted: false
+vaadin:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Vaadin
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f408
+  voted: false
+trade-federation:
+  changes:
+    - 5.0.12
+    - 7.0.0
+  label: Trade Federation
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f513
+  voted: false
+chrome:
+  changes:
+    - 4.4.0
+    - 5.0.0
+    - 6.1.2
+    - 7.0.0
+  label: Chrome
+  search:
+    terms:
+      - browser
+  styles:
+    - brands
+  unicode: f268
+  voted: false
+creative-commons-sa:
+  changes:
+    - 5.0.11
+    - 7.0.0
+  label: Creative Commons Sa
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f4ef
+  voted: false
+square-figma:
+  changes:
+    - 7.0.0
+  label: Square Figma
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e7e4
+  voted: false
+soundcloud:
+  changes:
+    - 4.1.0
+    - 5.0.0
+    - 6.6.0
+    - 7.0.0
+  label: Soundcloud
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1be
+  voted: false
+digital-ocean:
+  changes:
+    - 5.0.0
+    - 5.7.0
+    - 7.0.0
+  label: Digital Ocean
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f391
+  voted: false
+uber:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Uber
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f402
+  voted: false
+slideshare:
+  changes:
+    - 4.2.0
+    - 5.0.0
+    - 7.0.0
+  label: Slideshare
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1e7
+  voted: false
+jenkins:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Jenkins
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3b6
+  voted: false
+optin-monster:
+  changes:
+    - 4.4.0
+    - 5.0.0
+    - 5.7.0
+    - 7.0.0
+  label: Optin Monster
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f23c
+  voted: false
+git:
+  changes:
+    - 4.1.0
+    - 5.0.0
+    - 5.8.2
+    - 7.0.0
+  label: Git
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1d3
+  voted: false
+phoenix-framework:
+  changes:
+    - 5.0.0
+    - 5.0.3
+    - 7.0.0
+  label: Phoenix Framework
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3dc
+  voted: false
+galactic-senate:
+  changes:
+    - 5.0.12
+    - 7.0.0
+  label: Galactic Senate
+  search:
+    terms:
+      - star wars
+  styles:
+    - brands
+  unicode: f50d
+  voted: false
+snapchat:
+  aliases:
+    names:
+      - snapchat-ghost
+    unicodes:
+      composite:
+        - f2ac
+  changes:
+    - 4.6.0
+    - 5.0.0
+    - 6.0.0-beta1
+    - 7.0.0
+  label: Snapchat
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f2ab
+  voted: false
+steam:
+  changes:
+    - 4.1.0
+    - 5.0.0
+    - 7.0.0
+  label: Steam
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1b6
+  voted: false
+dailymotion:
+  changes:
+    - 5.12.1
+    - 5.14.0
+    - 7.0.0
+  label: Dailymotion
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e052
+  voted: true
+stripe:
+  changes:
+    - 5.0.0
+    - 5.0.3
+    - 7.0.0
+  label: Stripe
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f429
+  voted: false
+qq:
+  changes:
+    - 4.1.0
+    - 5.0.0
+    - 7.0.0
+  label: Qq
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1d6
+  voted: false
+gitlab:
+  changes:
+    - 4.6.0
+    - 5.0.0
+    - 5.7.0
+    - 6.0.0-beta1
+    - 6.1.2
+    - 7.0.0
+  label: Gitlab
+  search:
+    terms:
+      - Axosoft
+  styles:
+    - brands
+  unicode: f296
+  voted: false
+facebook:
+  aliases:
+    unicodes:
+      composite:
+        - f230
+  changes:
+    - 2.0.0
+    - 5.0.0
+    - 5.8.2
+    - 6.5.0
+    - 7.0.0
+  label: Facebook
+  search:
+    terms:
+      - fabook
+      - facebook-official
+      - fb
+      - social network
+  styles:
+    - brands
+  unicode: f09a
+  voted: false
+galactic-republic:
+  changes:
+    - 5.0.12
+    - 7.0.0
+  label: Galactic Republic
+  search:
+    terms:
+      - politics
+      - star wars
+  styles:
+    - brands
+  unicode: f50c
+  voted: false
+creative-commons-nc:
+  changes:
+    - 5.0.11
+    - 7.0.0
+  label: Creative Commons Nc
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f4e8
+  voted: false
+square-reddit:
+  aliases:
+    names:
+      - reddit-square
+  changes:
+    - 4.1.0
+    - 5.0.0
+    - 6.1.2
+    - 6.5.0
+    - 6.5.1
+    - 7.0.0
+  label: Square Reddit
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1a2
+  voted: false
+shopify:
+  changes:
+    - 5.12.1
+    - 5.14.0
+    - 7.0.0
+  label: Shopify
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e057
+  voted: false
+tex:
+  changes:
+    - 7.0.0
+  label: Tex
+  search:
+    terms:
+      - latex
+  styles:
+    - brands
+  unicode: e7ff
+  voted: false
+dhl:
+  changes:
+    - 5.6.0
+    - 7.0.0
+  label: Dhl
+  search:
+    terms:
+      - Dalsey
+      - Hillblom and Lynn
+      - german
+      - package
+      - shipping
+  styles:
+    - brands
+  unicode: f790
+  voted: false
+cc-paypal:
+  changes:
+    - 4.2.0
+    - 5.0.0
+    - 7.0.0
+  label: Cc Paypal
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1f4
+  voted: false
+linkedin:
+  changes:
+    - 1.0.0
+    - 5.0.0
+    - 7.0.0
+  label: Linkedin
+  search:
+    terms:
+      - linkedin-square
+      - linkin
+  styles:
+    - brands
+  unicode: f08c
+  voted: false
+dribbble:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Dribbble
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f17d
+  voted: false
+first-order:
+  changes:
+    - 4.6.0
+    - 5.0.0
+    - 7.0.0
+  label: First Order
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f2b0
+  voted: false
+elementor:
+  changes:
+    - 5.0.3
+    - 6.1.0
+    - 7.0.0
+  label: Elementor
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f430
+  voted: true
+dyalog:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Dyalog
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f399
+  voted: false
+cmplid:
+  changes:
+    - 6.0.0-beta1
+    - 7.0.0
+  label: Cmplid
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e360
+  voted: false
+hubspot:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Hubspot
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3b2
+  voted: false
+css3:
+  changes:
+    - 3.1.0
+    - 5.0.0
+    - 7.0.0
+  label: Css3
+  search:
+    terms:
+      - code
+  styles:
+    - brands
+  unicode: f13c
+  voted: false
+raspberry-pi:
+  changes:
+    - 5.6.0
+    - 7.0.0
+  label: Raspberry Pi
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f7bb
+  voted: true
+pied-piper:
+  changes:
+    - 4.6.0
+    - 5.0.0
+    - 5.0.10
+    - 5.12.0
+    - 7.0.0
+  label: Pied Piper
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f2ae
+  voted: false
+codiepie:
+  changes:
+    - 4.5.0
+    - 5.0.0
+    - 7.0.0
+  label: Codiepie
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f284
+  voted: false
+github:
+  changes:
+    - 2.0.0
+    - 5.0.0
+    - 7.0.0
+  label: Github
+  search:
+    terms:
+      - octocat
+  styles:
+    - brands
+  unicode: f09b
+  voted: false
+vk:
+  changes:
+    - 3.2.0
+    - 5.0.0
+    - 6.0.0-beta3
+    - 7.0.0
+  label: Vk
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f189
+  voted: false
+bitbucket:
+  aliases:
+    unicodes:
+      composite:
+        - f172
+  changes:
+    - 3.2.0
+    - 5.0.0
+    - 5.6.0
+    - 5.8.0
+    - 7.0.0
+  label: Bitbucket
+  search:
+    terms:
+      - atlassian
+      - bitbucket-square
+      - git
+  styles:
+    - brands
+  unicode: f171
+  voted: false
+studiovinari:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Studiovinari
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3f8
+  voted: false
+creative-commons-share:
+  changes:
+    - 5.0.11
+    - 7.0.0
+  label: Creative Commons Share
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f4f2
+  voted: false
+meta:
+  changes:
+    - 6.0.0
+    - 6.1.2
+    - 7.0.0
+  label: Meta
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e49b
+  voted: false
+vuejs:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Vuejs
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f41f
+  voted: false
+d-and-d:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: D And D
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f38d
+  voted: false
+schlix:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Schlix
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3ea
+  voted: false
+ioxhost:
+  changes:
+    - 4.2.0
+    - 5.0.0
+    - 7.0.0
+  label: Ioxhost
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f208
+  voted: false
+edge:
+  changes:
+    - 4.5.0
+    - 5.0.0
+    - 5.12.1
+    - 6.1.2
+    - 7.0.0
+  label: Edge
+  search:
+    terms:
+      - browser
+      - ie
+  styles:
+    - brands
+  unicode: f282
+  voted: false
+blogger:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Blogger
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f37c
+  voted: false
+shopware:
+  changes:
+    - 5.1.0
+    - 5.8.0
+    - 7.0.0
+  label: Shopware
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f5b5
+  voted: false
+lastfm:
+  changes:
+    - 4.2.0
+    - 5.0.0
+    - 7.0.0
+  label: Lastfm
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f202
+  voted: false
+wolf-pack-battalion:
+  changes:
+    - 5.0.12
+    - 5.8.0
+    - 7.0.0
+  label: Wolf Pack Battalion
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f514
+  voted: false
+gitter:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Gitter
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f426
+  voted: false
+dashcube:
+  changes:
+    - 4.3.0
+    - 5.0.0
+    - 5.0.3
+    - 7.0.0
+  label: Dashcube
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f210
+  voted: false
+sellsy:
+  changes:
+    - 4.3.0
+    - 5.0.0
+    - 7.0.0
+  label: Sellsy
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f213
+  voted: false
+wordpress-simple:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Wordpress Simple
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f411
+  voted: false
+cc-stripe:
+  changes:
+    - 4.2.0
+    - 5.0.0
+    - 7.0.0
+  label: Cc Stripe
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1f5
+  voted: false
+fly:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Fly
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f417
+  voted: false
+microsoft:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Microsoft
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3ca
+  voted: true
+d-and-d-beyond:
+  changes:
+    - 5.4.0
+    - 7.0.0
+  label: D And D Beyond
+  search:
+    terms:
+      - Dungeons & Dragons
+      - d&d
+      - dnd
+      - fantasy
+      - gaming
+      - tabletop
+  styles:
+    - brands
+  unicode: f6ca
+  voted: false
+square-bluesky:
+  changes:
+    - 6.7.1
+    - 7.0.0
+  label: Square Bluesky
+  search:
+    terms:
+      - social network
+  styles:
+    - brands
+  unicode: e6a3
+  voted: false
+paypal:
+  changes:
+    - 4.2.0
+    - 5.0.0
+    - 7.0.0
+  label: Paypal
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1ed
+  voted: false
+searchengin:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Searchengin
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3eb
+  voted: false
+viadeo:
+  changes:
+    - 4.6.0
+    - 5.0.0
+    - 7.0.0
+  label: Viadeo
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f2a9
+  voted: false
+trello:
+  changes:
+    - 3.2.0
+    - 5.0.0
+    - 5.6.0
+    - 7.0.0
+  label: Trello
+  search:
+    terms:
+      - atlassian
+  styles:
+    - brands
+  unicode: f181
+  voted: false
+squarespace:
+  changes:
+    - 5.1.0
+    - 7.0.0
+  label: Squarespace
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f5be
+  voted: true
+css3-alt:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Css3 Alt
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f38b
+  voted: false
+square-xing:
+  aliases:
+    names:
+      - xing-square
+  changes:
+    - 3.2.0
+    - 5.0.0
+    - 6.1.2
+    - 6.5.0
+    - 7.0.0
+  label: Square Xing
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f169
+  voted: false
+itunes:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Itunes
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3b4
+  voted: false
+bootstrap:
+  changes:
+    - 5.8.0
+    - 5.15.4
+    - 6.0.0-beta1
+    - 7.0.0
+  label: Bootstrap
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f836
+  voted: false
+ember:
+  changes:
+    - 5.0.0
+    - 5.0.3
+    - 7.0.0
+  label: Ember
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f423
+  voted: false
+youtube:
+  aliases:
+    unicodes:
+      composite:
+        - f16a
+  changes:
+    - 3.2.0
+    - 5.0.0
+    - 7.0.0
+  label: Youtube
+  search:
+    terms:
+      - film
+      - video
+      - youtube-play
+      - youtube-square
+  styles:
+    - brands
+  unicode: f167
+  voted: false
+superpowers:
+  changes:
+    - 4.7.0
+    - 5.0.0
+    - 7.0.0
+  label: Superpowers
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f2dd
+  voted: false
+uikit:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Uikit
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f403
+  voted: false
+square-dribbble:
+  aliases:
+    names:
+      - dribbble-square
+  changes:
+    - 5.0.0
+    - 6.1.2
+    - 6.5.0
+    - 7.0.0
+  label: Square Dribbble
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f397
+  voted: false
+app-store-ios:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: App Store Ios
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f370
+  voted: false
+suse:
+  changes:
+    - 5.6.0
+    - 5.8.0
+    - 6.5.0
+    - 7.0.0
+  label: Suse
+  search:
+    terms:
+      - linux
+      - operating system
+      - os
+  styles:
+    - brands
+  unicode: f7d6
+  voted: true
+old-republic:
+  changes:
+    - 5.0.12
+    - 7.0.0
+  label: Old Republic
+  search:
+    terms:
+      - politics
+      - star wars
+  styles:
+    - brands
+  unicode: f510
+  voted: false
+square-threads:
+  changes:
+    - 6.4.1
+    - 6.4.2
+    - 7.0.0
+  label: Square Threads
+  search:
+    terms:
+      - social network
+  styles:
+    - brands
+  unicode: e619
+  voted: false
+modx:
+  changes:
+    - 4.5.0
+    - 5.0.0
+    - 7.0.0
+  label: Modx
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f285
+  voted: false
+yammer:
+  changes:
+    - 5.8.0
+    - 6.0.0-beta1
+    - 7.0.0
+  label: Yammer
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f840
+  voted: false
+octopus-deploy:
+  changes:
+    - 5.15.0
+    - 7.0.0
+  label: Octopus Deploy
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e082
+  voted: false
+stackpath:
+  changes:
+    - 5.8.2
+    - 7.0.0
+  label: Stackpath
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f842
+  voted: false
+algolia:
+  changes:
+    - 5.0.0
+    - 6.3.0
+    - 7.0.0
+  label: Algolia
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f36c
+  voted: false
+pinterest:
+  changes:
+    - 2.0.0
+    - 5.0.0
+    - 7.0.0
+  label: Pinterest
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f0d2
+  voted: false
+cc-diners-club:
+  changes:
+    - 4.4.0
+    - 5.0.0
+    - 7.0.0
+  label: Cc Diners Club
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f24c
+  voted: false
+uniregistry:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Uniregistry
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f404
+  voted: false
+strava:
+  changes:
+    - 5.0.0
+    - 5.0.1
+    - 5.7.0
+    - 5.8.0
+    - 7.0.0
+  label: Strava
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f428
+  voted: false
+vimeo-v:
+  changes:
+    - 4.4.0
+    - 5.0.0
+    - 7.0.0
+  label: Vimeo V
+  search:
+    terms:
+      - vimeo
+  styles:
+    - brands
+  unicode: f27d
+  voted: false
+square-web-awesome-stroke:
+  changes:
+    - 6.5.2
+    - 7.0.0
+  label: Square Web Awesome Stroke
+  search:
+    terms:
+      - awesome
+      - coding
+      - components
+      - crown
+      - web
+  styles:
+    - brands
+  unicode: e684
+  voted: false
+bandcamp:
+  changes:
+    - 4.7.0
+    - 5.0.0
+    - 5.13.1
+    - 7.0.0
+  label: Bandcamp
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f2d5
+  voted: false
+creative-commons-remix:
+  changes:
+    - 5.0.11
+    - 7.0.0
+  label: Creative Commons Remix
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f4ee
+  voted: false
+waze:
+  changes:
+    - 5.8.0
+    - 7.0.0
+  label: Waze
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f83f
+  voted: false
+reacteurope:
+  changes:
+    - 5.5.0
+    - 5.8.0
+    - 7.0.0
+  label: Reacteurope
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f75d
+  voted: false
+intercom:
+  changes:
+    - 5.6.0
+    - 7.0.0
+  label: Intercom
+  search:
+    terms:
+      - app
+      - customer
+      - messenger
+  styles:
+    - brands
+  unicode: f7af
+  voted: false
+wix:
+  changes:
+    - 5.1.0
+    - 7.0.0
+  label: Wix
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f5cf
+  voted: true
+app-store:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: App Store
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f36f
+  voted: false
+square-google-plus:
+  aliases:
+    names:
+      - google-plus-square
+  changes:
+    - 2.0.0
+    - 5.0.0
+    - 6.1.2
+    - 6.5.0
+    - 7.0.0
+  label: Square Google Plus
+  search:
+    terms:
+      - social network
+  styles:
+    - brands
+  unicode: f0d4
+  voted: false
+gripfire:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Gripfire
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3ac
+  voted: false
+bluetooth-b:
+  changes:
+    - 4.5.0
+    - 5.0.0
+    - 7.0.0
+  label: Bluetooth B
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f294
+  voted: false
+square-pinterest:
+  aliases:
+    names:
+      - pinterest-square
+  changes:
+    - 2.0.0
+    - 5.0.0
+    - 6.1.2
+    - 6.5.0
+    - 7.0.0
+  label: Square Pinterest
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f0d3
+  voted: false
+ns8:
+  changes:
+    - 5.0.0
+    - 5.15.0
+    - 7.0.0
+  label: Ns8
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3d5
+  voted: false
+avianex:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Avianex
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f374
+  voted: false
+brave-reverse:
+  changes:
+    - 6.5.0
+    - 7.0.0
+  label: Brave Reverse
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e63d
+  voted: false
+fulcrum:
+  changes:
+    - 5.0.12
+    - 5.8.0
+    - 7.0.0
+  label: Fulcrum
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f50b
+  voted: false
+first-order-alt:
+  changes:
+    - 5.0.12
+    - 7.0.0
+  label: First Order Alt
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f50a
+  voted: false
+square-instagram:
+  aliases:
+    names:
+      - instagram-square
+  changes:
+    - 5.12.1
+    - 5.14.0
+    - 6.1.2
+    - 6.5.0
+    - 7.0.0
+  label: Square Instagram
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e055
+  voted: true
+unsplash:
+  changes:
+    - 5.13.1
+    - 5.14.0
+    - 7.0.0
+  label: Unsplash
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e07c
+  voted: false
+rockrms:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Rockrms
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3e9
+  voted: false
+supportnow:
+  changes:
+    - 7.1.0
+  label: Supportnow
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e833
+  voted: false
+grunt:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Grunt
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3ad
+  voted: false
+weixin:
+  changes:
+    - 4.1.0
+    - 5.0.0
+    - 5.0.3
+    - 7.0.0
+  label: Weixin
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1d7
+  voted: false
+joomla:
+  changes:
+    - 4.1.0
+    - 5.0.0
+    - 7.0.0
+  label: Joomla
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1aa
+  voted: false
+typo3:
+  changes:
+    - 5.0.1
+    - 5.8.0
+    - 7.0.0
+  label: Typo3
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f42b
+  voted: false
+markdown:
+  changes:
+    - 5.2.0
+    - 5.7.0
+    - 7.0.0
+  label: Markdown
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f60f
+  voted: true
+square-odnoklassniki:
+  aliases:
+    names:
+      - odnoklassniki-square
+  changes:
+    - 4.4.0
+    - 5.0.0
+    - 6.1.2
+    - 6.5.0
+    - 7.0.0
+  label: Square Odnoklassniki
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f264
+  voted: false
+earlybirds:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Earlybirds
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f39a
+  voted: false
+creative-commons-pd:
+  changes:
+    - 5.0.11
+    - 7.0.0
+  label: Creative Commons Pd
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f4ec
+  voted: false
+scribd:
+  changes:
+    - 4.5.0
+    - 5.0.0
+    - 7.0.0
+  label: Scribd
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f28a
+  voted: false
+bluesky:
+  changes:
+    - 6.5.2
+    - 6.7.0
+    - 6.7.1
+    - 7.0.0
+  label: Bluesky
+  search:
+    terms:
+      - social network
+  styles:
+    - brands
+  unicode: e671
+  voted: false
+yahoo:
+  changes:
+    - 4.1.0
+    - 5.0.0
+    - 5.0.3
+    - 5.13.1
+    - 7.0.0
+  label: Yahoo
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f19e
+  voted: false
+pixelfed:
+  changes:
+    - 7.0.0
+  label: Pixelfed
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e7db
+  voted: false
+nimblr:
+  changes:
+    - 5.1.0
+    - 5.8.0
+    - 7.0.0
+  label: Nimblr
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f5a8
+  voted: false
+yoast:
+  changes:
+    - 4.6.0
+    - 5.0.0
+    - 5.0.3
+    - 7.0.0
+  label: Yoast
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f2b1
+  voted: false
+wpressr:
+  aliases:
+    names:
+      - rendact
+  changes:
+    - 5.4.2
+    - 7.0.0
+  label: Wpressr
+  search:
+    terms:
+      - rendact
+  styles:
+    - brands
+  unicode: f3e4
+  voted: false
+threads:
+  changes:
+    - 6.4.1
+    - 6.4.2
+    - 7.0.0
+  label: Threads
+  search:
+    terms:
+      - social network
+  styles:
+    - brands
+  unicode: e618
+  voted: false
+digg:
+  changes:
+    - 4.1.0
+    - 5.0.0
+    - 7.0.0
+  label: Digg
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1a6
+  voted: false
+confluence:
+  changes:
+    - 5.6.0
+    - 7.0.0
+  label: Confluence
+  search:
+    terms:
+      - atlassian
+  styles:
+    - brands
+  unicode: f78d
+  voted: true
+wirsindhandwerk:
+  aliases:
+    names:
+      - wsh
+  changes:
+    - 6.0.0-beta1
+    - 7.0.0
+  label: Wirsindhandwerk
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e2d0
+  voted: false
+font-awesome:
+  aliases:
+    names:
+      - font-awesome-flag
+      - font-awesome-logo-full
+    unicodes:
+      composite:
+        - f425
+        - f4e6
+      primary:
+        - f4e6
+      secondary:
+        - 10f2b4
+        - 10f4e6
+  changes:
+    - 4.6.0
+    - 5.0.0
+    - 5.15.4
+    - 6.0.0-beta1
+    - 6.1.2
+    - 6.2.0
+    - 6.3.0
+    - 6.4.0
+    - 6.5.0
+    - 6.5.2
+    - 6.6.0
+    - 6.7.0
+    - 7.0.0
+  label: Font Awesome
+  search:
+    terms:
+      - awesome
+      - flag
+      - font
+      - icons
+      - typeface
+  styles:
+    - brands
+  unicode: f2b4
+  voted: false
+square-twitter:
+  aliases:
+    names:
+      - twitter-square
+  changes:
+    - 1.0.0
+    - 5.0.0
+    - 6.1.2
+    - 6.4.2
+    - 7.0.0
+  label: Square Twitter
+  search:
+    terms:
+      - social network
+      - tweet
+  styles:
+    - brands
+  unicode: f081
+  voted: false
+supple:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Supple
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3f9
+  voted: false
+teamspeak:
+  changes:
+    - 5.0.11
+    - 5.1.0
+    - 5.8.0
+    - 6.4.0
+    - 7.0.0
+  label: Teamspeak
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f4f9
+  voted: true
+eleventy:
+  aliases:
+    names:
+      - 11ty
+  changes:
+    - 7.0.0
+  label: Eleventy
+  search:
+    terms:
+      - 11ty
+  styles:
+    - brands
+  unicode: e7d6
+  voted: false
+hacker-news:
+  changes:
+    - 4.1.0
+    - 5.0.0
+    - 7.0.0
+  label: Hacker News
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1d4
+  voted: false
+discord:
+  changes:
+    - 5.0.0
+    - 5.15.4
+    - 6.0.0-beta1
+    - 7.0.0
+  label: Discord
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f392
+  voted: false
+google:
+  changes:
+    - 4.1.0
+    - 5.0.0
+    - 7.0.0
+  label: Google
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1a0
+  voted: false
+stumbleupon:
+  changes:
+    - 4.1.0
+    - 5.0.0
+    - 7.0.0
+  label: Stumbleupon
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1a4
+  voted: false
+windows:
+  changes:
+    - 3.2.0
+    - 5.0.0
+    - 7.0.0
+  label: Windows
+  search:
+    terms:
+      - microsoft
+      - operating system
+      - os
+  styles:
+    - brands
+  unicode: f17a
+  voted: false
+itch-io:
+  changes:
+    - 5.8.0
+    - 7.0.0
+  label: Itch Io
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f83a
+  voted: false
+mizuni:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Mizuni
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3cc
+  voted: false
+angrycreative:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Angrycreative
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f36e
+  voted: false
+usb:
+  changes:
+    - 4.5.0
+    - 5.0.0
+    - 7.0.0
+  label: Usb
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f287
+  voted: false
+evernote:
+  changes:
+    - 5.8.0
+    - 7.0.0
+  label: Evernote
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f839
+  voted: false
+fedex:
+  changes:
+    - 5.6.0
+    - 7.0.0
+  label: Fedex
+  search:
+    terms:
+      - Federal Express
+      - package
+      - shipping
+  styles:
+    - brands
+  unicode: f797
+  voted: false
+jira:
+  changes:
+    - 5.6.0
+    - 7.0.0
+  label: Jira
+  search:
+    terms:
+      - atlassian
+  styles:
+    - brands
+  unicode: f7b1
+  voted: true
+the-red-yeti:
+  changes:
+    - 5.3.0
+    - 5.7.0
+    - 5.8.0
+    - 7.0.0
+  label: The Red Yeti
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f69d
+  voted: false
+page4:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Page4
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3d7
+  voted: false
+mdb:
+  changes:
+    - 5.11.0
+    - 7.0.0
+  label: Mdb
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f8ca
+  voted: false
+megaport:
+  changes:
+    - 5.1.0
+    - 7.0.0
+  label: Megaport
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f5a3
+  voted: false
+wpexplorer:
+  changes:
+    - 4.7.0
+    - 5.0.0
+    - 7.0.0
+  label: Wpexplorer
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f2de
+  voted: false
+bity:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Bity
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f37a
+  voted: false
+glide:
+  changes:
+    - 4.6.0
+    - 5.0.0
+    - 7.0.0
+  label: Glide
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f2a5
+  voted: false
+get-pocket:
+  changes:
+    - 4.4.0
+    - 5.0.0
+    - 7.0.0
+  label: Get Pocket
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f265
+  voted: false
+github-alt:
+  changes:
+    - 3.0.0
+    - 5.0.0
+    - 7.0.0
+  label: Github Alt
+  search:
+    terms:
+      - octocat
+  styles:
+    - brands
+  unicode: f113
+  voted: false
+google-plus-g:
+  changes:
+    - 2.0.0
+    - 5.0.0
+    - 7.0.0
+  label: Google Plus G
+  search:
+    terms:
+      - google-plus
+      - social network
+  styles:
+    - brands
+  unicode: f0d5
+  voted: false
+untappd:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Untappd
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f405
+  voted: false
+xbox:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Xbox
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f412
+  voted: false
+guilded:
+  changes:
+    - 5.15.0
+    - 7.0.0
+  label: Guilded
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e07e
+  voted: false
+delicious:
+  changes:
+    - 4.1.0
+    - 5.0.0
+    - 5.7.0
+    - 7.0.0
+  label: Delicious
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1a5
+  voted: false
+napster:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Napster
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3d2
+  voted: false
+expeditedssl:
+  changes:
+    - 4.4.0
+    - 5.0.0
+    - 7.0.0
+  label: Expeditedssl
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f23e
+  voted: false
+periscope:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Periscope
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3da
+  voted: false
+sistrix:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Sistrix
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3ee
+  voted: false
+ello:
+  changes:
+    - 5.2.0
+    - 7.0.0
+  label: Ello
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f5f1
+  voted: true
+contao:
+  changes:
+    - 4.4.0
+    - 5.0.0
+    - 7.0.0
+  label: Contao
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f26d
+  voted: false
+ebay:
+  changes:
+    - 5.0.11
+    - 5.7.0
+    - 7.0.0
+  label: Ebay
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f4f4
+  voted: true
+cc-amazon-pay:
+  changes:
+    - 5.0.2
+    - 7.0.0
+  label: Cc Amazon Pay
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f42d
+  voted: false
+centos:
+  changes:
+    - 5.6.0
+    - 5.8.0
+    - 7.0.0
+  label: Centos
+  search:
+    terms:
+      - linux
+      - operating system
+      - os
+  styles:
+    - brands
+  unicode: f789
+  voted: true
+facebook-f:
+  changes:
+    - 5.0.0
+    - 5.8.2
+    - 6.5.0
+    - 7.0.0
+  label: Facebook F
+  search:
+    terms:
+      - fabook
+      - facebook
+      - fb
+  styles:
+    - brands
+  unicode: f39e
+  voted: false
+invision:
+  changes:
+    - 5.6.0
+    - 7.0.0
+  label: Invision
+  search:
+    terms:
+      - app
+      - design
+      - interface
+  styles:
+    - brands
+  unicode: f7b0
+  voted: false
+blogger-b:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Blogger B
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f37d
+  voted: false
+drupal:
+  changes:
+    - 4.1.0
+    - 5.0.0
+    - 6.0.0-beta1
+    - 7.0.0
+  label: Drupal
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1a9
+  voted: false
+odnoklassniki:
+  changes:
+    - 4.4.0
+    - 5.0.0
+    - 7.0.0
+  label: Odnoklassniki
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f263
+  voted: false
+square-git:
+  aliases:
+    names:
+      - git-square
+  changes:
+    - 4.1.0
+    - 5.0.0
+    - 5.8.2
+    - 6.1.2
+    - 6.5.0
+    - 7.0.0
+  label: Square Git
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1d2
+  voted: false
+hooli:
+  changes:
+    - 5.0.0
+    - 5.7.0
+    - 7.0.0
+  label: Hooli
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f427
+  voted: false
+umbraco:
+  changes:
+    - 5.11.0
+    - 7.0.0
+  label: Umbraco
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f8e8
+  voted: false
+creative-commons-by:
+  changes:
+    - 5.0.11
+    - 7.0.0
+  label: Creative Commons By
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f4e7
+  voted: false
+nfc-directional:
+  changes:
+    - 6.1.0
+    - 7.0.0
+  label: Nfc Directional
+  search:
+    terms:
+      - connect
+      - data
+      - near field communication
+      - nfc
+      - scan
+      - signal
+      - transfer
+      - wireless
+  styles:
+    - brands
+  unicode: e530
+  voted: false
+sith:
+  changes:
+    - 5.0.12
+    - 7.0.0
+  label: Sith
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f512
+  voted: false
+openai:
+  changes:
+    - 7.0.0
+  label: Openai
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e7cf
+  voted: false
+pixiv:
+  changes:
+    - 6.5.0
+    - 7.0.0
+  label: Pixiv
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e640
+  voted: false
+yandex:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Yandex
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f413
+  voted: false
+zhihu:
+  changes:
+    - 5.2.0
+    - 7.0.0
+  label: Zhihu
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f63f
+  voted: true
+viacoin:
+  changes:
+    - 4.3.0
+    - 5.0.0
+    - 7.0.0
+  label: Viacoin
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f237
+  voted: false
+ubuntu:
+  changes:
+    - 5.6.0
+    - 6.5.0
+    - 7.0.0
+  label: Ubuntu
+  search:
+    terms:
+      - linux
+      - operating system
+      - os
+  styles:
+    - brands
+  unicode: f7df
+  voted: true
+vsco:
+  changes:
+    - 7.0.0
+  label: Vsco
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e7dd
+  voted: false
+openid:
+  changes:
+    - 4.1.0
+    - 5.0.0
+    - 7.0.0
+  label: Openid
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f19b
+  voted: false
+pandora:
+  changes:
+    - 7.0.0
+  label: Pandora
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e7da
+  voted: false
+amazon-pay:
+  changes:
+    - 5.0.2
+    - 5.8.0
+    - 7.0.0
+  label: Amazon Pay
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f42c
+  voted: false
+ups:
+  changes:
+    - 5.6.0
+    - 5.8.0
+    - 7.0.0
+  label: Ups
+  search:
+    terms:
+      - United Parcel Service
+      - package
+      - shipping
+  styles:
+    - brands
+  unicode: f7e0
+  voted: false
+fonticons:
+  changes:
+    - 4.4.0
+    - 5.0.0
+    - 7.0.0
+  label: Fonticons
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f280
+  voted: false
+square-js:
+  aliases:
+    names:
+      - js-square
+  changes:
+    - 5.0.0
+    - 5.0.3
+    - 6.1.2
+    - 6.5.0
+    - 7.0.0
+  label: Square Js
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3b9
+  voted: false
+xing:
+  changes:
+    - 3.2.0
+    - 5.0.0
+    - 7.0.0
+  label: Xing
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f168
+  voted: false
+signal-messenger:
+  changes:
+    - 6.5.0
+    - 6.5.1
+    - 6.7.2
+    - 7.0.0
+  label: Signal Messenger
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e663
+  voted: false
+researchgate:
+  changes:
+    - 5.0.11
+    - 7.0.0
+  label: Researchgate
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f4f8
+  voted: true
+connectdevelop:
+  changes:
+    - 4.3.0
+    - 5.0.0
+    - 7.0.0
+  label: Connectdevelop
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f20e
+  voted: false
+reddit:
+  changes:
+    - 4.1.0
+    - 5.0.0
+    - 6.5.1
+    - 7.0.0
+  label: Reddit
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1a1
+  voted: false
+creative-commons-nc-jp:
+  changes:
+    - 5.0.11
+    - 7.0.0
+  label: Creative Commons Nc Jp
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f4ea
+  voted: false
+bluetooth:
+  aliases:
+    unicodes:
+      secondary:
+        - 10f293
+  changes:
+    - 4.5.0
+    - 5.0.0
+    - 6.0.0-beta1
+    - 6.2.0
+    - 6.3.0
+    - 6.4.0
+    - 6.5.0
+    - 6.6.0
+    - 6.7.0
+    - 7.0.0
+  label: Bluetooth
+  search:
+    terms:
+      - signal
+  styles:
+    - brands
+  unicode: f293
+  voted: false
+stack-overflow:
+  changes:
+    - 3.2.0
+    - 5.0.0
+    - 7.0.0
+  label: Stack Overflow
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f16c
+  voted: false
+yarn:
+  changes:
+    - 5.6.0
+    - 7.0.0
+  label: Yarn
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f7e3
+  voted: true
+google-scholar:
+  changes:
+    - 6.5.0
+    - 7.0.0
+  label: Google Scholar
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e63b
+  voted: false
+apper:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Apper
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f371
+  voted: false
+stubber:
+  changes:
+    - 6.2.1
+    - 6.3.0
+    - 7.0.0
+  label: Stubber
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e5c7
+  voted: false
+simplybuilt:
+  changes:
+    - 4.3.0
+    - 5.0.0
+    - 7.0.0
+  label: Simplybuilt
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f215
+  voted: false
+linktree:
+  changes:
+    - 7.0.0
+  label: Linktree
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e7d8
+  voted: false
+square-web-awesome:
+  changes:
+    - 6.5.2
+    - 7.0.0
+  label: Square Web Awesome
+  search:
+    terms:
+      - awesome
+      - coding
+      - components
+      - crown
+      - web
+  styles:
+    - brands
+  unicode: e683
+  voted: false
+rebel:
+  changes:
+    - 4.1.0
+    - 5.0.0
+    - 7.0.0
+  label: Rebel
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1d0
+  voted: false
+rocketchat:
+  changes:
+    - 5.0.0
+    - 5.4.2
+    - 5.8.0
+    - 5.15.0
+    - 7.0.0
+  label: Rocketchat
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3e8
+  voted: false
+servicestack:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Servicestack
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3ec
+  voted: false
+square-behance:
+  aliases:
+    names:
+      - behance-square
+  changes:
+    - 4.1.0
+    - 5.0.0
+    - 5.0.3
+    - 6.1.2
+    - 6.5.0
+    - 7.0.0
+  label: Square Behance
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1b5
+  voted: false
+stripe-s:
+  changes:
+    - 5.0.1
+    - 5.8.0
+    - 7.0.0
+  label: Stripe S
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f42a
+  voted: false
+blackberry:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Blackberry
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f37b
+  voted: false
+resolving:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Resolving
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3e7
+  voted: false
+deskpro:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Deskpro
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f38f
+  voted: false
+skyatlas:
+  changes:
+    - 4.3.0
+    - 5.0.0
+    - 5.0.3
+    - 7.0.0
+  label: Skyatlas
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f216
+  voted: false
+hackerrank:
+  changes:
+    - 5.2.0
+    - 5.8.0
+    - 7.0.0
+  label: Hackerrank
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f5f7
+  voted: true
+cloudflare:
+  changes:
+    - 5.15.0
+    - 7.0.0
+  label: Cloudflare
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e07d
+  voted: false
+gg-circle:
+  changes:
+    - 4.4.0
+    - 5.0.0
+    - 7.0.0
+  label: Gg Circle
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f261
+  voted: false
+odysee:
+  changes:
+    - 6.2.1
+    - 6.3.0
+    - 7.0.0
+  label: Odysee
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e5c6
+  voted: false
+freebsd:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Freebsd
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3a4
+  voted: false
+firstdraft:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Firstdraft
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3a1
+  voted: false
+duolingo:
+  changes:
+    - 7.0.0
+  label: Duolingo
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: e812
+  voted: false
+fedora:
+  changes:
+    - 5.6.0
+    - 5.6.3
+    - 5.8.0
+    - 6.0.0
+    - 7.0.0
+  label: Fedora
+  search:
+    terms:
+      - linux
+      - operating system
+      - os
+  styles:
+    - brands
+  unicode: f798
+  voted: true
+cc-jcb:
+  changes:
+    - 4.4.0
+    - 5.0.0
+    - 7.0.0
+  label: Cc Jcb
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f24b
+  voted: false
+quora:
+  changes:
+    - 4.7.0
+    - 5.0.0
+    - 7.0.0
+  label: Quora
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f2c4
+  voted: false
+accessible-icon:
+  aliases:
+    unicodes:
+      composite:
+        - f29b
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Accessible Icon
+  search:
+    terms:
+      - accessibility
+      - disabled
+      - handicap
+      - person
+      - uer
+      - wheelchair
+      - wheelchair-alt
+  styles:
+    - brands
+  unicode: f368
+  voted: false
+empire:
+  changes:
+    - 4.1.0
+    - 5.0.0
+    - 7.0.0
+  label: Empire
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1d1
+  voted: false
+replyd:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Replyd
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3e6
+  voted: false
+draft2digital:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Draft2digital
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f396
+  voted: false
+mendeley:
+  changes:
+    - 5.6.0
+    - 7.0.0
+  label: Mendeley
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f7b3
+  voted: true
+cpanel:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Cpanel
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f388
+  voted: false
+square-viadeo:
+  aliases:
+    names:
+      - viadeo-square
+  changes:
+    - 4.6.0
+    - 5.0.0
+    - 5.7.0
+    - 6.1.2
+    - 6.5.0
+    - 7.0.0
+  label: Square Viadeo
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f2aa
+  voted: false
+autoprefixer:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Autoprefixer
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f41c
+  voted: false
+google-drive:
+  changes:
+    - 5.0.0
+    - 7.0.0
+  label: Google Drive
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f3aa
+  voted: false
+think-peaks:
+  changes:
+    - 5.4.2
+    - 5.8.0
+    - 7.0.0
+  label: Think Peaks
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f731
+  voted: false
+square-github:
+  aliases:
+    names:
+      - github-square
+  changes:
+    - 1.0.0
+    - 5.0.0
+    - 6.1.2
+    - 6.5.0
+    - 7.0.0
+  label: Square Github
+  search:
+    terms:
+      - octocat
+  styles:
+    - brands
+  unicode: f092
+  voted: false

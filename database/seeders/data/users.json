@@ -1,0 +1,1322 @@
+[
+    {
+        "id": 1,
+        "name": "Admin",
+        "email": "admin@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "admin",
+        "email_verified_at": "2026-01-14 00:48:28",
+        "created_at": "2026-01-14 00:48:28",
+        "updated_at": "2026-01-14 01:15:20"
+    },
+    {
+        "id": 2,
+        "name": "A New Leaf Florist",
+        "email": "Flowerfreaks07@yahoo.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:18:11",
+        "updated_at": "2026-01-14 15:23:36"
+    },
+    {
+        "id": 4,
+        "name": "The Hanger Boutique",
+        "email": "shophangerboutique@gmail.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:18:15",
+        "updated_at": "2026-01-14 15:23:37"
+    },
+    {
+        "id": 5,
+        "name": "Nest 1896",
+        "email": "Shopnest1896@gmail.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:18:17",
+        "updated_at": "2026-01-14 15:23:38"
+    },
+    {
+        "id": 7,
+        "name": "Lee\u2019s Comfort Shoes",
+        "email": "leescomfort@embarqmail.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:18:21",
+        "updated_at": "2026-01-14 15:23:39"
+    },
+    {
+        "id": 9,
+        "name": "Stephen\u2019s Fine Jewelry",
+        "email": "sfj@bright.net",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:18:25",
+        "updated_at": "2026-01-14 04:18:25"
+    },
+    {
+        "id": 10,
+        "name": "A Robbins Nest",
+        "email": "a-robbins-nest-626504@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:18:13",
+        "updated_at": "2026-01-14 15:23:36"
+    },
+    {
+        "id": 11,
+        "name": "The Olde Mint Antiques LLC",
+        "email": "the-olde-mint-antiques-llc-ad85d4@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:18:19",
+        "updated_at": "2026-01-14 15:23:38"
+    },
+    {
+        "id": 12,
+        "name": "Tanger\u2019s Furniture",
+        "email": "tangers-furniture-54eb83@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:18:23",
+        "updated_at": "2026-01-14 15:23:39"
+    },
+    {
+        "id": 13,
+        "name": "The Poppy Seed",
+        "email": "the-poppy-seed-3ec17c@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:18:28",
+        "updated_at": "2026-01-14 15:23:40"
+    },
+    {
+        "id": 14,
+        "name": "Six Hundred Downtown",
+        "email": "six-hundred-downtown-3a590f@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:18:30",
+        "updated_at": "2026-01-14 15:23:40"
+    },
+    {
+        "id": 15,
+        "name": "S Canby St-Parking",
+        "email": "s-canby-st-parking-ed8deb@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:18:32",
+        "updated_at": "2026-01-14 04:18:32"
+    },
+    {
+        "id": 16,
+        "name": "68 S Detroit St-Parking",
+        "email": "68-s-detroit-st-parking-4e38a0@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:18:35",
+        "updated_at": "2026-01-14 04:18:35"
+    },
+    {
+        "id": 17,
+        "name": "Court Ave -Parking",
+        "email": "court-ave-parking-0b4936@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:18:38",
+        "updated_at": "2026-01-14 04:18:38"
+    },
+    {
+        "id": 18,
+        "name": "129 W Chillicothe Ave -Parking",
+        "email": "129-w-chillicothe-ave-parking-ac8cab@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:18:41",
+        "updated_at": "2026-01-14 04:18:41"
+    },
+    {
+        "id": 19,
+        "name": "Rustic Boutique",
+        "email": "rusticboutique@outlook.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:18:44",
+        "updated_at": "2026-01-14 15:23:41"
+    },
+    {
+        "id": 20,
+        "name": "Native Coffee Co",
+        "email": "native-coffee-co-b9b8e7@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:18:47",
+        "updated_at": "2026-01-14 15:23:41"
+    },
+    {
+        "id": 21,
+        "name": "Brewfontaine",
+        "email": "cheers@brewfontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:18:50",
+        "updated_at": "2026-01-14 15:23:42"
+    },
+    {
+        "id": 22,
+        "name": "2Gs BBQ",
+        "email": "2gs-bbq-bc5113@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:18:52",
+        "updated_at": "2026-01-14 15:23:42"
+    },
+    {
+        "id": 23,
+        "name": "Putt & Play Golf Center",
+        "email": "putt-play-golf-center-56a333@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:18:54",
+        "updated_at": "2026-01-14 15:23:43"
+    },
+    {
+        "id": 24,
+        "name": "Bear Bones Tattoo Gallery",
+        "email": "bear-bones-tattoo-gallery-69f5fe@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:18:57",
+        "updated_at": "2026-01-14 04:18:57"
+    },
+    {
+        "id": 25,
+        "name": "Kiyomi Sushi Steakhouse",
+        "email": "kiyomi-sushi-steakhouse-c28389@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:19:00",
+        "updated_at": "2026-01-14 15:23:43"
+    },
+    {
+        "id": 26,
+        "name": "Sweet Aromas Coffee",
+        "email": "sweet-aromas-coffee-049393@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:19:02",
+        "updated_at": "2026-01-14 15:23:44"
+    },
+    {
+        "id": 27,
+        "name": "The Fun Company",
+        "email": "the-fun-company-fd69d2@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:19:04",
+        "updated_at": "2026-01-14 15:23:45"
+    },
+    {
+        "id": 28,
+        "name": "Don's Downtown Diner",
+        "email": "dons-downtown-diner-9f6efd@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:19:06",
+        "updated_at": "2026-01-14 04:19:06"
+    },
+    {
+        "id": 29,
+        "name": "City Sweets and Creamery",
+        "email": "city-sweets-and-creamery-624935@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:19:09",
+        "updated_at": "2026-01-14 15:23:45"
+    },
+    {
+        "id": 30,
+        "name": "PeachTree Boutique",
+        "email": "peachtree_gifts@outlook.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:19:11",
+        "updated_at": "2026-01-14 15:23:46"
+    },
+    {
+        "id": 31,
+        "name": "Whit\u2019s Frozen Custard",
+        "email": "contact@whitsbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:19:14",
+        "updated_at": "2026-01-14 15:23:47"
+    },
+    {
+        "id": 32,
+        "name": "Holland Theatre",
+        "email": "holland-theatre-ffa87e@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:19:16",
+        "updated_at": "2026-01-14 15:23:47"
+    },
+    {
+        "id": 33,
+        "name": "Anytime Fitness",
+        "email": "anytime-fitness-eaef16@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:19:18",
+        "updated_at": "2026-01-14 15:23:48"
+    },
+    {
+        "id": 34,
+        "name": "Roundhouse Depot Brewing Company",
+        "email": "roundhouse-depot-brewing-company-2c68bc@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:19:21",
+        "updated_at": "2026-01-14 15:23:48"
+    },
+    {
+        "id": 35,
+        "name": "Bella Vino Events & Wine Room",
+        "email": "bella-vino-events-wine-room-9bdd82@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:19:24",
+        "updated_at": "2026-01-14 15:23:49"
+    },
+    {
+        "id": 36,
+        "name": "Main Street Marketplace",
+        "email": "main-street-marketplace-9731bd@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:19:26",
+        "updated_at": "2026-01-14 15:23:49"
+    },
+    {
+        "id": 37,
+        "name": "Homegrown Yoga",
+        "email": "homegrown-yoga-25228f@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:19:29",
+        "updated_at": "2026-01-14 15:23:50"
+    },
+    {
+        "id": 38,
+        "name": "Just U\u2019NeeQ",
+        "email": "just-uneeq-cbc62f@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:19:32",
+        "updated_at": "2026-01-14 15:23:50"
+    },
+    {
+        "id": 39,
+        "name": "Four Acre Clothing Company",
+        "email": "four-acre-clothing-company-16c1c5@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:19:34",
+        "updated_at": "2026-01-14 15:23:50"
+    },
+    {
+        "id": 40,
+        "name": "Comfort Inn",
+        "email": "comfort-inn-43a407@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:19:36",
+        "updated_at": "2026-01-14 15:23:51"
+    },
+    {
+        "id": 41,
+        "name": "Super 8",
+        "email": "super-8-ea7e47@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:19:39",
+        "updated_at": "2026-01-14 15:23:51"
+    },
+    {
+        "id": 42,
+        "name": "The Loft Above",
+        "email": "the-loft-above-b2c72b@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:19:41",
+        "updated_at": "2026-01-14 15:23:51"
+    },
+    {
+        "id": 43,
+        "name": "Undertone on Main",
+        "email": "undertone-on-main-293a98@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:19:44",
+        "updated_at": "2026-01-14 15:23:52"
+    },
+    {
+        "id": 44,
+        "name": "Brinkman Hypnosis Solutions",
+        "email": "brinkman-hypnosis-solutions-7d7d57@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:19:47",
+        "updated_at": "2026-01-14 15:23:52"
+    },
+    {
+        "id": 45,
+        "name": "The Morning Riot",
+        "email": "the-morning-riot-4ee008@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:19:49",
+        "updated_at": "2026-01-14 15:23:53"
+    },
+    {
+        "id": 46,
+        "name": "Small Nation",
+        "email": "small-nation-5e71c3@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:19:52",
+        "updated_at": "2026-01-14 15:23:53"
+    },
+    {
+        "id": 47,
+        "name": "Jazzercise",
+        "email": "jazzercise-927ff5@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:19:54",
+        "updated_at": "2026-01-14 15:23:53"
+    },
+    {
+        "id": 48,
+        "name": "Allstate Insurance",
+        "email": "allstate-insurance-deb400@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:19:57",
+        "updated_at": "2026-01-14 15:23:53"
+    },
+    {
+        "id": 49,
+        "name": "Hair by Rascals",
+        "email": "hair-by-rascals-dcf31a@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:19:59",
+        "updated_at": "2026-01-14 04:19:59"
+    },
+    {
+        "id": 50,
+        "name": "PNC Bank",
+        "email": "pnc-bank-8ebcac@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:20:03",
+        "updated_at": "2026-01-14 15:23:53"
+    },
+    {
+        "id": 51,
+        "name": "Dodd\u2019s Wealth Advisors",
+        "email": "dodds-wealth-advisors-eea929@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:20:05",
+        "updated_at": "2026-01-14 15:23:54"
+    },
+    {
+        "id": 52,
+        "name": "The Photo Booth",
+        "email": "the-photo-booth-c98109@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:20:08",
+        "updated_at": "2026-01-14 15:23:54"
+    },
+    {
+        "id": 53,
+        "name": "Bellefontaine Dental",
+        "email": "bellefontaine-dental-52a8f3@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:20:11",
+        "updated_at": "2026-01-14 15:23:54"
+    },
+    {
+        "id": 54,
+        "name": "Zimmerman Realty Ltd",
+        "email": "zimmerman-realty-ltd-de16c8@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:20:14",
+        "updated_at": "2026-01-14 15:23:55"
+    },
+    {
+        "id": 55,
+        "name": "Edward Jones",
+        "email": "edward-jones-9a0d46@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:20:16",
+        "updated_at": "2026-01-14 15:23:55"
+    },
+    {
+        "id": 56,
+        "name": "H&R Block",
+        "email": "hr-block-c85eda@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:20:19",
+        "updated_at": "2026-01-14 15:23:55"
+    },
+    {
+        "id": 57,
+        "name": "Belle Printing",
+        "email": "belle-printing-8eb8b4@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:20:22",
+        "updated_at": "2026-01-14 15:23:55"
+    },
+    {
+        "id": 58,
+        "name": "JB and Company",
+        "email": "jb-and-company-ff29c7@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:20:24",
+        "updated_at": "2026-01-14 15:23:56"
+    },
+    {
+        "id": 59,
+        "name": "American Solutions for Business",
+        "email": "american-solutions-for-business-bdfb8f@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:20:26",
+        "updated_at": "2026-01-14 04:20:26"
+    },
+    {
+        "id": 60,
+        "name": "Nationwide Insurance",
+        "email": "nationwide-insurance-d84707@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:20:29",
+        "updated_at": "2026-01-14 15:23:56"
+    },
+    {
+        "id": 61,
+        "name": "United States Postal Service",
+        "email": "united-states-postal-service-28c66f@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:20:32",
+        "updated_at": "2026-01-14 15:23:56"
+    },
+    {
+        "id": 62,
+        "name": "Gates Brothers Logan County Glass Inc",
+        "email": "gates-brothers-logan-county-glass-inc-0ad29d@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:20:34",
+        "updated_at": "2026-01-14 15:23:56"
+    },
+    {
+        "id": 63,
+        "name": "The Logan County Farmer\u2019s Market",
+        "email": "the-logan-county-farmers-market-c097d1@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:20:37",
+        "updated_at": "2026-01-14 15:23:57"
+    },
+    {
+        "id": 64,
+        "name": "Minnich Law Offices, LLC",
+        "email": "minnich-law-offices-llc-7636cc@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:20:39",
+        "updated_at": "2026-01-14 04:20:39"
+    },
+    {
+        "id": 65,
+        "name": "Undertone Beauty Bar",
+        "email": "undertone-beauty-bar-9fa01c@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:20:42",
+        "updated_at": "2026-01-14 15:23:57"
+    },
+    {
+        "id": 66,
+        "name": "Golden Reserve",
+        "email": "golden-reserve-cc4021@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:20:45",
+        "updated_at": "2026-01-14 15:23:58"
+    },
+    {
+        "id": 67,
+        "name": "Superior Moving Services",
+        "email": "superior-moving-services-51adf7@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:20:47",
+        "updated_at": "2026-01-14 15:23:58"
+    },
+    {
+        "id": 68,
+        "name": "Scout Title",
+        "email": "scout-title-e862fa@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:20:49",
+        "updated_at": "2026-01-14 15:23:58"
+    },
+    {
+        "id": 69,
+        "name": "AlerStallings, LLC",
+        "email": "alerstallings-llc-801fdc@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:20:52",
+        "updated_at": "2026-01-14 15:23:58"
+    },
+    {
+        "id": 70,
+        "name": "Citizens Federal Savings and Loan Association",
+        "email": "citizens-federal-savings-and-loan-association-0331a3@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:20:54",
+        "updated_at": "2026-01-14 15:23:58"
+    },
+    {
+        "id": 71,
+        "name": "Huntington Bank",
+        "email": "huntington-bank-4330e8@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:20:56",
+        "updated_at": "2026-01-14 15:23:59"
+    },
+    {
+        "id": 72,
+        "name": "Ameriprise Financial",
+        "email": "ameriprise-financial-85db7b@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:20:59",
+        "updated_at": "2026-01-14 15:23:59"
+    },
+    {
+        "id": 73,
+        "name": "Cardinal Appraisals",
+        "email": "cardinal-appraisals-1cf5c9@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:21:01",
+        "updated_at": "2026-01-14 04:21:01"
+    },
+    {
+        "id": 74,
+        "name": "Don M Hilliker Company",
+        "email": "don-m-hilliker-company-7b4378@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:21:04",
+        "updated_at": "2026-01-14 04:21:04"
+    },
+    {
+        "id": 75,
+        "name": "Skin Sanctuary Boutique Spa",
+        "email": "skin-sanctuary-boutique-spa-352ee8@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:21:06",
+        "updated_at": "2026-01-14 15:23:59"
+    },
+    {
+        "id": 76,
+        "name": "Beasley Architecture & Design",
+        "email": "beasley-architecture-design-a0b00a@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:21:11",
+        "updated_at": "2026-01-14 15:24:00"
+    },
+    {
+        "id": 77,
+        "name": "All-Around Awards",
+        "email": "all-around-awards-1f712b@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:21:13",
+        "updated_at": "2026-01-14 15:24:00"
+    },
+    {
+        "id": 78,
+        "name": "Alan Galvez Insurance, Ltd.",
+        "email": "alan-galvez-insurance-ltd-7a8919@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:21:16",
+        "updated_at": "2026-01-14 15:24:00"
+    },
+    {
+        "id": 79,
+        "name": "JC Sports",
+        "email": "jc-sports-4772ce@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:21:18",
+        "updated_at": "2026-01-14 15:24:01"
+    },
+    {
+        "id": 80,
+        "name": "Aunalytics",
+        "email": "aunalytics-6d27d8@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:21:23",
+        "updated_at": "2026-01-14 15:24:01"
+    },
+    {
+        "id": 81,
+        "name": "Artistic Treasures",
+        "email": "artistic-treasures-ea2bb4@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:21:26",
+        "updated_at": "2026-01-14 04:21:26"
+    },
+    {
+        "id": 82,
+        "name": "Peak Performance Holistic Health Center",
+        "email": "peak-performance-holistic-health-center-a2fd49@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:21:29",
+        "updated_at": "2026-01-14 15:24:01"
+    },
+    {
+        "id": 83,
+        "name": "Modern Office Methods",
+        "email": "modern-office-methods-1bd28a@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:21:31",
+        "updated_at": "2026-01-14 15:24:01"
+    },
+    {
+        "id": 84,
+        "name": "Prescription Bliss",
+        "email": "prescription-bliss-d73aa9@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:21:34",
+        "updated_at": "2026-01-14 15:24:01"
+    },
+    {
+        "id": 85,
+        "name": "Smith, Smith, Montgomery & Chamberlain, LLC",
+        "email": "smith-smith-montgomery-chamberlain-llc-8c9de3@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:21:37",
+        "updated_at": "2026-01-14 15:24:02"
+    },
+    {
+        "id": 86,
+        "name": "Hickory Medical Direct Primary Care, LLC",
+        "email": "hickory-medical-direct-primary-care-llc-f75bdc@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:21:39",
+        "updated_at": "2026-01-14 15:24:02"
+    },
+    {
+        "id": 87,
+        "name": "Wren\u2019s Florist & Greenhouse",
+        "email": "wrens-florist-greenhouse-edd181@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:21:43",
+        "updated_at": "2026-01-14 15:24:02"
+    },
+    {
+        "id": 88,
+        "name": "Robson Family Dentistry",
+        "email": "robson-family-dentistry-4a3b1f@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:21:45",
+        "updated_at": "2026-01-14 15:24:02"
+    },
+    {
+        "id": 89,
+        "name": "Logan County Libraries",
+        "email": "logan-county-libraries-6bf459@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:21:48",
+        "updated_at": "2026-01-14 15:24:03"
+    },
+    {
+        "id": 90,
+        "name": "High Point Home Health Ltd.",
+        "email": "high-point-home-health-ltd-8d3696@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:21:51",
+        "updated_at": "2026-01-14 15:24:03"
+    },
+    {
+        "id": 91,
+        "name": "Hess Lumber Company",
+        "email": "hess-lumber-company-cb6248@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:21:54",
+        "updated_at": "2026-01-14 15:24:03"
+    },
+    {
+        "id": 92,
+        "name": "Logan County Historical Center",
+        "email": "logan-county-historical-center-e9459b@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:21:56",
+        "updated_at": "2026-01-14 15:24:04"
+    },
+    {
+        "id": 93,
+        "name": "Logan County Commissioners Office",
+        "email": "logan-county-commissioners-office-573d66@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:21:58",
+        "updated_at": "2026-01-14 04:21:58"
+    },
+    {
+        "id": 94,
+        "name": "Logan County Veterans Services",
+        "email": "logan-county-veterans-services-b6e475@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:22:01",
+        "updated_at": "2026-01-14 04:22:01"
+    },
+    {
+        "id": 95,
+        "name": "A Peaceful Place Massage Company",
+        "email": "a-peaceful-place-massage-company-abe459@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:22:04",
+        "updated_at": "2026-01-14 15:24:04"
+    },
+    {
+        "id": 96,
+        "name": "Loco Depot Training Station",
+        "email": "loco-depot-training-station-691e8b@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:22:06",
+        "updated_at": "2026-01-14 15:24:05"
+    },
+    {
+        "id": 97,
+        "name": "Watkins Electric & Communications, LLC",
+        "email": "watkins-electric-communications-llc-046002@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:22:08",
+        "updated_at": "2026-01-14 04:22:08"
+    },
+    {
+        "id": 98,
+        "name": "Jennifer Marie Errington, LISW-S, RPT",
+        "email": "jennifer-marie-errington-lisw-s-rpt-fc43fc@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:22:11",
+        "updated_at": "2026-01-14 04:22:11"
+    },
+    {
+        "id": 99,
+        "name": "Ascend Consulting, LLC",
+        "email": "ascend-consulting-llc-f65fbf@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:22:13",
+        "updated_at": "2026-01-14 15:24:05"
+    },
+    {
+        "id": 100,
+        "name": "Classic Windows Doors-N-More",
+        "email": "classic-windows-doors-n-more-10ca07@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:22:16",
+        "updated_at": "2026-01-14 04:22:16"
+    },
+    {
+        "id": 101,
+        "name": "King of Kingz Barbershop",
+        "email": "king-of-kingz-barbershop-6e44dd@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:22:18",
+        "updated_at": "2026-01-14 15:24:05"
+    },
+    {
+        "id": 102,
+        "name": "The Flying Pepper Cantina",
+        "email": "the-flying-pepper-cantina-4f8b08@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:22:21",
+        "updated_at": "2026-01-14 15:24:05"
+    },
+    {
+        "id": 103,
+        "name": "Bellefontaine Police Department",
+        "email": "bellefontaine-police-department-a8c32c@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:22:24",
+        "updated_at": "2026-01-14 15:24:06"
+    },
+    {
+        "id": 104,
+        "name": "Bellefontaine City & Mayors Office",
+        "email": "bellefontaine-city-mayors-office-ce6a17@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:22:26",
+        "updated_at": "2026-01-14 15:24:06"
+    },
+    {
+        "id": 105,
+        "name": "Bellefontaine Fire Department",
+        "email": "bellefontaine-fire-department-792056@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:22:29",
+        "updated_at": "2026-01-14 04:22:29"
+    },
+    {
+        "id": 106,
+        "name": "BUILD Cowork + Space",
+        "email": "build-cowork-space-068962@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:22:31",
+        "updated_at": "2026-01-14 15:24:06"
+    },
+    {
+        "id": 107,
+        "name": "The Syndicate",
+        "email": "the-syndicate-798519@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:22:33",
+        "updated_at": "2026-01-14 15:24:07"
+    },
+    {
+        "id": 108,
+        "name": "Transportation Museum",
+        "email": "transportation-museum-3ff164@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:22:36",
+        "updated_at": "2026-01-14 15:24:07"
+    },
+    {
+        "id": 109,
+        "name": "Axe Ventura",
+        "email": "BELLEFONTAINE@AXE-VENTURA.COM",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:22:39",
+        "updated_at": "2026-01-14 15:24:08"
+    },
+    {
+        "id": 110,
+        "name": "Richwood Bank",
+        "email": "richwood-bank-0510fa@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:22:41",
+        "updated_at": "2026-01-14 15:24:08"
+    },
+    {
+        "id": 111,
+        "name": "Salon Platinum 121",
+        "email": "salon-platinum-121-add2fe@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:22:43",
+        "updated_at": "2026-01-14 15:24:08"
+    },
+    {
+        "id": 112,
+        "name": "Relax Nail Bar and Salon",
+        "email": "relax-nail-bar-and-salon-0ee8a3@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:22:46",
+        "updated_at": "2026-01-14 15:24:09"
+    },
+    {
+        "id": 113,
+        "name": "Farm Charm",
+        "email": "farm-charm-6df450@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:22:48",
+        "updated_at": "2026-01-14 15:24:09"
+    },
+    {
+        "id": 114,
+        "name": "Glitter and Grit",
+        "email": "glitter-and-grit-89aac4@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:22:51",
+        "updated_at": "2026-01-14 15:24:10"
+    },
+    {
+        "id": 115,
+        "name": "Queen of Hearts",
+        "email": "queen-of-hearts-cef344@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:22:54",
+        "updated_at": "2026-01-14 15:24:10"
+    },
+    {
+        "id": 116,
+        "name": "The Craft Emporium",
+        "email": "the-craft-emporium-75a396@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:22:56",
+        "updated_at": "2026-01-14 15:24:11"
+    },
+    {
+        "id": 117,
+        "name": "Rush Creek Art Studio",
+        "email": "rush-creek-art-studio-562373@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:22:59",
+        "updated_at": "2026-01-14 15:24:12"
+    },
+    {
+        "id": 118,
+        "name": "Candy Craze",
+        "email": "candy-craze-dbd7b8@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:23:03",
+        "updated_at": "2026-01-14 15:24:12"
+    },
+    {
+        "id": 119,
+        "name": "The Naked Goat",
+        "email": "the-naked-goat-86ad43@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:23:08",
+        "updated_at": "2026-01-14 15:24:13"
+    },
+    {
+        "id": 120,
+        "name": "One-Eyed Cookie Lab",
+        "email": "one-eyed-cookie-lab-6fb286@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:23:10",
+        "updated_at": "2026-01-14 15:24:13"
+    },
+    {
+        "id": 121,
+        "name": "Salty Swan",
+        "email": "salty-swan-42e146@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:23:13",
+        "updated_at": "2026-01-14 15:24:14"
+    },
+    {
+        "id": 122,
+        "name": "The Flats",
+        "email": "the-flats-a6ded2@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:23:16",
+        "updated_at": "2026-01-14 15:24:14"
+    },
+    {
+        "id": 123,
+        "name": "Sofa Express",
+        "email": "sofa-express-79390a@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:23:18",
+        "updated_at": "2026-01-14 15:24:14"
+    },
+    {
+        "id": 124,
+        "name": "Triple Moon Designs",
+        "email": "triple-moon-designs-5c603b@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:23:21",
+        "updated_at": "2026-01-14 15:24:14"
+    },
+    {
+        "id": 125,
+        "name": "Decode Zone",
+        "email": "decode-zone-5a72fa@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:23:24",
+        "updated_at": "2026-01-14 15:24:15"
+    },
+    {
+        "id": 126,
+        "name": "Wrock Bottom Bar",
+        "email": "wrock-bottom-bar-139255@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:23:27",
+        "updated_at": "2026-01-14 15:24:16"
+    },
+    {
+        "id": 127,
+        "name": "Mystic Mama Rock + Jewelry",
+        "email": "mystic-mama-rock-jewelry-5c4d7a@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:23:29",
+        "updated_at": "2026-01-14 15:24:16"
+    },
+    {
+        "id": 128,
+        "name": "Two Babes Boutique",
+        "email": "two-babes-boutique-51f623@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:23:32",
+        "updated_at": "2026-01-14 15:24:16"
+    },
+    {
+        "id": 129,
+        "name": "Opera Suites by BUILD",
+        "email": "opera-suites-by-build-ee77ae@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:23:34",
+        "updated_at": "2026-01-14 15:24:16"
+    },
+    {
+        "id": 130,
+        "name": "Lavender Undergound Salon & Grooming Parlor",
+        "email": "lavender-undergound-salon-grooming-parlor-ccc428@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:23:36",
+        "updated_at": "2026-01-14 15:24:17"
+    },
+    {
+        "id": 131,
+        "name": "The Butcher & Market",
+        "email": "the-butcher-market-e2b584@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:23:39",
+        "updated_at": "2026-01-14 15:24:17"
+    },
+    {
+        "id": 132,
+        "name": "Modern Beauty Aesthetics and Wellness",
+        "email": "modern-beauty-aesthetics-and-wellness-7a98ee@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:23:41",
+        "updated_at": "2026-01-14 15:24:17"
+    },
+    {
+        "id": 133,
+        "name": "Legado Brazilian Jiu Jitsu",
+        "email": "legado-brazilian-jiu-jitsu-b5f8f9@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:23:44",
+        "updated_at": "2026-01-14 15:24:18"
+    },
+    {
+        "id": 134,
+        "name": "The Academy",
+        "email": "the-academy-8acd56@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:23:47",
+        "updated_at": "2026-01-14 15:24:19"
+    },
+    {
+        "id": 135,
+        "name": "Allways Brewin\u2019",
+        "email": "allways-brewin-1da069@downtownbellefontaine.com",
+        "password": "$2y$12$gpYJ2AxnL0NDDsBVFwCwDuEif.3WkMchu9SoNuqy5LOuO3hkqXUq.",
+        "role": "business_owner",
+        "email_verified_at": null,
+        "created_at": "2026-01-14 04:23:50",
+        "updated_at": "2026-01-14 15:24:19"
+    }
+]

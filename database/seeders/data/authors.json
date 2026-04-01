@@ -1,0 +1,13 @@
+[
+    {
+        "id": 1,
+        "name": "Downtown Bellefontaine",
+        "slug": "downtown-bellefontaine",
+        "title": "Staff Writer",
+        "bio": null,
+        "photo": null,
+        "is_active": true,
+        "created_at": "2026-01-14 13:43:19",
+        "updated_at": "2026-01-14 13:43:19"
+    }
+]

@@ -1,0 +1,4132 @@
+[
+    {
+        "id": 1,
+        "blog_post_id": 1,
+        "business_id": 41,
+        "created_at": "2026-01-14 15:08:23",
+        "updated_at": "2026-01-14 15:08:23"
+    },
+    {
+        "id": 2,
+        "blog_post_id": 1,
+        "business_id": 37,
+        "created_at": "2026-01-14 15:08:23",
+        "updated_at": "2026-01-14 15:08:23"
+    },
+    {
+        "id": 3,
+        "blog_post_id": 1,
+        "business_id": 51,
+        "created_at": "2026-01-14 15:08:23",
+        "updated_at": "2026-01-14 15:08:23"
+    },
+    {
+        "id": 4,
+        "blog_post_id": 2,
+        "business_id": 50,
+        "created_at": "2026-01-14 15:08:27",
+        "updated_at": "2026-01-14 15:08:27"
+    },
+    {
+        "id": 5,
+        "blog_post_id": 2,
+        "business_id": 117,
+        "created_at": "2026-01-14 15:08:27",
+        "updated_at": "2026-01-14 15:08:27"
+    },
+    {
+        "id": 6,
+        "blog_post_id": 2,
+        "business_id": 58,
+        "created_at": "2026-01-14 15:08:27",
+        "updated_at": "2026-01-14 15:08:27"
+    },
+    {
+        "id": 7,
+        "blog_post_id": 3,
+        "business_id": 50,
+        "created_at": "2026-01-14 15:08:29",
+        "updated_at": "2026-01-14 15:08:29"
+    },
+    {
+        "id": 8,
+        "blog_post_id": 3,
+        "business_id": 110,
+        "created_at": "2026-01-14 15:08:29",
+        "updated_at": "2026-01-14 15:08:29"
+    },
+    {
+        "id": 9,
+        "blog_post_id": 4,
+        "business_id": 42,
+        "created_at": "2026-01-14 15:08:32",
+        "updated_at": "2026-01-14 15:08:32"
+    },
+    {
+        "id": 10,
+        "blog_post_id": 4,
+        "business_id": 50,
+        "created_at": "2026-01-14 15:08:32",
+        "updated_at": "2026-01-14 15:08:32"
+    },
+    {
+        "id": 11,
+        "blog_post_id": 5,
+        "business_id": 50,
+        "created_at": "2026-01-14 15:08:35",
+        "updated_at": "2026-01-14 15:08:35"
+    },
+    {
+        "id": 12,
+        "blog_post_id": 5,
+        "business_id": 26,
+        "created_at": "2026-01-14 15:08:35",
+        "updated_at": "2026-01-14 15:08:35"
+    },
+    {
+        "id": 13,
+        "blog_post_id": 6,
+        "business_id": 9,
+        "created_at": "2026-01-14 15:08:38",
+        "updated_at": "2026-01-14 15:08:38"
+    },
+    {
+        "id": 14,
+        "blog_post_id": 6,
+        "business_id": 10,
+        "created_at": "2026-01-14 15:08:38",
+        "updated_at": "2026-01-14 15:08:38"
+    },
+    {
+        "id": 15,
+        "blog_post_id": 6,
+        "business_id": 11,
+        "created_at": "2026-01-14 15:08:38",
+        "updated_at": "2026-01-14 15:08:38"
+    },
+    {
+        "id": 16,
+        "blog_post_id": 6,
+        "business_id": 12,
+        "created_at": "2026-01-14 15:08:38",
+        "updated_at": "2026-01-14 15:08:38"
+    },
+    {
+        "id": 17,
+        "blog_post_id": 6,
+        "business_id": 13,
+        "created_at": "2026-01-14 15:08:38",
+        "updated_at": "2026-01-14 15:08:38"
+    },
+    {
+        "id": 18,
+        "blog_post_id": 6,
+        "business_id": 14,
+        "created_at": "2026-01-14 15:08:38",
+        "updated_at": "2026-01-14 15:08:38"
+    },
+    {
+        "id": 19,
+        "blog_post_id": 6,
+        "business_id": 15,
+        "created_at": "2026-01-14 15:08:38",
+        "updated_at": "2026-01-14 15:08:38"
+    },
+    {
+        "id": 20,
+        "blog_post_id": 6,
+        "business_id": 16,
+        "created_at": "2026-01-14 15:08:38",
+        "updated_at": "2026-01-14 15:08:38"
+    },
+    {
+        "id": 21,
+        "blog_post_id": 6,
+        "business_id": 17,
+        "created_at": "2026-01-14 15:08:38",
+        "updated_at": "2026-01-14 15:08:38"
+    },
+    {
+        "id": 22,
+        "blog_post_id": 6,
+        "business_id": 18,
+        "created_at": "2026-01-14 15:08:38",
+        "updated_at": "2026-01-14 15:08:38"
+    },
+    {
+        "id": 23,
+        "blog_post_id": 6,
+        "business_id": 24,
+        "created_at": "2026-01-14 15:08:38",
+        "updated_at": "2026-01-14 15:08:38"
+    },
+    {
+        "id": 24,
+        "blog_post_id": 6,
+        "business_id": 25,
+        "created_at": "2026-01-14 15:08:38",
+        "updated_at": "2026-01-14 15:08:38"
+    },
+    {
+        "id": 25,
+        "blog_post_id": 6,
+        "business_id": 26,
+        "created_at": "2026-01-14 15:08:38",
+        "updated_at": "2026-01-14 15:08:38"
+    },
+    {
+        "id": 26,
+        "blog_post_id": 6,
+        "business_id": 31,
+        "created_at": "2026-01-14 15:08:38",
+        "updated_at": "2026-01-14 15:08:38"
+    },
+    {
+        "id": 27,
+        "blog_post_id": 6,
+        "business_id": 33,
+        "created_at": "2026-01-14 15:08:38",
+        "updated_at": "2026-01-14 15:08:38"
+    },
+    {
+        "id": 28,
+        "blog_post_id": 6,
+        "business_id": 34,
+        "created_at": "2026-01-14 15:08:38",
+        "updated_at": "2026-01-14 15:08:38"
+    },
+    {
+        "id": 29,
+        "blog_post_id": 6,
+        "business_id": 35,
+        "created_at": "2026-01-14 15:08:38",
+        "updated_at": "2026-01-14 15:08:38"
+    },
+    {
+        "id": 30,
+        "blog_post_id": 6,
+        "business_id": 39,
+        "created_at": "2026-01-14 15:08:38",
+        "updated_at": "2026-01-14 15:08:38"
+    },
+    {
+        "id": 31,
+        "blog_post_id": 6,
+        "business_id": 40,
+        "created_at": "2026-01-14 15:08:38",
+        "updated_at": "2026-01-14 15:08:38"
+    },
+    {
+        "id": 32,
+        "blog_post_id": 6,
+        "business_id": 50,
+        "created_at": "2026-01-14 15:08:38",
+        "updated_at": "2026-01-14 15:08:38"
+    },
+    {
+        "id": 33,
+        "blog_post_id": 7,
+        "business_id": 33,
+        "created_at": "2026-01-14 15:08:41",
+        "updated_at": "2026-01-14 15:08:41"
+    },
+    {
+        "id": 34,
+        "blog_post_id": 8,
+        "business_id": 50,
+        "created_at": "2026-01-14 15:08:46",
+        "updated_at": "2026-01-14 15:08:46"
+    },
+    {
+        "id": 35,
+        "blog_post_id": 8,
+        "business_id": 37,
+        "created_at": "2026-01-14 15:08:46",
+        "updated_at": "2026-01-14 15:08:46"
+    },
+    {
+        "id": 36,
+        "blog_post_id": 9,
+        "business_id": 13,
+        "created_at": "2026-01-14 15:08:48",
+        "updated_at": "2026-01-14 15:08:48"
+    },
+    {
+        "id": 37,
+        "blog_post_id": 10,
+        "business_id": 50,
+        "created_at": "2026-01-14 15:08:51",
+        "updated_at": "2026-01-14 15:08:51"
+    },
+    {
+        "id": 38,
+        "blog_post_id": 10,
+        "business_id": 110,
+        "created_at": "2026-01-14 15:08:51",
+        "updated_at": "2026-01-14 15:08:51"
+    },
+    {
+        "id": 39,
+        "blog_post_id": 11,
+        "business_id": 12,
+        "created_at": "2026-01-14 15:08:54",
+        "updated_at": "2026-01-14 15:08:54"
+    },
+    {
+        "id": 40,
+        "blog_post_id": 12,
+        "business_id": 17,
+        "created_at": "2026-01-14 15:08:57",
+        "updated_at": "2026-01-14 15:08:57"
+    },
+    {
+        "id": 41,
+        "blog_post_id": 12,
+        "business_id": 18,
+        "created_at": "2026-01-14 15:08:57",
+        "updated_at": "2026-01-14 15:08:57"
+    },
+    {
+        "id": 42,
+        "blog_post_id": 12,
+        "business_id": 43,
+        "created_at": "2026-01-14 15:08:57",
+        "updated_at": "2026-01-14 15:08:57"
+    },
+    {
+        "id": 43,
+        "blog_post_id": 12,
+        "business_id": 36,
+        "created_at": "2026-01-14 15:08:57",
+        "updated_at": "2026-01-14 15:08:57"
+    },
+    {
+        "id": 44,
+        "blog_post_id": 12,
+        "business_id": 35,
+        "created_at": "2026-01-14 15:08:57",
+        "updated_at": "2026-01-14 15:08:57"
+    },
+    {
+        "id": 45,
+        "blog_post_id": 13,
+        "business_id": 32,
+        "created_at": "2026-01-14 15:08:59",
+        "updated_at": "2026-01-14 15:08:59"
+    },
+    {
+        "id": 46,
+        "blog_post_id": 13,
+        "business_id": 33,
+        "created_at": "2026-01-14 15:08:59",
+        "updated_at": "2026-01-14 15:08:59"
+    },
+    {
+        "id": 47,
+        "blog_post_id": 13,
+        "business_id": 25,
+        "created_at": "2026-01-14 15:08:59",
+        "updated_at": "2026-01-14 15:08:59"
+    },
+    {
+        "id": 48,
+        "blog_post_id": 14,
+        "business_id": 31,
+        "created_at": "2026-01-14 15:09:03",
+        "updated_at": "2026-01-14 15:09:03"
+    },
+    {
+        "id": 49,
+        "blog_post_id": 14,
+        "business_id": 114,
+        "created_at": "2026-01-14 15:09:03",
+        "updated_at": "2026-01-14 15:09:03"
+    },
+    {
+        "id": 50,
+        "blog_post_id": 14,
+        "business_id": 27,
+        "created_at": "2026-01-14 15:09:03",
+        "updated_at": "2026-01-14 15:09:03"
+    },
+    {
+        "id": 51,
+        "blog_post_id": 14,
+        "business_id": 56,
+        "created_at": "2026-01-14 15:09:03",
+        "updated_at": "2026-01-14 15:09:03"
+    },
+    {
+        "id": 52,
+        "blog_post_id": 16,
+        "business_id": 74,
+        "created_at": "2026-01-14 15:09:15",
+        "updated_at": "2026-01-14 15:09:15"
+    },
+    {
+        "id": 53,
+        "blog_post_id": 16,
+        "business_id": 56,
+        "created_at": "2026-01-14 15:09:15",
+        "updated_at": "2026-01-14 15:09:15"
+    },
+    {
+        "id": 54,
+        "blog_post_id": 17,
+        "business_id": 56,
+        "created_at": "2026-01-14 15:09:17",
+        "updated_at": "2026-01-14 15:09:17"
+    },
+    {
+        "id": 55,
+        "blog_post_id": 17,
+        "business_id": 33,
+        "created_at": "2026-01-14 15:09:17",
+        "updated_at": "2026-01-14 15:09:17"
+    },
+    {
+        "id": 56,
+        "blog_post_id": 18,
+        "business_id": 38,
+        "created_at": "2026-01-14 15:09:19",
+        "updated_at": "2026-01-14 15:09:19"
+    },
+    {
+        "id": 57,
+        "blog_post_id": 18,
+        "business_id": 40,
+        "created_at": "2026-01-14 15:09:19",
+        "updated_at": "2026-01-14 15:09:19"
+    },
+    {
+        "id": 58,
+        "blog_post_id": 19,
+        "business_id": 18,
+        "created_at": "2026-01-14 15:09:22",
+        "updated_at": "2026-01-14 15:09:22"
+    },
+    {
+        "id": 59,
+        "blog_post_id": 21,
+        "business_id": 36,
+        "created_at": "2026-01-14 15:09:27",
+        "updated_at": "2026-01-14 15:09:27"
+    },
+    {
+        "id": 60,
+        "blog_post_id": 22,
+        "business_id": 33,
+        "created_at": "2026-01-14 15:09:29",
+        "updated_at": "2026-01-14 15:09:29"
+    },
+    {
+        "id": 61,
+        "blog_post_id": 22,
+        "business_id": 41,
+        "created_at": "2026-01-14 15:09:29",
+        "updated_at": "2026-01-14 15:09:29"
+    },
+    {
+        "id": 62,
+        "blog_post_id": 23,
+        "business_id": 18,
+        "created_at": "2026-01-14 15:09:31",
+        "updated_at": "2026-01-14 15:09:31"
+    },
+    {
+        "id": 63,
+        "blog_post_id": 23,
+        "business_id": 25,
+        "created_at": "2026-01-14 15:09:31",
+        "updated_at": "2026-01-14 15:09:31"
+    },
+    {
+        "id": 64,
+        "blog_post_id": 23,
+        "business_id": 27,
+        "created_at": "2026-01-14 15:09:31",
+        "updated_at": "2026-01-14 15:09:31"
+    },
+    {
+        "id": 65,
+        "blog_post_id": 24,
+        "business_id": 35,
+        "created_at": "2026-01-14 15:09:34",
+        "updated_at": "2026-01-14 15:09:34"
+    },
+    {
+        "id": 66,
+        "blog_post_id": 24,
+        "business_id": 74,
+        "created_at": "2026-01-14 15:09:34",
+        "updated_at": "2026-01-14 15:09:34"
+    },
+    {
+        "id": 67,
+        "blog_post_id": 24,
+        "business_id": 111,
+        "created_at": "2026-01-14 15:09:34",
+        "updated_at": "2026-01-14 15:09:34"
+    },
+    {
+        "id": 68,
+        "blog_post_id": 25,
+        "business_id": 9,
+        "created_at": "2026-01-14 15:09:38",
+        "updated_at": "2026-01-14 15:09:38"
+    },
+    {
+        "id": 69,
+        "blog_post_id": 25,
+        "business_id": 10,
+        "created_at": "2026-01-14 15:09:38",
+        "updated_at": "2026-01-14 15:09:38"
+    },
+    {
+        "id": 70,
+        "blog_post_id": 25,
+        "business_id": 11,
+        "created_at": "2026-01-14 15:09:38",
+        "updated_at": "2026-01-14 15:09:38"
+    },
+    {
+        "id": 71,
+        "blog_post_id": 25,
+        "business_id": 12,
+        "created_at": "2026-01-14 15:09:38",
+        "updated_at": "2026-01-14 15:09:38"
+    },
+    {
+        "id": 72,
+        "blog_post_id": 25,
+        "business_id": 13,
+        "created_at": "2026-01-14 15:09:38",
+        "updated_at": "2026-01-14 15:09:38"
+    },
+    {
+        "id": 73,
+        "blog_post_id": 25,
+        "business_id": 14,
+        "created_at": "2026-01-14 15:09:38",
+        "updated_at": "2026-01-14 15:09:38"
+    },
+    {
+        "id": 74,
+        "blog_post_id": 25,
+        "business_id": 15,
+        "created_at": "2026-01-14 15:09:38",
+        "updated_at": "2026-01-14 15:09:38"
+    },
+    {
+        "id": 75,
+        "blog_post_id": 25,
+        "business_id": 16,
+        "created_at": "2026-01-14 15:09:38",
+        "updated_at": "2026-01-14 15:09:38"
+    },
+    {
+        "id": 76,
+        "blog_post_id": 25,
+        "business_id": 17,
+        "created_at": "2026-01-14 15:09:38",
+        "updated_at": "2026-01-14 15:09:38"
+    },
+    {
+        "id": 77,
+        "blog_post_id": 25,
+        "business_id": 18,
+        "created_at": "2026-01-14 15:09:38",
+        "updated_at": "2026-01-14 15:09:38"
+    },
+    {
+        "id": 78,
+        "blog_post_id": 25,
+        "business_id": 23,
+        "created_at": "2026-01-14 15:09:38",
+        "updated_at": "2026-01-14 15:09:38"
+    },
+    {
+        "id": 79,
+        "blog_post_id": 25,
+        "business_id": 24,
+        "created_at": "2026-01-14 15:09:38",
+        "updated_at": "2026-01-14 15:09:38"
+    },
+    {
+        "id": 80,
+        "blog_post_id": 25,
+        "business_id": 25,
+        "created_at": "2026-01-14 15:09:38",
+        "updated_at": "2026-01-14 15:09:38"
+    },
+    {
+        "id": 81,
+        "blog_post_id": 25,
+        "business_id": 26,
+        "created_at": "2026-01-14 15:09:38",
+        "updated_at": "2026-01-14 15:09:38"
+    },
+    {
+        "id": 82,
+        "blog_post_id": 25,
+        "business_id": 31,
+        "created_at": "2026-01-14 15:09:38",
+        "updated_at": "2026-01-14 15:09:38"
+    },
+    {
+        "id": 83,
+        "blog_post_id": 25,
+        "business_id": 32,
+        "created_at": "2026-01-14 15:09:38",
+        "updated_at": "2026-01-14 15:09:38"
+    },
+    {
+        "id": 84,
+        "blog_post_id": 25,
+        "business_id": 33,
+        "created_at": "2026-01-14 15:09:38",
+        "updated_at": "2026-01-14 15:09:38"
+    },
+    {
+        "id": 85,
+        "blog_post_id": 25,
+        "business_id": 34,
+        "created_at": "2026-01-14 15:09:38",
+        "updated_at": "2026-01-14 15:09:38"
+    },
+    {
+        "id": 86,
+        "blog_post_id": 25,
+        "business_id": 35,
+        "created_at": "2026-01-14 15:09:38",
+        "updated_at": "2026-01-14 15:09:38"
+    },
+    {
+        "id": 87,
+        "blog_post_id": 25,
+        "business_id": 36,
+        "created_at": "2026-01-14 15:09:38",
+        "updated_at": "2026-01-14 15:09:38"
+    },
+    {
+        "id": 88,
+        "blog_post_id": 26,
+        "business_id": 38,
+        "created_at": "2026-01-14 15:09:41",
+        "updated_at": "2026-01-14 15:09:41"
+    },
+    {
+        "id": 89,
+        "blog_post_id": 26,
+        "business_id": 26,
+        "created_at": "2026-01-14 15:09:41",
+        "updated_at": "2026-01-14 15:09:41"
+    },
+    {
+        "id": 90,
+        "blog_post_id": 27,
+        "business_id": 50,
+        "created_at": "2026-01-14 15:09:45",
+        "updated_at": "2026-01-14 15:09:45"
+    },
+    {
+        "id": 91,
+        "blog_post_id": 27,
+        "business_id": 107,
+        "created_at": "2026-01-14 15:09:45",
+        "updated_at": "2026-01-14 15:09:45"
+    },
+    {
+        "id": 92,
+        "blog_post_id": 27,
+        "business_id": 108,
+        "created_at": "2026-01-14 15:09:45",
+        "updated_at": "2026-01-14 15:09:45"
+    },
+    {
+        "id": 93,
+        "blog_post_id": 28,
+        "business_id": 38,
+        "created_at": "2026-01-14 15:09:46",
+        "updated_at": "2026-01-14 15:09:46"
+    },
+    {
+        "id": 94,
+        "blog_post_id": 28,
+        "business_id": 26,
+        "created_at": "2026-01-14 15:09:46",
+        "updated_at": "2026-01-14 15:09:46"
+    },
+    {
+        "id": 95,
+        "blog_post_id": 28,
+        "business_id": 34,
+        "created_at": "2026-01-14 15:09:46",
+        "updated_at": "2026-01-14 15:09:46"
+    },
+    {
+        "id": 96,
+        "blog_post_id": 31,
+        "business_id": 31,
+        "created_at": "2026-01-14 15:09:54",
+        "updated_at": "2026-01-14 15:09:54"
+    },
+    {
+        "id": 97,
+        "blog_post_id": 31,
+        "business_id": 26,
+        "created_at": "2026-01-14 15:09:54",
+        "updated_at": "2026-01-14 15:09:54"
+    },
+    {
+        "id": 98,
+        "blog_post_id": 32,
+        "business_id": 36,
+        "created_at": "2026-01-14 15:09:57",
+        "updated_at": "2026-01-14 15:09:57"
+    },
+    {
+        "id": 99,
+        "blog_post_id": 34,
+        "business_id": 56,
+        "created_at": "2026-01-14 15:10:02",
+        "updated_at": "2026-01-14 15:10:02"
+    },
+    {
+        "id": 100,
+        "blog_post_id": 34,
+        "business_id": 26,
+        "created_at": "2026-01-14 15:10:02",
+        "updated_at": "2026-01-14 15:10:02"
+    },
+    {
+        "id": 101,
+        "blog_post_id": 34,
+        "business_id": 27,
+        "created_at": "2026-01-14 15:10:02",
+        "updated_at": "2026-01-14 15:10:02"
+    },
+    {
+        "id": 102,
+        "blog_post_id": 35,
+        "business_id": 36,
+        "created_at": "2026-01-14 15:10:06",
+        "updated_at": "2026-01-14 15:10:06"
+    },
+    {
+        "id": 103,
+        "blog_post_id": 35,
+        "business_id": 41,
+        "created_at": "2026-01-14 15:10:06",
+        "updated_at": "2026-01-14 15:10:06"
+    },
+    {
+        "id": 104,
+        "blog_post_id": 35,
+        "business_id": 10,
+        "created_at": "2026-01-14 15:10:06",
+        "updated_at": "2026-01-14 15:10:06"
+    },
+    {
+        "id": 105,
+        "blog_post_id": 36,
+        "business_id": 11,
+        "created_at": "2026-01-14 15:10:08",
+        "updated_at": "2026-01-14 15:10:08"
+    },
+    {
+        "id": 106,
+        "blog_post_id": 36,
+        "business_id": 31,
+        "created_at": "2026-01-14 15:10:08",
+        "updated_at": "2026-01-14 15:10:08"
+    },
+    {
+        "id": 107,
+        "blog_post_id": 36,
+        "business_id": 34,
+        "created_at": "2026-01-14 15:10:08",
+        "updated_at": "2026-01-14 15:10:08"
+    },
+    {
+        "id": 108,
+        "blog_post_id": 36,
+        "business_id": 42,
+        "created_at": "2026-01-14 15:10:08",
+        "updated_at": "2026-01-14 15:10:08"
+    },
+    {
+        "id": 109,
+        "blog_post_id": 37,
+        "business_id": 37,
+        "created_at": "2026-01-14 15:10:11",
+        "updated_at": "2026-01-14 15:10:11"
+    },
+    {
+        "id": 110,
+        "blog_post_id": 37,
+        "business_id": 41,
+        "created_at": "2026-01-14 15:10:11",
+        "updated_at": "2026-01-14 15:10:11"
+    },
+    {
+        "id": 111,
+        "blog_post_id": 38,
+        "business_id": 119,
+        "created_at": "2026-01-14 15:10:14",
+        "updated_at": "2026-01-14 15:10:14"
+    },
+    {
+        "id": 112,
+        "blog_post_id": 39,
+        "business_id": 111,
+        "created_at": "2026-01-14 15:10:16",
+        "updated_at": "2026-01-14 15:10:16"
+    },
+    {
+        "id": 113,
+        "blog_post_id": 40,
+        "business_id": 25,
+        "created_at": "2026-01-14 15:10:19",
+        "updated_at": "2026-01-14 15:10:19"
+    },
+    {
+        "id": 114,
+        "blog_post_id": 40,
+        "business_id": 39,
+        "created_at": "2026-01-14 15:10:19",
+        "updated_at": "2026-01-14 15:10:19"
+    },
+    {
+        "id": 115,
+        "blog_post_id": 41,
+        "business_id": 12,
+        "created_at": "2026-01-14 15:10:21",
+        "updated_at": "2026-01-14 15:10:21"
+    },
+    {
+        "id": 116,
+        "blog_post_id": 41,
+        "business_id": 11,
+        "created_at": "2026-01-14 15:10:21",
+        "updated_at": "2026-01-14 15:10:21"
+    },
+    {
+        "id": 117,
+        "blog_post_id": 43,
+        "business_id": 111,
+        "created_at": "2026-01-14 15:10:29",
+        "updated_at": "2026-01-14 15:10:29"
+    },
+    {
+        "id": 118,
+        "blog_post_id": 44,
+        "business_id": 36,
+        "created_at": "2026-01-14 15:10:31",
+        "updated_at": "2026-01-14 15:10:31"
+    },
+    {
+        "id": 119,
+        "blog_post_id": 45,
+        "business_id": 18,
+        "created_at": "2026-01-14 15:10:34",
+        "updated_at": "2026-01-14 15:10:34"
+    },
+    {
+        "id": 120,
+        "blog_post_id": 46,
+        "business_id": 111,
+        "created_at": "2026-01-14 15:10:37",
+        "updated_at": "2026-01-14 15:10:37"
+    },
+    {
+        "id": 121,
+        "blog_post_id": 48,
+        "business_id": 25,
+        "created_at": "2026-01-14 15:10:50",
+        "updated_at": "2026-01-14 15:10:50"
+    },
+    {
+        "id": 122,
+        "blog_post_id": 49,
+        "business_id": 38,
+        "created_at": "2026-01-14 15:10:52",
+        "updated_at": "2026-01-14 15:10:52"
+    },
+    {
+        "id": 123,
+        "blog_post_id": 49,
+        "business_id": 106,
+        "created_at": "2026-01-14 15:10:52",
+        "updated_at": "2026-01-14 15:10:52"
+    },
+    {
+        "id": 124,
+        "blog_post_id": 50,
+        "business_id": 74,
+        "created_at": "2026-01-14 15:10:55",
+        "updated_at": "2026-01-14 15:10:55"
+    },
+    {
+        "id": 125,
+        "blog_post_id": 50,
+        "business_id": 114,
+        "created_at": "2026-01-14 15:10:55",
+        "updated_at": "2026-01-14 15:10:55"
+    },
+    {
+        "id": 126,
+        "blog_post_id": 50,
+        "business_id": 31,
+        "created_at": "2026-01-14 15:10:55",
+        "updated_at": "2026-01-14 15:10:55"
+    },
+    {
+        "id": 127,
+        "blog_post_id": 50,
+        "business_id": 33,
+        "created_at": "2026-01-14 15:10:55",
+        "updated_at": "2026-01-14 15:10:55"
+    },
+    {
+        "id": 128,
+        "blog_post_id": 50,
+        "business_id": 27,
+        "created_at": "2026-01-14 15:10:55",
+        "updated_at": "2026-01-14 15:10:55"
+    },
+    {
+        "id": 129,
+        "blog_post_id": 50,
+        "business_id": 41,
+        "created_at": "2026-01-14 15:10:55",
+        "updated_at": "2026-01-14 15:10:55"
+    },
+    {
+        "id": 130,
+        "blog_post_id": 51,
+        "business_id": 18,
+        "created_at": "2026-01-14 15:10:58",
+        "updated_at": "2026-01-14 15:10:58"
+    },
+    {
+        "id": 131,
+        "blog_post_id": 51,
+        "business_id": 25,
+        "created_at": "2026-01-14 15:10:58",
+        "updated_at": "2026-01-14 15:10:58"
+    },
+    {
+        "id": 132,
+        "blog_post_id": 51,
+        "business_id": 40,
+        "created_at": "2026-01-14 15:10:58",
+        "updated_at": "2026-01-14 15:10:58"
+    },
+    {
+        "id": 133,
+        "blog_post_id": 52,
+        "business_id": 38,
+        "created_at": "2026-01-14 15:11:02",
+        "updated_at": "2026-01-14 15:11:02"
+    },
+    {
+        "id": 134,
+        "blog_post_id": 52,
+        "business_id": 82,
+        "created_at": "2026-01-14 15:11:02",
+        "updated_at": "2026-01-14 15:11:02"
+    },
+    {
+        "id": 135,
+        "blog_post_id": 52,
+        "business_id": 25,
+        "created_at": "2026-01-14 15:11:02",
+        "updated_at": "2026-01-14 15:11:02"
+    },
+    {
+        "id": 136,
+        "blog_post_id": 53,
+        "business_id": 38,
+        "created_at": "2026-01-14 15:11:05",
+        "updated_at": "2026-01-14 15:11:05"
+    },
+    {
+        "id": 137,
+        "blog_post_id": 53,
+        "business_id": 26,
+        "created_at": "2026-01-14 15:11:05",
+        "updated_at": "2026-01-14 15:11:05"
+    },
+    {
+        "id": 138,
+        "blog_post_id": 54,
+        "business_id": 38,
+        "created_at": "2026-01-14 15:11:07",
+        "updated_at": "2026-01-14 15:11:07"
+    },
+    {
+        "id": 139,
+        "blog_post_id": 54,
+        "business_id": 24,
+        "created_at": "2026-01-14 15:11:07",
+        "updated_at": "2026-01-14 15:11:07"
+    },
+    {
+        "id": 140,
+        "blog_post_id": 55,
+        "business_id": 99,
+        "created_at": "2026-01-14 15:11:12",
+        "updated_at": "2026-01-14 15:11:12"
+    },
+    {
+        "id": 141,
+        "blog_post_id": 55,
+        "business_id": 116,
+        "created_at": "2026-01-14 15:11:12",
+        "updated_at": "2026-01-14 15:11:12"
+    },
+    {
+        "id": 142,
+        "blog_post_id": 55,
+        "business_id": 9,
+        "created_at": "2026-01-14 15:11:12",
+        "updated_at": "2026-01-14 15:11:12"
+    },
+    {
+        "id": 143,
+        "blog_post_id": 56,
+        "business_id": 43,
+        "created_at": "2026-01-14 15:11:14",
+        "updated_at": "2026-01-14 15:11:14"
+    },
+    {
+        "id": 144,
+        "blog_post_id": 56,
+        "business_id": 26,
+        "created_at": "2026-01-14 15:11:14",
+        "updated_at": "2026-01-14 15:11:14"
+    },
+    {
+        "id": 145,
+        "blog_post_id": 56,
+        "business_id": 12,
+        "created_at": "2026-01-14 15:11:14",
+        "updated_at": "2026-01-14 15:11:14"
+    },
+    {
+        "id": 146,
+        "blog_post_id": 57,
+        "business_id": 122,
+        "created_at": "2026-01-14 15:11:18",
+        "updated_at": "2026-01-14 15:11:18"
+    },
+    {
+        "id": 147,
+        "blog_post_id": 58,
+        "business_id": 111,
+        "created_at": "2026-01-14 15:11:21",
+        "updated_at": "2026-01-14 15:11:21"
+    },
+    {
+        "id": 148,
+        "blog_post_id": 58,
+        "business_id": 25,
+        "created_at": "2026-01-14 15:11:21",
+        "updated_at": "2026-01-14 15:11:21"
+    },
+    {
+        "id": 149,
+        "blog_post_id": 59,
+        "business_id": 18,
+        "created_at": "2026-01-14 15:11:23",
+        "updated_at": "2026-01-14 15:11:23"
+    },
+    {
+        "id": 150,
+        "blog_post_id": 59,
+        "business_id": 38,
+        "created_at": "2026-01-14 15:11:23",
+        "updated_at": "2026-01-14 15:11:23"
+    },
+    {
+        "id": 151,
+        "blog_post_id": 59,
+        "business_id": 39,
+        "created_at": "2026-01-14 15:11:23",
+        "updated_at": "2026-01-14 15:11:23"
+    },
+    {
+        "id": 152,
+        "blog_post_id": 61,
+        "business_id": 110,
+        "created_at": "2026-01-14 15:11:27",
+        "updated_at": "2026-01-14 15:11:27"
+    },
+    {
+        "id": 153,
+        "blog_post_id": 61,
+        "business_id": 133,
+        "created_at": "2026-01-14 15:11:27",
+        "updated_at": "2026-01-14 15:11:27"
+    },
+    {
+        "id": 154,
+        "blog_post_id": 61,
+        "business_id": 96,
+        "created_at": "2026-01-14 15:11:27",
+        "updated_at": "2026-01-14 15:11:27"
+    },
+    {
+        "id": 155,
+        "blog_post_id": 62,
+        "business_id": 9,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 156,
+        "blog_post_id": 62,
+        "business_id": 10,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 157,
+        "blog_post_id": 62,
+        "business_id": 11,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 158,
+        "blog_post_id": 62,
+        "business_id": 12,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 159,
+        "blog_post_id": 62,
+        "business_id": 13,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 160,
+        "blog_post_id": 62,
+        "business_id": 14,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 161,
+        "blog_post_id": 62,
+        "business_id": 15,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 162,
+        "blog_post_id": 62,
+        "business_id": 16,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 163,
+        "blog_post_id": 62,
+        "business_id": 17,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 164,
+        "blog_post_id": 62,
+        "business_id": 18,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 165,
+        "blog_post_id": 62,
+        "business_id": 19,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 166,
+        "blog_post_id": 62,
+        "business_id": 20,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 167,
+        "blog_post_id": 62,
+        "business_id": 21,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 168,
+        "blog_post_id": 62,
+        "business_id": 22,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 169,
+        "blog_post_id": 62,
+        "business_id": 23,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 170,
+        "blog_post_id": 62,
+        "business_id": 24,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 171,
+        "blog_post_id": 62,
+        "business_id": 25,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 172,
+        "blog_post_id": 62,
+        "business_id": 26,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 173,
+        "blog_post_id": 62,
+        "business_id": 27,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 174,
+        "blog_post_id": 62,
+        "business_id": 28,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 175,
+        "blog_post_id": 62,
+        "business_id": 29,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 176,
+        "blog_post_id": 62,
+        "business_id": 30,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 177,
+        "blog_post_id": 62,
+        "business_id": 31,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 178,
+        "blog_post_id": 62,
+        "business_id": 32,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 179,
+        "blog_post_id": 62,
+        "business_id": 33,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 180,
+        "blog_post_id": 62,
+        "business_id": 34,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 181,
+        "blog_post_id": 62,
+        "business_id": 35,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 182,
+        "blog_post_id": 62,
+        "business_id": 36,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 183,
+        "blog_post_id": 62,
+        "business_id": 37,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 184,
+        "blog_post_id": 62,
+        "business_id": 38,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 185,
+        "blog_post_id": 62,
+        "business_id": 39,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 186,
+        "blog_post_id": 62,
+        "business_id": 40,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 187,
+        "blog_post_id": 62,
+        "business_id": 41,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 188,
+        "blog_post_id": 62,
+        "business_id": 42,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 189,
+        "blog_post_id": 62,
+        "business_id": 43,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 190,
+        "blog_post_id": 62,
+        "business_id": 44,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 191,
+        "blog_post_id": 62,
+        "business_id": 45,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 192,
+        "blog_post_id": 62,
+        "business_id": 46,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 193,
+        "blog_post_id": 62,
+        "business_id": 47,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 194,
+        "blog_post_id": 62,
+        "business_id": 48,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 195,
+        "blog_post_id": 62,
+        "business_id": 49,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 196,
+        "blog_post_id": 62,
+        "business_id": 50,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 197,
+        "blog_post_id": 62,
+        "business_id": 51,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 198,
+        "blog_post_id": 62,
+        "business_id": 52,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 199,
+        "blog_post_id": 62,
+        "business_id": 53,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 200,
+        "blog_post_id": 62,
+        "business_id": 54,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 201,
+        "blog_post_id": 62,
+        "business_id": 55,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 202,
+        "blog_post_id": 62,
+        "business_id": 56,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 203,
+        "blog_post_id": 62,
+        "business_id": 57,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 204,
+        "blog_post_id": 62,
+        "business_id": 58,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 205,
+        "blog_post_id": 62,
+        "business_id": 59,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 206,
+        "blog_post_id": 62,
+        "business_id": 60,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 207,
+        "blog_post_id": 62,
+        "business_id": 61,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 208,
+        "blog_post_id": 62,
+        "business_id": 62,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 209,
+        "blog_post_id": 62,
+        "business_id": 63,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 210,
+        "blog_post_id": 62,
+        "business_id": 64,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 211,
+        "blog_post_id": 62,
+        "business_id": 65,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 212,
+        "blog_post_id": 62,
+        "business_id": 66,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 213,
+        "blog_post_id": 62,
+        "business_id": 67,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 214,
+        "blog_post_id": 62,
+        "business_id": 68,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 215,
+        "blog_post_id": 62,
+        "business_id": 69,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 216,
+        "blog_post_id": 62,
+        "business_id": 70,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 217,
+        "blog_post_id": 62,
+        "business_id": 71,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 218,
+        "blog_post_id": 62,
+        "business_id": 72,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 219,
+        "blog_post_id": 62,
+        "business_id": 73,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 220,
+        "blog_post_id": 62,
+        "business_id": 74,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 221,
+        "blog_post_id": 62,
+        "business_id": 75,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 222,
+        "blog_post_id": 62,
+        "business_id": 76,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 223,
+        "blog_post_id": 62,
+        "business_id": 77,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 224,
+        "blog_post_id": 62,
+        "business_id": 78,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 225,
+        "blog_post_id": 62,
+        "business_id": 79,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 226,
+        "blog_post_id": 62,
+        "business_id": 80,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 227,
+        "blog_post_id": 62,
+        "business_id": 81,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 228,
+        "blog_post_id": 62,
+        "business_id": 82,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 229,
+        "blog_post_id": 62,
+        "business_id": 83,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 230,
+        "blog_post_id": 62,
+        "business_id": 84,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 231,
+        "blog_post_id": 62,
+        "business_id": 85,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 232,
+        "blog_post_id": 62,
+        "business_id": 86,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 233,
+        "blog_post_id": 62,
+        "business_id": 87,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 234,
+        "blog_post_id": 62,
+        "business_id": 88,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 235,
+        "blog_post_id": 62,
+        "business_id": 89,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 236,
+        "blog_post_id": 62,
+        "business_id": 90,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 237,
+        "blog_post_id": 62,
+        "business_id": 91,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 238,
+        "blog_post_id": 62,
+        "business_id": 92,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 239,
+        "blog_post_id": 62,
+        "business_id": 93,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 240,
+        "blog_post_id": 62,
+        "business_id": 94,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 241,
+        "blog_post_id": 62,
+        "business_id": 95,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 242,
+        "blog_post_id": 62,
+        "business_id": 96,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 243,
+        "blog_post_id": 62,
+        "business_id": 97,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 244,
+        "blog_post_id": 62,
+        "business_id": 98,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 245,
+        "blog_post_id": 62,
+        "business_id": 99,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 246,
+        "blog_post_id": 62,
+        "business_id": 100,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 247,
+        "blog_post_id": 62,
+        "business_id": 101,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 248,
+        "blog_post_id": 62,
+        "business_id": 102,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 249,
+        "blog_post_id": 62,
+        "business_id": 103,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 250,
+        "blog_post_id": 62,
+        "business_id": 104,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 251,
+        "blog_post_id": 62,
+        "business_id": 105,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 252,
+        "blog_post_id": 62,
+        "business_id": 106,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 253,
+        "blog_post_id": 62,
+        "business_id": 107,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 254,
+        "blog_post_id": 62,
+        "business_id": 108,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 255,
+        "blog_post_id": 62,
+        "business_id": 109,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 256,
+        "blog_post_id": 62,
+        "business_id": 110,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 257,
+        "blog_post_id": 62,
+        "business_id": 111,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 258,
+        "blog_post_id": 62,
+        "business_id": 112,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 259,
+        "blog_post_id": 62,
+        "business_id": 113,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 260,
+        "blog_post_id": 62,
+        "business_id": 114,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 261,
+        "blog_post_id": 62,
+        "business_id": 115,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 262,
+        "blog_post_id": 62,
+        "business_id": 116,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 263,
+        "blog_post_id": 62,
+        "business_id": 117,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 264,
+        "blog_post_id": 62,
+        "business_id": 118,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 265,
+        "blog_post_id": 62,
+        "business_id": 119,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 266,
+        "blog_post_id": 62,
+        "business_id": 120,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 267,
+        "blog_post_id": 62,
+        "business_id": 121,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 268,
+        "blog_post_id": 62,
+        "business_id": 122,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 269,
+        "blog_post_id": 62,
+        "business_id": 123,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 270,
+        "blog_post_id": 62,
+        "business_id": 124,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 271,
+        "blog_post_id": 62,
+        "business_id": 125,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 272,
+        "blog_post_id": 62,
+        "business_id": 126,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 273,
+        "blog_post_id": 62,
+        "business_id": 127,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 274,
+        "blog_post_id": 62,
+        "business_id": 128,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 275,
+        "blog_post_id": 62,
+        "business_id": 129,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 276,
+        "blog_post_id": 62,
+        "business_id": 130,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 277,
+        "blog_post_id": 62,
+        "business_id": 131,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 278,
+        "blog_post_id": 62,
+        "business_id": 132,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 279,
+        "blog_post_id": 62,
+        "business_id": 133,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 280,
+        "blog_post_id": 62,
+        "business_id": 134,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 281,
+        "blog_post_id": 62,
+        "business_id": 135,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 282,
+        "blog_post_id": 62,
+        "business_id": 136,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 283,
+        "blog_post_id": 62,
+        "business_id": 137,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 284,
+        "blog_post_id": 62,
+        "business_id": 138,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 285,
+        "blog_post_id": 62,
+        "business_id": 139,
+        "created_at": "2026-01-14 15:11:38",
+        "updated_at": "2026-01-14 15:11:38"
+    },
+    {
+        "id": 286,
+        "blog_post_id": 63,
+        "business_id": 25,
+        "created_at": "2026-01-14 15:11:40",
+        "updated_at": "2026-01-14 15:11:40"
+    },
+    {
+        "id": 287,
+        "blog_post_id": 63,
+        "business_id": 38,
+        "created_at": "2026-01-14 15:11:40",
+        "updated_at": "2026-01-14 15:11:40"
+    },
+    {
+        "id": 288,
+        "blog_post_id": 64,
+        "business_id": 11,
+        "created_at": "2026-01-14 15:11:42",
+        "updated_at": "2026-01-14 15:11:42"
+    },
+    {
+        "id": 289,
+        "blog_post_id": 65,
+        "business_id": 38,
+        "created_at": "2026-01-14 15:11:45",
+        "updated_at": "2026-01-14 15:11:45"
+    },
+    {
+        "id": 290,
+        "blog_post_id": 65,
+        "business_id": 106,
+        "created_at": "2026-01-14 15:11:45",
+        "updated_at": "2026-01-14 15:11:45"
+    },
+    {
+        "id": 291,
+        "blog_post_id": 66,
+        "business_id": 36,
+        "created_at": "2026-01-14 15:11:47",
+        "updated_at": "2026-01-14 15:11:47"
+    },
+    {
+        "id": 292,
+        "blog_post_id": 67,
+        "business_id": 30,
+        "created_at": "2026-01-14 15:11:49",
+        "updated_at": "2026-01-14 15:11:49"
+    },
+    {
+        "id": 293,
+        "blog_post_id": 67,
+        "business_id": 33,
+        "created_at": "2026-01-14 15:11:49",
+        "updated_at": "2026-01-14 15:11:49"
+    },
+    {
+        "id": 294,
+        "blog_post_id": 67,
+        "business_id": 124,
+        "created_at": "2026-01-14 15:11:49",
+        "updated_at": "2026-01-14 15:11:49"
+    },
+    {
+        "id": 295,
+        "blog_post_id": 68,
+        "business_id": 30,
+        "created_at": "2026-01-14 15:11:52",
+        "updated_at": "2026-01-14 15:11:52"
+    },
+    {
+        "id": 296,
+        "blog_post_id": 68,
+        "business_id": 24,
+        "created_at": "2026-01-14 15:11:52",
+        "updated_at": "2026-01-14 15:11:52"
+    },
+    {
+        "id": 297,
+        "blog_post_id": 69,
+        "business_id": 111,
+        "created_at": "2026-01-14 15:11:55",
+        "updated_at": "2026-01-14 15:11:55"
+    },
+    {
+        "id": 298,
+        "blog_post_id": 69,
+        "business_id": 26,
+        "created_at": "2026-01-14 15:11:55",
+        "updated_at": "2026-01-14 15:11:55"
+    },
+    {
+        "id": 299,
+        "blog_post_id": 70,
+        "business_id": 50,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 300,
+        "blog_post_id": 70,
+        "business_id": 11,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 301,
+        "blog_post_id": 70,
+        "business_id": 12,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 302,
+        "blog_post_id": 70,
+        "business_id": 13,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 303,
+        "blog_post_id": 70,
+        "business_id": 14,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 304,
+        "blog_post_id": 70,
+        "business_id": 15,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 305,
+        "blog_post_id": 70,
+        "business_id": 18,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 306,
+        "blog_post_id": 70,
+        "business_id": 19,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 307,
+        "blog_post_id": 70,
+        "business_id": 20,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 308,
+        "blog_post_id": 70,
+        "business_id": 21,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 309,
+        "blog_post_id": 70,
+        "business_id": 22,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 310,
+        "blog_post_id": 70,
+        "business_id": 23,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 311,
+        "blog_post_id": 70,
+        "business_id": 24,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 312,
+        "blog_post_id": 70,
+        "business_id": 25,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 313,
+        "blog_post_id": 70,
+        "business_id": 26,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 314,
+        "blog_post_id": 70,
+        "business_id": 27,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 315,
+        "blog_post_id": 70,
+        "business_id": 30,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 316,
+        "blog_post_id": 70,
+        "business_id": 31,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 317,
+        "blog_post_id": 70,
+        "business_id": 32,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 318,
+        "blog_post_id": 70,
+        "business_id": 33,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 319,
+        "blog_post_id": 70,
+        "business_id": 34,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 320,
+        "blog_post_id": 70,
+        "business_id": 36,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 321,
+        "blog_post_id": 70,
+        "business_id": 38,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 322,
+        "blog_post_id": 70,
+        "business_id": 40,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 323,
+        "blog_post_id": 70,
+        "business_id": 41,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 324,
+        "blog_post_id": 70,
+        "business_id": 42,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 325,
+        "blog_post_id": 70,
+        "business_id": 43,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 326,
+        "blog_post_id": 70,
+        "business_id": 44,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 327,
+        "blog_post_id": 70,
+        "business_id": 45,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 328,
+        "blog_post_id": 70,
+        "business_id": 46,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 329,
+        "blog_post_id": 70,
+        "business_id": 47,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 330,
+        "blog_post_id": 70,
+        "business_id": 48,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 331,
+        "blog_post_id": 70,
+        "business_id": 49,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 332,
+        "blog_post_id": 70,
+        "business_id": 51,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 333,
+        "blog_post_id": 70,
+        "business_id": 53,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 334,
+        "blog_post_id": 70,
+        "business_id": 57,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 335,
+        "blog_post_id": 70,
+        "business_id": 63,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 336,
+        "blog_post_id": 70,
+        "business_id": 67,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 337,
+        "blog_post_id": 70,
+        "business_id": 69,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 338,
+        "blog_post_id": 70,
+        "business_id": 70,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 339,
+        "blog_post_id": 70,
+        "business_id": 72,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 340,
+        "blog_post_id": 70,
+        "business_id": 74,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 341,
+        "blog_post_id": 70,
+        "business_id": 75,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 342,
+        "blog_post_id": 70,
+        "business_id": 78,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 343,
+        "blog_post_id": 70,
+        "business_id": 79,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 344,
+        "blog_post_id": 70,
+        "business_id": 81,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 345,
+        "blog_post_id": 70,
+        "business_id": 82,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 346,
+        "blog_post_id": 70,
+        "business_id": 84,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 347,
+        "blog_post_id": 70,
+        "business_id": 90,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 348,
+        "blog_post_id": 70,
+        "business_id": 92,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 349,
+        "blog_post_id": 70,
+        "business_id": 93,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 350,
+        "blog_post_id": 70,
+        "business_id": 94,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 351,
+        "blog_post_id": 70,
+        "business_id": 96,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 352,
+        "blog_post_id": 70,
+        "business_id": 97,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 353,
+        "blog_post_id": 70,
+        "business_id": 98,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 354,
+        "blog_post_id": 70,
+        "business_id": 99,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 355,
+        "blog_post_id": 70,
+        "business_id": 100,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 356,
+        "blog_post_id": 70,
+        "business_id": 101,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 357,
+        "blog_post_id": 70,
+        "business_id": 102,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 358,
+        "blog_post_id": 70,
+        "business_id": 103,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 359,
+        "blog_post_id": 70,
+        "business_id": 104,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 360,
+        "blog_post_id": 70,
+        "business_id": 106,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 361,
+        "blog_post_id": 70,
+        "business_id": 107,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 362,
+        "blog_post_id": 70,
+        "business_id": 108,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 363,
+        "blog_post_id": 70,
+        "business_id": 109,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 364,
+        "blog_post_id": 70,
+        "business_id": 110,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 365,
+        "blog_post_id": 70,
+        "business_id": 111,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 366,
+        "blog_post_id": 70,
+        "business_id": 112,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 367,
+        "blog_post_id": 70,
+        "business_id": 113,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 368,
+        "blog_post_id": 70,
+        "business_id": 114,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 369,
+        "blog_post_id": 70,
+        "business_id": 116,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 370,
+        "blog_post_id": 70,
+        "business_id": 118,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 371,
+        "blog_post_id": 70,
+        "business_id": 120,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 372,
+        "blog_post_id": 70,
+        "business_id": 121,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 373,
+        "blog_post_id": 70,
+        "business_id": 122,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 374,
+        "blog_post_id": 70,
+        "business_id": 123,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 375,
+        "blog_post_id": 70,
+        "business_id": 124,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 376,
+        "blog_post_id": 70,
+        "business_id": 125,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 377,
+        "blog_post_id": 70,
+        "business_id": 126,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 378,
+        "blog_post_id": 70,
+        "business_id": 128,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 379,
+        "blog_post_id": 70,
+        "business_id": 129,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 380,
+        "blog_post_id": 70,
+        "business_id": 130,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 381,
+        "blog_post_id": 70,
+        "business_id": 131,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 382,
+        "blog_post_id": 70,
+        "business_id": 132,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 383,
+        "blog_post_id": 70,
+        "business_id": 133,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 384,
+        "blog_post_id": 70,
+        "business_id": 134,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 385,
+        "blog_post_id": 70,
+        "business_id": 135,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 386,
+        "blog_post_id": 70,
+        "business_id": 136,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 387,
+        "blog_post_id": 70,
+        "business_id": 137,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 388,
+        "blog_post_id": 70,
+        "business_id": 138,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 389,
+        "blog_post_id": 70,
+        "business_id": 139,
+        "created_at": "2026-01-14 15:12:05",
+        "updated_at": "2026-01-14 15:12:05"
+    },
+    {
+        "id": 390,
+        "blog_post_id": 71,
+        "business_id": 128,
+        "created_at": "2026-01-14 15:12:08",
+        "updated_at": "2026-01-14 15:12:08"
+    },
+    {
+        "id": 391,
+        "blog_post_id": 71,
+        "business_id": 9,
+        "created_at": "2026-01-14 15:12:08",
+        "updated_at": "2026-01-14 15:12:08"
+    },
+    {
+        "id": 392,
+        "blog_post_id": 72,
+        "business_id": 36,
+        "created_at": "2026-01-14 15:12:10",
+        "updated_at": "2026-01-14 15:12:10"
+    },
+    {
+        "id": 393,
+        "blog_post_id": 73,
+        "business_id": 12,
+        "created_at": "2026-01-14 15:12:13",
+        "updated_at": "2026-01-14 15:12:13"
+    },
+    {
+        "id": 394,
+        "blog_post_id": 73,
+        "business_id": 13,
+        "created_at": "2026-01-14 15:12:13",
+        "updated_at": "2026-01-14 15:12:13"
+    },
+    {
+        "id": 395,
+        "blog_post_id": 73,
+        "business_id": 18,
+        "created_at": "2026-01-14 15:12:13",
+        "updated_at": "2026-01-14 15:12:13"
+    },
+    {
+        "id": 396,
+        "blog_post_id": 73,
+        "business_id": 25,
+        "created_at": "2026-01-14 15:12:13",
+        "updated_at": "2026-01-14 15:12:13"
+    },
+    {
+        "id": 397,
+        "blog_post_id": 73,
+        "business_id": 43,
+        "created_at": "2026-01-14 15:12:13",
+        "updated_at": "2026-01-14 15:12:13"
+    },
+    {
+        "id": 398,
+        "blog_post_id": 73,
+        "business_id": 111,
+        "created_at": "2026-01-14 15:12:13",
+        "updated_at": "2026-01-14 15:12:13"
+    },
+    {
+        "id": 399,
+        "blog_post_id": 74,
+        "business_id": 30,
+        "created_at": "2026-01-14 15:12:16",
+        "updated_at": "2026-01-14 15:12:16"
+    },
+    {
+        "id": 400,
+        "blog_post_id": 74,
+        "business_id": 119,
+        "created_at": "2026-01-14 15:12:16",
+        "updated_at": "2026-01-14 15:12:16"
+    },
+    {
+        "id": 401,
+        "blog_post_id": 75,
+        "business_id": 30,
+        "created_at": "2026-01-14 15:12:19",
+        "updated_at": "2026-01-14 15:12:19"
+    },
+    {
+        "id": 402,
+        "blog_post_id": 75,
+        "business_id": 33,
+        "created_at": "2026-01-14 15:12:19",
+        "updated_at": "2026-01-14 15:12:19"
+    },
+    {
+        "id": 403,
+        "blog_post_id": 75,
+        "business_id": 41,
+        "created_at": "2026-01-14 15:12:19",
+        "updated_at": "2026-01-14 15:12:19"
+    },
+    {
+        "id": 404,
+        "blog_post_id": 75,
+        "business_id": 43,
+        "created_at": "2026-01-14 15:12:19",
+        "updated_at": "2026-01-14 15:12:19"
+    },
+    {
+        "id": 405,
+        "blog_post_id": 75,
+        "business_id": 116,
+        "created_at": "2026-01-14 15:12:19",
+        "updated_at": "2026-01-14 15:12:19"
+    },
+    {
+        "id": 406,
+        "blog_post_id": 75,
+        "business_id": 114,
+        "created_at": "2026-01-14 15:12:19",
+        "updated_at": "2026-01-14 15:12:19"
+    },
+    {
+        "id": 407,
+        "blog_post_id": 76,
+        "business_id": 36,
+        "created_at": "2026-01-14 15:12:21",
+        "updated_at": "2026-01-14 15:12:21"
+    },
+    {
+        "id": 408,
+        "blog_post_id": 77,
+        "business_id": 25,
+        "created_at": "2026-01-14 15:12:24",
+        "updated_at": "2026-01-14 15:12:24"
+    },
+    {
+        "id": 409,
+        "blog_post_id": 78,
+        "business_id": 9,
+        "created_at": "2026-01-14 15:12:27",
+        "updated_at": "2026-01-14 15:12:27"
+    },
+    {
+        "id": 410,
+        "blog_post_id": 79,
+        "business_id": 88,
+        "created_at": "2026-01-14 15:12:29",
+        "updated_at": "2026-01-14 15:12:29"
+    },
+    {
+        "id": 411,
+        "blog_post_id": 79,
+        "business_id": 31,
+        "created_at": "2026-01-14 15:12:29",
+        "updated_at": "2026-01-14 15:12:29"
+    },
+    {
+        "id": 412,
+        "blog_post_id": 79,
+        "business_id": 33,
+        "created_at": "2026-01-14 15:12:29",
+        "updated_at": "2026-01-14 15:12:29"
+    },
+    {
+        "id": 413,
+        "blog_post_id": 79,
+        "business_id": 27,
+        "created_at": "2026-01-14 15:12:29",
+        "updated_at": "2026-01-14 15:12:29"
+    },
+    {
+        "id": 414,
+        "blog_post_id": 79,
+        "business_id": 36,
+        "created_at": "2026-01-14 15:12:29",
+        "updated_at": "2026-01-14 15:12:29"
+    },
+    {
+        "id": 415,
+        "blog_post_id": 80,
+        "business_id": 25,
+        "created_at": "2026-01-14 15:12:32",
+        "updated_at": "2026-01-14 15:12:32"
+    },
+    {
+        "id": 416,
+        "blog_post_id": 80,
+        "business_id": 39,
+        "created_at": "2026-01-14 15:12:32",
+        "updated_at": "2026-01-14 15:12:32"
+    },
+    {
+        "id": 417,
+        "blog_post_id": 80,
+        "business_id": 38,
+        "created_at": "2026-01-14 15:12:32",
+        "updated_at": "2026-01-14 15:12:32"
+    },
+    {
+        "id": 418,
+        "blog_post_id": 80,
+        "business_id": 11,
+        "created_at": "2026-01-14 15:12:32",
+        "updated_at": "2026-01-14 15:12:32"
+    },
+    {
+        "id": 419,
+        "blog_post_id": 81,
+        "business_id": 36,
+        "created_at": "2026-01-14 15:12:34",
+        "updated_at": "2026-01-14 15:12:34"
+    },
+    {
+        "id": 420,
+        "blog_post_id": 82,
+        "business_id": 38,
+        "created_at": "2026-01-14 15:12:37",
+        "updated_at": "2026-01-14 15:12:37"
+    },
+    {
+        "id": 421,
+        "blog_post_id": 82,
+        "business_id": 111,
+        "created_at": "2026-01-14 15:12:37",
+        "updated_at": "2026-01-14 15:12:37"
+    },
+    {
+        "id": 422,
+        "blog_post_id": 83,
+        "business_id": 26,
+        "created_at": "2026-01-14 15:12:39",
+        "updated_at": "2026-01-14 15:12:39"
+    },
+    {
+        "id": 423,
+        "blog_post_id": 84,
+        "business_id": 106,
+        "created_at": "2026-01-14 15:12:42",
+        "updated_at": "2026-01-14 15:12:42"
+    },
+    {
+        "id": 424,
+        "blog_post_id": 85,
+        "business_id": 38,
+        "created_at": "2026-01-14 15:12:44",
+        "updated_at": "2026-01-14 15:12:44"
+    },
+    {
+        "id": 425,
+        "blog_post_id": 85,
+        "business_id": 26,
+        "created_at": "2026-01-14 15:12:44",
+        "updated_at": "2026-01-14 15:12:44"
+    },
+    {
+        "id": 426,
+        "blog_post_id": 86,
+        "business_id": 111,
+        "created_at": "2026-01-14 15:12:47",
+        "updated_at": "2026-01-14 15:12:47"
+    },
+    {
+        "id": 427,
+        "blog_post_id": 88,
+        "business_id": 43,
+        "created_at": "2026-01-14 15:12:52",
+        "updated_at": "2026-01-14 15:12:52"
+    },
+    {
+        "id": 428,
+        "blog_post_id": 88,
+        "business_id": 26,
+        "created_at": "2026-01-14 15:12:52",
+        "updated_at": "2026-01-14 15:12:52"
+    },
+    {
+        "id": 429,
+        "blog_post_id": 88,
+        "business_id": 30,
+        "created_at": "2026-01-14 15:12:52",
+        "updated_at": "2026-01-14 15:12:52"
+    },
+    {
+        "id": 430,
+        "blog_post_id": 90,
+        "business_id": 36,
+        "created_at": "2026-01-14 15:12:57",
+        "updated_at": "2026-01-14 15:12:57"
+    },
+    {
+        "id": 431,
+        "blog_post_id": 91,
+        "business_id": 111,
+        "created_at": "2026-01-14 15:13:00",
+        "updated_at": "2026-01-14 15:13:00"
+    },
+    {
+        "id": 432,
+        "blog_post_id": 92,
+        "business_id": 111,
+        "created_at": "2026-01-14 15:13:04",
+        "updated_at": "2026-01-14 15:13:04"
+    },
+    {
+        "id": 433,
+        "blog_post_id": 93,
+        "business_id": 9,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 434,
+        "blog_post_id": 93,
+        "business_id": 10,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 435,
+        "blog_post_id": 93,
+        "business_id": 11,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 436,
+        "blog_post_id": 93,
+        "business_id": 12,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 437,
+        "blog_post_id": 93,
+        "business_id": 13,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 438,
+        "blog_post_id": 93,
+        "business_id": 14,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 439,
+        "blog_post_id": 93,
+        "business_id": 15,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 440,
+        "blog_post_id": 93,
+        "business_id": 16,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 441,
+        "blog_post_id": 93,
+        "business_id": 17,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 442,
+        "blog_post_id": 93,
+        "business_id": 18,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 443,
+        "blog_post_id": 93,
+        "business_id": 24,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 444,
+        "blog_post_id": 93,
+        "business_id": 25,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 445,
+        "blog_post_id": 93,
+        "business_id": 26,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 446,
+        "blog_post_id": 93,
+        "business_id": 27,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 447,
+        "blog_post_id": 93,
+        "business_id": 30,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 448,
+        "blog_post_id": 93,
+        "business_id": 32,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 449,
+        "blog_post_id": 93,
+        "business_id": 33,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 450,
+        "blog_post_id": 93,
+        "business_id": 34,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 451,
+        "blog_post_id": 93,
+        "business_id": 35,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 452,
+        "blog_post_id": 93,
+        "business_id": 38,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 453,
+        "blog_post_id": 93,
+        "business_id": 40,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 454,
+        "blog_post_id": 93,
+        "business_id": 42,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 455,
+        "blog_post_id": 93,
+        "business_id": 44,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 456,
+        "blog_post_id": 93,
+        "business_id": 45,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 457,
+        "blog_post_id": 93,
+        "business_id": 46,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 458,
+        "blog_post_id": 93,
+        "business_id": 47,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 459,
+        "blog_post_id": 93,
+        "business_id": 49,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 460,
+        "blog_post_id": 93,
+        "business_id": 50,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 461,
+        "blog_post_id": 93,
+        "business_id": 51,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 462,
+        "blog_post_id": 93,
+        "business_id": 54,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 463,
+        "blog_post_id": 93,
+        "business_id": 56,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 464,
+        "blog_post_id": 93,
+        "business_id": 57,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 465,
+        "blog_post_id": 93,
+        "business_id": 60,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 466,
+        "blog_post_id": 93,
+        "business_id": 61,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 467,
+        "blog_post_id": 93,
+        "business_id": 63,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 468,
+        "blog_post_id": 93,
+        "business_id": 64,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 469,
+        "blog_post_id": 93,
+        "business_id": 67,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 470,
+        "blog_post_id": 93,
+        "business_id": 69,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 471,
+        "blog_post_id": 93,
+        "business_id": 70,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 472,
+        "blog_post_id": 93,
+        "business_id": 72,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 473,
+        "blog_post_id": 93,
+        "business_id": 75,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 474,
+        "blog_post_id": 93,
+        "business_id": 78,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 475,
+        "blog_post_id": 93,
+        "business_id": 80,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 476,
+        "blog_post_id": 93,
+        "business_id": 81,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 477,
+        "blog_post_id": 93,
+        "business_id": 84,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 478,
+        "blog_post_id": 93,
+        "business_id": 86,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 479,
+        "blog_post_id": 93,
+        "business_id": 89,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 480,
+        "blog_post_id": 93,
+        "business_id": 91,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 481,
+        "blog_post_id": 93,
+        "business_id": 93,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 482,
+        "blog_post_id": 93,
+        "business_id": 94,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 483,
+        "blog_post_id": 93,
+        "business_id": 97,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 484,
+        "blog_post_id": 93,
+        "business_id": 99,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 485,
+        "blog_post_id": 93,
+        "business_id": 100,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 486,
+        "blog_post_id": 93,
+        "business_id": 101,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 487,
+        "blog_post_id": 93,
+        "business_id": 103,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 488,
+        "blog_post_id": 93,
+        "business_id": 106,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 489,
+        "blog_post_id": 93,
+        "business_id": 107,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 490,
+        "blog_post_id": 93,
+        "business_id": 108,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 491,
+        "blog_post_id": 93,
+        "business_id": 109,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 492,
+        "blog_post_id": 93,
+        "business_id": 111,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 493,
+        "blog_post_id": 93,
+        "business_id": 113,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 494,
+        "blog_post_id": 93,
+        "business_id": 115,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 495,
+        "blog_post_id": 93,
+        "business_id": 116,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 496,
+        "blog_post_id": 93,
+        "business_id": 118,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 497,
+        "blog_post_id": 93,
+        "business_id": 120,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 498,
+        "blog_post_id": 93,
+        "business_id": 122,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 499,
+        "blog_post_id": 93,
+        "business_id": 124,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 500,
+        "blog_post_id": 93,
+        "business_id": 126,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 501,
+        "blog_post_id": 93,
+        "business_id": 128,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 502,
+        "blog_post_id": 93,
+        "business_id": 130,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 503,
+        "blog_post_id": 93,
+        "business_id": 132,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 504,
+        "blog_post_id": 93,
+        "business_id": 134,
+        "created_at": "2026-01-14 15:13:15",
+        "updated_at": "2026-01-14 15:13:15"
+    },
+    {
+        "id": 505,
+        "blog_post_id": 94,
+        "business_id": 33,
+        "created_at": "2026-01-14 15:13:18",
+        "updated_at": "2026-01-14 15:13:18"
+    },
+    {
+        "id": 506,
+        "blog_post_id": 94,
+        "business_id": 35,
+        "created_at": "2026-01-14 15:13:18",
+        "updated_at": "2026-01-14 15:13:18"
+    },
+    {
+        "id": 507,
+        "blog_post_id": 94,
+        "business_id": 26,
+        "created_at": "2026-01-14 15:13:18",
+        "updated_at": "2026-01-14 15:13:18"
+    },
+    {
+        "id": 508,
+        "blog_post_id": 95,
+        "business_id": 111,
+        "created_at": "2026-01-14 15:13:20",
+        "updated_at": "2026-01-14 15:13:20"
+    },
+    {
+        "id": 509,
+        "blog_post_id": 95,
+        "business_id": 106,
+        "created_at": "2026-01-14 15:13:20",
+        "updated_at": "2026-01-14 15:13:20"
+    },
+    {
+        "id": 510,
+        "blog_post_id": 96,
+        "business_id": 68,
+        "created_at": "2026-01-14 15:13:23",
+        "updated_at": "2026-01-14 15:13:23"
+    },
+    {
+        "id": 511,
+        "blog_post_id": 96,
+        "business_id": 39,
+        "created_at": "2026-01-14 15:13:23",
+        "updated_at": "2026-01-14 15:13:23"
+    },
+    {
+        "id": 512,
+        "blog_post_id": 97,
+        "business_id": 12,
+        "created_at": "2026-01-14 15:13:27",
+        "updated_at": "2026-01-14 15:13:27"
+    },
+    {
+        "id": 513,
+        "blog_post_id": 97,
+        "business_id": 31,
+        "created_at": "2026-01-14 15:13:27",
+        "updated_at": "2026-01-14 15:13:27"
+    },
+    {
+        "id": 514,
+        "blog_post_id": 97,
+        "business_id": 30,
+        "created_at": "2026-01-14 15:13:27",
+        "updated_at": "2026-01-14 15:13:27"
+    },
+    {
+        "id": 515,
+        "blog_post_id": 97,
+        "business_id": 24,
+        "created_at": "2026-01-14 15:13:27",
+        "updated_at": "2026-01-14 15:13:27"
+    },
+    {
+        "id": 516,
+        "blog_post_id": 97,
+        "business_id": 18,
+        "created_at": "2026-01-14 15:13:27",
+        "updated_at": "2026-01-14 15:13:27"
+    },
+    {
+        "id": 517,
+        "blog_post_id": 97,
+        "business_id": 111,
+        "created_at": "2026-01-14 15:13:27",
+        "updated_at": "2026-01-14 15:13:27"
+    },
+    {
+        "id": 518,
+        "blog_post_id": 97,
+        "business_id": 119,
+        "created_at": "2026-01-14 15:13:27",
+        "updated_at": "2026-01-14 15:13:27"
+    },
+    {
+        "id": 519,
+        "blog_post_id": 99,
+        "business_id": 18,
+        "created_at": "2026-01-14 15:13:41",
+        "updated_at": "2026-01-14 15:13:41"
+    },
+    {
+        "id": 520,
+        "blog_post_id": 99,
+        "business_id": 25,
+        "created_at": "2026-01-14 15:13:41",
+        "updated_at": "2026-01-14 15:13:41"
+    },
+    {
+        "id": 521,
+        "blog_post_id": 100,
+        "business_id": 9,
+        "created_at": "2026-01-14 15:13:45",
+        "updated_at": "2026-01-14 15:13:45"
+    },
+    {
+        "id": 522,
+        "blog_post_id": 100,
+        "business_id": 10,
+        "created_at": "2026-01-14 15:13:45",
+        "updated_at": "2026-01-14 15:13:45"
+    },
+    {
+        "id": 523,
+        "blog_post_id": 100,
+        "business_id": 11,
+        "created_at": "2026-01-14 15:13:45",
+        "updated_at": "2026-01-14 15:13:45"
+    },
+    {
+        "id": 524,
+        "blog_post_id": 100,
+        "business_id": 12,
+        "created_at": "2026-01-14 15:13:45",
+        "updated_at": "2026-01-14 15:13:45"
+    },
+    {
+        "id": 525,
+        "blog_post_id": 100,
+        "business_id": 13,
+        "created_at": "2026-01-14 15:13:45",
+        "updated_at": "2026-01-14 15:13:45"
+    },
+    {
+        "id": 526,
+        "blog_post_id": 100,
+        "business_id": 14,
+        "created_at": "2026-01-14 15:13:45",
+        "updated_at": "2026-01-14 15:13:45"
+    },
+    {
+        "id": 527,
+        "blog_post_id": 100,
+        "business_id": 15,
+        "created_at": "2026-01-14 15:13:45",
+        "updated_at": "2026-01-14 15:13:45"
+    },
+    {
+        "id": 528,
+        "blog_post_id": 100,
+        "business_id": 24,
+        "created_at": "2026-01-14 15:13:45",
+        "updated_at": "2026-01-14 15:13:45"
+    },
+    {
+        "id": 529,
+        "blog_post_id": 100,
+        "business_id": 25,
+        "created_at": "2026-01-14 15:13:45",
+        "updated_at": "2026-01-14 15:13:45"
+    },
+    {
+        "id": 530,
+        "blog_post_id": 100,
+        "business_id": 26,
+        "created_at": "2026-01-14 15:13:45",
+        "updated_at": "2026-01-14 15:13:45"
+    },
+    {
+        "id": 531,
+        "blog_post_id": 100,
+        "business_id": 30,
+        "created_at": "2026-01-14 15:13:45",
+        "updated_at": "2026-01-14 15:13:45"
+    },
+    {
+        "id": 532,
+        "blog_post_id": 100,
+        "business_id": 32,
+        "created_at": "2026-01-14 15:13:45",
+        "updated_at": "2026-01-14 15:13:45"
+    },
+    {
+        "id": 533,
+        "blog_post_id": 100,
+        "business_id": 34,
+        "created_at": "2026-01-14 15:13:45",
+        "updated_at": "2026-01-14 15:13:45"
+    },
+    {
+        "id": 534,
+        "blog_post_id": 100,
+        "business_id": 36,
+        "created_at": "2026-01-14 15:13:45",
+        "updated_at": "2026-01-14 15:13:45"
+    },
+    {
+        "id": 535,
+        "blog_post_id": 100,
+        "business_id": 40,
+        "created_at": "2026-01-14 15:13:45",
+        "updated_at": "2026-01-14 15:13:45"
+    },
+    {
+        "id": 536,
+        "blog_post_id": 100,
+        "business_id": 50,
+        "created_at": "2026-01-14 15:13:45",
+        "updated_at": "2026-01-14 15:13:45"
+    },
+    {
+        "id": 537,
+        "blog_post_id": 100,
+        "business_id": 51,
+        "created_at": "2026-01-14 15:13:45",
+        "updated_at": "2026-01-14 15:13:45"
+    },
+    {
+        "id": 538,
+        "blog_post_id": 100,
+        "business_id": 58,
+        "created_at": "2026-01-14 15:13:45",
+        "updated_at": "2026-01-14 15:13:45"
+    },
+    {
+        "id": 539,
+        "blog_post_id": 100,
+        "business_id": 96,
+        "created_at": "2026-01-14 15:13:45",
+        "updated_at": "2026-01-14 15:13:45"
+    },
+    {
+        "id": 540,
+        "blog_post_id": 101,
+        "business_id": 9,
+        "created_at": "2026-01-14 15:13:49",
+        "updated_at": "2026-01-14 15:13:49"
+    },
+    {
+        "id": 541,
+        "blog_post_id": 101,
+        "business_id": 10,
+        "created_at": "2026-01-14 15:13:49",
+        "updated_at": "2026-01-14 15:13:49"
+    },
+    {
+        "id": 542,
+        "blog_post_id": 101,
+        "business_id": 11,
+        "created_at": "2026-01-14 15:13:49",
+        "updated_at": "2026-01-14 15:13:49"
+    },
+    {
+        "id": 543,
+        "blog_post_id": 101,
+        "business_id": 12,
+        "created_at": "2026-01-14 15:13:49",
+        "updated_at": "2026-01-14 15:13:49"
+    },
+    {
+        "id": 544,
+        "blog_post_id": 101,
+        "business_id": 13,
+        "created_at": "2026-01-14 15:13:49",
+        "updated_at": "2026-01-14 15:13:49"
+    },
+    {
+        "id": 545,
+        "blog_post_id": 101,
+        "business_id": 14,
+        "created_at": "2026-01-14 15:13:49",
+        "updated_at": "2026-01-14 15:13:49"
+    },
+    {
+        "id": 546,
+        "blog_post_id": 101,
+        "business_id": 15,
+        "created_at": "2026-01-14 15:13:49",
+        "updated_at": "2026-01-14 15:13:49"
+    },
+    {
+        "id": 547,
+        "blog_post_id": 101,
+        "business_id": 16,
+        "created_at": "2026-01-14 15:13:49",
+        "updated_at": "2026-01-14 15:13:49"
+    },
+    {
+        "id": 548,
+        "blog_post_id": 101,
+        "business_id": 17,
+        "created_at": "2026-01-14 15:13:49",
+        "updated_at": "2026-01-14 15:13:49"
+    },
+    {
+        "id": 549,
+        "blog_post_id": 101,
+        "business_id": 18,
+        "created_at": "2026-01-14 15:13:49",
+        "updated_at": "2026-01-14 15:13:49"
+    },
+    {
+        "id": 550,
+        "blog_post_id": 101,
+        "business_id": 23,
+        "created_at": "2026-01-14 15:13:49",
+        "updated_at": "2026-01-14 15:13:49"
+    },
+    {
+        "id": 551,
+        "blog_post_id": 101,
+        "business_id": 24,
+        "created_at": "2026-01-14 15:13:49",
+        "updated_at": "2026-01-14 15:13:49"
+    },
+    {
+        "id": 552,
+        "blog_post_id": 101,
+        "business_id": 25,
+        "created_at": "2026-01-14 15:13:49",
+        "updated_at": "2026-01-14 15:13:49"
+    },
+    {
+        "id": 553,
+        "blog_post_id": 101,
+        "business_id": 26,
+        "created_at": "2026-01-14 15:13:49",
+        "updated_at": "2026-01-14 15:13:49"
+    },
+    {
+        "id": 554,
+        "blog_post_id": 101,
+        "business_id": 30,
+        "created_at": "2026-01-14 15:13:49",
+        "updated_at": "2026-01-14 15:13:49"
+    },
+    {
+        "id": 555,
+        "blog_post_id": 101,
+        "business_id": 32,
+        "created_at": "2026-01-14 15:13:49",
+        "updated_at": "2026-01-14 15:13:49"
+    },
+    {
+        "id": 556,
+        "blog_post_id": 101,
+        "business_id": 34,
+        "created_at": "2026-01-14 15:13:49",
+        "updated_at": "2026-01-14 15:13:49"
+    },
+    {
+        "id": 557,
+        "blog_post_id": 101,
+        "business_id": 36,
+        "created_at": "2026-01-14 15:13:49",
+        "updated_at": "2026-01-14 15:13:49"
+    },
+    {
+        "id": 558,
+        "blog_post_id": 101,
+        "business_id": 40,
+        "created_at": "2026-01-14 15:13:49",
+        "updated_at": "2026-01-14 15:13:49"
+    },
+    {
+        "id": 559,
+        "blog_post_id": 101,
+        "business_id": 51,
+        "created_at": "2026-01-14 15:13:49",
+        "updated_at": "2026-01-14 15:13:49"
+    },
+    {
+        "id": 560,
+        "blog_post_id": 101,
+        "business_id": 80,
+        "created_at": "2026-01-14 15:13:49",
+        "updated_at": "2026-01-14 15:13:49"
+    },
+    {
+        "id": 561,
+        "blog_post_id": 101,
+        "business_id": 81,
+        "created_at": "2026-01-14 15:13:49",
+        "updated_at": "2026-01-14 15:13:49"
+    },
+    {
+        "id": 562,
+        "blog_post_id": 101,
+        "business_id": 120,
+        "created_at": "2026-01-14 15:13:49",
+        "updated_at": "2026-01-14 15:13:49"
+    },
+    {
+        "id": 563,
+        "blog_post_id": 101,
+        "business_id": 121,
+        "created_at": "2026-01-14 15:13:49",
+        "updated_at": "2026-01-14 15:13:49"
+    },
+    {
+        "id": 564,
+        "blog_post_id": 101,
+        "business_id": 128,
+        "created_at": "2026-01-14 15:13:49",
+        "updated_at": "2026-01-14 15:13:49"
+    },
+    {
+        "id": 565,
+        "blog_post_id": 103,
+        "business_id": 128,
+        "created_at": "2026-01-14 15:13:54",
+        "updated_at": "2026-01-14 15:13:54"
+    },
+    {
+        "id": 566,
+        "blog_post_id": 104,
+        "business_id": 18,
+        "created_at": "2026-01-14 15:13:57",
+        "updated_at": "2026-01-14 15:13:57"
+    },
+    {
+        "id": 567,
+        "blog_post_id": 104,
+        "business_id": 50,
+        "created_at": "2026-01-14 15:13:57",
+        "updated_at": "2026-01-14 15:13:57"
+    },
+    {
+        "id": 568,
+        "blog_post_id": 104,
+        "business_id": 126,
+        "created_at": "2026-01-14 15:13:57",
+        "updated_at": "2026-01-14 15:13:57"
+    },
+    {
+        "id": 569,
+        "blog_post_id": 112,
+        "business_id": 36,
+        "created_at": "2026-01-14 15:14:33",
+        "updated_at": "2026-01-14 15:14:33"
+    },
+    {
+        "id": 570,
+        "blog_post_id": 115,
+        "business_id": 50,
+        "created_at": "2026-01-14 15:14:51",
+        "updated_at": "2026-01-14 15:14:51"
+    },
+    {
+        "id": 571,
+        "blog_post_id": 115,
+        "business_id": 36,
+        "created_at": "2026-01-14 15:14:51",
+        "updated_at": "2026-01-14 15:14:51"
+    },
+    {
+        "id": 572,
+        "blog_post_id": 115,
+        "business_id": 11,
+        "created_at": "2026-01-14 15:14:51",
+        "updated_at": "2026-01-14 15:14:51"
+    },
+    {
+        "id": 573,
+        "blog_post_id": 115,
+        "business_id": 12,
+        "created_at": "2026-01-14 15:14:51",
+        "updated_at": "2026-01-14 15:14:51"
+    },
+    {
+        "id": 574,
+        "blog_post_id": 115,
+        "business_id": 26,
+        "created_at": "2026-01-14 15:14:51",
+        "updated_at": "2026-01-14 15:14:51"
+    },
+    {
+        "id": 575,
+        "blog_post_id": 115,
+        "business_id": 31,
+        "created_at": "2026-01-14 15:14:51",
+        "updated_at": "2026-01-14 15:14:51"
+    },
+    {
+        "id": 576,
+        "blog_post_id": 115,
+        "business_id": 33,
+        "created_at": "2026-01-14 15:14:51",
+        "updated_at": "2026-01-14 15:14:51"
+    },
+    {
+        "id": 577,
+        "blog_post_id": 115,
+        "business_id": 34,
+        "created_at": "2026-01-14 15:14:51",
+        "updated_at": "2026-01-14 15:14:51"
+    },
+    {
+        "id": 578,
+        "blog_post_id": 115,
+        "business_id": 38,
+        "created_at": "2026-01-14 15:14:51",
+        "updated_at": "2026-01-14 15:14:51"
+    },
+    {
+        "id": 579,
+        "blog_post_id": 116,
+        "business_id": 10,
+        "created_at": "2026-01-14 15:14:55",
+        "updated_at": "2026-01-14 15:14:55"
+    },
+    {
+        "id": 580,
+        "blog_post_id": 116,
+        "business_id": 12,
+        "created_at": "2026-01-14 15:14:55",
+        "updated_at": "2026-01-14 15:14:55"
+    },
+    {
+        "id": 581,
+        "blog_post_id": 116,
+        "business_id": 19,
+        "created_at": "2026-01-14 15:14:55",
+        "updated_at": "2026-01-14 15:14:55"
+    },
+    {
+        "id": 582,
+        "blog_post_id": 116,
+        "business_id": 25,
+        "created_at": "2026-01-14 15:14:55",
+        "updated_at": "2026-01-14 15:14:55"
+    },
+    {
+        "id": 583,
+        "blog_post_id": 116,
+        "business_id": 26,
+        "created_at": "2026-01-14 15:14:55",
+        "updated_at": "2026-01-14 15:14:55"
+    },
+    {
+        "id": 584,
+        "blog_post_id": 116,
+        "business_id": 30,
+        "created_at": "2026-01-14 15:14:55",
+        "updated_at": "2026-01-14 15:14:55"
+    },
+    {
+        "id": 585,
+        "blog_post_id": 116,
+        "business_id": 32,
+        "created_at": "2026-01-14 15:14:55",
+        "updated_at": "2026-01-14 15:14:55"
+    },
+    {
+        "id": 586,
+        "blog_post_id": 116,
+        "business_id": 34,
+        "created_at": "2026-01-14 15:14:55",
+        "updated_at": "2026-01-14 15:14:55"
+    },
+    {
+        "id": 587,
+        "blog_post_id": 116,
+        "business_id": 36,
+        "created_at": "2026-01-14 15:14:55",
+        "updated_at": "2026-01-14 15:14:55"
+    },
+    {
+        "id": 588,
+        "blog_post_id": 116,
+        "business_id": 45,
+        "created_at": "2026-01-14 15:14:55",
+        "updated_at": "2026-01-14 15:14:55"
+    },
+    {
+        "id": 589,
+        "blog_post_id": 117,
+        "business_id": 36,
+        "created_at": "2026-01-14 15:14:58",
+        "updated_at": "2026-01-14 15:14:58"
+    },
+    {
+        "id": 590,
+        "blog_post_id": 118,
+        "business_id": 113,
+        "created_at": "2026-01-14 15:15:00",
+        "updated_at": "2026-01-14 15:15:00"
+    }
+]

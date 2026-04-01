@@ -1,0 +1,263 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+/* FontAwesome */
+@import '../fonts/kit-31922bfab5-web/css/fontawesome.min.css';
+@import '../fonts/kit-31922bfab5-web/css/duotone-light.min.css';
+@import '../fonts/kit-31922bfab5-web/css/brands.min.css';
+
+/* Custom Fonts */
+@font-face {
+    font-family: 'Friday Vibes';
+    src: url('../fonts/Friday Vibes.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/static/Montserrat-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/static/Montserrat-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/static/Montserrat-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/static/Montserrat-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/static/Montserrat-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/static/Montserrat-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/static/Montserrat-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/static/Montserrat-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/static/Montserrat-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/static/Montserrat-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/static/Montserrat-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/static/Montserrat-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/static/Montserrat-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Custom color palette for Downtown Bellefontaine */
+@theme {
+    --font-sans: 'Montserrat', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-display: 'Friday Vibes', cursive;
+
+    /* Primary - Dark Teal */
+    --color-primary-50: #e6f2f3;
+    --color-primary-100: #b3d9dd;
+    --color-primary-200: #80c0c7;
+    --color-primary-300: #4da7b1;
+    --color-primary-400: #268e9b;
+    --color-primary-500: #01757f;
+    --color-primary-600: #015c66;
+    --color-primary-700: #01434c;
+    --color-primary-800: #003d45;
+    --color-primary-900: #002a30;
+    --color-primary-950: #001a1d;
+
+    /* Accent - Atomic Tangerine (base: #f3773d) */
+    --color-accent-50: #fef5f0;
+    --color-accent-100: #fde8dc;
+    --color-accent-200: #fbcdb8;
+    --color-accent-300: #f8ad8a;
+    --color-accent-400: #f59260;
+    --color-accent-500: #f3773d;
+    --color-accent-600: #e25a1f;
+    --color-accent-700: #bc4517;
+    --color-accent-800: #963815;
+    --color-accent-900: #7a3116;
+    --color-accent-950: #421608;
+
+    /* Success - Sage Green */
+    --color-success-50: #f0f6e9;
+    --color-success-100: #d9eac7;
+    --color-success-200: #b3d58f;
+    --color-success-300: #8dc057;
+    --color-success-400: #679436;
+    --color-success-500: #527728;
+    --color-success-600: #3d5a1e;
+    --color-success-700: #2a3d15;
+    --color-success-800: #1a260d;
+    --color-success-900: #0d1306;
+    --color-success-950: #060903;
+
+    /* Danger - Burgundy */
+    --color-danger-50: #fbeaeb;
+    --color-danger-100: #f4c5c7;
+    --color-danger-200: #e99093;
+    --color-danger-300: #de5b5f;
+    --color-danger-400: #b13337;
+    --color-danger-500: #88292f;
+    --color-danger-600: #6d2126;
+    --color-danger-700: #52191c;
+    --color-danger-800: #371012;
+    --color-danger-900: #1c0809;
+    --color-danger-950: #0e0405;
+
+    /* Warning - Using a warm amber */
+    --color-warning-50: #fffbeb;
+    --color-warning-100: #fef3c7;
+    --color-warning-200: #fde68a;
+    --color-warning-300: #fcd34d;
+    --color-warning-400: #fbbf24;
+    --color-warning-500: #f59e0b;
+    --color-warning-600: #d97706;
+    --color-warning-700: #b45309;
+    --color-warning-800: #92400e;
+    --color-warning-900: #78350f;
+    --color-warning-950: #451a03;
+}
+
+/* Light theme (default) */
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f3f4f6;
+    --bg-tertiary: #e5e7eb;
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --text-tertiary: #6b7280;
+    --border-color: #d1d5db;
+    --border-light: #e5e7eb;
+}
+
+/* Dark theme */
+.dark {
+    --bg-primary: #0a1f22;
+    --bg-secondary: #112d31;
+    --bg-tertiary: #1a3d42;
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --text-tertiary: #94a3b8;
+    --border-color: #475569;
+    --border-light: #334155;
+}
+
+/* Utility classes using CSS variables */
+@layer utilities {
+    .bg-theme-primary {
+        background-color: var(--bg-primary);
+    }
+    .bg-theme-secondary {
+        background-color: var(--bg-secondary);
+    }
+    .bg-theme-tertiary {
+        background-color: var(--bg-tertiary);
+    }
+    .text-theme-primary {
+        color: var(--text-primary);
+    }
+    .text-theme-secondary {
+        color: var(--text-secondary);
+    }
+    .text-theme-tertiary {
+        color: var(--text-tertiary);
+    }
+    .border-theme {
+        border-color: var(--border-color);
+    }
+    .border-theme-light {
+        border-color: var(--border-light);
+    }
+    /* Display font utility */
+    .font-display {
+        font-family: 'Friday Vibes', cursive;
+    }
+}
+
+/* Smooth theme transitions */
+html {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html.dark {
+    color-scheme: dark;
+}
