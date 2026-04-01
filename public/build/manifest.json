@@ -1,0 +1,90 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-Bkkl5Ymy.css",
+    "src": "resources/css/app.css",
+    "isEntry": true,
+    "name": "app",
+    "names": [
+      "app.css"
+    ]
+  },
+  "resources/css/filament/admin.css": {
+    "file": "assets/admin-DkQUWbuU.css",
+    "src": "resources/css/filament/admin.css",
+    "isEntry": true,
+    "name": "admin",
+    "names": [
+      "admin.css"
+    ]
+  },
+  "resources/fonts/Friday Vibes.ttf": {
+    "file": "assets/Friday Vibes-vcZxpPVp.ttf",
+    "src": "resources/fonts/Friday Vibes.ttf"
+  },
+  "resources/fonts/Montserrat/static/Montserrat-Black.ttf": {
+    "file": "assets/Montserrat-Black-BvreqxJ7.ttf",
+    "src": "resources/fonts/Montserrat/static/Montserrat-Black.ttf"
+  },
+  "resources/fonts/Montserrat/static/Montserrat-BlackItalic.ttf": {
+    "file": "assets/Montserrat-BlackItalic-C-5QLVvp.ttf",
+    "src": "resources/fonts/Montserrat/static/Montserrat-BlackItalic.ttf"
+  },
+  "resources/fonts/Montserrat/static/Montserrat-Bold.ttf": {
+    "file": "assets/Montserrat-Bold-D4JCkd3k.ttf",
+    "src": "resources/fonts/Montserrat/static/Montserrat-Bold.ttf"
+  },
+  "resources/fonts/Montserrat/static/Montserrat-BoldItalic.ttf": {
+    "file": "assets/Montserrat-BoldItalic-ChsC8_PY.ttf",
+    "src": "resources/fonts/Montserrat/static/Montserrat-BoldItalic.ttf"
+  },
+  "resources/fonts/Montserrat/static/Montserrat-ExtraBold.ttf": {
+    "file": "assets/Montserrat-ExtraBold-Cwewate7.ttf",
+    "src": "resources/fonts/Montserrat/static/Montserrat-ExtraBold.ttf"
+  },
+  "resources/fonts/Montserrat/static/Montserrat-ExtraLight.ttf": {
+    "file": "assets/Montserrat-ExtraLight-CaaIJGL_.ttf",
+    "src": "resources/fonts/Montserrat/static/Montserrat-ExtraLight.ttf"
+  },
+  "resources/fonts/Montserrat/static/Montserrat-Italic.ttf": {
+    "file": "assets/Montserrat-Italic-BClKdKAZ.ttf",
+    "src": "resources/fonts/Montserrat/static/Montserrat-Italic.ttf"
+  },
+  "resources/fonts/Montserrat/static/Montserrat-Light.ttf": {
+    "file": "assets/Montserrat-Light-C0R4aJ1n.ttf",
+    "src": "resources/fonts/Montserrat/static/Montserrat-Light.ttf"
+  },
+  "resources/fonts/Montserrat/static/Montserrat-Medium.ttf": {
+    "file": "assets/Montserrat-Medium-DZarjTSE.ttf",
+    "src": "resources/fonts/Montserrat/static/Montserrat-Medium.ttf"
+  },
+  "resources/fonts/Montserrat/static/Montserrat-Regular.ttf": {
+    "file": "assets/Montserrat-Regular-BdMzRefO.ttf",
+    "src": "resources/fonts/Montserrat/static/Montserrat-Regular.ttf"
+  },
+  "resources/fonts/Montserrat/static/Montserrat-SemiBold.ttf": {
+    "file": "assets/Montserrat-SemiBold-C0-6BeuA.ttf",
+    "src": "resources/fonts/Montserrat/static/Montserrat-SemiBold.ttf"
+  },
+  "resources/fonts/Montserrat/static/Montserrat-Thin.ttf": {
+    "file": "assets/Montserrat-Thin-Bwj8c5HY.ttf",
+    "src": "resources/fonts/Montserrat/static/Montserrat-Thin.ttf"
+  },
+  "resources/fonts/Montserrat/static/Montserrat-ThinItalic.ttf": {
+    "file": "assets/Montserrat-ThinItalic-BEjKNNaY.ttf",
+    "src": "resources/fonts/Montserrat/static/Montserrat-ThinItalic.ttf"
+  },
+  "resources/fonts/kit-31922bfab5-web/webfonts/fa-brands-400.woff2": {
+    "file": "assets/fa-brands-400-DXx3Sb0s.woff2",
+    "src": "resources/fonts/kit-31922bfab5-web/webfonts/fa-brands-400.woff2"
+  },
+  "resources/fonts/kit-31922bfab5-web/webfonts/fa-duotone-light-300.woff2": {
+    "file": "assets/fa-duotone-light-300-Bf8yKYCd.woff2",
+    "src": "resources/fonts/kit-31922bfab5-web/webfonts/fa-duotone-light-300.woff2"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-C-J3mxpa.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  }
+}
