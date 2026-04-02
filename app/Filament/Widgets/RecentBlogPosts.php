@@ -4,7 +4,9 @@ namespace App\Filament\Widgets;
 
 use App\Filament\Resources\BlogPosts\BlogPostResource;
 use App\Models\BlogPost;
-use Filament\Tables;
+use Filament\Actions\Action;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Filament\Widgets\TableWidget as BaseWidget;
 
@@ -25,23 +27,25 @@ class RecentBlogPosts extends BaseWidget
                     ->limit(5)
             )
             ->columns([
-                Tables\Columns\ImageColumn::make('featured_image')
+                ImageColumn::make('featured_image')
                     ->label('')
                     ->disk('public')
                     ->circular()
                     ->size(40),
-                Tables\Columns\TextColumn::make('title')
+                TextColumn::make('title')
                     ->weight('bold')
                     ->limit(30),
-                Tables\Columns\BadgeColumn::make('status')
-                    ->colors([
-                        'gray' => 'draft',
-                        'success' => 'published',
-                        'danger' => 'archived',
-                    ]),
+                TextColumn::make('status')
+                    ->badge()
+                    ->color(fn (string $state): string => match ($state) {
+                        'draft' => 'gray',
+                        'published' => 'success',
+                        'archived' => 'danger',
+                        default => 'gray',
+                    }),
             ])
-            ->actions([
-                Tables\Actions\Action::make('edit')
+            ->recordActions([
+                Action::make('edit')
                     ->label('Edit')
                     ->icon('heroicon-o-pencil')
                     ->url(fn (BlogPost $record) => BlogPostResource::getUrl('edit', ['record' => $record])),
