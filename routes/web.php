@@ -21,6 +21,7 @@ Route::get('/places-to-shop', [App\Http\Controllers\Public\PageController::class
 Route::get('/food-drinks', [App\Http\Controllers\Public\PageController::class, 'foodDrinks'])->name('pages.food-drinks');
 Route::get('/stay', [App\Http\Controllers\Public\PageController::class, 'stay'])->name('pages.stay');
 Route::get('/plan-a-visit', fn() => view('pages.plan-a-visit'))->name('pages.plan-a-visit');
+Route::get('/map', [App\Http\Controllers\Public\MapController::class, 'index'])->name('pages.map');
 Route::get('/first-fridays', fn() => view('pages.first-fridays'))->name('pages.first-fridays');
 Route::get('/meeting-spaces', fn() => view('pages.meeting-spaces'))->name('pages.meeting-spaces');
 Route::get('/dora', fn() => view('pages.dora'))->name('pages.dora');

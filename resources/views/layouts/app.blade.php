@@ -57,8 +57,12 @@
                         <span>Events</span>
                     </a>
                     <a href="{{ route('pages.plan-a-visit') }}" class="flex items-center gap-1.5 text-theme-secondary hover:text-primary-500 dark:hover:text-primary-400 transition-colors font-medium text-sm">
-                        <i class="fa-duotone fa-light fa-map-location-dot text-primary-500"></i>
+                        <i class="fa-duotone fa-light fa-compass text-primary-500"></i>
                         <span>Plan a Visit</span>
+                    </a>
+                    <a href="{{ route('pages.map') }}" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accent-500 hover:bg-accent-600 text-white transition-colors font-semibold text-sm">
+                        <i class="fa-duotone fa-light fa-map-location-dot"></i>
+                        <span>Map</span>
                     </a>
                     {{-- More Dropdown --}}
                     <div class="relative" data-dropdown>
@@ -153,8 +157,12 @@
                     <span>Events</span>
                 </a>
                 <a href="{{ route('pages.plan-a-visit') }}" class="flex items-center gap-3 py-2.5 text-theme-secondary hover:text-primary-500">
-                    <i class="fa-duotone fa-light fa-map-location-dot w-5 text-center text-primary-500"></i>
+                    <i class="fa-duotone fa-light fa-compass w-5 text-center text-primary-500"></i>
                     <span>Plan a Visit</span>
+                </a>
+                <a href="{{ route('pages.map') }}" class="flex items-center gap-3 py-2.5 text-theme-secondary hover:text-primary-500">
+                    <i class="fa-duotone fa-light fa-map-location-dot w-5 text-center text-primary-500"></i>
+                    <span>Map</span>
                 </a>
                 <a href="{{ route('pages.first-fridays') }}" class="flex items-center gap-3 py-2.5 text-theme-secondary hover:text-primary-500">
                     <i class="fa-duotone fa-light fa-party-horn w-5 text-center text-primary-500"></i>
@@ -290,8 +298,14 @@
                         </li>
                         <li>
                             <a href="{{ route('pages.plan-a-visit') }}" class="hover:text-white transition-colors flex items-center gap-2">
-                                <i class="fa-duotone fa-light fa-map-location-dot w-4 text-primary-400"></i>
+                                <i class="fa-duotone fa-light fa-compass w-4 text-primary-400"></i>
                                 Plan a Visit
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('pages.map') }}" class="hover:text-white transition-colors flex items-center gap-2">
+                                <i class="fa-duotone fa-light fa-map-location-dot w-4 text-primary-400"></i>
+                                Interactive Map
                             </a>
                         </li>
                     </ul>
