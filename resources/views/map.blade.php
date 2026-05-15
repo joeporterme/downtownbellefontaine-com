@@ -16,8 +16,40 @@
         outline: 2px solid var(--color-accent-500, #f3773d);
         outline-offset: 2px;
     }
-    /* Google InfoWindow tweaks */
-    .gm-iw-content { padding: 0 !important; }
+
+    /* Google InfoWindow chrome overrides — kill default top padding and
+       float the close button into the corner so our content controls
+       its own spacing. */
+    .gm-style-iw.gm-style-iw-c {
+        padding: 0 !important;
+        border-radius: 12px !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+        max-width: 280px !important;
+    }
+    .gm-style-iw-d {
+        overflow: hidden !important;
+        padding: 0 !important;
+        max-height: none !important;
+    }
+    .gm-style-iw-chr {
+        position: absolute !important;
+        top: 4px !important;
+        right: 4px !important;
+        height: auto !important;
+        margin: 0 !important;
+        z-index: 2;
+    }
+    .gm-style-iw-ch {
+        padding: 0 !important;
+        height: 0 !important;
+    }
+    .gm-ui-hover-effect {
+        width: 24px !important;
+        height: 24px !important;
+    }
+    .gm-ui-hover-effect > span {
+        margin: 4px !important;
+    }
 </style>
 @endpush
 
@@ -290,10 +322,10 @@
             if (map.getZoom() < 17) map.setZoom(17);
         }
         infoWindow.setContent(`
-            <div style="padding:8px 4px;min-width:180px;font-family:Montserrat,system-ui,sans-serif;">
-                <div style="font-weight:700;font-size:14px;color:#0a1f22;margin-bottom:2px;">${escapeHtml(b.name)}</div>
-                ${b.address ? `<div style="font-size:12px;color:#4b5563;margin-bottom:6px;">${escapeHtml(b.address)}</div>` : ''}
-                <a href="${escapeHtml(b.url)}" style="font-size:12px;color:#e25a1f;font-weight:600;text-decoration:none;">View details →</a>
+            <div style="padding:14px 32px 14px 16px;min-width:180px;font-family:Montserrat,system-ui,sans-serif;line-height:1.35;">
+                <div style="font-weight:700;font-size:15px;color:#0a1f22;margin-bottom:4px;">${escapeHtml(b.name)}</div>
+                ${b.address ? `<div style="font-size:13px;color:#4b5563;margin-bottom:8px;">${escapeHtml(b.address)}</div>` : ''}
+                <a href="${escapeHtml(b.url)}" style="font-size:13px;color:#e25a1f;font-weight:600;text-decoration:none;">View details →</a>
             </div>
         `);
         infoWindow.open({ anchor: marker, map });
