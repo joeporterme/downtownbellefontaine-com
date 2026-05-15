@@ -26,7 +26,10 @@ Route::get('/first-fridays', fn() => view('pages.first-fridays'))->name('pages.f
 Route::get('/meeting-spaces', fn() => view('pages.meeting-spaces'))->name('pages.meeting-spaces');
 Route::get('/dora', fn() => view('pages.dora'))->name('pages.dora');
 Route::get('/media', fn() => view('pages.media'))->name('pages.media');
-Route::get('/contact', fn() => view('pages.contact'))->name('pages.contact');
+Route::get('/contact', [App\Http\Controllers\Public\ContactController::class, 'show'])->name('pages.contact');
+Route::post('/contact', [App\Http\Controllers\Public\ContactController::class, 'store'])
+    ->middleware('throttle:5,1')
+    ->name('contact.submit');
 Route::get('/historic-walking-tour', fn() => view('pages.historic-walking-tour'))->name('pages.historic-walking-tour');
 Route::get('/privacy-policy', fn() => view('pages.privacy-policy'))->name('pages.privacy-policy');
 
