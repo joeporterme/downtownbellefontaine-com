@@ -64,34 +64,6 @@
                         <i class="fa-duotone fa-light fa-map-location-dot"></i>
                         <span>Map</span>
                     </a>
-                    {{-- More Dropdown --}}
-                    <div class="relative" data-dropdown>
-                        <button data-dropdown-toggle class="flex items-center gap-1.5 text-theme-secondary hover:text-primary-500 dark:hover:text-primary-400 transition-colors font-medium text-sm">
-                            <i class="fa-duotone fa-light fa-ellipsis text-primary-500"></i>
-                            <span>More</span>
-                            <i class="fa-duotone fa-light fa-chevron-down text-[10px] transition-transform" data-dropdown-chevron></i>
-                        </button>
-                        <div data-dropdown-menu class="absolute top-full right-0 pt-2 w-52 z-50 hidden opacity-0 transition-all duration-150">
-                        <div class="bg-theme-primary border border-theme rounded-lg shadow-lg py-1">
-                            <a href="{{ route('pages.first-fridays') }}" class="flex items-center gap-2.5 px-4 py-2.5 text-theme-secondary hover:text-primary-500 hover:bg-theme-secondary transition-colors text-sm">
-                                <i class="fa-duotone fa-light fa-party-horn text-primary-500 w-4 text-center"></i>
-                                <span>First Fridays</span>
-                            </a>
-                            <a href="{{ route('pages.dora') }}" class="flex items-center gap-2.5 px-4 py-2.5 text-theme-secondary hover:text-primary-500 hover:bg-theme-secondary transition-colors text-sm">
-                                <i class="fa-duotone fa-light fa-wine-glass text-primary-500 w-4 text-center"></i>
-                                <span>DORA</span>
-                            </a>
-                            <a href="{{ route('pages.historic-walking-tour') }}" class="flex items-center gap-2.5 px-4 py-2.5 text-theme-secondary hover:text-primary-500 hover:bg-theme-secondary transition-colors text-sm">
-                                <i class="fa-duotone fa-light fa-person-walking text-primary-500 w-4 text-center"></i>
-                                <span>Walking Tour</span>
-                            </a>
-                            <a href="{{ route('pages.meeting-spaces') }}" class="flex items-center gap-2.5 px-4 py-2.5 text-theme-secondary hover:text-primary-500 hover:bg-theme-secondary transition-colors text-sm">
-                                <i class="fa-duotone fa-light fa-users text-primary-500 w-4 text-center"></i>
-                                <span>Meeting Spaces</span>
-                            </a>
-                        </div>
-                        </div>
-                    </div>
                 </nav>
 
                 {{-- Right side --}}
@@ -163,22 +135,6 @@
                 <a href="{{ route('pages.map') }}" class="flex items-center gap-3 py-2.5 text-theme-secondary hover:text-primary-500">
                     <i class="fa-duotone fa-light fa-map-location-dot w-5 text-center text-primary-500"></i>
                     <span>Map</span>
-                </a>
-                <a href="{{ route('pages.first-fridays') }}" class="flex items-center gap-3 py-2.5 text-theme-secondary hover:text-primary-500">
-                    <i class="fa-duotone fa-light fa-party-horn w-5 text-center text-primary-500"></i>
-                    <span>First Fridays</span>
-                </a>
-                <a href="{{ route('pages.dora') }}" class="flex items-center gap-3 py-2.5 text-theme-secondary hover:text-primary-500">
-                    <i class="fa-duotone fa-light fa-wine-glass w-5 text-center text-primary-500"></i>
-                    <span>DORA</span>
-                </a>
-                <a href="{{ route('pages.historic-walking-tour') }}" class="flex items-center gap-3 py-2.5 text-theme-secondary hover:text-primary-500">
-                    <i class="fa-duotone fa-light fa-person-walking w-5 text-center text-primary-500"></i>
-                    <span>Walking Tour</span>
-                </a>
-                <a href="{{ route('pages.meeting-spaces') }}" class="flex items-center gap-3 py-2.5 text-theme-secondary hover:text-primary-500">
-                    <i class="fa-duotone fa-light fa-users w-5 text-center text-primary-500"></i>
-                    <span>Meeting Spaces</span>
                 </a>
                 <div class="border-t border-theme pt-2 mt-2">
                     @auth
@@ -358,10 +314,9 @@
 
     @stack('scripts')
 
-    {{-- Mobile menu toggle + dropdown script --}}
+    {{-- Mobile menu toggle --}}
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Mobile menu
             const toggleBtn = document.querySelector('[data-mobile-menu-toggle]');
             const menu = document.querySelector('[data-mobile-menu]');
             if (toggleBtn && menu) {
@@ -369,40 +324,6 @@
                     menu.classList.toggle('hidden');
                 });
             }
-
-            // More dropdown
-            document.querySelectorAll('[data-dropdown]').forEach(function(dropdown) {
-                const toggle = dropdown.querySelector('[data-dropdown-toggle]');
-                const menu = dropdown.querySelector('[data-dropdown-menu]');
-                const chevron = dropdown.querySelector('[data-dropdown-chevron]');
-                if (!toggle || !menu) return;
-
-                function open() {
-                    menu.classList.remove('hidden');
-                    requestAnimationFrame(function() { menu.classList.remove('opacity-0'); });
-                    if (chevron) chevron.classList.add('rotate-180');
-                }
-
-                function close() {
-                    menu.classList.add('opacity-0');
-                    if (chevron) chevron.classList.remove('rotate-180');
-                    setTimeout(function() { menu.classList.add('hidden'); }, 150);
-                }
-
-                function isOpen() { return !menu.classList.contains('hidden'); }
-
-                toggle.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    isOpen() ? close() : open();
-                });
-
-                dropdown.addEventListener('mouseenter', open);
-                dropdown.addEventListener('mouseleave', close);
-
-                document.addEventListener('click', function(e) {
-                    if (!dropdown.contains(e.target)) close();
-                });
-            });
         });
     </script>
 </body>
