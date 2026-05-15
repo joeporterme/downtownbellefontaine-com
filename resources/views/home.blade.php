@@ -22,7 +22,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(135deg, rgba(0, 42, 48, 0.9) 0%, rgba(1, 67, 76, 0.8) 50%, rgba(1, 92, 102, 0.75) 100%);
+        background: linear-gradient(180deg, rgba(10, 25, 30, 0.45) 0%, rgba(10, 25, 30, 0.25) 45%, rgba(10, 25, 30, 0.6) 100%);
         z-index: 1;
     }
 
@@ -169,7 +169,7 @@
 
 @section('content')
 {{-- Hero Section with Video Background --}}
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+<section class="relative min-h-[640px] md:min-h-[720px] lg:min-h-[75vh] flex items-center justify-center overflow-hidden">
     <video autoplay muted loop playsinline class="hero-video">
         <source src="/images/home/video-loop.mp4" type="video/mp4">
     </video>
@@ -222,32 +222,32 @@
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-            <a href="{{ route('pages.things-to-do') }}" class="group p-6 bg-theme-secondary rounded-2xl border border-theme hover:border-accent-400 transition-all card-hover text-center reveal delay-100">
+            <a href="{{ route('pages.places-to-shop') }}" class="group p-6 bg-theme-secondary rounded-2xl border border-theme hover:border-accent-400 transition-all card-hover text-center reveal delay-100">
                 <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-accent-400 to-accent-600 rounded-2xl flex items-center justify-center transform group-hover:rotate-6 transition-transform">
-                    <i class="fa-duotone fa-light fa-masks-theater text-2xl text-white"></i>
-                </div>
-                <h3 class="font-semibold text-theme-primary group-hover:text-accent-600 transition-colors">Things to Do</h3>
-            </a>
-
-            <a href="{{ route('pages.places-to-shop') }}" class="group p-6 bg-theme-secondary rounded-2xl border border-theme hover:border-accent-400 transition-all card-hover text-center reveal delay-200">
-                <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-primary-400 to-primary-600 rounded-2xl flex items-center justify-center transform group-hover:rotate-6 transition-transform">
                     <i class="fa-duotone fa-light fa-bag-shopping text-2xl text-white"></i>
                 </div>
-                <h3 class="font-semibold text-theme-primary group-hover:text-primary-600 transition-colors">Places to Shop</h3>
+                <h3 class="font-semibold text-theme-primary group-hover:text-accent-600 transition-colors">Shop</h3>
             </a>
 
-            <a href="{{ route('pages.food-drinks') }}" class="group p-6 bg-theme-secondary rounded-2xl border border-theme hover:border-accent-400 transition-all card-hover text-center reveal delay-300">
+            <a href="{{ route('pages.food-drinks') }}" class="group p-6 bg-theme-secondary rounded-2xl border border-theme hover:border-accent-400 transition-all card-hover text-center reveal delay-200">
                 <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-rose-400 to-rose-600 rounded-2xl flex items-center justify-center transform group-hover:rotate-6 transition-transform">
                     <i class="fa-duotone fa-light fa-utensils text-2xl text-white"></i>
                 </div>
-                <h3 class="font-semibold text-theme-primary group-hover:text-rose-600 transition-colors">Food & Drinks</h3>
+                <h3 class="font-semibold text-theme-primary group-hover:text-rose-600 transition-colors">Eat</h3>
             </a>
 
-            <a href="{{ route('pages.first-fridays') }}" class="group p-6 bg-theme-secondary rounded-2xl border border-theme hover:border-accent-400 transition-all card-hover text-center reveal delay-400">
-                <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-violet-400 to-violet-600 rounded-2xl flex items-center justify-center transform group-hover:rotate-6 transition-transform">
-                    <i class="fa-duotone fa-light fa-party-horn text-2xl text-white"></i>
+            <a href="{{ route('pages.stay') }}" class="group p-6 bg-theme-secondary rounded-2xl border border-theme hover:border-accent-400 transition-all card-hover text-center reveal delay-300">
+                <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-primary-400 to-primary-600 rounded-2xl flex items-center justify-center transform group-hover:rotate-6 transition-transform">
+                    <i class="fa-duotone fa-light fa-bed-front text-2xl text-white"></i>
                 </div>
-                <h3 class="font-semibold text-theme-primary group-hover:text-violet-600 transition-colors">First Fridays</h3>
+                <h3 class="font-semibold text-theme-primary group-hover:text-primary-600 transition-colors">Stay</h3>
+            </a>
+
+            <a href="{{ route('pages.things-to-do') }}" class="group p-6 bg-theme-secondary rounded-2xl border border-theme hover:border-accent-400 transition-all card-hover text-center reveal delay-400">
+                <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-violet-400 to-violet-600 rounded-2xl flex items-center justify-center transform group-hover:rotate-6 transition-transform">
+                    <i class="fa-duotone fa-light fa-masks-theater text-2xl text-white"></i>
+                </div>
+                <h3 class="font-semibold text-theme-primary group-hover:text-violet-600 transition-colors">Play</h3>
             </a>
         </div>
     </div>

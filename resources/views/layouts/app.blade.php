@@ -35,27 +35,35 @@
                 </a>
 
                 {{-- Navigation --}}
-                <nav class="hidden lg:flex items-center space-x-5">
-                    <a href="{{ route('events.index') }}" class="flex items-center gap-1.5 text-theme-secondary hover:text-primary-500 dark:hover:text-primary-400 transition-colors font-medium text-sm">
-                        <i class="fa-duotone fa-light fa-calendar-star text-primary-500"></i>
-                        <span>Events</span>
-                    </a>
-                    <a href="{{ route('pages.things-to-do') }}" class="flex items-center gap-1.5 text-theme-secondary hover:text-primary-500 dark:hover:text-primary-400 transition-colors font-medium text-sm">
-                        <i class="fa-duotone fa-light fa-masks-theater text-primary-500"></i>
-                        <span>Things to Do</span>
-                    </a>
+                <nav class="hidden lg:flex items-center space-x-4">
                     <a href="{{ route('pages.places-to-shop') }}" class="flex items-center gap-1.5 text-theme-secondary hover:text-primary-500 dark:hover:text-primary-400 transition-colors font-medium text-sm">
                         <i class="fa-duotone fa-light fa-bag-shopping text-primary-500"></i>
                         <span>Shop</span>
                     </a>
                     <a href="{{ route('pages.food-drinks') }}" class="flex items-center gap-1.5 text-theme-secondary hover:text-primary-500 dark:hover:text-primary-400 transition-colors font-medium text-sm">
                         <i class="fa-duotone fa-light fa-utensils text-primary-500"></i>
-                        <span>Food & Drinks</span>
+                        <span>Eat</span>
+                    </a>
+                    <a href="{{ route('pages.stay') }}" class="flex items-center gap-1.5 text-theme-secondary hover:text-primary-500 dark:hover:text-primary-400 transition-colors font-medium text-sm">
+                        <i class="fa-duotone fa-light fa-bed-front text-primary-500"></i>
+                        <span>Stay</span>
+                    </a>
+                    <a href="{{ route('pages.things-to-do') }}" class="flex items-center gap-1.5 text-theme-secondary hover:text-primary-500 dark:hover:text-primary-400 transition-colors font-medium text-sm">
+                        <i class="fa-duotone fa-light fa-masks-theater text-primary-500"></i>
+                        <span>Play</span>
+                    </a>
+                    <a href="{{ route('events.index') }}" class="flex items-center gap-1.5 text-theme-secondary hover:text-primary-500 dark:hover:text-primary-400 transition-colors font-medium text-sm">
+                        <i class="fa-duotone fa-light fa-calendar-star text-primary-500"></i>
+                        <span>Events</span>
+                    </a>
+                    <a href="{{ route('pages.plan-a-visit') }}" class="flex items-center gap-1.5 text-theme-secondary hover:text-primary-500 dark:hover:text-primary-400 transition-colors font-medium text-sm">
+                        <i class="fa-duotone fa-light fa-map-location-dot text-primary-500"></i>
+                        <span>Plan a Visit</span>
                     </a>
                     {{-- More Dropdown --}}
                     <div class="relative" data-dropdown>
                         <button data-dropdown-toggle class="flex items-center gap-1.5 text-theme-secondary hover:text-primary-500 dark:hover:text-primary-400 transition-colors font-medium text-sm">
-                            <i class="fa-duotone fa-light fa-bars text-primary-500"></i>
+                            <i class="fa-duotone fa-light fa-ellipsis text-primary-500"></i>
                             <span>More</span>
                             <i class="fa-duotone fa-light fa-chevron-down text-[10px] transition-transform" data-dropdown-chevron></i>
                         </button>
@@ -65,13 +73,17 @@
                                 <i class="fa-duotone fa-light fa-party-horn text-primary-500 w-4 text-center"></i>
                                 <span>First Fridays</span>
                             </a>
-                            <a href="{{ route('pages.meeting-spaces') }}" class="flex items-center gap-2.5 px-4 py-2.5 text-theme-secondary hover:text-primary-500 hover:bg-theme-secondary transition-colors text-sm">
-                                <i class="fa-duotone fa-light fa-users text-primary-500 w-4 text-center"></i>
-                                <span>Meeting Spaces</span>
-                            </a>
                             <a href="{{ route('pages.dora') }}" class="flex items-center gap-2.5 px-4 py-2.5 text-theme-secondary hover:text-primary-500 hover:bg-theme-secondary transition-colors text-sm">
                                 <i class="fa-duotone fa-light fa-wine-glass text-primary-500 w-4 text-center"></i>
                                 <span>DORA</span>
+                            </a>
+                            <a href="{{ route('pages.historic-walking-tour') }}" class="flex items-center gap-2.5 px-4 py-2.5 text-theme-secondary hover:text-primary-500 hover:bg-theme-secondary transition-colors text-sm">
+                                <i class="fa-duotone fa-light fa-person-walking text-primary-500 w-4 text-center"></i>
+                                <span>Walking Tour</span>
+                            </a>
+                            <a href="{{ route('pages.meeting-spaces') }}" class="flex items-center gap-2.5 px-4 py-2.5 text-theme-secondary hover:text-primary-500 hover:bg-theme-secondary transition-colors text-sm">
+                                <i class="fa-duotone fa-light fa-users text-primary-500 w-4 text-center"></i>
+                                <span>Meeting Spaces</span>
                             </a>
                         </div>
                         </div>
@@ -120,33 +132,45 @@
                     <i class="fa-duotone fa-light fa-house w-5 text-center text-primary-500"></i>
                     <span>Home</span>
                 </a>
-                <a href="{{ route('events.index') }}" class="flex items-center gap-3 py-2.5 text-theme-secondary hover:text-primary-500">
-                    <i class="fa-duotone fa-light fa-calendar-star w-5 text-center text-primary-500"></i>
-                    <span>Events</span>
-                </a>
-                <a href="{{ route('pages.things-to-do') }}" class="flex items-center gap-3 py-2.5 text-theme-secondary hover:text-primary-500">
-                    <i class="fa-duotone fa-light fa-masks-theater w-5 text-center text-primary-500"></i>
-                    <span>Things to Do</span>
-                </a>
                 <a href="{{ route('pages.places-to-shop') }}" class="flex items-center gap-3 py-2.5 text-theme-secondary hover:text-primary-500">
                     <i class="fa-duotone fa-light fa-bag-shopping w-5 text-center text-primary-500"></i>
                     <span>Shop</span>
                 </a>
                 <a href="{{ route('pages.food-drinks') }}" class="flex items-center gap-3 py-2.5 text-theme-secondary hover:text-primary-500">
                     <i class="fa-duotone fa-light fa-utensils w-5 text-center text-primary-500"></i>
-                    <span>Food & Drinks</span>
+                    <span>Eat</span>
+                </a>
+                <a href="{{ route('pages.stay') }}" class="flex items-center gap-3 py-2.5 text-theme-secondary hover:text-primary-500">
+                    <i class="fa-duotone fa-light fa-bed-front w-5 text-center text-primary-500"></i>
+                    <span>Stay</span>
+                </a>
+                <a href="{{ route('pages.things-to-do') }}" class="flex items-center gap-3 py-2.5 text-theme-secondary hover:text-primary-500">
+                    <i class="fa-duotone fa-light fa-masks-theater w-5 text-center text-primary-500"></i>
+                    <span>Play</span>
+                </a>
+                <a href="{{ route('events.index') }}" class="flex items-center gap-3 py-2.5 text-theme-secondary hover:text-primary-500">
+                    <i class="fa-duotone fa-light fa-calendar-star w-5 text-center text-primary-500"></i>
+                    <span>Events</span>
+                </a>
+                <a href="{{ route('pages.plan-a-visit') }}" class="flex items-center gap-3 py-2.5 text-theme-secondary hover:text-primary-500">
+                    <i class="fa-duotone fa-light fa-map-location-dot w-5 text-center text-primary-500"></i>
+                    <span>Plan a Visit</span>
                 </a>
                 <a href="{{ route('pages.first-fridays') }}" class="flex items-center gap-3 py-2.5 text-theme-secondary hover:text-primary-500">
                     <i class="fa-duotone fa-light fa-party-horn w-5 text-center text-primary-500"></i>
                     <span>First Fridays</span>
                 </a>
-                <a href="{{ route('pages.meeting-spaces') }}" class="flex items-center gap-3 py-2.5 text-theme-secondary hover:text-primary-500">
-                    <i class="fa-duotone fa-light fa-users w-5 text-center text-primary-500"></i>
-                    <span>Meeting Spaces</span>
-                </a>
                 <a href="{{ route('pages.dora') }}" class="flex items-center gap-3 py-2.5 text-theme-secondary hover:text-primary-500">
                     <i class="fa-duotone fa-light fa-wine-glass w-5 text-center text-primary-500"></i>
                     <span>DORA</span>
+                </a>
+                <a href="{{ route('pages.historic-walking-tour') }}" class="flex items-center gap-3 py-2.5 text-theme-secondary hover:text-primary-500">
+                    <i class="fa-duotone fa-light fa-person-walking w-5 text-center text-primary-500"></i>
+                    <span>Walking Tour</span>
+                </a>
+                <a href="{{ route('pages.meeting-spaces') }}" class="flex items-center gap-3 py-2.5 text-theme-secondary hover:text-primary-500">
+                    <i class="fa-duotone fa-light fa-users w-5 text-center text-primary-500"></i>
+                    <span>Meeting Spaces</span>
                 </a>
                 <div class="border-t border-theme pt-2 mt-2">
                     @auth
@@ -235,33 +259,39 @@
                     </h4>
                     <ul class="space-y-2 text-primary-200">
                         <li>
+                            <a href="{{ route('pages.places-to-shop') }}" class="hover:text-white transition-colors flex items-center gap-2">
+                                <i class="fa-duotone fa-light fa-bag-shopping w-4 text-primary-400"></i>
+                                Shop
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('pages.food-drinks') }}" class="hover:text-white transition-colors flex items-center gap-2">
+                                <i class="fa-duotone fa-light fa-utensils w-4 text-primary-400"></i>
+                                Eat
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('pages.stay') }}" class="hover:text-white transition-colors flex items-center gap-2">
+                                <i class="fa-duotone fa-light fa-bed-front w-4 text-primary-400"></i>
+                                Stay
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('pages.things-to-do') }}" class="hover:text-white transition-colors flex items-center gap-2">
+                                <i class="fa-duotone fa-light fa-masks-theater w-4 text-primary-400"></i>
+                                Play
+                            </a>
+                        </li>
+                        <li>
                             <a href="{{ route('events.index') }}" class="hover:text-white transition-colors flex items-center gap-2">
                                 <i class="fa-duotone fa-light fa-calendar-star w-4 text-primary-400"></i>
                                 Events
                             </a>
                         </li>
                         <li>
-                            <a href="{{ route('pages.things-to-do') }}" class="hover:text-white transition-colors flex items-center gap-2">
-                                <i class="fa-duotone fa-light fa-masks-theater w-4 text-primary-400"></i>
-                                Things to Do
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('pages.places-to-shop') }}" class="hover:text-white transition-colors flex items-center gap-2">
-                                <i class="fa-duotone fa-light fa-bag-shopping w-4 text-primary-400"></i>
-                                Places to Shop
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('pages.food-drinks') }}" class="hover:text-white transition-colors flex items-center gap-2">
-                                <i class="fa-duotone fa-light fa-utensils w-4 text-primary-400"></i>
-                                Food & Drinks
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('pages.historic-walking-tour') }}" class="hover:text-white transition-colors flex items-center gap-2">
-                                <i class="fa-duotone fa-light fa-person-walking w-4 text-primary-400"></i>
-                                Historic Walking Tour
+                            <a href="{{ route('pages.plan-a-visit') }}" class="hover:text-white transition-colors flex items-center gap-2">
+                                <i class="fa-duotone fa-light fa-map-location-dot w-4 text-primary-400"></i>
+                                Plan a Visit
                             </a>
                         </li>
                     </ul>

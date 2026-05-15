@@ -29,6 +29,13 @@ class PageController extends Controller
         return view('pages.food-drinks', compact('businesses'));
     }
 
+    public function stay()
+    {
+        $businesses = $this->businessesForCategory('hotel-lodging');
+
+        return view('pages.stay', compact('businesses'));
+    }
+
     private function businessesForCategory(string $slug)
     {
         $category = BusinessCategory::where('slug', $slug)->first();
