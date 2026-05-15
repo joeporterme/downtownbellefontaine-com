@@ -43,4 +43,8 @@ return [
         'api_key' => env('OPENAI_API_KEY'),
     ],
 
+    'contact' => [
+        'recipient' => env('CONTACT_FORM_RECIPIENT', 'kncooper9118@gmail.com'),
+    ],
+
 ];
