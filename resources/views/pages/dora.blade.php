@@ -1,79 +1,169 @@
 @extends('layouts.app')
 
 @section('title', 'DORA')
-@section('description', "Learn about Downtown Bellefontaine's DORA (Designated Outdoor Refreshment Area) - rules, map, and special event information.")
+@section('description', "Learn about Downtown Bellefontaine's DORA (Designated Outdoor Refreshment Area) - the rules, boundaries, and how it works during special events.")
 
 @section('content')
-<div class="py-12 bg-theme-primary">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 class="text-3xl font-bold text-theme-primary mb-8">DORA - Designated Outdoor Refreshment Area</h1>
+{{-- Hero --}}
+<section class="relative overflow-hidden bg-primary-800 dark:bg-primary-950">
+    <div class="absolute inset-0">
+        <img src="/images/home/downtown-bellefontaine-2.jpg" alt="DORA in Downtown Bellefontaine" class="w-full h-full object-cover opacity-30">
+        <div class="absolute inset-0 bg-gradient-to-b from-primary-900/40 to-primary-900/70"></div>
+    </div>
+    <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 text-center">
+        <p class="text-accent-400 font-display text-lg sm:text-xl mb-3">Designated Outdoor Refreshment Area</p>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">DORA District</h1>
+        <p class="text-primary-200 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed">
+            For special events, a designated cup, a drink in hand, and 46 acres of historic downtown to explore.
+        </p>
+    </div>
+</section>
 
-        <div class="prose prose-lg max-w-none text-theme-secondary">
-            <p>Established in 2020 for Special Events Only, the City of Bellefontaine's DORA is a designated public area where alcoholic beverages can be purchased in a designated cup from permitted establishments and carried within the district.</p>
+{{-- Intro --}}
+<section class="py-16 bg-theme-primary">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-2xl sm:text-3xl font-bold text-theme-primary mb-4">What is DORA?</h2>
+        <p class="text-theme-secondary leading-relaxed">
+            Established in 2020 for <strong class="text-theme-primary">Special Events Only</strong>, the City of Bellefontaine's DORA is a designated public area where alcoholic beverages can be purchased in a designated cup from permitted establishments and carried within the district. Keep up with
+            <a href="https://www.facebook.com/DowntownBellefontaine/" target="_blank" rel="noopener" class="text-primary-600 dark:text-primary-400 hover:underline font-medium">Downtown Bellefontaine on Facebook</a>
+            for upcoming DORA events.
+        </p>
+    </div>
+</section>
 
-            <h2 class="text-2xl font-semibold mt-8 mb-4 text-theme-primary">Where is Downtown Bellefontaine's DORA?</h2>
+{{-- Map --}}
+<section class="py-16 bg-theme-secondary">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+            <span class="font-display text-2xl text-accent-500">The Boundaries</span>
+            <h2 class="text-2xl sm:text-3xl font-bold text-theme-primary mt-2">Where Is It?</h2>
+            <p class="text-theme-secondary mt-3 max-w-2xl mx-auto">
+                In accordance with O.R.C. 4301.82 [B] [1] [b], the boundaries of the City of Bellefontaine DORA cover <strong class="text-theme-primary">46.14 acres</strong> of historic downtown.
+            </p>
+        </div>
+        <figure class="bg-theme-primary rounded-2xl border border-theme p-4 sm:p-6 shadow-sm">
+            <img src="/images/pages/dora-map.jpg" alt="DORA District Map" class="rounded-xl mx-auto w-full max-w-3xl">
+            <figcaption class="text-sm text-center mt-3 text-theme-tertiary">Official DORA District map -- City of Bellefontaine</figcaption>
+        </figure>
+    </div>
+</section>
 
-            <p>The DORA enhances Bellefontaine's revitalized downtown, encouraging more community members and visitors to stroll the area during special events. Keep up with <a href="https://www.facebook.com/DowntownBellefontaine/" target="_blank" class="text-primary-600 dark:text-primary-400 hover:underline">Downtown Bellefontaine Ohio on Facebook</a> to catch all of the upcoming events, and learn more about the City of Bellefontaine's Downtown DORA below!</p>
+{{-- Rules --}}
+<section class="py-16 bg-theme-primary">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <span class="font-display text-2xl text-accent-500">Know Before You Go</span>
+            <h2 class="text-2xl sm:text-3xl font-bold text-theme-primary mt-2">DORA Rules</h2>
+            <p class="text-theme-secondary mt-3 max-w-2xl mx-auto">Enjoying the DORA safely and appropriately is important. Here's how it works.</p>
+        </div>
 
-            <p>In accordance with O.R.C. 4301.82 [B] [1] [b], the boundaries of the City of Bellefontaine DORA are shown below. This area contains 46.14 Acres.</p>
-
-            <figure class="my-6">
-                <img src="/images/pages/dora-map.jpg" alt="DORA Map" class="rounded-lg mx-auto max-w-lg">
-                <figcaption class="text-sm text-center mt-2 text-theme-tertiary">DORA Map</figcaption>
-            </figure>
-
-            <h2 class="text-2xl font-semibold mt-8 mb-4 text-theme-primary">Public Health and Safety</h2>
-
-            <p>The City of Bellefontaine seeks to use a DORA District in its Historic Downtown for Special Events ONLY. All host entities for special events are required to develop and submit for approval a public health and safety plan along with their special event application. The proposed plan will be reviewed by city staff and others with interest along with the host entity. Only once the plan is agreed upon and all stipulations met will a permit be issued.</p>
-
-            <p>City staff will ensure that adequate sanitation, signage, and public safety requirements are met for each unique event. The necessity for portable bathrooms, handicap accessibility, pedestrian mobility, police and fire services, ingress and egress, crowd control, DORA boundary management and other factors will be addressed. Event organizers will be required to pay for special duty officers or overtime for public safety workers if necessary.</p>
-
-            <p>It is the City of Bellefontaine's intent that only beer and wine may be carried through the DORA District in City-approved DORA plastic cups.</p>
-
-            <p>The Chief of Police will dictate at DORA events the need for additional police officers at the expense of the host entity. The Chief of Police shall have the ability to revise or end a DORA event at any time if, in his/her professional opinion, it is in the public's best interest to do so.</p>
-
-            <h2 class="text-2xl font-semibold mt-8 mb-4 text-theme-primary">DORA Rules</h2>
-
-            <p>Enjoying the DORA safely and appropriately is very important, so there are a few rules to follow.</p>
-
-            <ol class="list-decimal list-inside space-y-2 my-4">
-                <li>You must present your valid state or federal ID to a participating DORA vendor, be 21 years of age or older and receive a wristband that you must wear while carrying your beverage.</li>
-                <li>You may purchase alcoholic beverages (beer and wine only) from a participating establishment or event vendor. No outside alcoholic beverages are permitted in the DORA.</li>
-                <li>You may purchase up to two beverages at a time. Beverages must be in an approved DORA cup.</li>
-                <li>Any alcoholic beverages being consumed in public areas in the DORA must be in an approved DORA single use cup.</li>
-                <li>You cannot carry a DORA beverage into any other DORA beverage selling business. You may carry your beverage into any non-alcohol serving business at the sole discretion of that business.</li>
-                <li>DORA beverages may only be consumed during the DORA approved hours of operation. Possible hours for future DORA events include Monday through Saturday, 9 a.m. to midnight, and Sunday 12 p.m. to 9 p.m.</li>
-            </ol>
-
-            <h2 class="text-2xl font-semibold mt-8 mb-4 text-theme-primary">DORA Frequently Asked Questions</h2>
-
-            <div class="space-y-6">
-                <div>
-                    <p class="font-semibold text-theme-primary">Q: Can I walk anywhere with my DORA cup?</p>
-                    <p>A: NO. Patrons can only carry DORA beverages in the defined area in the approved container. Retail and private establishments may allow DORA beverages or may opt to NOT allow them. Each establishment within the DORA will have their own policy.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            @foreach([
+                ['icon' => 'fa-id-card', 'title' => 'ID and Wristband', 'body' => 'Present a valid state or federal ID to a participating DORA vendor, be 21 or older, and receive a wristband to wear while carrying your beverage.'],
+                ['icon' => 'fa-store', 'title' => 'From Participating Vendors Only', 'body' => 'Purchase alcoholic beverages (beer and wine only) from a participating establishment or event vendor. No outside alcohol is permitted in the DORA.'],
+                ['icon' => 'fa-circle-2', 'title' => 'Two-Drink Maximum', 'body' => 'You may purchase up to two beverages at a time. Beverages must be in an approved DORA cup.'],
+                ['icon' => 'fa-wine-glass', 'title' => 'Approved Cup Required', 'body' => 'Any alcoholic beverage consumed in public areas within the DORA must be in an approved single-use DORA cup.'],
+                ['icon' => 'fa-ban', 'title' => 'No Vendor Hopping', 'body' => "You cannot carry a DORA beverage into another DORA-serving business. Non-alcohol-serving businesses may allow drinks at their own discretion."],
+                ['icon' => 'fa-clock', 'title' => 'Approved Hours Only', 'body' => 'DORA beverages may only be consumed during approved hours of operation -- typically Monday through Saturday, 9 a.m. to midnight, and Sunday 12 p.m. to 9 p.m.'],
+            ] as $i => $rule)
+                <div class="bg-theme-secondary rounded-2xl border border-theme p-6 flex gap-4">
+                    <div class="flex-shrink-0">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-accent-400 to-accent-600 flex items-center justify-center text-white font-bold">
+                            {{ $i + 1 }}
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i class="fa-duotone fa-light {{ $rule['icon'] }} text-accent-500"></i>
+                            <h3 class="font-bold text-theme-primary">{{ $rule['title'] }}</h3>
+                        </div>
+                        <p class="text-theme-secondary text-sm leading-relaxed">{{ $rule['body'] }}</p>
+                    </div>
                 </div>
-                <div>
-                    <p class="font-semibold text-theme-primary">Q: What is a DORA cup?</p>
-                    <p>A: A plastic single-use cup designated for all establishments serving alcohol within the DORA. The DORA rules will be provided on a label with each cup.</p>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+{{-- Public Health & Safety --}}
+<section class="py-16 bg-theme-secondary">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+            <div>
+                <span class="font-display text-2xl text-accent-500">Special Events Only</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-theme-primary mt-2 mb-4">Public Health & Safety</h2>
+                <div class="space-y-4 text-theme-secondary leading-relaxed text-sm">
+                    <p>The City of Bellefontaine uses the DORA District for special events only. All host entities are required to submit a public health and safety plan with their event application, reviewed by city staff before any permit is issued.</p>
+                    <p>City staff ensures adequate sanitation, signage, and public safety -- including portable restrooms, ADA accessibility, pedestrian mobility, police and fire services, ingress and egress, crowd control, and DORA boundary management. Organizers may be required to pay for special-duty officers or overtime for public safety workers.</p>
                 </div>
-                <div>
-                    <p class="font-semibold text-theme-primary">Q: Can I take my DORA beverage into another establishment?</p>
-                    <p>A: No. Once a DORA beverage has left the business where it was purchased, it must be consumed and the DORA cup disposed of prior to entering another establishment.</p>
+            </div>
+            <div class="space-y-4">
+                <div class="bg-theme-primary rounded-2xl border border-theme p-5 flex gap-4">
+                    <i class="fa-duotone fa-light fa-shield-check text-2xl text-primary-500 flex-shrink-0 mt-1"></i>
+                    <div>
+                        <h3 class="font-semibold text-theme-primary mb-1">Beer & Wine Only</h3>
+                        <p class="text-theme-secondary text-sm">It is the City's intent that only beer and wine may be carried through the DORA in approved DORA cups.</p>
+                    </div>
                 </div>
-                <div>
-                    <p class="font-semibold text-theme-primary">Q: What are the hours the DORA will be allowed to operate?</p>
-                    <p>A: Generally, the allowable DORA event hours are Monday through Saturday, 9 a.m. to midnight. Sunday allowable hours are noon to 9 p.m. However, specific hours will be set for each DORA event. DORA beverages may not be consumed outside these hours.</p>
-                </div>
-                <div>
-                    <p class="font-semibold text-theme-primary">Q: How will patrons know the DORA area limits?</p>
-                    <p>A: Signs at key egress and endpoints will be installed on the boundaries. More information can be found on the DORA page on the City website.</p>
-                </div>
-                <div>
-                    <p class="font-semibold text-theme-primary">Q: Can I pour my own alcohol in the DORA cup and carry it?</p>
-                    <p>A: No. Beverages MUST be purchased from participating vendors. No cans, glass bottles, or outside beverages of any kind are allowed in public areas within DORA boundaries. In addition, DORA beverages may not be taken outside of the DORA route or patrons may be subject to legal consequences.</p>
+                <div class="bg-theme-primary rounded-2xl border border-theme p-5 flex gap-4">
+                    <i class="fa-duotone fa-light fa-user-police text-2xl text-primary-500 flex-shrink-0 mt-1"></i>
+                    <div>
+                        <h3 class="font-semibold text-theme-primary mb-1">Police Discretion</h3>
+                        <p class="text-theme-secondary text-sm">The Chief of Police may require additional officers at the host entity's expense, and may revise or end a DORA event at any time if it's in the public's best interest.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
+
+{{-- FAQ --}}
+<section class="py-16 bg-theme-primary">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <span class="font-display text-2xl text-accent-500">Good Questions</span>
+            <h2 class="text-2xl sm:text-3xl font-bold text-theme-primary mt-2">Frequently Asked</h2>
+        </div>
+
+        <div class="space-y-4">
+            @foreach([
+                ['q' => 'Can I walk anywhere with my DORA cup?', 'a' => 'No. Patrons can only carry DORA beverages within the defined area and in an approved container. Retail and private establishments may set their own DORA policy.'],
+                ['q' => 'What is a DORA cup?', 'a' => 'A single-use plastic cup designated for all establishments serving alcohol within the DORA. The DORA rules are printed on each cup.'],
+                ['q' => 'Can I take my DORA beverage into another establishment?', 'a' => 'No. Once a DORA beverage leaves the business where it was purchased, it must be consumed (and the cup disposed of) before entering another establishment.'],
+                ['q' => 'What hours is the DORA open?', 'a' => 'Generally Monday through Saturday, 9 a.m. to midnight, and Sunday noon to 9 p.m. Specific hours are set for each event. DORA beverages may not be consumed outside those hours.'],
+                ['q' => 'How will I know where the DORA boundary is?', 'a' => 'Signs are installed at key entry and exit points along the boundary. The DORA map above shows the full district. More info is available on the City website.'],
+                ['q' => 'Can I pour my own alcohol into a DORA cup?', 'a' => "No. Beverages must be purchased from participating vendors. No cans, glass bottles, or outside beverages of any kind are allowed in public DORA areas, and beverages may not be taken outside the DORA."],
+            ] as $faq)
+                <div class="bg-theme-secondary rounded-2xl border border-theme p-5">
+                    <div class="flex items-start gap-3">
+                        <i class="fa-duotone fa-light fa-circle-question text-xl text-accent-500 flex-shrink-0 mt-0.5"></i>
+                        <div>
+                            <h3 class="font-semibold text-theme-primary mb-1.5">{{ $faq['q'] }}</h3>
+                            <p class="text-theme-secondary text-sm leading-relaxed">{{ $faq['a'] }}</p>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+{{-- CTA --}}
+<section class="py-16 bg-primary-700 dark:bg-primary-900">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <i class="fa-duotone fa-light fa-calendar-star text-4xl text-accent-400 mb-4"></i>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">Catch the Next DORA Event</h2>
+        <p class="text-primary-200 mb-8 max-w-lg mx-auto">DORA hours apply during special events only. Check the events calendar or follow the Partnership on Facebook for the next chance to grab a cup and stroll the district.</p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+            <a href="{{ route('events.index') }}" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition-colors shadow-sm">
+                <i class="fa-duotone fa-light fa-calendar-star"></i>
+                See Upcoming Events
+            </a>
+            <a href="https://www.facebook.com/DowntownBellefontaine/" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent border-2 border-white/40 hover:bg-white/10 text-white font-semibold rounded-lg transition-colors">
+                <i class="fa-brands fa-facebook-f"></i>
+                Follow on Facebook
+            </a>
+        </div>
+    </div>
+</section>
 @endsection
