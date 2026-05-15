@@ -98,9 +98,10 @@
         <div class="text-center mb-12">
             <span class="font-display text-2xl text-accent-500">Visitor Info</span>
             <h2 class="text-2xl sm:text-3xl font-bold text-theme-primary mt-2">Before You Come</h2>
+            <p class="text-theme-secondary mt-3 max-w-2xl mx-auto">Everything you'll want to know -- from where to sleep to which night to come.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <a href="{{ route('pages.stay') }}" class="group block p-6 bg-theme-secondary rounded-2xl border border-theme hover:border-accent-400 transition-all text-center">
                 <div class="w-14 h-14 mx-auto mb-4 bg-gradient-to-br from-accent-400 to-accent-600 rounded-xl flex items-center justify-center">
                     <i class="fa-duotone fa-light fa-bed-front text-2xl text-white"></i>
@@ -117,11 +118,19 @@
                 <p class="text-sm text-theme-tertiary">Upcoming events and festivals</p>
             </a>
 
-            <a href="{{ route('pages.historic-walking-tour') }}" class="group block p-6 bg-theme-secondary rounded-2xl border border-theme hover:border-accent-400 transition-all text-center">
+            <a href="{{ route('pages.first-fridays') }}" class="group block p-6 bg-theme-secondary rounded-2xl border border-theme hover:border-accent-400 transition-all text-center">
                 <div class="w-14 h-14 mx-auto mb-4 bg-gradient-to-br from-violet-400 to-violet-600 rounded-xl flex items-center justify-center">
+                    <i class="fa-duotone fa-light fa-party-horn text-2xl text-white"></i>
+                </div>
+                <h3 class="font-semibold text-theme-primary group-hover:text-violet-600 transition-colors mb-1">First Fridays</h3>
+                <p class="text-sm text-theme-tertiary">Monthly downtown celebrations</p>
+            </a>
+
+            <a href="{{ route('pages.historic-walking-tour') }}" class="group block p-6 bg-theme-secondary rounded-2xl border border-theme hover:border-accent-400 transition-all text-center">
+                <div class="w-14 h-14 mx-auto mb-4 bg-gradient-to-br from-sky-400 to-sky-600 rounded-xl flex items-center justify-center">
                     <i class="fa-duotone fa-light fa-person-walking text-2xl text-white"></i>
                 </div>
-                <h3 class="font-semibold text-theme-primary group-hover:text-violet-600 transition-colors mb-1">Walking Tour</h3>
+                <h3 class="font-semibold text-theme-primary group-hover:text-sky-600 transition-colors mb-1">Walking Tour</h3>
                 <p class="text-sm text-theme-tertiary">Stroll our historic square</p>
             </a>
 
@@ -131,6 +140,14 @@
                 </div>
                 <h3 class="font-semibold text-theme-primary group-hover:text-rose-600 transition-colors mb-1">DORA District</h3>
                 <p class="text-sm text-theme-tertiary">Rules for our outdoor refreshment area</p>
+            </a>
+
+            <a href="{{ route('pages.meeting-spaces') }}" class="group block p-6 bg-theme-secondary rounded-2xl border border-theme hover:border-accent-400 transition-all text-center">
+                <div class="w-14 h-14 mx-auto mb-4 bg-gradient-to-br from-success-400 to-success-600 rounded-xl flex items-center justify-center">
+                    <i class="fa-duotone fa-light fa-people-group text-2xl text-white"></i>
+                </div>
+                <h3 class="font-semibold text-theme-primary group-hover:text-success-600 transition-colors mb-1">Meeting Spaces</h3>
+                <p class="text-sm text-theme-tertiary">Venues for events and gatherings</p>
             </a>
         </div>
     </div>
