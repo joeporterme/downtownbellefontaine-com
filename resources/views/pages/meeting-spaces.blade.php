@@ -1,34 +1,164 @@
 @extends('layouts.app')
 
 @section('title', 'Meeting Spaces')
-@section('description', 'Find the perfect meeting space in Downtown Bellefontaine - from elegant event venues to modern coworking spaces.')
+@section('description', 'Find the perfect meeting space in Downtown Bellefontaine - The Syndicate, Bella Vino, The Maxwell, Build Cowork, Putt and Play, and more.')
+
+@php
+    $venues = [
+        [
+            'name' => 'The Syndicate',
+            'url' => 'https://syndicatedowntown.com/bookus/',
+            'tagline' => 'Fine dining + event center',
+            'description' => "One of Logan County's finest caterers and event centers. The Syndicate hosts larger gatherings with their fine dining and venue space.",
+            'image' => null,
+            'gradient' => 'from-accent-400 to-accent-600',
+            'icon' => 'fa-utensils',
+        ],
+        [
+            'name' => 'Bella Vino',
+            'url' => 'http://bellavinoevents.com/',
+            'tagline' => 'Old-world charm + curated wine',
+            'description' => 'A truly unique destination hidden away in the heart of downtown -- old-world atmosphere with curated wine selections and catering options for your special event.',
+            'image' => '/images/pages/bella-vino.jpg',
+            'gradient' => 'from-rose-400 to-rose-600',
+            'icon' => 'fa-wine-glass',
+        ],
+        [
+            'name' => 'The Maxwell',
+            'url' => 'https://themaxwellevents.com/',
+            'tagline' => 'Premier event space',
+            'description' => "A premier event space in the heart of Bellefontaine -- perfect for weddings, corporate events, and social gatherings. A stunning setting for life's most important moments.",
+            'image' => null,
+            'gradient' => 'from-primary-400 to-primary-600',
+            'icon' => 'fa-champagne-glasses',
+        ],
+        [
+            'name' => 'Build Cowork + Space',
+            'url' => 'https://buildcowork.com/',
+            'tagline' => 'Coworking + 4 conference rooms',
+            'description' => 'Designed to inspire and connect small businesses and solopreneurs. Four styles of conference rooms with the highest-quality A/V and tech -- rent by the hour or reserve a room for the day.',
+            'image' => null,
+            'gradient' => 'from-sky-400 to-sky-600',
+            'icon' => 'fa-laptop',
+        ],
+        [
+            'name' => 'Putt and Play Golf Center',
+            'url' => 'https://www.puttplaygolfcenter.com/',
+            'tagline' => 'Work, then play',
+            'description' => 'The perfect balance of work and play. Hold your meeting, then enjoy laser tag, mini golf, golf simulation, and VR rooms. Also a great spot for special birthday parties.',
+            'image' => null,
+            'gradient' => 'from-success-400 to-success-600',
+            'icon' => 'fa-flag',
+        ],
+    ];
+@endphp
 
 @section('content')
-<div class="py-12 bg-theme-primary">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 class="text-3xl font-bold text-theme-primary mb-8">Meeting Spaces</h1>
+{{-- Hero --}}
+<section class="relative overflow-hidden bg-primary-800 dark:bg-primary-950">
+    <div class="absolute inset-0">
+        <img src="/images/home/downtown-bellefontaine-3.jpg" alt="Event spaces in Downtown Bellefontaine" class="w-full h-full object-cover opacity-30">
+        <div class="absolute inset-0 bg-gradient-to-b from-primary-900/40 to-primary-900/70"></div>
+    </div>
+    <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 text-center">
+        <p class="text-accent-400 font-display text-lg sm:text-xl mb-3">Downtown Bellefontaine</p>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">Meeting Spaces</h1>
+        <p class="text-primary-200 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed">
+            Weddings, board meetings, birthday parties, all-day workshops -- downtown has a room for it.
+        </p>
+    </div>
+</section>
 
-        <div class="prose prose-lg max-w-none text-theme-secondary">
-            <p>You've got business to take care of and we've got the venues to take care of you. Downtown Bellefontaine offers a variety of event spaces for whatever your event needs may be. From meetings to social gatherings to birthday parties, we cater to it all.</p>
+{{-- Intro --}}
+<section class="py-16 bg-theme-primary">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-2xl sm:text-3xl font-bold text-theme-primary mb-4">We've Got the Venue</h2>
+        <p class="text-theme-secondary leading-relaxed">
+            You've got business to take care of and we've got the venues to take care of you. Downtown Bellefontaine offers a variety of event spaces for whatever your event needs may be -- from meetings and corporate events to social gatherings and birthday parties.
+        </p>
+    </div>
+</section>
 
-            <div class="float-left mr-6 mb-4">
-                <img src="/images/pages/bella-vino.jpg" alt="Bella Vino Event Space" class="rounded-lg w-96">
-            </div>
+{{-- Venues Grid --}}
+<section class="py-16 bg-theme-secondary">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <span class="font-display text-2xl text-accent-500">Find a Fit</span>
+            <h2 class="text-2xl sm:text-3xl font-bold text-theme-primary mt-2">Spaces You Can Book</h2>
+        </div>
 
-            <p><a href="https://syndicatedowntown.com/bookus/" target="_blank" class="text-primary-600 dark:text-primary-400 hover:underline">The Syndicate</a> offers one of Logan County's finest caterer and event centers. They can host your larger gatherings with their fine dining and venue space.</p>
-
-            <p><a href="http://bellavinoevents.com/" target="_blank" class="text-primary-600 dark:text-primary-400 hover:underline">Bella Vino</a> is a truly unique destination for your special event. Hidden away in the heart of Downtown, they provide you an old-world atmosphere with curated wine selections and catering options.</p>
-
-            <p><a href="https://themaxwellevents.com/" target="_blank" class="text-primary-600 dark:text-primary-400 hover:underline">The Maxwell</a> is a premier event space located in the heart of Bellefontaine. It is the perfect venue for celebrating life's most important moments, whether you're hosting a wedding, corporate event, or social gathering. The Maxwell offers a stunning setting for unforgettable experiences.</p>
-
-            <p class="clear-both"><a href="https://buildcowork.com/" target="_blank" class="text-primary-600 dark:text-primary-400 hover:underline">Build Cowork + Space</a> was designed to inspire, connect, and enable small businesses and solopreneurs. With four different styles of conference rooms available, there is a space to fit every meeting need. BUILD conference rooms also include the highest quality A/V equipment and next-level technology. Rent your space by the hour or reserve a room for the whole day.</p>
-
-            <p><a href="https://www.puttplaygolfcenter.com/" target="_blank" class="text-primary-600 dark:text-primary-400 hover:underline">Putt and Play Golf Center</a> is that perfect balance of work and play. Have your meeting then have some fun with their laser tag, miniature golf and golf simulation, and virtual reality rooms. It's also a great location for those birthday parties that deserve something extra special.</p>
-
-            <p>Make your next event one you won't forget.</p>
-
-            <p>View more on our <a href="/downtown-map" class="text-primary-600 dark:text-primary-400 hover:underline">Downtown Map</a></p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            @foreach($venues as $venue)
+                <div class="bg-theme-primary rounded-2xl border border-theme overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
+                    <div class="relative">
+                        @if($venue['image'])
+                            <img src="{{ $venue['image'] }}" alt="{{ $venue['name'] }}" class="w-full h-44 object-cover">
+                        @else
+                            <div class="w-full h-44 bg-gradient-to-br {{ $venue['gradient'] }} flex items-center justify-center">
+                                <i class="fa-duotone fa-light {{ $venue['icon'] }} text-5xl text-white"></i>
+                            </div>
+                        @endif
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <p class="text-xs uppercase tracking-wider font-semibold text-accent-600 mb-2">{{ $venue['tagline'] }}</p>
+                        <h3 class="text-xl font-bold text-theme-primary mb-2">{{ $venue['name'] }}</h3>
+                        <p class="text-theme-secondary text-sm leading-relaxed flex-1">{{ $venue['description'] }}</p>
+                        <a href="{{ $venue['url'] }}" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 mt-4 text-accent-600 hover:text-accent-700 font-semibold text-sm">
+                            Visit website
+                            <i class="fa-duotone fa-light fa-arrow-up-right-from-square text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            @endforeach
         </div>
     </div>
-</div>
+</section>
+
+{{-- Helpful info --}}
+<section class="py-16 bg-theme-primary">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-theme-secondary rounded-2xl border border-theme p-6 text-center">
+                <div class="w-12 h-12 mx-auto mb-3 rounded-xl bg-accent-100 dark:bg-accent-900/40 flex items-center justify-center">
+                    <i class="fa-duotone fa-light fa-people-group text-xl text-accent-600"></i>
+                </div>
+                <h3 class="font-semibold text-theme-primary mb-1">Groups of All Sizes</h3>
+                <p class="text-theme-tertiary text-sm">From intimate boardrooms to large ballroom events, there's a fit downtown.</p>
+            </div>
+            <div class="bg-theme-secondary rounded-2xl border border-theme p-6 text-center">
+                <div class="w-12 h-12 mx-auto mb-3 rounded-xl bg-primary-100 dark:bg-primary-900/40 flex items-center justify-center">
+                    <i class="fa-duotone fa-light fa-utensils text-xl text-primary-600"></i>
+                </div>
+                <h3 class="font-semibold text-theme-primary mb-1">Catering Available</h3>
+                <p class="text-theme-tertiary text-sm">Most venues offer in-house catering or partner with downtown restaurants.</p>
+            </div>
+            <div class="bg-theme-secondary rounded-2xl border border-theme p-6 text-center">
+                <div class="w-12 h-12 mx-auto mb-3 rounded-xl bg-success-100 dark:bg-success-900/40 flex items-center justify-center">
+                    <i class="fa-duotone fa-light fa-square-parking text-xl text-success-600"></i>
+                </div>
+                <h3 class="font-semibold text-theme-primary mb-1">Easy Parking</h3>
+                <p class="text-theme-tertiary text-sm">Free parking lots and on-street spots within a short walk of every venue.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{-- CTA --}}
+<section class="py-16 bg-primary-700 dark:bg-primary-900">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <i class="fa-duotone fa-light fa-calendar-check text-4xl text-accent-400 mb-4"></i>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">Make Your Next Event One You Won't Forget</h2>
+        <p class="text-primary-200 mb-8 max-w-lg mx-auto">Use the downtown map to scout locations, or reach out to the Partnership for tailored recommendations.</p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+            <a href="{{ route('pages.map') }}" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition-colors shadow-sm">
+                <i class="fa-duotone fa-light fa-map-location-dot"></i>
+                See on the Map
+            </a>
+            <a href="{{ route('pages.contact') }}" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent border-2 border-white/40 hover:bg-white/10 text-white font-semibold rounded-lg transition-colors">
+                <i class="fa-duotone fa-light fa-envelope"></i>
+                Get Recommendations
+            </a>
+        </div>
+    </div>
+</section>
 @endsection
