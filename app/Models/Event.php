@@ -2,9 +2,12 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Str;
+use Symfony\Component\HtmlSanitizer\HtmlSanitizer;
+use Symfony\Component\HtmlSanitizer\HtmlSanitizerConfig;
 
 class Event extends Model
 {
@@ -46,13 +49,39 @@ class Event extends Model
 
         static::creating(function ($event) {
             if (empty($event->slug)) {
-                $event->slug = Str::slug($event->title);
-                $count = static::where('slug', 'like', $event->slug . '%')->count();
-                if ($count > 0) {
-                    $event->slug .= '-' . ($count + 1);
+                $base = Str::slug($event->title);
+                $slug = $base;
+                $suffix = 2;
+                while (static::where('slug', $slug)->exists()) {
+                    $slug = $base . '-' . $suffix++;
                 }
+                $event->slug = $slug;
             }
         });
+    }
+
+    /**
+     * Description sanitized for safe HTML output. Admin authors rich text via
+     * the Filament editor; business owners submit plain text via a textarea.
+     * Strips scripts/event handlers/unsafe URIs from either source so the
+     * public view can render it without stored-XSS risk.
+     */
+    protected function safeDescription(): Attribute
+    {
+        return Attribute::make(
+            get: function () {
+                if (blank($this->description)) {
+                    return null;
+                }
+
+                $config = (new HtmlSanitizerConfig())
+                    ->allowSafeElements()
+                    ->allowRelativeLinks()
+                    ->allowLinkSchemes(['https', 'http', 'mailto']);
+
+                return (new HtmlSanitizer($config))->sanitize($this->description);
+            }
+        );
     }
 
     public function business(): BelongsTo

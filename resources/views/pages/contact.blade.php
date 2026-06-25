@@ -166,7 +166,7 @@
                             </div>
                             <div class="min-w-0">
                                 <p class="text-xs uppercase tracking-wider text-theme-tertiary font-semibold">Email</p>
-                                <a href="mailto:kncooper9118@gmail.com" class="font-semibold text-theme-primary hover:text-accent-600 transition-colors break-all">kncooper9118@gmail.com</a>
+                                <a href="mailto:info@downtownbellefontaine.com" class="font-semibold text-theme-primary hover:text-accent-600 transition-colors break-all">info@downtownbellefontaine.com</a>
                             </div>
                         </div>
                     </div>

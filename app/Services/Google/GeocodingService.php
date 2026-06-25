@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Log;
 
 class GeocodingService
 {
-    protected string $apiKey;
+    protected ?string $apiKey;
     protected string $baseUrl = 'https://maps.googleapis.com/maps/api/geocode/json';
 
     public function __construct()
@@ -20,6 +20,11 @@ class GeocodingService
      */
     public function geocode(string $address): ?array
     {
+        // Skip geocoding gracefully when no API key is configured.
+        if (empty($this->apiKey)) {
+            return null;
+        }
+
         try {
             $response = Http::get($this->baseUrl, [
                 'address' => $address,

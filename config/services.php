@@ -44,7 +44,11 @@ return [
     ],
 
     'contact' => [
-        'recipient' => env('CONTACT_FORM_RECIPIENT', 'kncooper9118@gmail.com'),
+        // Set CONTACT_FORM_RECIPIENT in the environment. If unset, submissions
+        // are still saved to the admin inbox (ContactMessage) — only the email
+        // notification is skipped. Kept out of committed code to avoid shipping
+        // a personal address in version control.
+        'recipient' => env('CONTACT_FORM_RECIPIENT'),
     ],
 
 ];

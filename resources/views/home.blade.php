@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Welcome')
+@section('title', 'Downtown Bellefontaine, Ohio — Shop, Dine, Stay & Explore')
 @section('description', 'Discover Downtown Bellefontaine, Ohio - your destination for local businesses, community events, and small-town charm in the heart of Logan County.')
 
 @push('styles')
@@ -164,13 +164,45 @@
     .animate-scroll:hover {
         animation-play-state: paused;
     }
+
+    /* Respect users who prefer reduced motion: neutralize all decorative
+       animations and the auto-scrolling ribbon, and reveal hidden content. */
+    @media (prefers-reduced-motion: reduce) {
+        .float-animation,
+        .float-animation-delayed,
+        .pulse-glow,
+        .animate-scroll,
+        .animate-bounce,
+        .reveal,
+        .reveal.active,
+        .reveal-left.active,
+        .reveal-right.active,
+        .reveal-scale.active {
+            animation: none !important;
+        }
+
+        /* Keep ribbon images visible (no transform) instead of scrolled off */
+        .animate-scroll {
+            transform: none !important;
+        }
+
+        /* Ensure reveal content is fully shown without its entrance animation */
+        .reveal {
+            opacity: 1 !important;
+        }
+
+        /* Stop the autoplaying hero video from looping motion */
+        .hero-video {
+            animation: none !important;
+        }
+    }
 </style>
 @endpush
 
 @section('content')
 {{-- Hero Section with Video Background --}}
 <section class="relative min-h-[640px] md:min-h-[720px] lg:min-h-[75vh] flex items-center justify-center overflow-hidden">
-    <video autoplay muted loop playsinline class="hero-video">
+    <video autoplay muted loop playsinline preload="metadata" poster="{{ asset('images/home/downtown-bellefontaine-1.jpg') }}" class="hero-video">
         <source src="/images/home/video-loop.mp4" type="video/mp4">
     </video>
     <div class="hero-overlay"></div>
@@ -292,7 +324,7 @@
                 <a href="{{ route('businesses.show', $business) }}" class="group bg-theme-primary rounded-2xl border border-theme overflow-hidden card-hover reveal delay-{{ ($index % 3 + 1) * 100 }}">
                     <div class="relative overflow-hidden">
                         @if($business->featured_image)
-                            <img src="{{ Storage::url($business->featured_image) }}" alt="{{ $business->name }}" class="w-full h-56 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                            <img src="{{ Storage::url($business->featured_image) }}" alt="{{ $business->name }}" loading="lazy" decoding="async" width="400" height="224" class="w-full h-56 object-cover transform group-hover:scale-110 transition-transform duration-500">
                         @else
                             <div class="w-full h-56 bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-800 dark:to-primary-900 flex items-center justify-center">
                                 <i class="fa-duotone fa-light fa-store text-5xl text-primary-300 dark:text-primary-600"></i>
@@ -355,7 +387,7 @@
                 <a href="{{ route('events.show', $event) }}" class="group bg-theme-secondary rounded-2xl border border-theme overflow-hidden card-hover reveal delay-{{ ($index + 1) * 100 }}">
                     <div class="relative">
                         @if($event->featured_image)
-                            <img src="{{ Storage::url($event->featured_image) }}" alt="{{ $event->title }}" class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-500">
+                            <img src="{{ Storage::url($event->featured_image) }}" alt="{{ $event->title }}" loading="lazy" decoding="async" width="400" height="192" class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-500">
                         @else
                             <div class="w-full h-48 bg-gradient-to-br from-violet-100 to-violet-200 dark:from-violet-800 dark:to-violet-900 flex items-center justify-center">
                                 <i class="fa-duotone fa-light fa-calendar-star text-5xl text-violet-300 dark:text-violet-600"></i>
@@ -423,7 +455,7 @@
                 <article class="group bg-theme-primary rounded-2xl border border-theme overflow-hidden card-hover reveal delay-{{ ($index + 1) * 100 }}">
                     <div class="relative overflow-hidden">
                         @if($post->featured_image)
-                            <img src="{{ Storage::url($post->featured_image) }}" alt="{{ $post->title }}" class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                            <img src="{{ Storage::url($post->featured_image) }}" alt="{{ $post->title }}" loading="lazy" decoding="async" width="400" height="192" class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500">
                         @else
                             <div class="w-full h-48 bg-gradient-to-br from-accent-100 to-accent-200 dark:from-accent-800 dark:to-accent-900 flex items-center justify-center">
                                 <i class="fa-duotone fa-light fa-newspaper text-4xl text-accent-300 dark:text-accent-600"></i>
@@ -458,12 +490,12 @@
 <section class="py-8 bg-theme-secondary overflow-hidden">
     <div class="flex gap-4 animate-scroll">
         @for($i = 0; $i < 2; $i++)
-        <img src="/images/home/downtown-bellefontaine-1.jpg" alt="Downtown Bellefontaine" class="h-32 md:h-48 w-auto rounded-lg object-cover flex-shrink-0">
-        <img src="/images/home/downtown-bellefontaine-2.jpg" alt="Downtown Bellefontaine" class="h-32 md:h-48 w-auto rounded-lg object-cover flex-shrink-0">
-        <img src="/images/home/downtown-bellefontaine-3.jpg" alt="Downtown Bellefontaine" class="h-32 md:h-48 w-auto rounded-lg object-cover flex-shrink-0">
-        <img src="/images/home/downtown-bellefontaine-1.jpg" alt="Downtown Bellefontaine" class="h-32 md:h-48 w-auto rounded-lg object-cover flex-shrink-0">
-        <img src="/images/home/downtown-bellefontaine-2.jpg" alt="Downtown Bellefontaine" class="h-32 md:h-48 w-auto rounded-lg object-cover flex-shrink-0">
-        <img src="/images/home/downtown-bellefontaine-3.jpg" alt="Downtown Bellefontaine" class="h-32 md:h-48 w-auto rounded-lg object-cover flex-shrink-0">
+        <img src="/images/home/downtown-bellefontaine-1.jpg" alt="Downtown Bellefontaine" loading="lazy" decoding="async" width="300" height="192" class="h-32 md:h-48 w-auto rounded-lg object-cover flex-shrink-0">
+        <img src="/images/home/downtown-bellefontaine-2.jpg" alt="Downtown Bellefontaine" loading="lazy" decoding="async" width="300" height="192" class="h-32 md:h-48 w-auto rounded-lg object-cover flex-shrink-0">
+        <img src="/images/home/downtown-bellefontaine-3.jpg" alt="Downtown Bellefontaine" loading="lazy" decoding="async" width="300" height="192" class="h-32 md:h-48 w-auto rounded-lg object-cover flex-shrink-0">
+        <img src="/images/home/downtown-bellefontaine-1.jpg" alt="Downtown Bellefontaine" loading="lazy" decoding="async" width="300" height="192" class="h-32 md:h-48 w-auto rounded-lg object-cover flex-shrink-0">
+        <img src="/images/home/downtown-bellefontaine-2.jpg" alt="Downtown Bellefontaine" loading="lazy" decoding="async" width="300" height="192" class="h-32 md:h-48 w-auto rounded-lg object-cover flex-shrink-0">
+        <img src="/images/home/downtown-bellefontaine-3.jpg" alt="Downtown Bellefontaine" loading="lazy" decoding="async" width="300" height="192" class="h-32 md:h-48 w-auto rounded-lg object-cover flex-shrink-0">
         @endfor
     </div>
 </section>

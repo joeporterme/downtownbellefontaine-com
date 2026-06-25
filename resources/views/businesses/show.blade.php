@@ -2,6 +2,40 @@
 
 @section('title', $business->name)
 @section('description', $business->description ? Str::limit(strip_tags($business->description), 160) : 'Learn more about ' . $business->name . ' in Downtown Bellefontaine, Ohio.')
+@if($business->featured_image)
+    @section('og_image', Storage::url($business->featured_image))
+@endif
+
+@push('head')
+@php
+    $loc = $business->primaryLocation ?? $business->locations->first();
+    $ld = array_filter([
+        '@context' => 'https://schema.org',
+        '@type' => 'LocalBusiness',
+        'name' => $business->name,
+        'url' => url()->current(),
+        'description' => $business->description ? Str::limit(strip_tags($business->description), 300) : null,
+        'image' => $business->featured_image ? Storage::url($business->featured_image) : null,
+        'telephone' => $loc->phone ?? $business->phone ?? null,
+        'address' => $loc ? array_filter([
+            '@type' => 'PostalAddress',
+            'streetAddress' => $loc->address,
+            'addressLocality' => $loc->city ?? 'Bellefontaine',
+            'addressRegion' => $loc->state ?? 'OH',
+            'postalCode' => $loc->zip,
+            'addressCountry' => 'US',
+        ]) : null,
+        'geo' => ($loc && $loc->latitude && $loc->longitude) ? [
+            '@type' => 'GeoCoordinates',
+            'latitude' => (float) $loc->latitude,
+            'longitude' => (float) $loc->longitude,
+        ] : null,
+    ]);
+@endphp
+<script type="application/ld+json">
+{!! json_encode($ld, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+</script>
+@endpush
 
 @section('content')
 <div class="py-12 bg-theme-primary">

@@ -73,12 +73,12 @@
 <section class="bg-theme-secondary border-b border-theme">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div class="flex flex-wrap gap-2" data-category-filters>
-            <button type="button" data-category="all"
+            <button type="button" data-category="all" aria-pressed="true"
                 class="px-4 py-1.5 rounded-full text-sm font-medium transition-colors bg-primary-600 text-white">
                 All
             </button>
             @foreach($categories as $category)
-                <button type="button" data-category="{{ $category->id }}"
+                <button type="button" data-category="{{ $category->id }}" aria-pressed="false"
                     class="px-4 py-1.5 rounded-full text-sm font-medium transition-colors bg-theme-primary text-theme-secondary border border-theme hover:border-primary-400">
                     {{ $category->name }}
                 </button>
@@ -357,6 +357,7 @@
         document.querySelectorAll('[data-category]').forEach(btn => {
             const cat = btn.dataset.category;
             const active = activeCategories.has(cat);
+            btn.setAttribute('aria-pressed', active ? 'true' : 'false');
             btn.classList.toggle('bg-primary-600', active);
             btn.classList.toggle('text-white', active);
             btn.classList.toggle('bg-theme-primary', !active);

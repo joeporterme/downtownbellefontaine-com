@@ -4,11 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title', 'Downtown Bellefontaine') - {{ config('app.name') }}</title>
-    <meta name="description" content="@yield('description', 'Discover Downtown Bellefontaine, Ohio - your destination for local businesses, events, and community.')">
+
+    {{-- Primary meta --}}
+    <title>@yield('title', 'Downtown Bellefontaine, Ohio') - {{ config('app.name') }}</title>
+    <meta name="description" content="@yield('description', 'Discover Downtown Bellefontaine, Ohio — local shops, restaurants, events, and things to do in the heart of Logan County.')">
+    <link rel="canonical" href="{{ url()->current() }}">
+    <meta name="theme-color" content="#01757f">
+
+    {{-- Open Graph --}}
+    <meta property="og:site_name" content="Downtown Bellefontaine">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="@yield('og_type', 'website')">
+    <meta property="og:title" content="@yield('title', 'Downtown Bellefontaine, Ohio')">
+    <meta property="og:description" content="@yield('description', 'Discover Downtown Bellefontaine, Ohio — local shops, restaurants, events, and things to do in the heart of Logan County.')">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:image" content="@yield('og_image', asset('images/home/downtown-bellefontaine-1.jpg'))">
+
+    {{-- Twitter --}}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="@yield('title', 'Downtown Bellefontaine, Ohio')">
+    <meta name="twitter:description" content="@yield('description', 'Discover Downtown Bellefontaine, Ohio — local shops, restaurants, events, and things to do in the heart of Logan County.')">
+    <meta name="twitter:image" content="@yield('og_image', asset('images/home/downtown-bellefontaine-1.jpg'))">
 
     {{-- Favicon --}}
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" href="{{ asset('favicon.ico') }}" sizes="any">
+    <link rel="icon" type="image/png" href="{{ asset('images/favicon-32.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('images/apple-touch-icon.png') }}">
+
+    {{-- Organization + site search structured data --}}
+    <script type="application/ld+json">
+    {!! json_encode([
+        '@context' => 'https://schema.org',
+        '@graph' => [
+            [
+                '@type' => 'Organization',
+                '@id' => url('/') . '#organization',
+                'name' => 'Downtown Bellefontaine',
+                'url' => url('/'),
+                'logo' => asset('images/logo.svg'),
+                'sameAs' => [
+                    'https://www.facebook.com/DowntownBellefontaine',
+                    'https://www.instagram.com/downtownbellefontaine',
+                    'https://twitter.com/dtbellefontaine',
+                ],
+            ],
+            [
+                '@type' => 'WebSite',
+                '@id' => url('/') . '#website',
+                'url' => url('/'),
+                'name' => 'Downtown Bellefontaine',
+                'publisher' => ['@id' => url('/') . '#organization'],
+                'potentialAction' => [
+                    '@type' => 'SearchAction',
+                    'target' => url('/businesses') . '?q={search_term_string}',
+                    'query-input' => 'required name=search_term_string',
+                ],
+            ],
+        ],
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+    </script>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -24,6 +78,11 @@
     @stack('styles')
 </head>
 <body class="bg-theme-secondary text-theme-primary min-h-screen flex flex-col">
+    {{-- Skip to content (keyboard / screen-reader users) --}}
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:top-3 focus:left-3 focus:px-4 focus:py-2 focus:rounded-lg focus:bg-primary-600 focus:text-white focus:shadow-lg">
+        Skip to main content
+    </a>
+
     {{-- Header --}}
     <header class="bg-theme-primary shadow-sm border-b border-theme sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -94,15 +153,15 @@
                     @endauth
 
                     {{-- Mobile menu button --}}
-                    <button type="button" class="lg:hidden p-2 rounded-lg hover:bg-theme-tertiary" data-mobile-menu-toggle>
-                        <i class="fa-duotone fa-light fa-bars text-xl text-theme-secondary"></i>
+                    <button type="button" class="lg:hidden p-2 rounded-lg hover:bg-theme-tertiary" data-mobile-menu-toggle aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+                        <i class="fa-duotone fa-light fa-bars text-xl text-theme-secondary" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
         </div>
 
         {{-- Mobile Navigation --}}
-        <div class="hidden lg:hidden" data-mobile-menu>
+        <div class="hidden lg:hidden" id="mobile-menu" data-mobile-menu>
             <div class="px-4 pt-2 pb-4 space-y-1 border-t border-theme">
                 <a href="{{ url('/') }}" class="flex items-center gap-3 py-2.5 text-theme-secondary hover:text-primary-500">
                     <i class="fa-duotone fa-light fa-house w-5 text-center text-primary-500"></i>
@@ -184,7 +243,7 @@
     @endif
 
     {{-- Main Content --}}
-    <main class="flex-grow">
+    <main id="main" tabindex="-1" class="flex-grow">
         @yield('content')
     </main>
 
@@ -321,7 +380,9 @@
             const menu = document.querySelector('[data-mobile-menu]');
             if (toggleBtn && menu) {
                 toggleBtn.addEventListener('click', function() {
-                    menu.classList.toggle('hidden');
+                    const isOpen = menu.classList.toggle('hidden') === false;
+                    toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                    toggleBtn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
                 });
             }
         });

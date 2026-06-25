@@ -73,13 +73,19 @@ class BusinessImportService
             $this->progress("Processing {$listing['listingTitle']}...", $index + 1, $this->stats['total']);
 
             try {
-                $this->importBusiness(
+                $business = $this->importBusiness(
                     $listing,
                     $categoryById,
                     $assignmentsByListing->get($listing['listingId'], collect()),
                     $imagesByListing->get($listing['listingId'], collect())->first()
                 );
-                $this->stats['imported']++;
+
+                if ($business === null) {
+                    // Business already exists - count as skipped, not imported or error.
+                    $this->stats['skipped']++;
+                } else {
+                    $this->stats['imported']++;
+                }
             } catch (\Exception $e) {
                 $this->stats['errors']++;
                 $this->errors[] = [
@@ -108,12 +114,11 @@ class BusinessImportService
         $categoryById,
         $assignments,
         ?array $imageData
-    ): Business {
-        // Check if business already exists by name
+    ): ?Business {
+        // Check if business already exists by name - signal a skip by returning null.
         $existingBusiness = Business::where('name', $listing['listingTitle'])->first();
         if ($existingBusiness) {
-            $this->stats['skipped']++;
-            throw new \Exception('Business already exists');
+            return null;
         }
 
         // Create or find user account

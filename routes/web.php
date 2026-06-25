@@ -33,6 +33,9 @@ Route::post('/contact', [App\Http\Controllers\Public\ContactController::class, '
 Route::get('/historic-walking-tour', fn() => view('pages.historic-walking-tour'))->name('pages.historic-walking-tour');
 Route::get('/privacy-policy', fn() => view('pages.privacy-policy'))->name('pages.privacy-policy');
 
+// SEO
+Route::get('/sitemap.xml', [App\Http\Controllers\Public\SitemapController::class, 'index'])->name('sitemap');
+
 // Public Events
 Route::get('/events', [EventController::class, 'index'])->name('events.index');
 Route::get('/events/{event:slug}', [EventController::class, 'show'])->name('events.show');
@@ -45,19 +48,19 @@ Route::get('/businesses/{business:slug}', [PublicBusinessController::class, 'sho
 // Authentication
 Route::middleware('guest')->group(function () {
     Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
-    Route::post('/register', [RegisterController::class, 'register']);
+    Route::post('/register', [RegisterController::class, 'register'])->middleware('throttle:5,1');
     Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
-    Route::post('/login', [LoginController::class, 'login']);
+    Route::post('/login', [LoginController::class, 'login'])->middleware('throttle:5,1');
     Route::get('/forgot-password', [ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
-    Route::post('/forgot-password', [ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
+    Route::post('/forgot-password', [ForgotPasswordController::class, 'sendResetLinkEmail'])->middleware('throttle:5,1')->name('password.email');
     Route::get('/reset-password/{token}', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
-    Route::post('/reset-password', [ResetPasswordController::class, 'reset'])->name('password.update');
+    Route::post('/reset-password', [ResetPasswordController::class, 'reset'])->middleware('throttle:5,1')->name('password.update');
 });
 
 Route::post('/logout', [LogoutController::class, 'logout'])->middleware('auth')->name('logout');
 
 // Business Owner Portal
-Route::prefix('portal')->middleware(['web', 'auth', 'verified'])->group(function () {
+Route::prefix('portal')->middleware(['auth'])->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('business.dashboard');
     Route::get('/business/create', [BusinessController::class, 'create'])->name('business.create');
     Route::post('/business', [BusinessController::class, 'store'])->name('business.store');

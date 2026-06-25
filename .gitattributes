@@ -1,5 +1,21 @@
 * text=auto eol=lf
 
+# Treat binary assets as binary so git never line-ending-normalizes them
+# (prevents prod working-tree churn / phantom "modified" files on deploy).
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.webp  binary
+*.svg   binary
+*.mp4   binary
+*.woff  binary
+*.woff2 binary
+*.ttf   binary
+*.eot   binary
+*.otf   binary
+
 *.blade.php diff=html
 *.css diff=css
 *.html diff=html

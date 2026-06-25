@@ -184,9 +184,9 @@ class EventController extends Controller
         $image->cover(1920, 1080);
 
         // Save with compression (quality 80)
-        $image->toJpeg(80);
+        $encoded = $image->toJpeg(80);
 
-        Storage::disk('public')->put($filename, (string) $image->encode());
+        Storage::disk('public')->put($filename, (string) $encoded);
 
         return $filename;
     }

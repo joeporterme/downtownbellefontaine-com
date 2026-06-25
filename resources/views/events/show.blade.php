@@ -2,6 +2,40 @@
 
 @section('title', $event->title)
 @section('description', Str::limit(strip_tags($event->description), 160))
+@section('og_type', 'event')
+@if($event->featured_image)
+    @section('og_image', Storage::url($event->featured_image))
+@endif
+
+@push('head')
+@php
+    $eventLd = array_filter([
+        '@context' => 'https://schema.org',
+        '@type' => 'Event',
+        'name' => $event->title,
+        'url' => url()->current(),
+        'startDate' => $event->event_date?->toDateString(),
+        'description' => $event->description ? Str::limit(strip_tags($event->description), 300) : null,
+        'image' => $event->featured_image ? Storage::url($event->featured_image) : null,
+        'eventAttendanceMode' => 'https://schema.org/OfflineEventAttendanceMode',
+        'location' => ($event->location_name || $event->address) ? array_filter([
+            '@type' => 'Place',
+            'name' => $event->location_name,
+            'address' => array_filter([
+                '@type' => 'PostalAddress',
+                'streetAddress' => $event->address,
+                'addressLocality' => $event->city ?? 'Bellefontaine',
+                'addressRegion' => $event->state ?? 'OH',
+                'postalCode' => $event->zip,
+                'addressCountry' => 'US',
+            ]),
+        ]) : null,
+    ]);
+@endphp
+<script type="application/ld+json">
+{!! json_encode($eventLd, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+</script>
+@endpush
 
 @section('content')
 <div class="py-12 bg-theme-primary">
@@ -33,7 +67,7 @@
 
             @if($event->description)
                 <div class="prose prose-lg max-w-none text-theme-secondary mb-6">
-                    {!! $event->description !!}
+                    {!! $event->safe_description !!}
                 </div>
             @endif
 
