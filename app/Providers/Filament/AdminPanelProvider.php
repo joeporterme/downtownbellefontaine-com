@@ -111,7 +111,17 @@ class AdminPanelProvider extends PanelProvider
                         .fi-fo-rich-editor-content .ProseMirror {
                             min-height: 360px !important;
                         }
+                        /* Google Places autocomplete dropdown — keep above Filament modals/repeaters */
+                        .pac-container {
+                            z-index: 100000 !important;
+                            font-family: inherit;
+                            border-radius: 0.5rem;
+                            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+                            margin-top: 4px;
+                        }
                     </style>
+                    <script async defer
+                        src="https://maps.googleapis.com/maps/api/js?key=' . e(config('services.google.maps_api_key')) . '&libraries=places&loading=async"></script>
                 ')
             );
     }

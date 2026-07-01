@@ -4,12 +4,14 @@ namespace App\Filament\Resources\Businesses\Schemas;
 
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Hidden;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Components\Section;
+use Filament\Schemas\Components\View;
 use Filament\Schemas\Schema;
 
 class BusinessForm
@@ -54,7 +56,7 @@ class BusinessForm
                     ]),
 
                 Section::make('Locations')
-                    ->description('Add business locations with addresses and coordinates')
+                    ->description('Search for the business address — city, state, ZIP, and coordinates fill in automatically.')
                     ->schema([
                         Repeater::make('locations')
                             ->relationship()
@@ -62,28 +64,23 @@ class BusinessForm
                                 TextInput::make('name')
                                     ->label('Location Name')
                                     ->placeholder('e.g., Main Store, Downtown Branch')
-                                    ->maxLength(255),
-                                TextInput::make('address')
-                                    ->required()
-                                    ->maxLength(255),
-                                TextInput::make('city')
-                                    ->default('Bellefontaine')
-                                    ->maxLength(100),
-                                TextInput::make('state')
-                                    ->default('OH')
-                                    ->maxLength(2),
-                                TextInput::make('zip')
-                                    ->label('ZIP Code')
-                                    ->maxLength(10),
+                                    ->maxLength(255)
+                                    ->columnSpanFull(),
+
+                                View::make('filament.forms.places-autocomplete')
+                                    ->columnSpanFull(),
+
+                                // Kept in form state, populated by the Places view above.
+                                Hidden::make('address'),
+                                Hidden::make('city')->default('Bellefontaine'),
+                                Hidden::make('state')->default('OH'),
+                                Hidden::make('zip'),
+                                Hidden::make('latitude'),
+                                Hidden::make('longitude'),
+
                                 TextInput::make('phone')
                                     ->tel()
                                     ->maxLength(20),
-                                TextInput::make('latitude')
-                                    ->numeric()
-                                    ->step(0.00000001),
-                                TextInput::make('longitude')
-                                    ->numeric()
-                                    ->step(0.00000001),
                                 Toggle::make('is_primary')
                                     ->label('Primary Location')
                                     ->default(false),
