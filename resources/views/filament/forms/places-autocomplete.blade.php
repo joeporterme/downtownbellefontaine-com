@@ -6,21 +6,87 @@
     $itemPath = $getStatePath();
 ?>
 
+{{-- Scoped styles — Filament's admin CSS doesn't scan this file for Tailwind
+     utilities, so we can't rely on class names like w-6/mt-3/flex being present
+     in the compiled bundle. Everything visual lives in .dtb-places-* rules. --}}
+<style>
+    .dtb-places { grid-column: 1 / -1; }
+    .dtb-places-label { display: block; font-size: 0.875rem; font-weight: 500; line-height: 1.5rem; color: rgb(3 7 18); }
+    .dark .dtb-places-label { color: rgb(255 255 255); }
+    .dtb-places-required { color: rgb(220 38 38); }
+    .dtb-places-hint { font-size: 0.75rem; color: rgb(107 114 128); margin-top: 0.25rem; margin-bottom: 0.5rem; }
+    .dtb-places-input-wrp {
+        display: flex;
+        align-items: center;
+        border-radius: 0.5rem;
+        background: rgb(255 255 255);
+        box-shadow: inset 0 0 0 1px rgba(3, 7, 18, 0.1);
+    }
+    .dark .dtb-places-input-wrp { background: rgba(255,255,255,0.05); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.2); }
+    .dtb-places-input-wrp:focus-within { box-shadow: inset 0 0 0 2px rgb(1 117 127); }
+    .dtb-places-input {
+        width: 100%;
+        border: 0;
+        background: transparent;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.875rem;
+        color: rgb(3 7 18);
+        outline: none;
+    }
+    .dtb-places-input::placeholder { color: rgb(156 163 175); }
+    .dark .dtb-places-input { color: rgb(255 255 255); }
+    .dtb-places-warning { margin-top: 0.375rem; font-size: 0.875rem; color: rgb(220 38 38); }
+    .dtb-places-card {
+        margin-top: 0.75rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        border-radius: 0.5rem;
+        border: 1px solid rgb(229 231 235);
+        background: rgb(249 250 251);
+        padding: 1rem;
+    }
+    .dark .dtb-places-card { border-color: rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); }
+    .dtb-places-pin {
+        width: 24px;
+        height: 24px;
+        flex: 0 0 auto;
+        margin-top: 0.125rem;
+        color: rgb(1 117 127);
+    }
+    .dtb-places-body { flex: 1; min-width: 0; }
+    .dtb-places-body-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: rgb(107 114 128); font-weight: 600; margin-bottom: 0.25rem; }
+    .dtb-places-body-address { font-weight: 600; color: rgb(3 7 18); margin: 0; }
+    .dark .dtb-places-body-address { color: rgb(255 255 255); }
+    .dtb-places-body-citystate { font-size: 0.875rem; color: rgb(75 85 99); margin: 0.125rem 0 0; }
+    .dark .dtb-places-body-citystate { color: rgb(209 213 219); }
+    .dtb-places-body-coords { font-size: 0.75rem; color: rgb(107 114 128); margin: 0.25rem 0 0; }
+    .dtb-places-clear {
+        font-size: 0.75rem;
+        color: rgb(107 114 128);
+        background: none;
+        border: 0;
+        cursor: pointer;
+        padding: 0;
+    }
+    .dtb-places-clear:hover { color: rgb(220 38 38); }
+</style>
+
 <div
     x-data="placesAutocomplete({
         statePath: @js($itemPath),
     })"
     x-init="init()"
-    class="col-span-2"
+    class="dtb-places"
 >
-    <label class="block text-sm font-medium leading-6 text-gray-950 dark:text-white">
-        Business Address <span class="text-danger-600">*</span>
+    <label class="dtb-places-label">
+        Business Address <span class="dtb-places-required">*</span>
     </label>
-    <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 mb-2">
+    <p class="dtb-places-hint">
         Start typing and pick from the dropdown &mdash; we&rsquo;ll fill in the rest.
     </p>
 
-    <div class="fi-input-wrp flex items-center rounded-lg bg-white shadow-sm ring-1 ring-inset ring-gray-950/10 dark:bg-white/5 dark:ring-white/20 focus-within:ring-2 focus-within:ring-primary-500">
+    <div class="dtb-places-input-wrp">
         <input
             type="text"
             x-ref="searchInput"
@@ -28,26 +94,26 @@
             @keydown.enter.prevent
             placeholder="e.g., 100 N Main St, Bellefontaine, OH"
             autocomplete="off"
-            class="w-full border-0 bg-transparent py-1.5 px-3 text-base text-gray-950 placeholder:text-gray-400 focus:ring-0 dark:text-white dark:placeholder:text-gray-500 sm:text-sm sm:leading-6"
+            class="dtb-places-input"
         />
     </div>
 
-    <p x-show="showWarning" x-cloak class="mt-1.5 text-sm text-danger-600 dark:text-danger-400">
+    <p x-show="showWarning" x-cloak class="dtb-places-warning">
         Please pick an address from the dropdown so we can save the coordinates.
     </p>
 
     <template x-if="picked">
-        <div class="mt-3 flex items-start gap-3 rounded-lg border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 p-4">
-            <svg class="w-6 h-6 text-primary-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+        <div class="dtb-places-card">
+            <svg class="dtb-places-pin" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                 <path fill-rule="evenodd" d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 103 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 002.273 1.765 11.842 11.842 0 00.976.544l.062.029.018.008.006.003zM10 11.25a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5z" clip-rule="evenodd"/>
             </svg>
-            <div class="flex-1 min-w-0">
-                <p class="text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400 font-semibold mb-1">Selected Address</p>
-                <p class="font-semibold text-gray-950 dark:text-white" x-text="address"></p>
-                <p class="text-sm text-gray-600 dark:text-gray-300" x-text="cityStateZip"></p>
-                <p class="text-xs text-gray-500 dark:text-gray-400 mt-1" x-text="coordsLabel"></p>
+            <div class="dtb-places-body">
+                <p class="dtb-places-body-label">Selected Address</p>
+                <p class="dtb-places-body-address" x-text="address"></p>
+                <p class="dtb-places-body-citystate" x-text="cityStateZip"></p>
+                <p class="dtb-places-body-coords" x-text="coordsLabel"></p>
             </div>
-            <button type="button" @click="clear()" class="text-xs text-gray-500 hover:text-danger-600 transition-colors">
+            <button type="button" @click="clear()" class="dtb-places-clear">
                 Clear
             </button>
         </div>
