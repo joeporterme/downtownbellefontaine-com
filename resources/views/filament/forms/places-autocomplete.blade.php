@@ -54,9 +54,9 @@
     </template>
 </div>
 
+@assets
 <script>
-    if (!window.placesAutocomplete) {
-        window.placesAutocomplete = function ({ statePath }) {
+    window.placesAutocomplete = function ({ statePath }) {
             return {
                 statePath,
                 searchValue: '',
@@ -184,5 +184,5 @@
                 },
             };
         };
-    }
 </script>
+@endassets
