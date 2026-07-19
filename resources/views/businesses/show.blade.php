@@ -61,11 +61,17 @@
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {{-- Main Content --}}
             <div class="lg:col-span-2">
-                {{-- Listing image (curated photo, saved Street View, else featured photo) --}}
-                @if($business->listingImageUrl)
+                {{-- Top image: the business's featured / curated photo. Street View
+                     lives in the sidebar, so it is not used here. --}}
+                @php
+                    $topImage = $business->featured_image
+                        ? \App\Support\Media::url($business->featured_image)
+                        : ($business->listing_image ? \App\Support\Media::url($business->listing_image) : null);
+                @endphp
+                @if($topImage)
                     <figure class="mb-6">
-                        <img src="{{ $business->listingImageUrl }}" alt="{{ $business->name }}" class="w-full h-64 md:h-96 object-cover rounded-lg shadow {{ $business->hasStreetView ? 'streetview-img' : '' }}">
-                        @if($business->listing_image_credit)
+                        <img src="{{ $topImage }}" alt="{{ $business->name }}" class="w-full h-64 md:h-96 object-cover rounded-lg shadow">
+                        @if($business->listing_image_credit && ! $business->featured_image)
                             <figcaption class="mt-1 text-xs text-theme-tertiary">Photo: {{ $business->listing_image_credit }} · via Google</figcaption>
                         @endif
                     </figure>
@@ -204,15 +210,25 @@
                         </div>
                     @endif
 
-                    {{-- Map --}}
+                    {{-- Location: map + saved Street View snapshot --}}
                     @if($business->locations->first() && $business->locations->first()->latitude)
-                        @php $location = $business->locations->first(); @endphp
+                        @php
+                            $location = $business->locations->first();
+                            $streetview = $business->primaryLocation?->streetview_image ?? $location->streetview_image;
+                        @endphp
                         <div class="mt-6 pt-6 border-t border-theme">
                             <div id="business-map"
                                  data-lat="{{ $location->latitude }}"
                                  data-lng="{{ $location->longitude }}"
                                  data-title="{{ $business->name }}"
                                  class="w-full h-56 rounded-lg overflow-hidden border border-theme mb-3 bg-gray-100 dark:bg-gray-800"></div>
+
+                            @if($streetview)
+                                <figure class="mb-3">
+                                    <img src="{{ \App\Support\Media::url($streetview) }}" alt="{{ $business->name }} — Street View" class="w-full h-40 object-cover rounded-lg border border-theme streetview-img">
+                                    <figcaption class="mt-1 text-xs text-theme-tertiary">Street View</figcaption>
+                                </figure>
+                            @endif
                             <a href="https://www.google.com/maps/dir/?api=1&destination={{ urlencode($location->address . ', ' . $location->city . ', ' . $location->state . ' ' . $location->zip) }}"
                                target="_blank"
                                rel="noopener noreferrer"
