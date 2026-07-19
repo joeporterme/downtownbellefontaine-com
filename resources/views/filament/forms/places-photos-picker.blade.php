@@ -94,8 +94,6 @@
     window.placesPhotosPicker = function ({ statePath }) {
         return {
             statePath,
-            // Business-level root state path (strip the ".locations.<uuid>" tail).
-            rootPath: statePath.split('.locations.')[0] || 'data',
             loading: false,
             photos: [],
             selectedUrl: '',
@@ -103,7 +101,7 @@
 
             init() {
                 // Restore a previously-stashed selection so it survives re-renders.
-                this.selectedUrl = this.$wire.get(`${this.rootPath}.places_photo_url`) || '';
+                this.selectedUrl = this.$wire.get(`${this.statePath}.places_photo_url`) || '';
             },
 
             placesService() {
@@ -168,14 +166,14 @@
 
             select(photo) {
                 this.selectedUrl = photo.full;
-                this.$wire.set(`${this.rootPath}.places_photo_url`, photo.full, true);
-                this.$wire.set(`${this.rootPath}.places_photo_credit`, photo.credit || '', true);
+                this.$wire.set(`${this.statePath}.places_photo_url`, photo.full, true);
+                this.$wire.set(`${this.statePath}.listing_image_credit`, photo.credit || '', true);
             },
 
             clearSelection() {
                 this.selectedUrl = '';
-                this.$wire.set(`${this.rootPath}.places_photo_url`, '', true);
-                this.$wire.set(`${this.rootPath}.places_photo_credit`, '', true);
+                this.$wire.set(`${this.statePath}.places_photo_url`, '', true);
+                this.$wire.set(`${this.statePath}.listing_image_credit`, '', true);
             },
         };
     };

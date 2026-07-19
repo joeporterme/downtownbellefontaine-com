@@ -123,25 +123,8 @@ class BusinessForm
                                         ->image()
                                         ->disk('public')
                                         ->directory('businesses')
-                                        ->imageEditor(),
-                                    FileUpload::make('listing_image')
-                                        ->label('Listing photo (overrides Street View)')
-                                        ->image()
-                                        ->disk('public')
-                                        ->directory('businesses/listing')
                                         ->imageEditor()
-                                        ->imageResizeMode('cover')
-                                        ->imageResizeTargetWidth('1200')
-                                        ->imageResizeTargetHeight('800')
-                                        ->maxSize(8192)
-                                        ->columnSpanFull()
-                                        ->helperText('Optional. When set, this photo is used as the big listing image everywhere, instead of the auto Street View snapshot. Upload your own here, or pick one from Google under a location above. Best for buildings Google Street View shows out of date.'),
-
-                                    // Transient stash for a photo chosen in the Google-photos
-                                    // picker (inside a location). Captured + stripped in the
-                                    // Create/Edit page, which downloads it into listing_image.
-                                    Hidden::make('places_photo_url'),
-                                    Hidden::make('places_photo_credit'),
+                                        ->helperText('The big photo shown at the top of the business page. The Street View / Google photo / override image is set per location under "Locations".'),
                                 ]),
                         ]),
 
@@ -177,12 +160,28 @@ class BusinessForm
                                             Hidden::make('streetview_pitch'),
                                             Hidden::make('streetview_zoom'),
 
-                                            // Pick an owner/visitor photo from the business's
-                                            // Google listing. Downloaded + stored as the
-                                            // listing image on save (see CreateBusiness /
-                                            // EditBusiness). Stashes onto business-level state.
+                                            // Option 2 — pick an owner/visitor photo from the
+                                            // business's Google listing. The picker stashes the
+                                            // chosen URL in places_photo_url; the location observer
+                                            // downloads it into listing_image on save.
                                             View::make('filament.forms.places-photos-picker')
                                                 ->columnSpanFull(),
+                                            Hidden::make('places_photo_url'),
+                                            Hidden::make('listing_image_credit'),
+
+                                            // Option 3 — manual override upload for this location.
+                                            FileUpload::make('listing_image')
+                                                ->label('Listing photo (overrides Street View)')
+                                                ->image()
+                                                ->disk('public')
+                                                ->directory('businesses/listing')
+                                                ->imageEditor()
+                                                ->imageResizeMode('cover')
+                                                ->imageResizeTargetWidth('1200')
+                                                ->imageResizeTargetHeight('800')
+                                                ->maxSize(8192)
+                                                ->columnSpanFull()
+                                                ->helperText('Optional. When set, this photo is the big listing image for this location, instead of Street View. Best when Google Street View is out of date.'),
 
                                             TextInput::make('phone')
                                                 ->tel()

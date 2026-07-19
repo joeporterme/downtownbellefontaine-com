@@ -84,18 +84,25 @@ class Business extends Model
 
     /**
      * The main listing image, in priority order:
-     * 1. a curated storefront photo (overrides everything),
-     * 2. the saved Street View snapshot of the primary location,
-     * 3. the uploaded featured image, else null (placeholder).
+     * 1. the primary location's curated override (manual upload / Google photo),
+     * 2. a legacy business-level override (kept as a fallback),
+     * 3. the primary location's saved Street View snapshot,
+     * 4. the uploaded featured image, else null (placeholder).
      */
     public function getListingImageUrlAttribute(): ?string
     {
+        $loc = $this->primaryLocation;
+
+        if ($loc?->listing_image) {
+            return Media::url($loc->listing_image);
+        }
+
         if ($this->listing_image) {
             return Media::url($this->listing_image);
         }
 
-        if ($sv = $this->primaryLocation?->streetview_image) {
-            return Media::url($sv);
+        if ($loc?->streetview_image) {
+            return Media::url($loc->streetview_image);
         }
 
         return $this->featured_image ? Media::url($this->featured_image) : null;
@@ -119,7 +126,22 @@ class Business extends Model
      */
     public function getHasStreetViewAttribute(): bool
     {
-        return ! $this->listing_image && (bool) $this->primaryLocation?->streetview_image;
+        $loc = $this->primaryLocation;
+
+        return ! $loc?->listing_image
+            && ! $this->listing_image
+            && (bool) $loc?->streetview_image;
+    }
+
+    /**
+     * The big listing image resolved to its owning location (for a per-location
+     * override) or null when the resolved image is business-level/featured.
+     */
+    public function resolvedListingCredit(): ?string
+    {
+        return $this->primaryLocation?->listing_image
+            ? $this->primaryLocation->listing_image_credit
+            : ($this->listing_image ? $this->listing_image_credit : null);
     }
 
     public function isApproved(): bool

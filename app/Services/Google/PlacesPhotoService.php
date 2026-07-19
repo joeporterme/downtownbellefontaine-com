@@ -2,7 +2,7 @@
 
 namespace App\Services\Google;
 
-use App\Models\Business;
+use App\Models\BusinessLocation;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
@@ -28,11 +28,11 @@ class PlacesPhotoService
      * Download a Google Places photo (the temporary googleusercontent URL the
      * Places JS library hands back), process it, store it on the public disk,
      * and return the stored path (or null on failure). Replaces any previously
-     * stored Places photo for this business.
+     * stored Places photo for this location.
      *
      * The URL is a pre-authorized image CDN link, so no API key is needed here.
      */
-    public function store(Business $business, string $url): ?string
+    public function store(BusinessLocation $location, string $url): ?string
     {
         if (blank($url) || ! $this->isAllowedHost($url)) {
             return null;
@@ -45,7 +45,7 @@ class PlacesPhotoService
 
             if (! $response->successful() || ! str_starts_with($response->header('Content-Type', ''), 'image/')) {
                 Log::warning('Places photo download failed', [
-                    'business_id' => $business->id,
+                    'location_id' => $location->id,
                     'status' => $response->status(),
                 ]);
 
@@ -57,12 +57,12 @@ class PlacesPhotoService
             $encoded = $image->toJpeg(88);
 
             $hash = substr(md5($url), 0, 8);
-            $path = self::DIRECTORY."/{$business->id}-places-{$hash}.jpg";
+            $path = self::DIRECTORY."/loc-{$location->id}-places-{$hash}.jpg";
 
             // Remove the previous Places photo if it was a different file. We
             // only clean up our own auto-generated Places files, never a photo
             // the admin uploaded by hand.
-            $previous = $business->getOriginal('listing_image') ?: $business->listing_image;
+            $previous = $location->getOriginal('listing_image') ?: $location->listing_image;
             if (filled($previous)
                 && $previous !== $path
                 && str_contains($previous, '-places-')) {
@@ -76,7 +76,7 @@ class PlacesPhotoService
             return $path;
         } catch (\Throwable $e) {
             Log::warning('Places photo exception', [
-                'business_id' => $business->id,
+                'location_id' => $location->id,
                 'error' => $e->getMessage(),
             ]);
 

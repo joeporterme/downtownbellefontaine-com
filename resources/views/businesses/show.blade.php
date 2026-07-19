@@ -64,15 +64,18 @@
                 {{-- Top image: the business's featured / curated photo. Street View
                      lives in the sidebar, so it is not used here. --}}
                 @php
+                    $primaryLoc = $business->primaryLocation ?? $business->locations->first();
+                    $override = $primaryLoc?->listing_image ?: $business->listing_image;
                     $topImage = $business->featured_image
                         ? \App\Support\Media::url($business->featured_image)
-                        : ($business->listing_image ? \App\Support\Media::url($business->listing_image) : null);
+                        : ($override ? \App\Support\Media::url($override) : null);
+                    $topCredit = $business->featured_image ? null : $business->resolvedListingCredit();
                 @endphp
                 @if($topImage)
                     <figure class="mb-6">
                         <img src="{{ $topImage }}" alt="{{ $business->name }}" class="w-full h-64 md:h-96 object-cover rounded-lg shadow">
-                        @if($business->listing_image_credit && ! $business->featured_image)
-                            <figcaption class="mt-1 text-xs text-theme-tertiary">Photo: {{ $business->listing_image_credit }} · via Google</figcaption>
+                        @if($topCredit)
+                            <figcaption class="mt-1 text-xs text-theme-tertiary">Photo: {{ $topCredit }} · via Google</figcaption>
                         @endif
                     </figure>
                 @endif

@@ -3,7 +3,6 @@
 namespace App\Filament\Resources\Businesses\Pages;
 
 use App\Filament\Resources\Businesses\BusinessResource;
-use App\Filament\Resources\Businesses\Concerns\AppliesPlacesPhoto;
 use App\Services\Google\StreetViewService;
 use Filament\Actions\Action;
 use Filament\Actions\DeleteAction;
@@ -12,19 +11,7 @@ use Filament\Resources\Pages\EditRecord;
 
 class EditBusiness extends EditRecord
 {
-    use AppliesPlacesPhoto;
-
     protected static string $resource = BusinessResource::class;
-
-    protected function mutateFormDataBeforeSave(array $data): array
-    {
-        return $this->capturePlacesPhoto($data);
-    }
-
-    protected function afterSave(): void
-    {
-        $this->applyPlacesPhoto();
-    }
 
     protected function getHeaderActions(): array
     {

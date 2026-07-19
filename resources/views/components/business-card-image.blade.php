@@ -14,8 +14,8 @@
 @endphp
 
 <div class="relative w-full {{ $height }} overflow-hidden">
-    @if($sv || $featured)
-        {{-- Street View (enhanced) or the uploaded featured photo --}}
+    @if($listing)
+        {{-- Resolved listing image: override, Street View (enhanced), or featured --}}
         <img src="{{ $listing }}" alt="{{ $business->name }}"
              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 {{ $sv ? 'streetview-img' : '' }}">
     @elseif($logo)
