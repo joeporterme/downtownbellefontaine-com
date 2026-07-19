@@ -40,8 +40,10 @@
         Drag to look around and scroll to zoom until the storefront is framed nicely &mdash; we save this exact view. Use the <strong>date control</strong> (top-left of the panorama) to switch to newer imagery. If Google's imagery is out of date, upload a "Listing photo" above to override it entirely.
     </p>
 
-    {{-- Panorama --}}
-    <div x-show="state === 'ready' || state === 'loading'" x-ref="pano" class="dtb-sv-canvas"></div>
+    {{-- Panorama. wire:ignore is essential: without it, the next Livewire DOM
+         morph (e.g. when we push the framing back to the server) wipes the
+         Google-rendered panorama and it goes grey. --}}
+    <div wire:ignore x-show="state === 'ready' || state === 'loading'" x-ref="pano" class="dtb-sv-canvas"></div>
 
     {{-- States --}}
     <div x-show="state === 'no-location'" x-cloak class="dtb-sv-note">
