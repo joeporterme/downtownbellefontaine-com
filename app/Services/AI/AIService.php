@@ -65,6 +65,65 @@ class AIService
     }
 
     /**
+     * Classify a local image file as a designed "logo" or a real "photo"
+     * (storefront exterior/interior). Returns ['type','confidence','reason']
+     * or null on failure. Uses a vision model with low detail — plenty for a
+     * logo-vs-photo decision and cheap/fast at scale.
+     */
+    public function classifyImageType(string $absolutePath, ?string $model = null): ?array
+    {
+        if (! is_file($absolutePath)) {
+            return null;
+        }
+
+        $bytes = @file_get_contents($absolutePath);
+        if ($bytes === false) {
+            return null;
+        }
+
+        $mime = @mime_content_type($absolutePath) ?: 'image/jpeg';
+        $dataUrl = 'data:'.$mime.';base64,'.base64_encode($bytes);
+
+        try {
+            $response = OpenAI::chat()->create([
+                'model' => $model ?? $this->model,
+                'max_tokens' => 200,
+                'temperature' => 0,
+                'response_format' => ['type' => 'json_object'],
+                'messages' => [
+                    [
+                        'role' => 'system',
+                        'content' => 'You classify a single business image. A "logo" is a designed brand mark, wordmark, icon, or flat graphic (often on a solid or transparent background). A "photo" is a real photograph of a physical place: a storefront/building exterior, an interior, products on shelves, food, or people in the space. Reply with strict JSON only.',
+                    ],
+                    [
+                        'role' => 'user',
+                        'content' => [
+                            ['type' => 'text', 'text' => 'Classify this image. Respond as JSON: {"type":"logo" or "photo","confidence":0-1,"reason":"a few words"}'],
+                            ['type' => 'image_url', 'image_url' => ['url' => $dataUrl, 'detail' => 'low']],
+                        ],
+                    ],
+                ],
+            ]);
+
+            $json = json_decode($response->choices[0]->message->content ?? '', true);
+
+            if (! is_array($json) || ! in_array($json['type'] ?? null, ['logo', 'photo'], true)) {
+                return null;
+            }
+
+            return [
+                'type' => $json['type'],
+                'confidence' => (float) ($json['confidence'] ?? 0),
+                'reason' => (string) ($json['reason'] ?? ''),
+            ];
+        } catch (\Throwable $e) {
+            Log::warning('Image classification failed', ['path' => $absolutePath, 'error' => $e->getMessage()]);
+
+            return null;
+        }
+    }
+
+    /**
      * Perform a chat completion with OpenAI.
      */
     public function chat(string $systemPrompt, string $userPrompt, array $options = []): ?string

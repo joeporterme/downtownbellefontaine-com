@@ -24,6 +24,14 @@ class BackfillStreetView extends Command
         $bar->start();
 
         foreach ($businesses as $business) {
+            // Skip businesses with a curated photo override — Street View would
+            // never be shown for them, so there's no point generating it.
+            if (filled($business->listing_image)) {
+                $skipped++;
+                $bar->advance();
+                continue;
+            }
+
             $location = $business->locations->firstWhere('is_primary', true)
                 ?? $business->locations->first();
 
