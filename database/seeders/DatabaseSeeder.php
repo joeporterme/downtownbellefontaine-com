@@ -20,6 +20,9 @@ class DatabaseSeeder extends Seeder
             BusinessSeeder::class,
             EventSeeder::class,
             BlogSeeder::class,
+            SiteSettingSeeder::class,
+            PageSeeder::class,
+            GallerySeeder::class,
         ]);
 
         Schema::enableForeignKeyConstraints();

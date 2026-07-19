@@ -247,9 +247,15 @@
     .border-theme-light {
         border-color: var(--border-light);
     }
-    /* Display font utility */
+    /* Display font utility. Friday Vibes is a script face that only reads well at
+       larger sizes, so we enforce a hard 40px minimum everywhere it's used (it
+       scales up on wider screens). This intentionally overrides any text-* size
+       utility placed on a .font-display element. */
     .font-display {
         font-family: 'Friday Vibes', cursive;
+        letter-spacing: 0.01em;
+        line-height: 1.15;
+        font-size: clamp(2.5rem, 2.1rem + 1.6vw, 3.5rem) !important; /* 40px → 56px */
     }
 }
 
@@ -260,4 +266,44 @@ html {
 
 html.dark {
     color-scheme: dark;
+}
+
+/* Saved Street View listing images get a gentle saturation/vibrance boost so
+   storefronts pop. Kept modest because Street View maxes out at 640px and gets
+   upscaled — an aggressive filter amplifies the JPEG grain. Never on logos. */
+.streetview-img {
+    filter: saturate(1.28) contrast(1.04) brightness(1.02);
+}
+
+/* Parallax hero image (driven by resources/js/parallax.js). Scaled up so the
+   scroll translate never reveals the container edges. */
+.parallax-img {
+    will-change: transform;
+    transform: translate3d(0, 0, 0) scale(1.2);
+}
+
+/* Sitewide scrolling photo ribbon (components/photo-ribbon). Kept global so it
+   animates on every page, not just the homepage. */
+@keyframes ribbon-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+.animate-scroll {
+    animation: ribbon-scroll 60s linear infinite;
+    width: max-content;
+}
+.animate-scroll:hover {
+    animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .animate-scroll {
+        animation: none !important;
+        transform: none !important;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .parallax-img {
+        transform: none !important;
+    }
 }

@@ -1,6 +1,7 @@
 /**
- * Theme Toggle for Downtown Bellefontaine
- * Handles light/dark mode switching with localStorage persistence
+ * Theme manager for Downtown Bellefontaine.
+ * Three preferences: 'light', 'dark', or 'system' (default).
+ * 'system' follows the OS preference live and is stored as the absence of a key.
  */
 
 const ThemeManager = {
@@ -8,115 +9,112 @@ const ThemeManager = {
     DARK_CLASS: 'dark',
 
     init() {
-        // Apply theme immediately to prevent flash
-        this.applyTheme(this.getStoredTheme());
+        this.applyPreference(this.getPreference());
 
-        // Set up toggle buttons when DOM is ready
         if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', () => this.setupToggles());
+            document.addEventListener('DOMContentLoaded', () => this.setupButtons());
         } else {
-            this.setupToggles();
+            this.setupButtons();
         }
 
-        // Listen for system theme changes
         this.watchSystemTheme();
     },
 
-    getStoredTheme() {
-        const stored = localStorage.getItem(this.STORAGE_KEY);
-        if (stored) {
-            return stored;
-        }
-        // Default to system preference
-        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    getPreference() {
+        return localStorage.getItem(this.STORAGE_KEY) || 'system';
     },
 
-    applyTheme(theme) {
-        if (theme === 'dark') {
-            document.documentElement.classList.add(this.DARK_CLASS);
+    resolve(preference) {
+        if (preference === 'system') {
+            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        return preference;
+    },
+
+    applyPreference(preference) {
+        const theme = this.resolve(preference);
+        document.documentElement.classList.toggle(this.DARK_CLASS, theme === 'dark');
+        this.updateButtons(preference);
+    },
+
+    setPreference(preference) {
+        if (preference === 'system') {
+            localStorage.removeItem(this.STORAGE_KEY);
         } else {
-            document.documentElement.classList.remove(this.DARK_CLASS);
+            localStorage.setItem(this.STORAGE_KEY, preference);
         }
-        // Update any toggle buttons
-        this.updateToggleButtons(theme);
+        this.applyPreference(preference);
     },
 
-    setTheme(theme) {
-        localStorage.setItem(this.STORAGE_KEY, theme);
-        this.applyTheme(theme);
+    CYCLE: ['light', 'dark', 'system'],
+
+    // Advance to the next preference in the cycle.
+    cycle() {
+        const current = this.getPreference();
+        const next = this.CYCLE[(this.CYCLE.indexOf(current) + 1) % this.CYCLE.length];
+        this.setPreference(next);
     },
 
+    // Legacy two-way toggle (kept for any [data-theme-toggle]).
     toggle() {
-        const currentTheme = document.documentElement.classList.contains(this.DARK_CLASS) ? 'dark' : 'light';
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        this.setTheme(newTheme);
+        const current = document.documentElement.classList.contains(this.DARK_CLASS) ? 'dark' : 'light';
+        this.setPreference(current === 'dark' ? 'light' : 'dark');
     },
 
-    setupToggles() {
-        // Find all theme toggle buttons
-        document.querySelectorAll('[data-theme-toggle]').forEach(button => {
+    setupButtons() {
+        document.querySelectorAll('[data-theme-cycle]').forEach((button) => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.cycle();
+            });
+        });
+
+        document.querySelectorAll('[data-theme-toggle]').forEach((button) => {
             button.addEventListener('click', (e) => {
                 e.preventDefault();
                 this.toggle();
             });
         });
 
-        // Find specific theme buttons (light/dark)
-        document.querySelectorAll('[data-theme-set]').forEach(button => {
+        document.querySelectorAll('[data-theme-set]').forEach((button) => {
             button.addEventListener('click', (e) => {
                 e.preventDefault();
-                const theme = button.getAttribute('data-theme-set');
-                this.setTheme(theme);
+                this.setPreference(button.getAttribute('data-theme-set'));
             });
         });
 
-        // Initial update of toggle button states
-        const currentTheme = document.documentElement.classList.contains(this.DARK_CLASS) ? 'dark' : 'light';
-        this.updateToggleButtons(currentTheme);
+        this.updateButtons(this.getPreference());
     },
 
-    updateToggleButtons(theme) {
-        // Update toggle button icons/states
-        document.querySelectorAll('[data-theme-toggle]').forEach(button => {
-            const sunIcon = button.querySelector('[data-theme-icon="sun"]');
-            const moonIcon = button.querySelector('[data-theme-icon="moon"]');
+    updateButtons(preference) {
+        const labels = { light: 'Light', dark: 'Dark', system: 'System' };
 
-            if (sunIcon && moonIcon) {
-                if (theme === 'dark') {
-                    sunIcon.classList.remove('hidden');
-                    moonIcon.classList.add('hidden');
-                } else {
-                    sunIcon.classList.add('hidden');
-                    moonIcon.classList.remove('hidden');
-                }
-            }
+        // Single cycling button: show only the current mode's icon.
+        document.querySelectorAll('[data-theme-cycle]').forEach((button) => {
+            button.querySelectorAll('[data-theme-icon]').forEach((icon) => {
+                icon.classList.toggle('hidden', icon.getAttribute('data-theme-icon') !== preference);
+            });
+            button.setAttribute('aria-label', `Theme: ${labels[preference]} (click to change)`);
+            button.setAttribute('title', `Theme: ${labels[preference]}`);
         });
 
-        // Update active states on theme set buttons
-        document.querySelectorAll('[data-theme-set]').forEach(button => {
-            const buttonTheme = button.getAttribute('data-theme-set');
-            if (buttonTheme === theme) {
-                button.classList.add('active');
-                button.setAttribute('aria-pressed', 'true');
-            } else {
-                button.classList.remove('active');
-                button.setAttribute('aria-pressed', 'false');
-            }
+        // Legacy segmented buttons (if present).
+        document.querySelectorAll('[data-theme-set]').forEach((button) => {
+            const active = button.getAttribute('data-theme-set') === preference;
+            button.setAttribute('aria-pressed', active ? 'true' : 'false');
+            button.classList.toggle('active', active);
         });
     },
 
     watchSystemTheme() {
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-            // Only update if user hasn't set a preference
-            if (!localStorage.getItem(this.STORAGE_KEY)) {
-                this.applyTheme(e.matches ? 'dark' : 'light');
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+            if (this.getPreference() === 'system') {
+                this.applyPreference('system');
             }
         });
-    }
+    },
 };
 
-// Initialize theme manager
 ThemeManager.init();
 
-// Export for use in other scripts
 window.ThemeManager = ThemeManager;

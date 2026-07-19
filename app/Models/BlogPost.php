@@ -2,10 +2,13 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Str;
+use Symfony\Component\HtmlSanitizer\HtmlSanitizer;
+use Symfony\Component\HtmlSanitizer\HtmlSanitizerConfig;
 
 class BlogPost extends Model
 {
@@ -47,6 +50,33 @@ class BlogPost extends Model
         }
 
         return $slug;
+    }
+
+    /**
+     * Post body sanitized for safe HTML output. Content comes from the Filament
+     * rich editor (trusted) and the WordPress importer (untrusted external
+     * source). strip_tags in the importer leaves attributes intact, so an
+     * imported <img onerror=…> or javascript: link would otherwise be stored
+     * XSS. Sanitize on render so both sources are safe.
+     */
+    protected function safeContent(): Attribute
+    {
+        return Attribute::make(
+            get: function () {
+                if (blank($this->content)) {
+                    return null;
+                }
+
+                $config = (new HtmlSanitizerConfig())
+                    ->allowSafeElements()
+                    ->allowRelativeLinks()
+                    ->allowRelativeMedias()
+                    ->allowLinkSchemes(['https', 'http', 'mailto'])
+                    ->allowMediaSchemes(['https', 'http', 'data']);
+
+                return (new HtmlSanitizer($config))->sanitize($this->content);
+            }
+        );
     }
 
     public function category(): BelongsTo

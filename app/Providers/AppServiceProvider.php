@@ -2,9 +2,15 @@
 
 namespace App\Providers;
 
+use App\Models\BusinessLocation;
+use App\Models\SiteSetting;
+use App\Observers\BusinessLocationObserver;
 use App\Services\AI\AIService;
 use App\Services\BusinessImportService;
 use App\Services\Google\GeocodingService;
+use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -39,6 +45,19 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        // Regenerate the cached Street View snapshot when a location's camera changes.
+        BusinessLocation::observe(BusinessLocationObserver::class);
+
+        // Branded pagination bar sitewide.
+        Paginator::defaultView('vendor.pagination.downtown');
+
+        // Make global site settings available to every view.
+        try {
+            if (Schema::hasTable('site_settings')) {
+                View::share('siteSettings', SiteSetting::current());
+            }
+        } catch (\Throwable $e) {
+            // Settings table not migrated yet (e.g. during install) — ignore.
+        }
     }
 }

@@ -146,7 +146,7 @@
                             </div>
                             <div>
                                 <p class="text-xs uppercase tracking-wider text-theme-tertiary font-semibold">Executive Director</p>
-                                <p class="font-semibold text-theme-primary">Katie Cooper</p>
+                                <p class="font-semibold text-theme-primary">Olivia Covey</p>
                             </div>
                         </div>
 

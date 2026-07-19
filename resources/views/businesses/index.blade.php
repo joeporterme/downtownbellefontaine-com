@@ -41,19 +41,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 @foreach($businesses as $business)
                     <a href="{{ route('businesses.show', $business) }}" class="bg-theme-secondary rounded-lg shadow border border-theme overflow-hidden hover:shadow-lg transition-shadow group">
-                        @if($business->featured_image)
-                            <img src="{{ Storage::url($business->featured_image) }}" alt="{{ $business->name }}" class="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300">
-                        @elseif($business->logo)
-                            <div class="w-full h-40 bg-gray-100 dark:bg-gray-800 flex items-center justify-center p-4">
-                                <img src="{{ Storage::url($business->logo) }}" alt="{{ $business->name }}" class="max-h-full max-w-full object-contain">
-                            </div>
-                        @else
-                            <div class="w-full h-40 bg-primary-100 dark:bg-primary-900 flex items-center justify-center">
-                                <svg class="w-16 h-16 text-primary-300 dark:text-primary-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                                </svg>
-                            </div>
-                        @endif
+                        <x-business-card-image :business="$business" icon="fa-store" height="h-40" />
 
                         <div class="p-4">
                             <h2 class="text-lg font-semibold text-theme-primary mb-1 group-hover:text-primary-600 transition-colors">{{ $business->name }}</h2>

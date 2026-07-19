@@ -11,7 +11,11 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
+        // Resolve the CMS Page for the current route and share $currentPage
+        // (draft pages 404 for non-admins).
+        $middleware->web(append: [
+            \App\Http\Middleware\LoadCurrentPage::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //

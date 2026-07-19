@@ -325,7 +325,7 @@ class ImportWordPressEvents extends Command
         }
 
         // Geocode if not skipped
-        if (!$this->option('skip-geocoding') && config('services.google.maps_api_key')) {
+        if (!$this->option('skip-geocoding') && config('services.google.maps_server_key')) {
             $geocoded = $this->geocodeAddress($location);
             if ($geocoded) {
                 $result = array_merge($result, $geocoded);
@@ -337,7 +337,7 @@ class ImportWordPressEvents extends Command
 
     protected function geocodeAddress(string $address): ?array
     {
-        $apiKey = config('services.google.maps_api_key');
+        $apiKey = config('services.google.maps_server_key');
         if (!$apiKey) {
             return null;
         }

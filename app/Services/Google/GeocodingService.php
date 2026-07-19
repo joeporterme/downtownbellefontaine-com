@@ -12,7 +12,7 @@ class GeocodingService
 
     public function __construct()
     {
-        $this->apiKey = config('services.google.maps_api_key');
+        $this->apiKey = config('services.google.maps_server_key');
     }
 
     /**
@@ -41,9 +41,9 @@ class GeocodingService
 
             $data = $response->json();
 
-            if ($data['status'] !== 'OK' || empty($data['results'])) {
+            if (($data['status'] ?? null) !== 'OK' || empty($data['results'])) {
                 Log::warning('Google Geocoding: No results', [
-                    'status' => $data['status'],
+                    'status' => $data['status'] ?? 'unknown',
                     'address' => $address,
                 ]);
                 return null;

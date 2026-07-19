@@ -2,8 +2,8 @@
 
 @section('title', $business->name)
 @section('description', $business->description ? Str::limit(strip_tags($business->description), 160) : 'Learn more about ' . $business->name . ' in Downtown Bellefontaine, Ohio.')
-@if($business->featured_image)
-    @section('og_image', Storage::url($business->featured_image))
+@if($business->listingImageUrl)
+    @section('og_image', $business->listingImageUrl)
 @endif
 
 @push('head')
@@ -15,7 +15,7 @@
         'name' => $business->name,
         'url' => url()->current(),
         'description' => $business->description ? Str::limit(strip_tags($business->description), 300) : null,
-        'image' => $business->featured_image ? Storage::url($business->featured_image) : null,
+        'image' => $business->listingImageUrl,
         'telephone' => $loc->phone ?? $business->phone ?? null,
         'address' => $loc ? array_filter([
             '@type' => 'PostalAddress',
@@ -53,16 +53,22 @@
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {{-- Main Content --}}
             <div class="lg:col-span-2">
-                {{-- Featured Image --}}
-                @if($business->featured_image)
-                    <img src="{{ Storage::url($business->featured_image) }}" alt="{{ $business->name }}" class="w-full h-64 md:h-96 object-cover rounded-lg shadow mb-6">
+                {{-- Listing image (curated photo, saved Street View, else featured photo) --}}
+                @if($business->listingImageUrl)
+                    <figure class="mb-6">
+                        <img src="{{ $business->listingImageUrl }}" alt="{{ $business->name }}" class="w-full h-64 md:h-96 object-cover rounded-lg shadow {{ $business->hasStreetView ? 'streetview-img' : '' }}">
+                        @if($business->listing_image_credit)
+                            <figcaption class="mt-1 text-xs text-theme-tertiary">Photo: {{ $business->listing_image_credit }} · via Google</figcaption>
+                        @endif
+                    </figure>
                 @endif
 
                 {{-- Header --}}
                 <div class="bg-theme-secondary rounded-lg shadow border border-theme p-6 mb-6">
                     <div class="flex items-start gap-4">
-                        @if($business->logo)
-                            <img src="{{ Storage::url($business->logo) }}" alt="{{ $business->name }} logo" class="w-20 h-20 object-contain rounded">
+                        @if($business->avatarUrl)
+                            <img src="{{ $business->avatarUrl }}" alt="{{ $business->name }} logo" class="w-20 h-20 object-cover rounded-full bg-white dark:bg-gray-900 ring-2 ring-white dark:ring-gray-900 shadow">
+
                         @endif
                         <div class="flex-1">
                             <h1 class="text-3xl font-bold text-theme-primary">{{ $business->name }}</h1>

@@ -23,3 +23,8 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
+
+# One-time WordPress export sources (import artifacts, not app code)
+/resources/events.xml
+/resources/media.xml
+/resources/posts.xml

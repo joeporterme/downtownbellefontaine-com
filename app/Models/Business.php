@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Support\Media;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
@@ -29,6 +30,8 @@ class Business extends Model
         'x_url',
         'logo',
         'featured_image',
+        'listing_image',
+        'listing_image_credit',
         'hours',
         'social_links',
         'status',
@@ -77,6 +80,46 @@ class Business extends Model
     public function activeLocations(): HasMany
     {
         return $this->locations()->where('is_active', true);
+    }
+
+    /**
+     * The main listing image, in priority order:
+     * 1. a curated storefront photo (overrides everything),
+     * 2. the saved Street View snapshot of the primary location,
+     * 3. the uploaded featured image, else null (placeholder).
+     */
+    public function getListingImageUrlAttribute(): ?string
+    {
+        if ($this->listing_image) {
+            return Media::url($this->listing_image);
+        }
+
+        if ($sv = $this->primaryLocation?->streetview_image) {
+            return Media::url($sv);
+        }
+
+        return $this->featured_image ? Media::url($this->featured_image) : null;
+    }
+
+    /**
+     * The small logo/avatar shown on cards + the detail header.
+     */
+    public function getAvatarUrlAttribute(): ?string
+    {
+        if ($this->logo) {
+            return Media::url($this->logo);
+        }
+
+        return $this->featured_image ? Media::url($this->featured_image) : null;
+    }
+
+    /**
+     * Whether the listing image is a Street View snapshot (drives the vibrance
+     * filter + logo-avatar de-dup). A curated photo override is NOT enhanced.
+     */
+    public function getHasStreetViewAttribute(): bool
+    {
+        return ! $this->listing_image && (bool) $this->primaryLocation?->streetview_image;
     }
 
     public function isApproved(): bool

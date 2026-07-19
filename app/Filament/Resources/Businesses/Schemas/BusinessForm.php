@@ -78,6 +78,21 @@ class BusinessForm
                                 Hidden::make('latitude'),
                                 Hidden::make('longitude'),
 
+                                // Street View listing image — frame it in the panorama below.
+                                View::make('filament.forms.streetview-picker')
+                                    ->columnSpanFull(),
+                                Hidden::make('streetview_pano_id'),
+                                Hidden::make('streetview_heading'),
+                                Hidden::make('streetview_pitch'),
+                                Hidden::make('streetview_zoom'),
+
+                                // Pick an owner/visitor photo from the business's
+                                // Google listing. Downloaded + stored as the
+                                // listing image on save (see CreateBusiness /
+                                // EditBusiness). Stashes onto business-level state.
+                                View::make('filament.forms.places-photos-picker')
+                                    ->columnSpanFull(),
+
                                 TextInput::make('phone')
                                     ->tel()
                                     ->maxLength(20),
@@ -150,12 +165,31 @@ class BusinessForm
                             ->image()
                             ->disk('public')
                             ->directory('businesses/logos')
-                            ->imageEditor(),
+                            ->imageEditor()
+                            ->helperText('Shown as the small logo/avatar on the listing.'),
                         FileUpload::make('featured_image')
                             ->image()
                             ->disk('public')
                             ->directory('businesses')
                             ->imageEditor(),
+                        FileUpload::make('listing_image')
+                            ->label('Listing photo (overrides Street View)')
+                            ->image()
+                            ->disk('public')
+                            ->directory('businesses/listing')
+                            ->imageEditor()
+                            ->imageResizeMode('cover')
+                            ->imageResizeTargetWidth('1200')
+                            ->imageResizeTargetHeight('800')
+                            ->maxSize(8192)
+                            ->columnSpanFull()
+                            ->helperText('Optional. When set, this photo is used as the big listing image everywhere, instead of the auto Street View snapshot. Upload your own here, or pick one from Google under a location above. Best for buildings Google Street View shows out of date.'),
+
+                        // Transient stash for a photo chosen in the Google-photos
+                        // picker (inside a location). Captured + stripped in the
+                        // Create/Edit page, which downloads it into listing_image.
+                        Hidden::make('places_photo_url'),
+                        Hidden::make('places_photo_credit'),
                     ]),
 
                 Section::make('Approval')

@@ -4,12 +4,26 @@
 @section('description', 'Discover upcoming events in Downtown Bellefontaine, Ohio - festivals, community gatherings, First Fridays, and more.')
 
 @section('content')
-<div class="py-12 bg-theme-primary">
+{{-- Hero --}}
+<x-page-hero
+    eyebrow="Downtown Bellefontaine"
+    title="Events"
+    subtitle="From First Fridays and festivals to live music, markets, and holiday magic — there's always something happening in Ohio's most loveable downtown."
+    image="/images/pages/first-fridays.jpg" />
+
+<x-breadcrumbs :items="[['label' => 'Home', 'url' => url('/')], ['label' => 'Events']]" />
+
+<div class="py-12 md:py-16 bg-theme-primary">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center mb-8">
-            <h1 class="text-3xl font-bold text-theme-primary">Upcoming Events</h1>
+        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-4 mb-10">
+            <div class="max-w-2xl">
+                <span class="font-display text-2xl sm:text-3xl text-accent-500">Mark your calendar</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-theme-primary mt-1">Upcoming Events</h2>
+                <p class="text-theme-secondary mt-2 leading-relaxed">Plan your visit around a festival, a gallery hop, or a night at the theatre. New happenings are added all the time — check back often.</p>
+            </div>
             @auth
-                <a href="{{ route('events.create') }}" class="bg-primary-600 text-white px-4 py-2 rounded-md hover:bg-primary-700 transition-colors">
+                <a href="{{ route('events.create') }}" class="inline-flex items-center gap-2 bg-primary-600 text-white px-5 py-2.5 rounded-lg hover:bg-primary-700 transition-colors font-semibold whitespace-nowrap">
+                    <i class="fa-duotone fa-light fa-calendar-plus"></i>
                     Submit Event
                 </a>
             @endauth

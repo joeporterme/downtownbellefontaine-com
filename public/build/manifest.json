@@ -1,6 +1,6 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-DMkIY6ZG.css",
+    "file": "assets/app-BESFfIDY.css",
     "src": "resources/css/app.css",
     "isEntry": true,
     "name": "app",
@@ -82,7 +82,7 @@
     "src": "resources/fonts/kit-31922bfab5-web/webfonts/fa-duotone-light-300.woff2"
   },
   "resources/js/app.js": {
-    "file": "assets/app-C-J3mxpa.js",
+    "file": "assets/app-BVMZ8-d0.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true

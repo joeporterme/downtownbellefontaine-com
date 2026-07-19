@@ -5,19 +5,13 @@
 
 @section('content')
 {{-- Hero --}}
-<section class="relative overflow-hidden bg-primary-800 dark:bg-primary-950">
-    <div class="absolute inset-0">
-        <img src="/images/home/downtown-bellefontaine-2.jpg" alt="DORA in Downtown Bellefontaine" class="w-full h-full object-cover opacity-30">
-        <div class="absolute inset-0 bg-gradient-to-b from-primary-900/40 to-primary-900/70"></div>
-    </div>
-    <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 text-center">
-        <p class="text-accent-400 font-display text-lg sm:text-xl mb-3">Designated Outdoor Refreshment Area</p>
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">DORA District</h1>
-        <p class="text-primary-200 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed">
-            For special events, a designated cup, a drink in hand, and 46 acres of historic downtown to explore.
-        </p>
-    </div>
-</section>
+<x-page-hero
+    eyebrow="Designated Outdoor Refreshment Area"
+    title="DORA District"
+    subtitle="For special events, a designated cup, a drink in hand, and 46 acres of historic downtown to explore."
+    image="/images/home/downtown-bellefontaine-2.jpg" />
+
+<x-breadcrumbs :items="[['label' => 'Home', 'url' => url('/')], ['label' => 'DORA District']]" />
 
 {{-- Intro --}}
 <section class="py-16 bg-theme-primary">

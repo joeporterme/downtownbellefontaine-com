@@ -8,12 +8,11 @@ use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\Business\BusinessController;
 use App\Http\Controllers\Business\DashboardController;
 use App\Http\Controllers\Events\EventController;
+use App\Http\Controllers\Public\BlogController;
 use App\Http\Controllers\Public\BusinessController as PublicBusinessController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [App\Http\Controllers\Public\HomeController::class, 'index'])->name('home');
 
 // Public Pages
 Route::get('/things-to-do', [App\Http\Controllers\Public\PageController::class, 'thingsToDo'])->name('pages.things-to-do');
@@ -30,7 +29,7 @@ Route::get('/contact', [App\Http\Controllers\Public\ContactController::class, 's
 Route::post('/contact', [App\Http\Controllers\Public\ContactController::class, 'store'])
     ->middleware('throttle:5,1')
     ->name('contact.submit');
-Route::get('/historic-walking-tour', fn() => view('pages.historic-walking-tour'))->name('pages.historic-walking-tour');
+Route::get('/historic-walking-tour', [App\Http\Controllers\Public\WalkingTourController::class, 'index'])->name('pages.historic-walking-tour');
 Route::get('/privacy-policy', fn() => view('pages.privacy-policy'))->name('pages.privacy-policy');
 
 // SEO
@@ -39,6 +38,10 @@ Route::get('/sitemap.xml', [App\Http\Controllers\Public\SitemapController::class
 // Public Events
 Route::get('/events', [EventController::class, 'index'])->name('events.index');
 Route::get('/events/{event:slug}', [EventController::class, 'show'])->name('events.show');
+
+// Public Blog
+Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
+Route::get('/blog/{post:slug}', [BlogController::class, 'show'])->name('blog.show');
 
 // Public Business Directory
 Route::get('/businesses', [PublicBusinessController::class, 'index'])->name('businesses.index');

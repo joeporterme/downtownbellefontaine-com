@@ -7,7 +7,7 @@
             if (typeof google === 'undefined' || typeof google.maps === 'undefined') {
                 // Load Google Maps script if not already loaded
                 const script = document.createElement('script');
-                script.src = 'https://maps.googleapis.com/maps/api/js?key={{ config('services.google.maps_api_key') }}&libraries=places';
+                script.src = 'https://maps.googleapis.com/maps/api/js?key={{ config('services.google.maps_browser_key') }}&libraries=places';
                 script.async = true;
                 script.defer = true;
                 script.onload = () => this.setupAutocomplete();

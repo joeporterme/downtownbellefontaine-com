@@ -22,7 +22,9 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(180deg, rgba(10, 25, 30, 0.45) 0%, rgba(10, 25, 30, 0.25) 45%, rgba(10, 25, 30, 0.6) 100%);
+        /* Neutral charcoal scrim (less teal cast) with stronger top/bottom
+           anchoring so headline + CTAs stay legible over the video. */
+        background: linear-gradient(180deg, rgba(15, 18, 22, 0.55) 0%, rgba(15, 18, 22, 0.32) 45%, rgba(10, 12, 16, 0.72) 100%);
         z-index: 1;
     }
 
@@ -150,19 +152,95 @@
         animation: pulse-glow 2s ease-in-out infinite;
     }
 
-    /* Scrolling animation for image ribbon */
-    @keyframes scroll {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); }
-    }
+    /* Ribbon animation now lives globally in resources/css/app.css (the ribbon
+       is sitewide via components/photo-ribbon). */
 
-    .animate-scroll {
-        animation: scroll 40s linear infinite;
-        width: max-content;
+    /* Explore Downtown — photographic bento mosaic */
+    .bento-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 165px;
+        gap: 1rem;
     }
-
-    .animate-scroll:hover {
-        animation-play-state: paused;
+    .bento-feature {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+    @media (min-width: 1024px) {
+        .bento-grid {
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 250px;
+        }
+    }
+    .bento-tile {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        border-radius: 1rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+    }
+    .bento-img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+    .bento-tile:hover .bento-img,
+    .bento-tile:focus-visible .bento-img {
+        transform: scale(1.07);
+    }
+    .bento-scrim {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(0,0,0,0) 25%, rgba(0,0,0,0.28) 55%, rgba(0,0,0,0.72) 100%);
+        transition: background 0.4s ease;
+    }
+    .bento-tile:hover .bento-scrim {
+        background: linear-gradient(180deg, rgba(1,117,127,0.10) 15%, rgba(0,0,0,0.45) 60%, rgba(0,0,0,0.80) 100%);
+    }
+    .bento-content {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 1.1rem 1.25rem;
+    }
+    .bento-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #fff;
+        font-weight: 700;
+        font-size: 1.35rem;
+        line-height: 1.1;
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .bento-tile:hover .bento-label {
+        transform: translateY(-4px);
+    }
+    .bento-sub {
+        color: rgba(255, 255, 255, 0.88);
+        font-size: 0.85rem;
+        margin-top: 0.15rem;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: opacity 0.4s ease, max-height 0.4s ease;
+    }
+    .bento-tile:hover .bento-sub,
+    .bento-tile:focus-visible .bento-sub {
+        opacity: 1;
+        max-height: 2.5rem;
+    }
+    .bento-arrow {
+        transition: transform 0.3s ease;
+    }
+    .bento-tile:hover .bento-arrow {
+        transform: translateX(4px);
     }
 
     /* Respect users who prefer reduced motion: neutralize all decorative
@@ -207,9 +285,13 @@
     </video>
     <div class="hero-overlay"></div>
 
-    {{-- Floating Pineapple Decorations --}}
-    <img src="/images/home/pineapple.svg" alt="" class="absolute top-20 left-10 w-16 md:w-24 opacity-20 float-animation hidden md:block" aria-hidden="true">
-    <img src="/images/home/pineapple.svg" alt="" class="absolute bottom-32 right-10 w-20 md:w-32 opacity-15 float-animation-delayed hidden md:block" aria-hidden="true">
+    {{-- Floating Pineapple Decorations (wrapper tilts, inner image floats) --}}
+    <div class="absolute top-16 left-24 rotate-12 hidden md:block" aria-hidden="true">
+        <img src="/images/home/pineapple.svg" alt="" class="w-28 md:w-40 opacity-30 float-animation">
+    </div>
+    <div class="absolute bottom-28 right-24 -rotate-12 hidden md:block" aria-hidden="true">
+        <img src="/images/home/pineapple.svg" alt="" class="w-32 md:w-48 opacity-25 float-animation-delayed">
+    </div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white py-20">
         <div class="reveal active">
@@ -243,43 +325,136 @@
     </div>
 </section>
 
-{{-- Quick Links Section --}}
-<section class="py-16 bg-theme-primary relative overflow-hidden">
+{{-- Welcome / Story Section --}}
+<section class="py-16 md:py-20 bg-theme-secondary relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="grid md:grid-cols-2 gap-10 lg:gap-14 items-center">
+            {{-- Image --}}
+            <div class="relative order-2 md:order-1 reveal-left active">
+                <img src="{{ asset('images/home/welcome-courthouse.jpg') }}" alt="The Logan County Courthouse and pineapple fountain at sunset in Downtown Bellefontaine" class="rounded-2xl shadow-xl w-full aspect-square object-cover" loading="lazy">
+                <div class="absolute -bottom-5 -right-5 bg-accent-500 text-white rounded-xl px-5 py-3 shadow-lg hidden sm:block">
+                    <span class="font-display text-lg">Ohio's most loveable downtown</span>
+                </div>
+            </div>
+
+            {{-- Copy --}}
+            <div class="order-1 md:order-2 reveal-right active">
+                <span class="font-display text-2xl text-accent-500">Welcome to</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-theme-primary mt-1 mb-5">Downtown Bellefontaine</h2>
+                <div class="space-y-4 text-theme-secondary leading-relaxed">
+                    <p>Tucked into the heart of Ohio, Downtown Bellefontaine is a charming small-town destination filled with historic character, locally owned shops, and unforgettable food and drinks. Whether you're wandering our brick-lined streets, catching a show at the historic Holland Theatre, or sipping coffee on a sunny corner, downtown invites you to slow down, explore, and stay awhile.</p>
+                </div>
+
+                {{-- Landmark highlights --}}
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-7">
+                    <div class="flex items-start gap-3">
+                        <div class="w-9 h-9 rounded-lg bg-accent-100 dark:bg-accent-900/40 flex items-center justify-center flex-shrink-0">
+                            <i class="fa-duotone fa-light fa-droplet text-accent-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-theme-primary text-sm">The Fountain</p>
+                            <p class="text-theme-tertiary text-xs">Bellefontaine — French for "beautiful fountain"</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-9 h-9 rounded-lg bg-primary-100 dark:bg-primary-900/40 flex items-center justify-center flex-shrink-0">
+                            <i class="fa-duotone fa-light fa-mountains text-primary-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-theme-primary text-sm">Campbell Hill</p>
+                            <p class="text-theme-tertiary text-xs">Ohio's highest point — 1,549 feet</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-9 h-9 rounded-lg bg-primary-100 dark:bg-primary-900/40 flex items-center justify-center flex-shrink-0">
+                            <i class="fa-duotone fa-light fa-road text-primary-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-theme-primary text-sm">America's First Concrete Street</p>
+                            <p class="text-theme-tertiary text-xs">Court Avenue, poured in the 1890s</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-9 h-9 rounded-lg bg-accent-100 dark:bg-accent-900/40 flex items-center justify-center flex-shrink-0">
+                            <i class="fa-duotone fa-light fa-ruler-horizontal text-accent-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-theme-primary text-sm">America's Shortest Street</p>
+                            <p class="text-theme-tertiary text-xs">McKinley Street — about 15 feet long</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{-- Explore Downtown — photographic bento mosaic --}}
+<section class="py-16 md:py-20 bg-theme-primary relative overflow-hidden">
     <div class="pineapple-bg absolute -right-32 -bottom-32 w-96 h-96"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div class="text-center mb-12">
+        <div class="text-center mb-10">
             <span class="font-display text-2xl text-accent-500 reveal">Discover</span>
-            <h2 class="text-3xl md:text-4xl font-bold text-theme-primary mt-2 reveal delay-100">What's Downtown</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-theme-primary mt-2 reveal delay-100">Explore Downtown</h2>
+            <p class="text-theme-secondary mt-3 max-w-2xl mx-auto reveal delay-200">Shop, eat, stay, and play your way through Ohio's most loveable downtown.</p>
         </div>
 
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-            <a href="{{ route('pages.places-to-shop') }}" class="group p-6 bg-theme-secondary rounded-2xl border border-theme hover:border-accent-400 transition-all card-hover text-center reveal delay-100">
-                <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-accent-400 to-accent-600 rounded-2xl flex items-center justify-center transform group-hover:rotate-6 transition-transform">
-                    <i class="fa-duotone fa-light fa-bag-shopping text-2xl text-white"></i>
+        <div class="bento-grid reveal-scale active">
+            {{-- Feature tile → interactive map --}}
+            <a href="{{ route('pages.map') }}" class="bento-tile bento-feature" aria-label="Explore the interactive downtown map">
+                <img src="{{ asset('images/home/explore-feature.jpg') }}" alt="Aerial view of Downtown Bellefontaine at dusk" class="bento-img" loading="lazy">
+                <div class="bento-scrim"></div>
+                <div class="bento-content">
+                    <span class="font-display text-2xl md:text-3xl text-accent-300">Find your way around</span>
+                    <span class="bento-label !text-2xl md:!text-4xl">Downtown Bellefontaine</span>
+                    <p class="text-white/85 text-sm md:text-base mt-2 max-w-md hidden sm:block">Browse the interactive map to discover shops, restaurants, stays, and things to do.</p>
+                    <span class="inline-flex items-center gap-2 mt-3 text-white font-semibold">
+                        <i class="fa-duotone fa-light fa-map-location-dot text-accent-300"></i>
+                        Explore the Map
+                        <i class="fa-duotone fa-light fa-arrow-right bento-arrow"></i>
+                    </span>
                 </div>
-                <h3 class="font-semibold text-theme-primary group-hover:text-accent-600 transition-colors">Shop</h3>
             </a>
 
-            <a href="{{ route('pages.food-drinks') }}" class="group p-6 bg-theme-secondary rounded-2xl border border-theme hover:border-accent-400 transition-all card-hover text-center reveal delay-200">
-                <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-rose-400 to-rose-600 rounded-2xl flex items-center justify-center transform group-hover:rotate-6 transition-transform">
-                    <i class="fa-duotone fa-light fa-utensils text-2xl text-white"></i>
+            {{-- Shop --}}
+            <a href="{{ route('pages.places-to-shop') }}" class="bento-tile">
+                <img src="{{ asset('images/home/cat-shop.jpg') }}" alt="Shopping in Downtown Bellefontaine" class="bento-img" loading="lazy">
+                <div class="bento-scrim"></div>
+                <div class="bento-content">
+                    <span class="bento-label"><i class="fa-duotone fa-light fa-bag-shopping text-accent-300"></i> Shop</span>
+                    <span class="bento-sub">Local boutiques &amp; makers</span>
                 </div>
-                <h3 class="font-semibold text-theme-primary group-hover:text-rose-600 transition-colors">Eat</h3>
             </a>
 
-            <a href="{{ route('pages.stay') }}" class="group p-6 bg-theme-secondary rounded-2xl border border-theme hover:border-accent-400 transition-all card-hover text-center reveal delay-300">
-                <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-primary-400 to-primary-600 rounded-2xl flex items-center justify-center transform group-hover:rotate-6 transition-transform">
-                    <i class="fa-duotone fa-light fa-bed-front text-2xl text-white"></i>
+            {{-- Eat --}}
+            <a href="{{ route('pages.food-drinks') }}" class="bento-tile">
+                <img src="{{ asset('images/home/cat-eat.jpg') }}" alt="Dining in Downtown Bellefontaine" class="bento-img" loading="lazy">
+                <div class="bento-scrim"></div>
+                <div class="bento-content">
+                    <span class="bento-label"><i class="fa-duotone fa-light fa-utensils text-accent-300"></i> Eat</span>
+                    <span class="bento-sub">Restaurants, cafés &amp; treats</span>
                 </div>
-                <h3 class="font-semibold text-theme-primary group-hover:text-primary-600 transition-colors">Stay</h3>
             </a>
 
-            <a href="{{ route('pages.things-to-do') }}" class="group p-6 bg-theme-secondary rounded-2xl border border-theme hover:border-accent-400 transition-all card-hover text-center reveal delay-400">
-                <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-violet-400 to-violet-600 rounded-2xl flex items-center justify-center transform group-hover:rotate-6 transition-transform">
-                    <i class="fa-duotone fa-light fa-masks-theater text-2xl text-white"></i>
+            {{-- Stay --}}
+            <a href="{{ route('pages.stay') }}" class="bento-tile">
+                <img src="{{ asset('images/home/cat-stay.jpg') }}" alt="Places to stay in Downtown Bellefontaine" class="bento-img" loading="lazy">
+                <div class="bento-scrim"></div>
+                <div class="bento-content">
+                    <span class="bento-label"><i class="fa-duotone fa-light fa-bed-front text-accent-300"></i> Stay</span>
+                    <span class="bento-sub">Lofts, hotels &amp; suites</span>
                 </div>
-                <h3 class="font-semibold text-theme-primary group-hover:text-violet-600 transition-colors">Play</h3>
+            </a>
+
+            {{-- Play --}}
+            <a href="{{ route('pages.things-to-do') }}" class="bento-tile">
+                <img src="{{ asset('images/home/cat-play.jpg') }}" alt="Things to do in Downtown Bellefontaine" class="bento-img" loading="lazy">
+                <div class="bento-scrim"></div>
+                <div class="bento-content">
+                    <span class="bento-label"><i class="fa-duotone fa-light fa-masks-theater text-accent-300"></i> Play</span>
+                    <span class="bento-sub">Theatre, museums &amp; more</span>
+                </div>
             </a>
         </div>
     </div>
@@ -303,33 +478,10 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            @php
-                $featuredBusinesses = \App\Models\Business::approved()
-                    ->whereNotNull('featured_image')
-                    ->inRandomOrder()
-                    ->take(6)
-                    ->get();
-
-                if($featuredBusinesses->count() < 6) {
-                    $additionalBusinesses = \App\Models\Business::approved()
-                        ->whereNotIn('id', $featuredBusinesses->pluck('id'))
-                        ->inRandomOrder()
-                        ->take(6 - $featuredBusinesses->count())
-                        ->get();
-                    $featuredBusinesses = $featuredBusinesses->merge($additionalBusinesses);
-                }
-            @endphp
-
             @forelse($featuredBusinesses as $index => $business)
                 <a href="{{ route('businesses.show', $business) }}" class="group bg-theme-primary rounded-2xl border border-theme overflow-hidden card-hover reveal delay-{{ ($index % 3 + 1) * 100 }}">
                     <div class="relative overflow-hidden">
-                        @if($business->featured_image)
-                            <img src="{{ Storage::url($business->featured_image) }}" alt="{{ $business->name }}" loading="lazy" decoding="async" width="400" height="224" class="w-full h-56 object-cover transform group-hover:scale-110 transition-transform duration-500">
-                        @else
-                            <div class="w-full h-56 bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-800 dark:to-primary-900 flex items-center justify-center">
-                                <i class="fa-duotone fa-light fa-store text-5xl text-primary-300 dark:text-primary-600"></i>
-                            </div>
-                        @endif
+                        <x-business-card-image :business="$business" icon="fa-store" height="h-56" />
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     </div>
                     <div class="p-6">
@@ -375,19 +527,11 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            @php
-                $upcomingEvents = \App\Models\Event::approved()
-                    ->upcoming()
-                    ->orderBy('event_date')
-                    ->take(3)
-                    ->get();
-            @endphp
-
             @forelse($upcomingEvents as $index => $event)
                 <a href="{{ route('events.show', $event) }}" class="group bg-theme-secondary rounded-2xl border border-theme overflow-hidden card-hover reveal delay-{{ ($index + 1) * 100 }}">
                     <div class="relative">
                         @if($event->featured_image)
-                            <img src="{{ Storage::url($event->featured_image) }}" alt="{{ $event->title }}" loading="lazy" decoding="async" width="400" height="192" class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-500">
+                            <img src="{{ \App\Support\Media::url($event->featured_image) }}" alt="{{ $event->title }}" loading="lazy" decoding="async" width="400" height="192" class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-500">
                         @else
                             <div class="w-full h-48 bg-gradient-to-br from-violet-100 to-violet-200 dark:from-violet-800 dark:to-violet-900 flex items-center justify-center">
                                 <i class="fa-duotone fa-light fa-calendar-star text-5xl text-violet-300 dark:text-violet-600"></i>
@@ -443,19 +587,11 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            @php
-                $latestPosts = \App\Models\BlogPost::where('status', 'published')
-                    ->where('published_at', '<=', now())
-                    ->orderBy('published_at', 'desc')
-                    ->take(3)
-                    ->get();
-            @endphp
-
             @forelse($latestPosts as $index => $post)
-                <article class="group bg-theme-primary rounded-2xl border border-theme overflow-hidden card-hover reveal delay-{{ ($index + 1) * 100 }}">
+                <a href="{{ route('blog.show', $post) }}" class="group block bg-theme-primary rounded-2xl border border-theme overflow-hidden card-hover reveal delay-{{ ($index + 1) * 100 }}">
                     <div class="relative overflow-hidden">
                         @if($post->featured_image)
-                            <img src="{{ Storage::url($post->featured_image) }}" alt="{{ $post->title }}" loading="lazy" decoding="async" width="400" height="192" class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                            <img src="{{ \App\Support\Media::url($post->featured_image) }}" alt="{{ $post->title }}" loading="lazy" decoding="async" width="400" height="192" class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500">
                         @else
                             <div class="w-full h-48 bg-gradient-to-br from-accent-100 to-accent-200 dark:from-accent-800 dark:to-accent-900 flex items-center justify-center">
                                 <i class="fa-duotone fa-light fa-newspaper text-4xl text-accent-300 dark:text-accent-600"></i>
@@ -475,7 +611,7 @@
                             <p class="text-theme-secondary text-sm line-clamp-2">{{ $post->seo_description }}</p>
                         @endif
                     </div>
-                </article>
+                </a>
             @empty
                 <div class="col-span-full text-center py-8 text-theme-secondary">
                     <i class="fa-duotone fa-light fa-newspaper text-5xl text-theme-tertiary mb-4"></i>
@@ -483,22 +619,18 @@
                 </div>
             @endforelse
         </div>
+
+        @if($latestPosts->isNotEmpty())
+            <div class="text-center mt-12">
+                <a href="{{ route('blog.index') }}" class="inline-flex items-center gap-2 px-6 py-3 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition-colors shadow-sm">
+                    <i class="fa-duotone fa-light fa-newspaper"></i> Read the Blog
+                </a>
+            </div>
+        @endif
     </div>
 </section>
 
-{{-- Image Gallery Ribbon --}}
-<section class="py-8 bg-theme-secondary overflow-hidden">
-    <div class="flex gap-4 animate-scroll">
-        @for($i = 0; $i < 2; $i++)
-        <img src="/images/home/downtown-bellefontaine-1.jpg" alt="Downtown Bellefontaine" loading="lazy" decoding="async" width="300" height="192" class="h-32 md:h-48 w-auto rounded-lg object-cover flex-shrink-0">
-        <img src="/images/home/downtown-bellefontaine-2.jpg" alt="Downtown Bellefontaine" loading="lazy" decoding="async" width="300" height="192" class="h-32 md:h-48 w-auto rounded-lg object-cover flex-shrink-0">
-        <img src="/images/home/downtown-bellefontaine-3.jpg" alt="Downtown Bellefontaine" loading="lazy" decoding="async" width="300" height="192" class="h-32 md:h-48 w-auto rounded-lg object-cover flex-shrink-0">
-        <img src="/images/home/downtown-bellefontaine-1.jpg" alt="Downtown Bellefontaine" loading="lazy" decoding="async" width="300" height="192" class="h-32 md:h-48 w-auto rounded-lg object-cover flex-shrink-0">
-        <img src="/images/home/downtown-bellefontaine-2.jpg" alt="Downtown Bellefontaine" loading="lazy" decoding="async" width="300" height="192" class="h-32 md:h-48 w-auto rounded-lg object-cover flex-shrink-0">
-        <img src="/images/home/downtown-bellefontaine-3.jpg" alt="Downtown Bellefontaine" loading="lazy" decoding="async" width="300" height="192" class="h-32 md:h-48 w-auto rounded-lg object-cover flex-shrink-0">
-        @endfor
-    </div>
-</section>
+{{-- Image gallery ribbon is now sitewide (components/photo-ribbon in the layout). --}}
 
 {{-- CTA Section --}}
 <section class="py-20 bg-gradient-to-r from-primary-600 via-primary-700 to-primary-800 relative overflow-hidden">

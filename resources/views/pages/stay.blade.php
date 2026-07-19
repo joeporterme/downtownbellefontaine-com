@@ -4,37 +4,105 @@
 @section('description', 'Where to stay in and around Downtown Bellefontaine, Ohio - hotels, inns, and lodging for your visit to the most loveable downtown.')
 
 @section('content')
-{{-- Hero Section --}}
-<section class="relative overflow-hidden bg-primary-800 dark:bg-primary-950">
-    <div class="absolute inset-0">
-        <img src="/images/home/downtown-bellefontaine-2.jpg" alt="Stay in Downtown Bellefontaine" class="w-full h-full object-cover opacity-30">
-        <div class="absolute inset-0 bg-gradient-to-b from-primary-900/40 to-primary-900/70"></div>
-    </div>
-    <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 text-center">
-        <p class="text-accent-400 font-display text-lg sm:text-xl mb-3">Downtown Bellefontaine</p>
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">Stay Awhile</h1>
-        <p class="text-primary-200 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed">
-            One day isn't enough. Make a weekend of it with a stay in Logan County's most loveable small town.
-        </p>
+{{-- Hero --}}
+<x-page-hero
+    eyebrow="Downtown Bellefontaine"
+    title="Stay Awhile"
+    subtitle="One day isn't enough. Make a weekend of it with a stay in Logan County's most loveable small town."
+    image="/images/home/downtown-bellefontaine-2.jpg" />
+
+<x-breadcrumbs :items="[['label' => 'Home', 'url' => url('/')], ['label' => 'Stay']]" />
+
+{{-- Lead --}}
+<section class="py-16 md:py-24 bg-theme-primary">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div class="order-2 lg:order-1">
+                <span class="font-display text-2xl sm:text-3xl text-accent-500">Where to Stay</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-theme-primary mt-2 mb-6 leading-tight">Don't Just Visit.<br>Wake Up Here.</h2>
+                <div class="space-y-5 text-theme-secondary text-lg leading-relaxed">
+                    <p class="text-xl text-theme-primary font-medium">Here's a little secret the day-trippers miss: downtown Bellefontaine is even better after dark — and the best way to experience it is to stay right in the middle of it.</p>
+                    <p>However you stay, one night usually turns into a plan for the next visit. Consider yourself warned.</p>
+                </div>
+            </div>
+            <div class="relative order-1 lg:order-2">
+                <img src="/images/home/downtown-bellefontaine-3.jpg" alt="Downtown Bellefontaine after dark"
+                     data-lightbox data-lightbox-group="stay" data-lightbox-caption="Downtown Bellefontaine after dark"
+                     class="rounded-2xl shadow-xl w-full object-cover aspect-[4/5] cursor-zoom-in">
+                <div class="absolute -bottom-5 -left-5 bg-accent-500 text-white rounded-xl px-5 py-3 shadow-lg hidden sm:block">
+                    <span class="font-display text-xl">Rest Easy</span>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
-{{-- Story Section --}}
-<section class="py-16 bg-theme-primary">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+{{-- Lofts above the storefronts --}}
+<section class="py-16 bg-theme-secondary">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div class="relative">
+                <img src="{{ \App\Support\Media::url('gallery/empire-block-day.jpg') }}" alt="Historic buildings with lofts above the storefronts"
+                     data-lightbox data-lightbox-group="stay" data-lightbox-caption="Historic lofts and flats sit above the downtown storefronts"
+                     class="rounded-2xl shadow-xl w-full object-cover aspect-[4/3] cursor-zoom-in">
+            </div>
             <div>
-                <h2 class="text-2xl sm:text-3xl font-bold text-theme-primary mb-4">Wake Up Downtown</h2>
-                <div class="space-y-4 text-theme-secondary leading-relaxed">
-                    <p>Between shopping, dining, live entertainment, and outdoor adventure on Indian Lake and at Mad River Mountain, Bellefontaine packs a lot into a small footprint. Spend the night and you'll have time to enjoy every bit of it.</p>
-                    <p>From boutique stays right downtown to lakeside getaways just a few minutes out, there's a place to land that fits whatever brought you here.</p>
+                <span class="font-display text-2xl sm:text-3xl text-accent-500">Lofts & flats downtown</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-theme-primary mt-1 mb-4">Steps from everything</h2>
+                <p class="text-theme-secondary text-lg leading-relaxed mb-6">Above the storefronts and along the brick side streets, historic buildings have been transformed into stylish, fully furnished lofts and flats — exposed brick, soaring ceilings, thoughtfully designed spaces with full kitchens and every modern comfort. Each one has its own personality, and each one is steps from everything downtown has to offer.</p>
+                <div class="grid grid-cols-2 gap-3 text-theme-secondary">
+                    @foreach([['fa-block-brick','Exposed brick'], ['fa-kitchen-set','Full kitchens'], ['fa-arrows-up-to-line','Soaring ceilings'], ['fa-wifi','Modern comforts']] as [$icon,$label])
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-duotone fa-light {{ $icon }} text-primary-500"></i>
+                            <span class="text-sm font-medium">{{ $label }}</span>
+                        </div>
+                    @endforeach
                 </div>
             </div>
-            <div class="relative">
-                <img src="/images/home/downtown-bellefontaine-3.jpg" alt="Downtown Bellefontaine after dark" class="rounded-xl shadow-lg w-full object-cover aspect-[4/3]">
-                <div class="absolute -bottom-4 -right-4 bg-accent-500 text-white rounded-lg px-5 py-3 shadow-lg hidden sm:block">
-                    <p class="font-display text-lg">Rest Easy</p>
+        </div>
+    </div>
+</section>
+
+{{-- Picture it --}}
+<section class="py-16 bg-primary-800 dark:bg-primary-950 relative overflow-hidden">
+    <div class="pineapple-bg absolute -right-24 -bottom-24 w-80 h-80 opacity-[0.06]"></div>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+        <span class="font-display text-2xl sm:text-3xl text-accent-300">Picture it</span>
+        <p class="text-white text-2xl sm:text-3xl font-semibold leading-snug mt-3">
+            Dinner and drinks without ever touching your car keys. A nightcap on Main Street. Then a short stroll "home" to a loft above the very street you just explored.
+        </p>
+        <p class="text-primary-200 text-lg mt-5">In the morning, coffee and fresh-baked pastries are waiting downstairs, and the whole town wakes up around you.</p>
+    </div>
+</section>
+
+{{-- Basecamp for any trip --}}
+<section class="py-16 bg-theme-primary">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="font-display text-2xl sm:text-3xl text-accent-500">The perfect basecamp</span>
+            <h2 class="text-2xl sm:text-3xl font-bold text-theme-primary mt-1">Close to the action, far from ordinary</h2>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            @foreach([
+                ['fa-briefcase', 'Work Trips', 'Extended-stay options with real kitchens and real workspace beat a highway hotel room every time.'],
+                ['fa-champagne-glasses', 'Girls\' Weekend', 'Shops, dinner, drinks, and a stylish loft to call home base — all within a walk.'],
+                ['fa-person-skiing', 'Ski Trips', 'The slopes are just twenty minutes away — stay downtown and warm up in style.'],
+                ['fa-water', 'Lake Getaways', 'A summer lake escape with downtown\'s food and nightlife minutes from the water.'],
+            ] as [$icon, $title, $body])
+                <div class="bg-theme-secondary rounded-2xl border border-theme p-6 card-hover">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-accent-400 to-accent-600 flex items-center justify-center mb-4">
+                        <i class="fa-duotone fa-light {{ $icon }} text-xl text-white"></i>
+                    </div>
+                    <h3 class="font-semibold text-theme-primary mb-2">{{ $title }}</h3>
+                    <p class="text-theme-secondary text-sm leading-relaxed">{{ $body }}</p>
                 </div>
+            @endforeach
+        </div>
+        <div class="mt-10 flex items-start gap-4 bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-800 rounded-2xl p-6 max-w-3xl mx-auto">
+            <i class="fa-duotone fa-light fa-bed-front text-2xl text-primary-600 flex-shrink-0 mt-0.5"></i>
+            <div>
+                <p class="font-semibold text-theme-primary mb-1">Prefer traditional lodging?</p>
+                <p class="text-theme-secondary leading-relaxed">You'll find comfortable, convenient hotel options just minutes from the town center, too.</p>
             </div>
         </div>
     </div>
@@ -52,19 +120,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             @foreach($businesses as $business)
                 <a href="{{ route('businesses.show', $business) }}" class="bg-theme-primary rounded-xl shadow border border-theme overflow-hidden hover:shadow-lg transition-all duration-300 group">
-                    <div class="overflow-hidden">
-                        @if($business->featured_image)
-                            <img src="{{ Storage::url($business->featured_image) }}" alt="{{ $business->name }}" class="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-300">
-                        @elseif($business->logo)
-                            <div class="w-full h-44 bg-gray-100 dark:bg-gray-800 flex items-center justify-center p-6">
-                                <img src="{{ Storage::url($business->logo) }}" alt="{{ $business->name }}" class="max-h-full max-w-full object-contain">
-                            </div>
-                        @else
-                            <div class="w-full h-44 bg-primary-100 dark:bg-primary-900 flex items-center justify-center">
-                                <i class="fa-duotone fa-light fa-bed-front text-4xl text-primary-300 dark:text-primary-700"></i>
-                            </div>
-                        @endif
-                    </div>
+                    <x-business-card-image :business="$business" icon="fa-bed-front" height="h-44" />
 
                     <div class="p-4">
                         <h3 class="text-lg font-semibold text-theme-primary mb-1 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">{{ $business->name }}</h3>

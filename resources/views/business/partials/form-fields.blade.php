@@ -230,7 +230,7 @@
         window.initPlacesAutocomplete = initPlacesAutocomplete;
     })();
 </script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key={{ config('services.google.maps_api_key') }}&libraries=places&callback=initPlacesAutocomplete&loading=async"></script>
+<x-google-maps-script libraries="places" callback="initPlacesAutocomplete" />
 @endpush
 
 <hr class="my-6 border-theme">

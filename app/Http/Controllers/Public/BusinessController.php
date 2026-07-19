@@ -11,7 +11,7 @@ class BusinessController extends Controller
     public function index()
     {
         $businesses = Business::approved()
-            ->with(['categories', 'locations'])
+            ->with(['categories', 'locations', 'primaryLocation'])
             ->orderBy('name')
             ->paginate(24);
 
@@ -39,7 +39,7 @@ class BusinessController extends Controller
             ->whereHas('categories', function ($query) use ($category) {
                 $query->where('business_categories.id', $category->id);
             })
-            ->with(['categories', 'locations'])
+            ->with(['categories', 'locations', 'primaryLocation'])
             ->orderBy('name')
             ->paginate(24);
 

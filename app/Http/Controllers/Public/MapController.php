@@ -32,9 +32,11 @@ class MapController extends Controller
                     'id' => $business->id,
                     'name' => $business->name,
                     'url' => route('businesses.show', $business),
-                    'image' => $business->featured_image
-                        ? Storage::url($business->featured_image)
-                        : ($business->logo ? Storage::url($business->logo) : null),
+                    'image' => $location->streetview_image
+                        ? \App\Support\Media::url($location->streetview_image)
+                        : ($business->featured_image
+                            ? Storage::url($business->featured_image)
+                            : ($business->logo ? Storage::url($business->logo) : null)),
                     'address' => $location->address,
                     'city' => $location->city,
                     'state' => $location->state,

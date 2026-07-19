@@ -36,7 +36,13 @@ return [
     ],
 
     'google' => [
+        // Single key still works out of the box. To lock things down, set a
+        // browser key (HTTP-referrer restricted, Maps JS + Places) and a server
+        // key (IP restricted, Geocoding / Street View / Places) separately; each
+        // falls back to GOOGLE_API_KEY when unset.
         'maps_api_key' => env('GOOGLE_API_KEY'),
+        'maps_browser_key' => env('GOOGLE_MAPS_BROWSER_KEY', env('GOOGLE_API_KEY')),
+        'maps_server_key' => env('GOOGLE_MAPS_SERVER_KEY', env('GOOGLE_API_KEY')),
     ],
 
     'openai' => [

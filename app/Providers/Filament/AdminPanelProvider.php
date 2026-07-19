@@ -121,7 +121,7 @@ class AdminPanelProvider extends PanelProvider
                         }
                     </style>
                     <script async defer
-                        src="https://maps.googleapis.com/maps/api/js?key=' . e(config('services.google.maps_api_key')) . '&libraries=places&loading=async"></script>
+                        src="https://maps.googleapis.com/maps/api/js?key=' . e(config('services.google.maps_browser_key')) . '&libraries=places&loading=async"></script>
                 ')
             );
     }

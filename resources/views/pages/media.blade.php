@@ -9,6 +9,12 @@
         <h1 class="text-3xl font-bold text-theme-primary mb-8">Media & Press</h1>
 
         <div class="prose prose-lg max-w-none text-theme-secondary">
+            <h2 class="text-2xl font-semibold mb-4 text-theme-primary">2026</h2>
+            <ul class="list-disc list-inside space-y-2 mb-8">
+                <li><a href="https://www.10tv.com/article/news/local/boomtown-ohio/mother-and-daughter-open-bellefontaine-coffee-shop/530-52019299-cb58-4197-bb51-0286fba93c38" target="_blank" class="text-primary-600 dark:text-primary-400 hover:underline">Mother and daughter open Bellefontaine coffee shop</a> (10TV Boomtown Ohio)</li>
+                {{-- TODO: add additional recent press links here as they are provided (e.g. the 10TV interview referenced in meeting notes) --}}
+            </ul>
+
             <h2 class="text-2xl font-semibold mb-4 text-theme-primary">2025</h2>
             <ul class="list-disc list-inside space-y-2 mb-8">
                 <li><a href="https://www.wosu.org/show/all-sides/2025-09-23/a-central-ohio-organization-is-setting-the-standard-for-small-town-revitalization" target="_blank" class="text-primary-600 dark:text-primary-400 hover:underline">A central Ohio organization is setting the standard for small-town revitalization</a> (Sept 23, 2025)</li>

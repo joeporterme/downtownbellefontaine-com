@@ -222,6 +222,6 @@
         }
     }
 </script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key={{ config('services.google.maps_api_key') }}&libraries=places&callback=initAutocomplete"></script>
+<x-google-maps-script libraries="places" callback="initAutocomplete" />
 @endpush
 @endsection

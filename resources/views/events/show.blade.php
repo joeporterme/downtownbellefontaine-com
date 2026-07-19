@@ -133,7 +133,7 @@
                     });
                 }
             </script>
-            <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ config('services.google.maps_api_key') }}&callback=initMap"></script>
+            <x-google-maps-script callback="initMap" />
             @endpush
         @endif
     </div>
