@@ -40,14 +40,22 @@
 @section('content')
 <div class="py-12 bg-theme-primary">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {{-- Back Link --}}
-        <div class="mb-6">
+        {{-- Back Link (+ admin edit shortcut) --}}
+        <div class="mb-6 flex items-center justify-between gap-4">
             <a href="{{ route('businesses.index') }}" class="text-primary-600 hover:text-primary-700 flex items-center">
                 <svg class="w-5 h-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                 </svg>
                 Back to Directory
             </a>
+
+            @if(auth()->check() && auth()->user()->isAdmin())
+                <a href="{{ url('/admin/businesses/'.$business->id.'/edit') }}"
+                   class="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-md bg-primary-600 text-white hover:bg-primary-700 transition-colors shadow-sm">
+                    <i class="fa-duotone fa-light fa-pen-to-square"></i>
+                    Edit in Admin
+                </a>
+            @endif
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -200,6 +208,11 @@
                     @if($business->locations->first() && $business->locations->first()->latitude)
                         @php $location = $business->locations->first(); @endphp
                         <div class="mt-6 pt-6 border-t border-theme">
+                            <div id="business-map"
+                                 data-lat="{{ $location->latitude }}"
+                                 data-lng="{{ $location->longitude }}"
+                                 data-title="{{ $business->name }}"
+                                 class="w-full h-56 rounded-lg overflow-hidden border border-theme mb-3 bg-gray-100 dark:bg-gray-800"></div>
                             <a href="https://www.google.com/maps/dir/?api=1&destination={{ urlencode($location->address . ', ' . $location->city . ', ' . $location->state . ' ' . $location->zip) }}"
                                target="_blank"
                                rel="noopener noreferrer"
@@ -210,6 +223,46 @@
                                 Get Directions
                             </a>
                         </div>
+
+                        @push('scripts')
+                        <script>
+                            function initBusinessMap() {
+                                const el = document.getElementById('business-map');
+                                if (!el || !window.google || !google.maps) return;
+                                const pos = { lat: parseFloat(el.dataset.lat), lng: parseFloat(el.dataset.lng) };
+                                if (isNaN(pos.lat) || isNaN(pos.lng)) return;
+
+                                const map = new google.maps.Map(el, {
+                                    center: pos,
+                                    zoom: 16,
+                                    mapTypeControl: false,
+                                    streetViewControl: false,
+                                    fullscreenControl: true,
+                                    zoomControl: true,
+                                    styles: [
+                                        { featureType: 'poi.business', stylers: [{ visibility: 'off' }] },
+                                        { featureType: 'transit', stylers: [{ visibility: 'off' }] },
+                                    ],
+                                });
+
+                                new google.maps.Marker({
+                                    position: pos,
+                                    map,
+                                    title: el.dataset.title,
+                                    icon: {
+                                        path: 'M 0,0 C -2,-4 -10,-10 -10,-20 a 10,10 0 1 1 20,0 c 0,10 -8,16 -10,20 z',
+                                        fillColor: '#f3773d',
+                                        fillOpacity: 1,
+                                        strokeColor: '#ffffff',
+                                        strokeWeight: 2,
+                                        scale: 1,
+                                        anchor: new google.maps.Point(0, 0),
+                                    },
+                                });
+                            }
+                        </script>
+                        <x-google-maps-script callback="initBusinessMap" />
+                        @endpush
                     @endif
                 </div>
             </div>
