@@ -88,8 +88,10 @@
                 this.attach();
             },
 
-            attach(retries = 20) {
-                if (!window.google || !google.maps) {
+            attach(retries = 40) {
+                // Wait for the specific classes we use, not just google.maps — with
+                // some loaders google.maps appears before its classes are attached.
+                if (!window.google || !google.maps || !google.maps.StreetViewService || !google.maps.StreetViewPanorama) {
                     if (retries <= 0) { this.state = 'no-imagery'; return; }
                     setTimeout(() => this.attach(retries - 1), 250);
                     return;
