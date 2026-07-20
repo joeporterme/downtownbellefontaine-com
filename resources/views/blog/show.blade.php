@@ -52,7 +52,7 @@
             <div class="absolute inset-0 overflow-hidden">
                 <img src="{{ \App\Support\Media::url($post->featured_image) }}" alt="{{ $post->title }}"
                      data-parallax data-parallax-speed="0.25"
-                     class="parallax-img absolute inset-0 w-full h-full object-cover opacity-40 blur-sm">
+                     class="parallax-img absolute inset-0 w-full h-full object-cover opacity-40">
                 <div class="absolute inset-0 bg-gradient-to-b from-primary-900/55 via-primary-900/40 to-primary-900/80"></div>
             </div>
         @endif
@@ -75,7 +75,7 @@
 
     {{-- Featured image (clear), overlapping the hero --}}
     @if($post->featured_image)
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 -mt-12 md:-mt-16">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 -mt-20 md:-mt-28">
             <img src="{{ \App\Support\Media::url($post->featured_image) }}" alt="{{ $post->title }}" class="w-full aspect-[16/9] object-cover rounded-2xl shadow-xl ring-1 ring-black/5">
         </div>
     @endif
