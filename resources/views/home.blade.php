@@ -632,32 +632,6 @@
 
 {{-- Image gallery ribbon is now sitewide (components/photo-ribbon in the layout). --}}
 
-{{-- CTA Section --}}
-<section class="py-20 bg-gradient-to-r from-primary-600 via-primary-700 to-primary-800 relative overflow-hidden">
-    {{-- Decorative elements --}}
-    <img src="/images/home/pineapple.svg" alt="" class="absolute -left-16 top-1/2 transform -translate-y-1/2 w-48 opacity-10 float-animation" aria-hidden="true">
-    <img src="/images/home/pineapple.svg" alt="" class="absolute -right-16 top-1/2 transform -translate-y-1/2 w-48 opacity-10 float-animation-delayed" aria-hidden="true">
-
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <span class="font-display text-3xl text-accent-300 reveal">Join Our Community</span>
-        <h2 class="text-3xl md:text-4xl font-bold text-white mt-4 mb-6 reveal delay-100">Own a Business in Downtown Bellefontaine?</h2>
-        <p class="text-xl text-white/90 mb-10 reveal delay-200">
-            Join our growing directory and get discovered by locals and visitors alike.<br class="hidden md:inline">
-            Share your events, connect with customers, and be part of our vibrant community.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center reveal delay-300">
-            <a href="/register" class="inline-flex items-center justify-center px-8 py-4 bg-accent-500 hover:bg-accent-400 text-white font-bold rounded-full transition-all text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                <i class="fa-duotone fa-light fa-user-plus mr-2"></i>
-                Register Your Business
-            </a>
-            <a href="{{ route('pages.contact') }}" class="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white/50 hover:bg-white hover:text-primary-700 text-white font-bold rounded-full transition-all text-lg">
-                <i class="fa-duotone fa-light fa-envelope mr-2"></i>
-                Contact Us
-            </a>
-        </div>
-    </div>
-</section>
-
 {{-- Pineapple Heritage Note --}}
 <section class="py-12 bg-accent-50 dark:bg-accent-950/30">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
