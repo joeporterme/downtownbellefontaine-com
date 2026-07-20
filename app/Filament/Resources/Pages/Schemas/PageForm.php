@@ -69,9 +69,10 @@ class PageForm
                         TextInput::make('hero_heading')->maxLength(255),
                         Textarea::make('hero_subheading')->rows(2)->maxLength(500)->columnSpanFull(),
                         FileUpload::make('hero_image')
+                            ->label('Featured image (header background)')
                             ->image()->disk('public')->directory('pages/heroes')
                             ->imageEditor()->maxSize(5120)->columnSpanFull()
-                            ->helperText('Large hero background. Recommended 2000px wide.'),
+                            ->helperText('Used as the background image of the page header. Recommended 2000px wide.'),
                     ]),
 
                 Section::make('SEO')

@@ -27,7 +27,10 @@ class EventForm
                             ->columnSpanFull(),
 
                         RichEditor::make('description')
+                            ->fileAttachmentsDisk('public')
+                            ->fileAttachmentsDirectory('events/content')
                             ->toolbarButtons([
+                                'attachFiles',
                                 'bold',
                                 'italic',
                                 'underline',
