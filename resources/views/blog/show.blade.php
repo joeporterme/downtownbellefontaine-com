@@ -47,7 +47,7 @@
 <article class="bg-theme-primary">
     @php $minutes = max(1, (int) ceil(str_word_count(strip_tags($post->content)) / 200)); @endphp
     {{-- Header — the featured image becomes the hero background when present --}}
-    <header class="relative overflow-hidden {{ $post->featured_image ? 'py-24 md:py-36' : 'py-12 md:py-16' }}">
+    <header class="relative overflow-hidden {{ $post->featured_image ? 'bg-primary-800 dark:bg-primary-950 py-24 md:py-36' : 'py-12 md:py-16' }}">
         @if($post->featured_image)
             <div class="absolute inset-0 overflow-hidden">
                 <img src="{{ \App\Support\Media::url($post->featured_image) }}" alt="{{ $post->title }}"
