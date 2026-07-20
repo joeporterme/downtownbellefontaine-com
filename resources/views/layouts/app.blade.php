@@ -463,18 +463,6 @@
                                 Privacy Policy
                             </a>
                         </li>
-                        <li>
-                            <a href="{{ route('register') }}" class="hover:text-white transition-colors flex items-center gap-2">
-                                <i class="fa-duotone fa-light fa-store w-4 text-primary-400"></i>
-                                List Your Business
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('login') }}" class="hover:text-white transition-colors flex items-center gap-2">
-                                <i class="fa-duotone fa-light fa-right-to-bracket w-4 text-primary-400"></i>
-                                Business Login
-                            </a>
-                        </li>
                     </ul>
                 </div>
             </div>
