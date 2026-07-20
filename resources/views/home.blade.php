@@ -460,57 +460,6 @@
     </div>
 </section>
 
-{{-- Featured Businesses Section --}}
-<section class="py-20 bg-gradient-to-b from-theme-secondary to-theme-primary relative overflow-hidden">
-    <div class="pineapple-bg absolute -left-48 top-20 w-96 h-96 transform rotate-12"></div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-12">
-            <div>
-                <span class="font-display text-2xl text-accent-500 reveal">Shop Local</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-theme-primary mt-2 reveal delay-100">Featured Businesses</h2>
-                <p class="text-theme-secondary mt-2 reveal delay-200">Discover what makes our downtown special</p>
-            </div>
-            <a href="{{ route('businesses.index') }}" class="mt-4 md:mt-0 inline-flex items-center text-accent-600 hover:text-accent-700 font-semibold reveal delay-300">
-                View All
-                <i class="fa-duotone fa-light fa-arrow-right ml-2"></i>
-            </a>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            @forelse($featuredBusinesses as $index => $business)
-                <a href="{{ route('businesses.show', $business) }}" class="group bg-theme-primary rounded-2xl border border-theme overflow-hidden card-hover reveal delay-{{ ($index % 3 + 1) * 100 }}">
-                    <div class="relative overflow-hidden">
-                        <x-business-card-image :business="$business" icon="fa-store" height="h-56" />
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex flex-wrap gap-2 mb-3">
-                            @foreach($business->categories->take(2) as $category)
-                                <span class="px-3 py-1 text-xs bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 rounded-full font-medium">
-                                    {{ $category->name }}
-                                </span>
-                            @endforeach
-                        </div>
-                        <h3 class="text-xl font-bold text-theme-primary group-hover:text-accent-600 transition-colors">{{ $business->name }}</h3>
-                        @if($business->locations->first())
-                            <p class="text-theme-tertiary text-sm mt-2 flex items-center">
-                                <i class="fa-duotone fa-light fa-location-dot mr-2 text-accent-500"></i>
-                                {{ $business->locations->first()->address }}
-                            </p>
-                        @endif
-                    </div>
-                </a>
-            @empty
-                <div class="col-span-full text-center py-12 text-theme-secondary">
-                    <i class="fa-duotone fa-light fa-store-slash text-6xl text-theme-tertiary mb-4"></i>
-                    <p>No businesses listed yet. Be the first to register!</p>
-                </div>
-            @endforelse
-        </div>
-    </div>
-</section>
-
 {{-- Upcoming Events Section --}}
 <section class="py-20 bg-theme-primary relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -627,6 +576,57 @@
                 </a>
             </div>
         @endif
+    </div>
+</section>
+
+{{-- Featured Businesses Section --}}
+<section class="py-20 bg-gradient-to-b from-theme-secondary to-theme-primary relative overflow-hidden">
+    <div class="pineapple-bg absolute -left-48 top-20 w-96 h-96 transform rotate-12"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-12">
+            <div>
+                <span class="font-display text-2xl text-accent-500 reveal">Shop Local</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-theme-primary mt-2 reveal delay-100">Featured Businesses</h2>
+                <p class="text-theme-secondary mt-2 reveal delay-200">Discover what makes our downtown special</p>
+            </div>
+            <a href="{{ route('businesses.index') }}" class="mt-4 md:mt-0 inline-flex items-center text-accent-600 hover:text-accent-700 font-semibold reveal delay-300">
+                View All
+                <i class="fa-duotone fa-light fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            @forelse($featuredBusinesses as $index => $business)
+                <a href="{{ route('businesses.show', $business) }}" class="group bg-theme-primary rounded-2xl border border-theme overflow-hidden card-hover reveal delay-{{ ($index % 3 + 1) * 100 }}">
+                    <div class="relative overflow-hidden">
+                        <x-business-card-image :business="$business" icon="fa-store" height="h-56" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            @foreach($business->categories->take(2) as $category)
+                                <span class="px-3 py-1 text-xs bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 rounded-full font-medium">
+                                    {{ $category->name }}
+                                </span>
+                            @endforeach
+                        </div>
+                        <h3 class="text-xl font-bold text-theme-primary group-hover:text-accent-600 transition-colors">{{ $business->name }}</h3>
+                        @if($business->locations->first())
+                            <p class="text-theme-tertiary text-sm mt-2 flex items-center">
+                                <i class="fa-duotone fa-light fa-location-dot mr-2 text-accent-500"></i>
+                                {{ $business->locations->first()->address }}
+                            </p>
+                        @endif
+                    </div>
+                </a>
+            @empty
+                <div class="col-span-full text-center py-12 text-theme-secondary">
+                    <i class="fa-duotone fa-light fa-store-slash text-6xl text-theme-tertiary mb-4"></i>
+                    <p>No businesses listed yet. Be the first to register!</p>
+                </div>
+            @endforelse
+        </div>
     </div>
 </section>
 

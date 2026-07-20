@@ -67,6 +67,14 @@
     </button>
     <span x-show="loading" class="dtb-pp-status">Loading photos from Google&hellip;</span>
 
+    {{-- The image currently applied to this location (overrides Street View) --}}
+    <template x-if="currentImage && !selectedUrl">
+        <div class="dtb-pp-selected-wrap">
+            <img class="dtb-pp-selected-img" :src="currentImage" alt="Current listing image">
+            <div class="dtb-pp-note" style="margin-top:0">&#10003; This is the current listing image for this location (it overrides Street View).</div>
+        </div>
+    </template>
+
     {{-- Currently-selected pick (persists across reloads) --}}
     <template x-if="selectedUrl">
         <div class="dtb-pp-selected-wrap">
@@ -97,11 +105,20 @@
             loading: false,
             photos: [],
             selectedUrl: '',
+            currentImage: '',
             message: '',
 
             init() {
                 // Restore a previously-stashed selection so it survives re-renders.
                 this.selectedUrl = this.$wire.get(`${this.statePath}.places_photo_url`) || '';
+                // Show whatever image is currently applied to this location.
+                this.currentImage = this.imageUrl(this.$wire.get(`${this.statePath}.listing_image`));
+            },
+
+            imageUrl(path) {
+                if (!path) return '';
+                if (/^https?:\/\//.test(path) || path.startsWith('/')) return path;
+                return '/storage/' + path;
             },
 
             // Business name lives at the form root (data.name); the location item

@@ -13,6 +13,15 @@ class EditBusiness extends EditRecord
 {
     protected static string $resource = BusinessResource::class;
 
+    protected function afterSave(): void
+    {
+        // Picked Google photos are downloaded into the images by the location /
+        // business observers *after* the save completes, so reload the form to
+        // show them without a manual page refresh.
+        $this->record->refresh();
+        $this->fillForm();
+    }
+
     protected function getHeaderActions(): array
     {
         return [

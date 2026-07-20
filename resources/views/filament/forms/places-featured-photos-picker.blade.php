@@ -56,6 +56,14 @@
     </button>
     <span x-show="loading" class="dtb-fp-status">Loading photos from Google&hellip;</span>
 
+    {{-- The image currently used as the featured image --}}
+    <template x-if="currentImage && !selectedUrl">
+        <div class="dtb-fp-selected-wrap">
+            <img class="dtb-fp-selected-img" :src="currentImage" alt="Current featured image">
+            <div class="dtb-fp-note" style="margin-top:0">&#10003; This is the current featured image.</div>
+        </div>
+    </template>
+
     <template x-if="selectedUrl">
         <div class="dtb-fp-selected-wrap">
             <img class="dtb-fp-selected-img" :src="selectedUrl" alt="Selected Google photo">
@@ -85,10 +93,18 @@
             loading: false,
             photos: [],
             selectedUrl: '',
+            currentImage: '',
             message: '',
 
             init() {
                 this.selectedUrl = this.$wire.get(`${this.root}.featured_places_url`) || '';
+                this.currentImage = this.imageUrl(this.$wire.get(`${this.root}.featured_image`));
+            },
+
+            imageUrl(path) {
+                if (!path) return '';
+                if (/^https?:\/\//.test(path) || path.startsWith('/')) return path;
+                return '/storage/' + path;
             },
 
             // Best-effort search context: business name + the first location's address/coords.
