@@ -64,12 +64,12 @@
                 {{-- Top image: the business's featured / curated photo. Street View
                      lives in the sidebar, so it is not used here. --}}
                 @php
-                    $primaryLoc = $business->primaryLocation ?? $business->locations->first();
-                    $override = $primaryLoc?->listing_image ?: $business->listing_image;
+                    // Top hero = the featured photo (falling back to a legacy business-level
+                    // override). The per-location override belongs to the sidebar, not here.
                     $topImage = $business->featured_image
                         ? \App\Support\Media::url($business->featured_image)
-                        : ($override ? \App\Support\Media::url($override) : null);
-                    $topCredit = $business->featured_image ? null : $business->resolvedListingCredit();
+                        : ($business->listing_image ? \App\Support\Media::url($business->listing_image) : null);
+                    $topCredit = (! $business->featured_image && $business->listing_image) ? $business->listing_image_credit : null;
                 @endphp
                 @if($topImage)
                     <figure class="mb-6">
@@ -141,15 +141,13 @@
                 <div class="bg-theme-secondary rounded-lg shadow border border-theme p-6 sticky top-6">
                     @php
                         $primaryLoc = $business->primaryLocation ?? $business->locations->first();
-                        $override = $primaryLoc?->listing_image ?: $business->listing_image;
+                        // A per-location override (Google photo / upload) replaces Street View here.
+                        $locOverride = $primaryLoc?->listing_image;
                         $streetview = $primaryLoc?->streetview_image;
-                        // Top hero shows the featured photo; if there's no featured photo the
-                        // override goes on top, so only put it in the sidebar when it isn't already up top.
-                        $topIsOverride = ! $business->featured_image && $override;
                         $sidebarImage = null; $sidebarIsSV = false; $sidebarLabel = null;
-                        if ($override && ! $topIsOverride) {
-                            $sidebarImage = \App\Support\Media::url($override);
-                            $sidebarLabel = $business->resolvedListingCredit() ? 'Photo · via Google' : null;
+                        if ($locOverride) {
+                            $sidebarImage = \App\Support\Media::url($locOverride);
+                            $sidebarLabel = $primaryLoc?->listing_image_credit ? 'Photo · via Google' : null;
                         } elseif ($streetview) {
                             $sidebarImage = \App\Support\Media::url($streetview);
                             $sidebarIsSV = true;
