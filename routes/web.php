@@ -24,7 +24,14 @@ Route::get('/map', [App\Http\Controllers\Public\MapController::class, 'index'])-
 Route::get('/first-fridays', fn() => view('pages.first-fridays'))->name('pages.first-fridays');
 Route::get('/meeting-spaces', fn() => view('pages.meeting-spaces'))->name('pages.meeting-spaces');
 Route::get('/dora', fn() => view('pages.dora'))->name('pages.dora');
-Route::get('/media', fn() => view('pages.media'))->name('pages.media');
+Route::get('/media', function () {
+    $pressItems = \App\Models\PressItem::active()
+        ->orderByDesc('published_date')
+        ->get()
+        ->groupBy(fn ($item) => $item->published_date->format('Y'));
+
+    return view('pages.media', compact('pressItems'));
+})->name('pages.media');
 Route::get('/contact', [App\Http\Controllers\Public\ContactController::class, 'show'])->name('pages.contact');
 Route::post('/contact', [App\Http\Controllers\Public\ContactController::class, 'store'])
     ->middleware('throttle:5,1')

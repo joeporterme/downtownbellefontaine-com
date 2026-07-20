@@ -87,6 +87,9 @@ class PageSeeder extends Seeder
             ],
             [
                 'key' => 'media', 'title' => 'Media & Press', 'nav_label' => 'Media & Press', 'sort' => 110,
+                'hero_eyebrow' => 'In the News', 'hero_heading' => 'Media & Press',
+                'hero_subheading' => "Downtown Bellefontaine has been featured across Ohio and beyond. Here's a look at our coverage.",
+                'hero_image' => 'pages/heroes/downtown-bellefontaine-2.jpg',
                 'seo_description' => 'Downtown Bellefontaine in the news - read press coverage and media mentions about Ohio\'s most loveable downtown.',
             ],
             [
