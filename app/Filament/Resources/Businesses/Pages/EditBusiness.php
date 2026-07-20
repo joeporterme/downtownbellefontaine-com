@@ -16,6 +16,13 @@ class EditBusiness extends EditRecord
     protected function getHeaderActions(): array
     {
         return [
+            Action::make('viewLive')
+                ->label('View Live')
+                ->icon('heroicon-o-arrow-top-right-on-square')
+                ->color('gray')
+                ->url(fn (): string => route('businesses.show', $this->record))
+                ->openUrlInNewTab(),
+
             Action::make('refreshStreetView')
                 ->label('Refresh Street View')
                 ->icon('heroicon-o-arrow-path')

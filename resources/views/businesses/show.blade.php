@@ -139,20 +139,71 @@
             {{-- Sidebar --}}
             <div class="lg:col-span-1">
                 <div class="bg-theme-secondary rounded-lg shadow border border-theme p-6 sticky top-6">
-                    <h2 class="text-lg font-semibold text-theme-primary mb-4">Contact Information</h2>
+                    @php
+                        $primaryLoc = $business->primaryLocation ?? $business->locations->first();
+                        $override = $primaryLoc?->listing_image ?: $business->listing_image;
+                        $streetview = $primaryLoc?->streetview_image;
+                        // Top hero shows the featured photo; if there's no featured photo the
+                        // override goes on top, so only put it in the sidebar when it isn't already up top.
+                        $topIsOverride = ! $business->featured_image && $override;
+                        $sidebarImage = null; $sidebarIsSV = false; $sidebarLabel = null;
+                        if ($override && ! $topIsOverride) {
+                            $sidebarImage = \App\Support\Media::url($override);
+                            $sidebarLabel = $business->resolvedListingCredit() ? 'Photo · via Google' : null;
+                        } elseif ($streetview) {
+                            $sidebarImage = \App\Support\Media::url($streetview);
+                            $sidebarIsSV = true;
+                            $sidebarLabel = 'Street View';
+                        }
+                        $hasMap = $primaryLoc && $primaryLoc->latitude;
+                    @endphp
+
+                    {{-- Street View / override photo --}}
+                    @if($sidebarImage)
+                        <figure class="mb-4">
+                            <img src="{{ $sidebarImage }}" alt="{{ $business->name }}" class="w-full h-44 object-cover rounded-lg border border-theme {{ $sidebarIsSV ? 'streetview-img' : '' }}">
+                            @if($sidebarLabel)
+                                <figcaption class="mt-1 text-xs text-theme-tertiary">{{ $sidebarLabel }}</figcaption>
+                            @endif
+                        </figure>
+                    @endif
+
+                    {{-- Map --}}
+                    @if($hasMap)
+                        <div id="business-map"
+                             data-lat="{{ $primaryLoc->latitude }}"
+                             data-lng="{{ $primaryLoc->longitude }}"
+                             data-title="{{ $business->name }}"
+                             class="w-full h-56 rounded-lg overflow-hidden border border-theme mb-3 bg-gray-100 dark:bg-gray-800"></div>
+                    @endif
+
+                    {{-- Get Directions --}}
+                    @if($primaryLoc && ($hasMap || $primaryLoc->address))
+                        <a href="https://www.google.com/maps/dir/?api=1&destination={{ urlencode($primaryLoc->address . ', ' . $primaryLoc->city . ', ' . $primaryLoc->state . ' ' . $primaryLoc->zip) }}"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="w-full inline-flex items-center justify-center px-4 py-2 bg-primary-600 text-white rounded-md hover:bg-primary-700 transition-colors mb-6">
+                            <svg class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                            </svg>
+                            Get Directions
+                        </a>
+                    @endif
+
+                    {{-- Info --}}
+                    <h2 class="text-lg font-semibold text-theme-primary mb-4 {{ ($sidebarImage || $hasMap) ? 'pt-6 border-t border-theme' : '' }}">Contact Information</h2>
 
                     <div class="space-y-4">
                         {{-- Location --}}
-                        @if($business->locations->first())
-                            @php $location = $business->locations->first(); @endphp
+                        @if($primaryLoc)
                             <div class="flex items-start">
                                 <svg class="w-5 h-5 text-primary-600 mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                 </svg>
                                 <div>
-                                    <p class="text-theme-secondary">{{ $location->address }}</p>
-                                    <p class="text-theme-secondary">{{ $location->city }}, {{ $location->state }} {{ $location->zip }}</p>
+                                    <p class="text-theme-secondary">{{ $primaryLoc->address }}</p>
+                                    <p class="text-theme-secondary">{{ $primaryLoc->city }}, {{ $primaryLoc->state }} {{ $primaryLoc->zip }}</p>
                                 </div>
                             </div>
                         @endif
@@ -213,36 +264,8 @@
                         </div>
                     @endif
 
-                    {{-- Location: map + saved Street View snapshot --}}
-                    @if($business->locations->first() && $business->locations->first()->latitude)
-                        @php
-                            $location = $business->locations->first();
-                            $streetview = $business->primaryLocation?->streetview_image ?? $location->streetview_image;
-                        @endphp
-                        <div class="mt-6 pt-6 border-t border-theme">
-                            <div id="business-map"
-                                 data-lat="{{ $location->latitude }}"
-                                 data-lng="{{ $location->longitude }}"
-                                 data-title="{{ $business->name }}"
-                                 class="w-full h-56 rounded-lg overflow-hidden border border-theme mb-3 bg-gray-100 dark:bg-gray-800"></div>
-
-                            @if($streetview)
-                                <figure class="mb-3">
-                                    <img src="{{ \App\Support\Media::url($streetview) }}" alt="{{ $business->name }} — Street View" class="w-full h-40 object-cover rounded-lg border border-theme streetview-img">
-                                    <figcaption class="mt-1 text-xs text-theme-tertiary">Street View</figcaption>
-                                </figure>
-                            @endif
-                            <a href="https://www.google.com/maps/dir/?api=1&destination={{ urlencode($location->address . ', ' . $location->city . ', ' . $location->state . ' ' . $location->zip) }}"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               class="w-full inline-flex items-center justify-center px-4 py-2 bg-primary-600 text-white rounded-md hover:bg-primary-700 transition-colors">
-                                <svg class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-                                </svg>
-                                Get Directions
-                            </a>
-                        </div>
-
+                    {{-- Map init --}}
+                    @if($hasMap)
                         @push('scripts')
                         <script>
                             function initBusinessMap() {
