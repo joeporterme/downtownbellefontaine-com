@@ -306,9 +306,9 @@
             vibrant community spirit in Ohio's highest city.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center reveal active delay-300">
-            <a href="{{ route('businesses.index') }}" class="inline-flex items-center justify-center px-8 py-4 bg-accent-500 hover:bg-accent-400 text-white font-semibold rounded-full transition-all pulse-glow text-lg">
-                <i class="fa-duotone fa-light fa-magnifying-glass mr-2"></i>
-                Explore Businesses
+            <a href="#explore-downtown" class="inline-flex items-center justify-center px-8 py-4 bg-accent-500 hover:bg-accent-400 text-white font-semibold rounded-full transition-all pulse-glow text-lg">
+                <i class="fa-duotone fa-light fa-compass mr-2"></i>
+                Explore Downtown
             </a>
             <a href="{{ route('events.index') }}" class="inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/50 hover:bg-white hover:text-primary-800 font-semibold rounded-full transition-all text-lg">
                 <i class="fa-duotone fa-light fa-calendar-star mr-2"></i>
@@ -390,7 +390,7 @@
 </section>
 
 {{-- Explore Downtown — photographic bento mosaic --}}
-<section class="py-16 md:py-20 bg-theme-primary relative overflow-hidden">
+<section id="explore-downtown" class="scroll-mt-24 py-16 md:py-20 bg-theme-primary relative overflow-hidden">
     <div class="pineapple-bg absolute -right-32 -bottom-32 w-96 h-96"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
