@@ -100,7 +100,17 @@ class PageSeeder extends Seeder
             ],
             [
                 'key' => 'privacy-policy', 'title' => 'Privacy Policy', 'nav_label' => 'Privacy Policy', 'sort' => 130,
+                'hero_eyebrow' => 'Legal', 'hero_heading' => 'Privacy Policy',
+                'hero_subheading' => 'How we collect, use, and protect your information.',
+                'hero_image' => 'pages/heroes/downtown-bellefontaine-1.jpg',
                 'seo_description' => 'Downtown Bellefontaine privacy policy - learn how we collect, use, and protect your personal information.',
+            ],
+            [
+                'key' => 'terms-of-service', 'title' => 'Terms of Service', 'nav_label' => 'Terms of Service', 'sort' => 140,
+                'hero_eyebrow' => 'Legal', 'hero_heading' => 'Terms of Service',
+                'hero_subheading' => 'The terms for using the Downtown Bellefontaine website.',
+                'hero_image' => 'pages/heroes/downtown-bellefontaine-1.jpg',
+                'seo_description' => 'Terms of Service for the Downtown Bellefontaine website - the rules for using our site, accounts, and listings.',
             ],
         ];
 

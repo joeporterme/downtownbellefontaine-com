@@ -38,6 +38,7 @@ Route::post('/contact', [App\Http\Controllers\Public\ContactController::class, '
     ->name('contact.submit');
 Route::get('/historic-walking-tour', [App\Http\Controllers\Public\WalkingTourController::class, 'index'])->name('pages.historic-walking-tour');
 Route::get('/privacy-policy', fn() => view('pages.privacy-policy'))->name('pages.privacy-policy');
+Route::get('/terms-of-service', fn() => view('pages.terms-of-service'))->name('pages.terms-of-service');
 
 // SEO
 Route::get('/sitemap.xml', [App\Http\Controllers\Public\SitemapController::class, 'index'])->name('sitemap');

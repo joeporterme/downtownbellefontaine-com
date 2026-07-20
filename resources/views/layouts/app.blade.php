@@ -463,6 +463,12 @@
                                 Privacy Policy
                             </a>
                         </li>
+                        <li>
+                            <a href="{{ route('pages.terms-of-service') }}" class="hover:text-white transition-colors flex items-center gap-2">
+                                <i class="fa-duotone fa-light fa-file-contract w-4 text-primary-400"></i>
+                                Terms of Service
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
