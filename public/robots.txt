@@ -1,7 +1,0 @@
-User-agent: *
-Disallow: /portal/
-Disallow: /admin/
-Disallow: /login
-Disallow: /register
-
-Sitemap: https://db.smallnation.site/sitemap.xml
