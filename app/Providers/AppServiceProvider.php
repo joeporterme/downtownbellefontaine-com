@@ -2,9 +2,11 @@
 
 namespace App\Providers;
 
+use App\Models\Business;
 use App\Models\BusinessLocation;
 use App\Models\SiteSetting;
 use App\Observers\BusinessLocationObserver;
+use App\Observers\BusinessObserver;
 use App\Services\AI\AIService;
 use App\Services\BusinessImportService;
 use App\Services\Google\GeocodingService;
@@ -45,8 +47,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // Regenerate the cached Street View snapshot when a location's camera changes.
+        // Regenerate the cached Street View snapshot when a location's camera changes,
+        // and download a picked Google photo into a location's / business's images.
         BusinessLocation::observe(BusinessLocationObserver::class);
+        Business::observe(BusinessObserver::class);
 
         // Branded pagination bar sitewide.
         Paginator::defaultView('vendor.pagination.downtown');

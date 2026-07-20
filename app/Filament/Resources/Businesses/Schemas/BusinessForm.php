@@ -124,7 +124,15 @@ class BusinessForm
                                         ->disk('public')
                                         ->directory('businesses')
                                         ->imageEditor()
-                                        ->helperText('The big photo shown at the top of the business page. The Street View / Google photo / override image is set per location under "Locations".'),
+                                        ->columnSpanFull()
+                                        ->helperText('The big photo shown at the top of the business page. Upload one here, or pick from Google below. The Street View / Google photo / override for the sidebar is set per location under "Locations".'),
+
+                                    // Alternative to uploading: apply a Google Places photo as
+                                    // the featured image. The business observer downloads the
+                                    // picked URL into featured_image on save.
+                                    View::make('filament.forms.places-featured-photos-picker')
+                                        ->columnSpanFull(),
+                                    Hidden::make('featured_places_url'),
                                 ]),
                         ]),
 

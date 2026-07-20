@@ -30,6 +30,7 @@ class Business extends Model
         'x_url',
         'logo',
         'featured_image',
+        'featured_places_url',
         'listing_image',
         'listing_image_credit',
         'hours',

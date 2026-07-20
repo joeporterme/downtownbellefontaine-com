@@ -2,6 +2,7 @@
 
 namespace App\Services\Google;
 
+use App\Models\Business;
 use App\Models\BusinessLocation;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
@@ -34,28 +35,44 @@ class PlacesPhotoService
      */
     public function store(BusinessLocation $location, string $url): ?string
     {
+        $previous = $location->getOriginal('listing_image') ?: $location->listing_image;
+
+        return $this->download($url, self::DIRECTORY."/loc-{$location->id}-places-".substr(md5($url), 0, 8).'.jpg', $previous);
+    }
+
+    /**
+     * Same, but store a chosen Google photo as a business's featured image.
+     */
+    public function storeFeatured(Business $business, string $url): ?string
+    {
+        $previous = $business->getOriginal('featured_image') ?: $business->featured_image;
+
+        return $this->download($url, "businesses/{$business->id}-places-".substr(md5($url), 0, 8).'.jpg', $previous);
+    }
+
+    /**
+     * Download + process a Places photo to $path, removing a previous auto
+     * -generated Places file. Returns the stored path (or null on failure).
+     * The URL is host-checked and fetched with a matching Referer so the
+     * referrer-restricted browser key accepts the server-side request.
+     */
+    protected function download(string $url, string $path, ?string $previous): ?string
+    {
         if (blank($url) || ! $this->isAllowedHost($url)) {
             return null;
         }
 
         try {
-            // The URL host is allowlisted to Google above; Places photo media
-            // URLs redirect to Google's image CDN, so redirects are followed
-            // (they stay within Google, so this is not an SSRF vector).
-            //
-            // The new Places API media URL carries our referrer-restricted browser
-            // key, so we send a matching Referer header — otherwise the key's HTTP
-            // referrer restriction rejects this server-side request.
+            // Host is allowlisted to Google above; media URLs redirect within
+            // Google's CDN (not an SSRF vector). The new Places media URL carries
+            // our referrer-restricted key, so send a matching Referer.
             $response = Http::timeout(30)
                 ->withHeaders(['Referer' => rtrim(config('app.url'), '/').'/'])
                 ->withOptions(['allow_redirects' => ['max' => 5, 'strict' => true]])
                 ->get($url);
 
             if (! $response->successful() || ! str_starts_with($response->header('Content-Type', ''), 'image/')) {
-                Log::warning('Places photo download failed', [
-                    'location_id' => $location->id,
-                    'status' => $response->status(),
-                ]);
+                Log::warning('Places photo download failed', ['path' => $path, 'status' => $response->status()]);
 
                 return null;
             }
@@ -64,16 +81,8 @@ class PlacesPhotoService
             $image->cover(1200, 800);
             $encoded = $image->toJpeg(88);
 
-            $hash = substr(md5($url), 0, 8);
-            $path = self::DIRECTORY."/loc-{$location->id}-places-{$hash}.jpg";
-
-            // Remove the previous Places photo if it was a different file. We
-            // only clean up our own auto-generated Places files, never a photo
-            // the admin uploaded by hand.
-            $previous = $location->getOriginal('listing_image') ?: $location->listing_image;
-            if (filled($previous)
-                && $previous !== $path
-                && str_contains($previous, '-places-')) {
+            // Only clean up our own auto-generated Places files, never a manual upload.
+            if (filled($previous) && $previous !== $path && str_contains($previous, '-places-')) {
                 Storage::disk('public')->delete($previous);
             }
 
@@ -83,10 +92,7 @@ class PlacesPhotoService
 
             return $path;
         } catch (\Throwable $e) {
-            Log::warning('Places photo exception', [
-                'location_id' => $location->id,
-                'error' => $e->getMessage(),
-            ]);
+            Log::warning('Places photo exception', ['path' => $path, 'error' => $e->getMessage()]);
 
             return null;
         }
