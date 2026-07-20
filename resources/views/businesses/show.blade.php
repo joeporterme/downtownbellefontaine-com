@@ -216,27 +216,6 @@
                             </div>
                         @endif
 
-                        {{-- Social icons --}}
-                        @php
-                            $socials = array_filter([
-                                'facebook' => $business->facebook_url,
-                                'instagram' => $business->instagram_url,
-                                'x-twitter' => $business->x_url,
-                                'tiktok' => $business->tiktok_url,
-                                'snapchat' => $business->snapchat_url,
-                            ]);
-                        @endphp
-                        @if(count($socials))
-                            <div class="flex flex-wrap items-center gap-2 pl-8">
-                                @foreach($socials as $icon => $url)
-                                    <a href="{{ $url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ $icon === 'x-twitter' ? 'X' : ucfirst($icon) }}"
-                                       class="w-9 h-9 rounded-full bg-primary-50 dark:bg-primary-900/40 text-primary-600 dark:text-primary-300 hover:bg-primary-600 hover:text-white flex items-center justify-center transition-colors">
-                                        <i class="fa-brands fa-{{ $icon }}"></i>
-                                    </a>
-                                @endforeach
-                            </div>
-                        @endif
-
                         {{-- Email --}}
                         @if($business->email)
                             <div class="flex items-center">
@@ -256,6 +235,27 @@
                                 <a href="{{ $business->website }}" target="_blank" rel="noopener noreferrer" class="text-theme-secondary hover:text-primary-600 truncate">
                                     {{ parse_url($business->website, PHP_URL_HOST) }}
                                 </a>
+                            </div>
+                        @endif
+
+                        {{-- Social icons --}}
+                        @php
+                            $socials = array_filter([
+                                'facebook' => $business->facebook_url,
+                                'instagram' => $business->instagram_url,
+                                'x-twitter' => $business->x_url,
+                                'tiktok' => $business->tiktok_url,
+                                'snapchat' => $business->snapchat_url,
+                            ]);
+                        @endphp
+                        @if(count($socials))
+                            <div class="flex flex-wrap items-center gap-2 pt-1">
+                                @foreach($socials as $icon => $url)
+                                    <a href="{{ $url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ $icon === 'x-twitter' ? 'X' : ucfirst($icon) }}"
+                                       class="w-9 h-9 rounded-full bg-primary-50 dark:bg-primary-900/40 text-primary-600 dark:text-primary-300 hover:bg-primary-600 hover:text-white flex items-center justify-center transition-colors">
+                                        <i class="fa-brands fa-{{ $icon }}"></i>
+                                    </a>
+                                @endforeach
                             </div>
                         @endif
                     </div>
