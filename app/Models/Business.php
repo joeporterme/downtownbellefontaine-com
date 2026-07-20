@@ -84,11 +84,13 @@ class Business extends Model
     }
 
     /**
-     * The main listing image, in priority order:
+     * The listing image used on cards / OG, in priority order:
      * 1. the primary location's curated override (manual upload / Google photo),
-     * 2. a legacy business-level override (kept as a fallback),
-     * 3. the primary location's saved Street View snapshot,
-     * 4. the uploaded featured image, else null (placeholder).
+     * 2. the primary location's saved Street View snapshot,
+     * 3. the uploaded featured image, else null (placeholder).
+     *
+     * The location image (override or Street View) is preferred over the featured
+     * photo, which is the profile's top hero.
      */
     public function getListingImageUrlAttribute(): ?string
     {
@@ -96,10 +98,6 @@ class Business extends Model
 
         if ($loc?->listing_image) {
             return Media::url($loc->listing_image);
-        }
-
-        if ($this->listing_image) {
-            return Media::url($this->listing_image);
         }
 
         if ($loc?->streetview_image) {
@@ -129,20 +127,18 @@ class Business extends Model
     {
         $loc = $this->primaryLocation;
 
-        return ! $loc?->listing_image
-            && ! $this->listing_image
-            && (bool) $loc?->streetview_image;
+        return ! $loc?->listing_image && (bool) $loc?->streetview_image;
     }
 
     /**
-     * The big listing image resolved to its owning location (for a per-location
-     * override) or null when the resolved image is business-level/featured.
+     * Attribution for the resolved listing image (only per-location overrides
+     * carry a Google credit).
      */
     public function resolvedListingCredit(): ?string
     {
         return $this->primaryLocation?->listing_image
             ? $this->primaryLocation->listing_image_credit
-            : ($this->listing_image ? $this->listing_image_credit : null);
+            : null;
     }
 
     public function isApproved(): bool
