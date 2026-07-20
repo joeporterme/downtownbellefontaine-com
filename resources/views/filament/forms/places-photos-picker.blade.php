@@ -104,19 +104,25 @@
                 this.selectedUrl = this.$wire.get(`${this.statePath}.places_photo_url`) || '';
             },
 
-            placesService() {
-                if (!window.google || !google.maps || !google.maps.places) return null;
-                // PlacesService needs an element to attribute results to.
-                return new google.maps.places.PlacesService(document.createElement('div'));
+            // Business name lives at the form root (data.name); the location item
+            // only has an optional location label. Search needs the business name.
+            businessName() {
+                const root = this.statePath.split('.locations.')[0];
+                return this.$wire.get(`${root}.name`) || '';
             },
 
-            loadPhotos() {
-                const svc = this.placesService();
-                if (!svc) { this.message = 'Google Maps is still loading — try again in a moment.'; return; }
+            async loadPhotos() {
+                // New Places API — the legacy PlacesService is not available to
+                // Google Cloud projects created after March 2025.
+                if (!window.google || !google.maps || !google.maps.places || !google.maps.places.Place) {
+                    this.message = 'Google Maps is still loading — try again in a moment.';
+                    return;
+                }
 
                 const item = this.$wire.get(this.statePath) || {};
-                const name = item.name || '';
-                const parts = [name, item.address, item.city, item.state].filter(Boolean).join(', ');
+                const biz = this.businessName();
+                const locName = item.name || '';
+                const parts = [biz || locName, item.address, item.city, item.state].filter(Boolean).join(', ');
                 const lat = parseFloat(item.latitude);
                 const lng = parseFloat(item.longitude);
 
@@ -129,39 +135,42 @@
                 this.message = '';
                 this.photos = [];
 
-                const request = {
-                    query: parts || `${lat},${lng}`,
-                    fields: ['place_id'],
-                };
-                if (!isNaN(lat) && !isNaN(lng)) {
-                    request.locationBias = { lat, lng };
-                }
+                try {
+                    const request = {
+                        textQuery: parts || `${lat},${lng}`,
+                        fields: ['id', 'displayName', 'photos', 'location'],
+                        maxResultCount: 1,
+                    };
+                    if (!isNaN(lat) && !isNaN(lng)) {
+                        request.locationBias = { center: { lat, lng }, radius: 200 };
+                    }
 
-                svc.findPlaceFromQuery(request, (results, status) => {
-                    if (status !== google.maps.places.PlacesServiceStatus.OK || !results || !results.length) {
-                        this.loading = false;
+                    const { places } = await google.maps.places.Place.searchByText(request);
+                    this.loading = false;
+
+                    if (!places || !places.length) {
                         this.message = 'No matching Google place found for this business.';
                         return;
                     }
+                    const photos = places[0].photos || [];
+                    if (!photos.length) {
+                        this.message = 'This Google listing has no photos to choose from.';
+                        return;
+                    }
 
-                    svc.getDetails({ placeId: results[0].place_id, fields: ['photos'] }, (place, dStatus) => {
-                        this.loading = false;
-
-                        if (dStatus !== google.maps.places.PlacesServiceStatus.OK || !place || !place.photos || !place.photos.length) {
-                            this.message = 'This Google listing has no photos to choose from.';
-                            return;
-                        }
-
-                        this.photos = place.photos.map((p) => ({
-                            thumb: p.getUrl({ maxWidth: 400, maxHeight: 300 }),
-                            full: p.getUrl({ maxWidth: 1600, maxHeight: 1200 }),
-                            credit: (p.html_attributions && p.html_attributions.length)
-                                ? p.html_attributions[0].replace(/<[^>]*>/g, '').trim()
-                                : '',
-                        }));
-                        this.message = `${this.photos.length} photo(s) from Google — click one to use it.`;
-                    });
-                });
+                    this.photos = photos.map((p) => ({
+                        thumb: p.getURI({ maxWidth: 400, maxHeight: 300 }),
+                        full: p.getURI({ maxWidth: 1600, maxHeight: 1200 }),
+                        credit: (p.authorAttributions && p.authorAttributions.length)
+                            ? p.authorAttributions[0].displayName
+                            : '',
+                    }));
+                    this.message = `${this.photos.length} photo(s) from Google — click one to use it.`;
+                } catch (e) {
+                    this.loading = false;
+                    this.message = 'Could not load Google photos (' + (e && e.message ? e.message : e) + '). The Places API (New) may need to be enabled.';
+                    console.error('[places-photos] searchByText failed', e);
+                }
             },
 
             select(photo) {

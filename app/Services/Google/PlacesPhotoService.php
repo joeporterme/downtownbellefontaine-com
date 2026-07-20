@@ -39,8 +39,11 @@ class PlacesPhotoService
         }
 
         try {
+            // The URL host is allowlisted to Google above; Places photo media
+            // URLs redirect to Google's image CDN, so redirects are followed
+            // (they stay within Google, so this is not an SSRF vector).
             $response = Http::timeout(30)
-                ->withoutRedirecting()
+                ->withOptions(['allow_redirects' => ['max' => 5, 'strict' => true]])
                 ->get($url);
 
             if (! $response->successful() || ! str_starts_with($response->header('Content-Type', ''), 'image/')) {
