@@ -64,6 +64,15 @@ class AdminPanelProvider extends PanelProvider
             ->pages([
                 Dashboard::class,
             ])
+            // Nav group order: Content right under Dashboard, Settings at the bottom.
+            ->navigationGroups([
+                'Content',
+                'Businesses',
+                'Communications',
+                'User Management',
+                'Tools',
+                'Settings',
+            ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\Filament\Widgets')
             ->widgets([
                 AccountWidget::class,
