@@ -328,16 +328,116 @@
                     <h3 class="font-display text-2xl sm:text-3xl text-accent-300 mb-1">Stay in the loop</h3>
                     <p class="text-primary-200 text-sm">Downtown events, new openings, and happenings — straight to your inbox.</p>
                 </div>
-                {{-- TODO: wire action to the newsletter platform (Mailchimp / Constant Contact) once confirmed --}}
-                <form action="#" method="post" class="flex flex-col sm:flex-row gap-3 w-full">
-                    @csrf
-                    <input type="email" name="email" required placeholder="you@email.com" aria-label="Email address" class="flex-grow px-4 py-3 rounded-lg text-primary-900 bg-white/95 border border-primary-600 focus:outline-none focus:ring-2 focus:ring-accent-400">
-                    <button type="submit" class="px-6 py-3 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition-colors whitespace-nowrap">
-                        <i class="fa-duotone fa-light fa-paper-plane mr-1.5"></i>Subscribe
-                    </button>
-                </form>
+                {{-- Newsletter → HubSpot (AJAX, no native HTML validation). --}}
+                <div>
+                    <form id="newsletter-form" novalidate class="w-full">
+                        <div class="grid sm:grid-cols-2 gap-3">
+                            <div>
+                                <input type="text" name="firstname" placeholder="First name" aria-label="First name" autocomplete="given-name" class="w-full px-4 py-3 rounded-lg text-primary-900 bg-white/95 border border-primary-600 focus:outline-none focus:ring-2 focus:ring-accent-400">
+                                <p class="nl-error hidden text-red-300 text-xs mt-1" data-for="firstname"></p>
+                            </div>
+                            <div>
+                                <input type="text" name="lastname" placeholder="Last name" aria-label="Last name" autocomplete="family-name" class="w-full px-4 py-3 rounded-lg text-primary-900 bg-white/95 border border-primary-600 focus:outline-none focus:ring-2 focus:ring-accent-400">
+                                <p class="nl-error hidden text-red-300 text-xs mt-1" data-for="lastname"></p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row sm:items-start gap-3 mt-3">
+                            <div class="flex-grow">
+                                <input type="email" name="email" placeholder="you@email.com" aria-label="Email address" autocomplete="email" class="w-full px-4 py-3 rounded-lg text-primary-900 bg-white/95 border border-primary-600 focus:outline-none focus:ring-2 focus:ring-accent-400">
+                                <p class="nl-error hidden text-red-300 text-xs mt-1" data-for="email"></p>
+                            </div>
+                            <button type="submit" id="nl-submit" class="px-6 py-3 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition-colors whitespace-nowrap disabled:opacity-60">
+                                <i class="fa-duotone fa-light fa-paper-plane mr-1.5"></i>Subscribe
+                            </button>
+                        </div>
+                        <p id="nl-form-error" class="hidden text-red-300 text-sm mt-2"></p>
+                    </form>
+                    <div id="newsletter-success" class="hidden items-center gap-3 bg-white/10 border border-white/20 rounded-lg px-5 py-4">
+                        <i class="fa-duotone fa-light fa-circle-check text-3xl text-accent-300"></i>
+                        <div>
+                            <p class="font-semibold text-white">You&rsquo;re subscribed!</p>
+                            <p class="text-primary-200 text-sm">Thanks &mdash; keep an eye on your inbox for downtown news.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <script>
+            (function () {
+                var form = document.getElementById('newsletter-form');
+                if (!form) return;
+                var PORTAL = '20109775';
+                var FORM_ID = 'b1fe3e78-e462-49cc-b1d9-0ea2ed95f6de';
+                var endpoint = 'https://api.hsforms.com/submissions/v3/integration/submit/' + PORTAL + '/' + FORM_ID;
+                var successEl = document.getElementById('newsletter-success');
+                var formErr = document.getElementById('nl-form-error');
+                var submitBtn = document.getElementById('nl-submit');
+
+                function field(n) { return form.querySelector('[name="' + n + '"]'); }
+                function errBox(n) { return form.querySelector('.nl-error[data-for="' + n + '"]'); }
+                function setErr(n, msg) {
+                    var e = errBox(n), f = field(n);
+                    if (msg) { e.textContent = msg; e.classList.remove('hidden'); f.classList.add('ring-2', 'ring-red-400'); }
+                    else { e.textContent = ''; e.classList.add('hidden'); f.classList.remove('ring-2', 'ring-red-400'); }
+                }
+                function validate() {
+                    var ok = true;
+                    var fn = field('firstname').value.trim(), ln = field('lastname').value.trim(), em = field('email').value.trim();
+                    setErr('firstname', fn ? '' : 'First name is required.'); if (!fn) ok = false;
+                    setErr('lastname', ln ? '' : 'Last name is required.'); if (!ln) ok = false;
+                    if (!em) { setErr('email', 'Email is required.'); ok = false; }
+                    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)) { setErr('email', 'Enter a valid email address.'); ok = false; }
+                    else setErr('email', '');
+                    return ok;
+                }
+                ['firstname', 'lastname', 'email'].forEach(function (n) {
+                    field(n).addEventListener('input', function () { setErr(n, ''); formErr.classList.add('hidden'); });
+                });
+
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    formErr.classList.add('hidden');
+                    if (!validate()) return;
+                    submitBtn.disabled = true;
+                    var original = submitBtn.innerHTML;
+                    submitBtn.innerHTML = 'Subscribing…';
+
+                    fetch(endpoint, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            fields: [
+                                { name: 'firstname', value: field('firstname').value.trim() },
+                                { name: 'lastname', value: field('lastname').value.trim() },
+                                { name: 'email', value: field('email').value.trim() }
+                            ],
+                            context: { pageUri: window.location.href, pageName: document.title }
+                        })
+                    }).then(function (res) {
+                        if (res.ok) {
+                            form.classList.add('hidden');
+                            successEl.classList.remove('hidden');
+                            successEl.classList.add('flex');
+                            return;
+                        }
+                        return res.json().then(function (j) {
+                            var type = j && j.errors && j.errors[0] && j.errors[0].errorType;
+                            if (type === 'INVALID_EMAIL' || type === 'BLOCKED_EMAIL') {
+                                setErr('email', 'Please enter a valid email address.');
+                            } else {
+                                formErr.textContent = 'Sorry, something went wrong. Please try again.';
+                                formErr.classList.remove('hidden');
+                            }
+                            submitBtn.disabled = false; submitBtn.innerHTML = original;
+                        });
+                    }).catch(function () {
+                        formErr.textContent = 'Network error. Please try again.';
+                        formErr.classList.remove('hidden');
+                        submitBtn.disabled = false; submitBtn.innerHTML = original;
+                    });
+                });
+            })();
+        </script>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 {{-- About --}}
