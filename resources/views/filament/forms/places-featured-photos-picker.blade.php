@@ -27,6 +27,12 @@
         border-radius: 9999px; font-size: 12px; display: flex; align-items: center; justify-content: center;
     }
     .dtb-fp-status { margin-top: 0.5rem; font-size: 0.75rem; color: rgb(107 114 128); }
+    .dtb-fp-tip {
+        margin: 0.25rem 0 0.5rem; padding: 0.5rem 0.75rem; border-radius: 0.5rem;
+        background: rgb(255 251 235); border: 1px solid rgb(253 230 138);
+        font-size: 0.8125rem; color: rgb(146 64 14);
+    }
+    .dark .dtb-fp-tip { background: rgba(245,158,11,0.08); border-color: rgba(245,158,11,0.3); color: rgb(252 211 77); }
     .dtb-fp-note {
         margin-top: 0.75rem; padding: 0.75rem 1rem; border-radius: 0.5rem;
         background: rgb(240 253 244); border: 1px solid rgb(187 247 208); font-size: 0.8125rem; color: rgb(22 101 52);
@@ -39,7 +45,10 @@
 <div x-data="placesFeaturedPicker()" x-init="init()" class="dtb-fp">
     <label class="dtb-fp-label">Or pick the featured image from Google</label>
     <p class="dtb-fp-hint">
-        Pull photos from this business&rsquo;s Google listing and use one as the big featured image at the top of the page. On save it&rsquo;s downloaded and stored in our app. Add a location with an address first for best matching.
+        Pull photos from this business&rsquo;s Google listing and use one as the big featured image at the top of the page. On save it&rsquo;s downloaded and stored in our app.
+    </p>
+    <p class="dtb-fp-tip">
+        <strong>Note:</strong> add a location with an address under &ldquo;Locations&rdquo; and save first &mdash; Google photo matching works best when a location is applied to the business.
     </p>
 
     <button type="button" class="dtb-fp-btn" @click="loadPhotos()" x-show="!loading" x-bind:disabled="loading">
