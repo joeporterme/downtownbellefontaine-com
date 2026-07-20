@@ -3,6 +3,7 @@
     'title' => null,
     'subtitle' => null,
     'image' => null,
+    'credit' => null,
     'height' => 'py-24 sm:py-32',
 ])
 
@@ -24,6 +25,9 @@
                  class="parallax-img absolute inset-0 w-full h-full object-cover opacity-40">
             <div class="absolute inset-0 bg-gradient-to-b from-primary-900/55 via-primary-900/40 to-primary-900/80"></div>
         </div>
+        @if($credit)
+            <p class="absolute bottom-2 right-3 z-10 text-[11px] text-white/50 tracking-wide">{{ $credit }}</p>
+        @endif
     @endif
 
     <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 {{ $height }} text-center">

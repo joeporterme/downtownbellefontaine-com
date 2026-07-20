@@ -9,7 +9,8 @@
     eyebrow="Downtown Bellefontaine"
     title="Events"
     subtitle="From First Fridays and festivals to live music, markets, and holiday magic — there's always something happening in Ohio's most loveable downtown."
-    image="/images/pages/first-fridays.jpg" />
+    image="/images/pages/events-fountain-holland.jpg"
+    credit="Photo: Mac McGinnis" />
 
 <x-breadcrumbs :items="[['label' => 'Home', 'url' => url('/')], ['label' => 'Events']]" />
 
