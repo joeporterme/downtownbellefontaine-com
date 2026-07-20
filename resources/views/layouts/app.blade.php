@@ -12,6 +12,9 @@
         $defaultDesc = $settings->default_meta_description
             ?? 'Discover Downtown Bellefontaine, Ohio — local shops, restaurants, events, and things to do in the heart of Logan County.';
         $metaTitle = $page?->seo_title ?: ($page?->title ?: trim($__env->yieldContent('title', 'Downtown Bellefontaine, Ohio')));
+        // A page's custom SEO title is used verbatim (our titles already carry the
+        // brand); everything else gets the " - Downtown Bellefontaine" suffix.
+        $titleTag = filled($page?->seo_title) ? $metaTitle : $metaTitle.' - '.$siteName;
         $metaDescription = $page?->seo_description ?: trim($__env->yieldContent('description', $defaultDesc));
         // Priority: the page's own image (business/post/event featured, or a CMS
         // page's og/hero) → the site-wide default share image.
@@ -29,7 +32,7 @@
     @endphp
 
     {{-- Primary meta --}}
-    <title>{{ $metaTitle }} - {{ $siteName }}</title>
+    <title>{{ $titleTag }}</title>
     <meta name="description" content="{{ $metaDescription }}">
     <link rel="canonical" href="{{ url()->current() }}">
     <meta name="theme-color" content="#01757f">
@@ -59,14 +62,25 @@
     {!! json_encode([
         '@context' => 'https://schema.org',
         '@graph' => [
-            [
+            array_filter([
                 '@type' => 'Organization',
                 '@id' => url('/') . '#organization',
                 'name' => $siteName,
                 'url' => url('/'),
                 'logo' => asset('images/logo.svg'),
+                'description' => $defaultDesc,
+                'email' => $settings->contact_email ?? null,
+                'telephone' => $settings->contact_phone ?? null,
+                'address' => array_filter([
+                    '@type' => 'PostalAddress',
+                    'streetAddress' => $settings->address ?? null,
+                    'addressLocality' => $settings->city ?? 'Bellefontaine',
+                    'addressRegion' => $settings->state ?? 'OH',
+                    'postalCode' => $settings->zip ?? '43311',
+                    'addressCountry' => 'US',
+                ]),
                 'sameAs' => $socialLinks,
-            ],
+            ]),
             [
                 '@type' => 'WebSite',
                 '@id' => url('/') . '#website',
@@ -77,6 +91,32 @@
                     '@type' => 'SearchAction',
                     'target' => url('/businesses') . '?q={search_term_string}',
                     'query-input' => 'required name=search_term_string',
+                ],
+            ],
+            [
+                '@type' => 'TouristDestination',
+                '@id' => url('/') . '#destination',
+                'name' => 'Downtown Bellefontaine',
+                'description' => 'A historic, walkable downtown district in Bellefontaine, Ohio — the heart of Logan County — with local shops, restaurants, breweries, lodging, events, and attractions.',
+                'url' => url('/'),
+                'image' => \App\Support\Media::absoluteUrl($settings->default_og_image ?? '/images/og-default.jpg'),
+                'hasMap' => url('/map'),
+                'touristType' => ['Families', 'Couples', 'Day trippers', 'Shoppers', 'Foodies'],
+                'address' => [
+                    '@type' => 'PostalAddress',
+                    'addressLocality' => 'Bellefontaine',
+                    'addressRegion' => 'OH',
+                    'postalCode' => '43311',
+                    'addressCountry' => 'US',
+                ],
+                'geo' => [
+                    '@type' => 'GeoCoordinates',
+                    'latitude' => 40.3612,
+                    'longitude' => -83.7599,
+                ],
+                'containedInPlace' => [
+                    '@type' => 'AdministrativeArea',
+                    'name' => 'Logan County, Ohio',
                 ],
             ],
         ],

@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
             BlogSeeder::class,
             SiteSettingSeeder::class,
             PageSeeder::class,
+            PageSeoSeeder::class,
             GallerySeeder::class,
             RedirectSeeder::class,
         ]);

@@ -18,6 +18,12 @@
         'description' => $event->description ? Str::limit(strip_tags($event->description), 300) : null,
         'image' => $event->featured_image ? Storage::url($event->featured_image) : null,
         'eventAttendanceMode' => 'https://schema.org/OfflineEventAttendanceMode',
+        'eventStatus' => 'https://schema.org/EventScheduled',
+        'organizer' => [
+            '@type' => 'Organization',
+            'name' => 'Downtown Bellefontaine',
+            'url' => url('/'),
+        ],
         'location' => ($event->location_name || $event->address) ? array_filter([
             '@type' => 'Place',
             'name' => $event->location_name,

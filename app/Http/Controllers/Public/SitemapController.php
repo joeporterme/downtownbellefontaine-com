@@ -41,6 +41,16 @@ class SitemapController extends Controller
             $urls[] = ['loc' => route($name), 'changefreq' => 'weekly', 'priority' => '0.6'];
         }
 
+        // Business category landing pages.
+        \App\Models\BusinessCategory::query()->get(['slug', 'updated_at'])->each(function ($cat) use (&$urls) {
+            $urls[] = [
+                'loc' => route('businesses.category', $cat->slug),
+                'lastmod' => $cat->updated_at?->toAtomString(),
+                'changefreq' => 'monthly',
+                'priority' => '0.5',
+            ];
+        });
+
         Business::approved()->get(['slug', 'updated_at'])->each(function ($b) use (&$urls) {
             $urls[] = [
                 'loc' => route('businesses.show', $b->slug),

@@ -41,8 +41,10 @@ Route::get('/historic-walking-tour', [App\Http\Controllers\Public\WalkingTourCon
 Route::get('/privacy-policy', fn() => view('pages.privacy-policy'))->name('pages.privacy-policy');
 Route::get('/terms-of-service', fn() => view('pages.terms-of-service'))->name('pages.terms-of-service');
 
-// SEO
+// SEO / crawlers
 Route::get('/sitemap.xml', [App\Http\Controllers\Public\SitemapController::class, 'index'])->name('sitemap');
+Route::get('/robots.txt', [App\Http\Controllers\Public\CrawlerController::class, 'robots'])->name('robots');
+Route::get('/llms.txt', [App\Http\Controllers\Public\CrawlerController::class, 'llms'])->name('llms');
 
 // Public Events
 Route::get('/events', [EventController::class, 'index'])->name('events.index');
