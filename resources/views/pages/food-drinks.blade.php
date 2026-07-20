@@ -161,16 +161,4 @@
 </section>
 @endif
 
-{{-- CTA Section --}}
-<section class="py-16 bg-primary-700 dark:bg-primary-900">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <i class="fa-duotone fa-light fa-utensils text-4xl text-accent-400 mb-4"></i>
-        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">Own a Restaurant in Bellefontaine?</h2>
-        <p class="text-primary-200 mb-8 max-w-lg mx-auto">Get your restaurant listed in our directory for free. Reach hungry visitors and join our growing downtown community.</p>
-        <a href="{{ route('register') }}" class="inline-flex items-center gap-2 px-6 py-3 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition-colors shadow-sm">
-            <i class="fa-duotone fa-light fa-rocket"></i>
-            List Your Business
-        </a>
-    </div>
-</section>
 @endsection

@@ -129,22 +129,4 @@
 </section>
 @endif
 
-{{-- CTA --}}
-<section class="py-16 bg-primary-700 dark:bg-primary-900">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <i class="fa-duotone fa-light fa-party-horn text-4xl text-accent-400 mb-4"></i>
-        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">Don't Miss the Next One</h2>
-        <p class="text-primary-200 mb-8 max-w-lg mx-auto">For the full lineup, schedule, and details on what's planned, head to the official First Fridays site.</p>
-        <div class="flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="https://firstfridaysbellefontaine.com/" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition-colors shadow-sm">
-                <i class="fa-duotone fa-light fa-arrow-up-right-from-square"></i>
-                First Fridays Bellefontaine
-            </a>
-            <a href="{{ route('events.index') }}" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent border-2 border-white/40 hover:bg-white/10 text-white font-semibold rounded-lg transition-colors">
-                <i class="fa-duotone fa-light fa-calendar-star"></i>
-                All Events
-            </a>
-        </div>
-    </div>
-</section>
 @endsection

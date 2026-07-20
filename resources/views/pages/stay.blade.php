@@ -152,16 +152,4 @@
 </section>
 @endif
 
-{{-- CTA Section --}}
-<section class="py-16 bg-primary-700 dark:bg-primary-900">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <i class="fa-duotone fa-light fa-map-location-dot text-4xl text-accent-400 mb-4"></i>
-        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">Planning Your Visit?</h2>
-        <p class="text-primary-200 mb-8 max-w-lg mx-auto">Build the perfect Bellefontaine getaway with our sample itineraries and visitor info.</p>
-        <a href="{{ route('pages.plan-a-visit') }}" class="inline-flex items-center gap-2 px-6 py-3 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition-colors shadow-sm">
-            <i class="fa-duotone fa-light fa-compass"></i>
-            Plan a Visit
-        </a>
-    </div>
-</section>
 @endsection

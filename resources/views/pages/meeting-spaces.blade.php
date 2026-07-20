@@ -137,22 +137,4 @@
     </div>
 </section>
 
-{{-- CTA --}}
-<section class="py-16 bg-primary-700 dark:bg-primary-900">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <i class="fa-duotone fa-light fa-calendar-check text-4xl text-accent-400 mb-4"></i>
-        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">Make Your Next Event One You Won't Forget</h2>
-        <p class="text-primary-200 mb-8 max-w-lg mx-auto">Use the downtown map to scout locations, or reach out to the Partnership for tailored recommendations.</p>
-        <div class="flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="{{ route('pages.map') }}" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition-colors shadow-sm">
-                <i class="fa-duotone fa-light fa-map-location-dot"></i>
-                See on the Map
-            </a>
-            <a href="{{ route('pages.contact') }}" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent border-2 border-white/40 hover:bg-white/10 text-white font-semibold rounded-lg transition-colors">
-                <i class="fa-duotone fa-light fa-envelope"></i>
-                Get Recommendations
-            </a>
-        </div>
-    </div>
-</section>
 @endsection
