@@ -13,7 +13,7 @@
             ?? 'Discover Downtown Bellefontaine, Ohio — local shops, restaurants, events, and things to do in the heart of Logan County.';
         $metaTitle = $page?->seo_title ?: ($page?->title ?: trim($__env->yieldContent('title', 'Downtown Bellefontaine, Ohio')));
         $metaDescription = $page?->seo_description ?: trim($__env->yieldContent('description', $defaultDesc));
-        $ogImageRaw = $page?->og_image ?: ($page?->hero_image ?: ($settings->default_og_image ?? '/images/home/downtown-bellefontaine-1.jpg'));
+        $ogImageRaw = $page?->og_image ?: ($page?->hero_image ?: ($settings->default_og_image ?: '/images/og-default.jpg'));
         $ogImage = \App\Support\Media::absoluteUrl($ogImageRaw);
         $ogType = trim($__env->yieldContent('og_type', 'website')) ?: 'website';
         $socialLinks = array_values(array_filter([
