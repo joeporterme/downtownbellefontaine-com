@@ -49,11 +49,11 @@
     {{-- Header — the featured image becomes the hero background when present --}}
     <header class="relative overflow-hidden {{ $post->featured_image ? 'py-24 md:py-36' : 'py-12 md:py-16' }}">
         @if($post->featured_image)
-            <div class="absolute inset-0">
+            <div class="absolute inset-0 overflow-hidden">
                 <img src="{{ \App\Support\Media::url($post->featured_image) }}" alt="{{ $post->title }}"
-                     data-parallax data-parallax-speed="0.2"
-                     class="parallax-img absolute inset-0 w-full h-full object-cover">
-                <div class="absolute inset-0 bg-gradient-to-b from-primary-900/70 via-primary-900/55 to-primary-900/85"></div>
+                     data-parallax data-parallax-speed="0.25"
+                     class="parallax-img absolute inset-0 w-full h-full object-cover opacity-40 blur-sm">
+                <div class="absolute inset-0 bg-gradient-to-b from-primary-900/55 via-primary-900/40 to-primary-900/80"></div>
             </div>
         @endif
         <div class="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -72,6 +72,13 @@
             </div>
         </div>
     </header>
+
+    {{-- Featured image (clear), overlapping the hero --}}
+    @if($post->featured_image)
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 -mt-12 md:-mt-16">
+            <img src="{{ \App\Support\Media::url($post->featured_image) }}" alt="{{ $post->title }}" class="w-full aspect-[16/9] object-cover rounded-2xl shadow-xl ring-1 ring-black/5">
+        </div>
+    @endif
 
     {{-- Body --}}
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 blog-content">
