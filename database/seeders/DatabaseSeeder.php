@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             SiteSettingSeeder::class,
             PageSeeder::class,
             GallerySeeder::class,
+            RedirectSeeder::class,
         ]);
 
         Schema::enableForeignKeyConstraints();

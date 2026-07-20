@@ -10,6 +10,7 @@ use App\Http\Controllers\Business\DashboardController;
 use App\Http\Controllers\Events\EventController;
 use App\Http\Controllers\Public\BlogController;
 use App\Http\Controllers\Public\BusinessController as PublicBusinessController;
+use App\Http\Controllers\RedirectController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\Public\HomeController::class, 'index'])->name('home');
@@ -86,3 +87,7 @@ Route::prefix('portal')->middleware(['auth'])->group(function () {
     Route::put('/events/{event}', [EventController::class, 'update'])->name('events.update');
     Route::delete('/events/{event}', [EventController::class, 'destroy'])->name('events.destroy');
 });
+
+// Legacy WordPress URL redirects — runs only when nothing else matched.
+// Keep this LAST.
+Route::fallback([RedirectController::class, 'handle']);
