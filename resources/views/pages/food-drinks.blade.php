@@ -59,9 +59,9 @@
             </div>
             {{-- Craft beer --}}
             <div class="bg-theme-primary rounded-2xl overflow-hidden border border-theme shadow-sm flex flex-col card-hover">
-                <div class="h-52 bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center">
-                    <i class="fa-duotone fa-light fa-beer-mug-empty text-5xl text-white/90"></i>
-                </div>
+                <img src="/images/pages/brewfontaine-taproom.jpg" alt="Inside Brewfontaine, Ohio's #1 beer bar"
+                     data-lightbox data-lightbox-group="eat" data-lightbox-caption="Inside Brewfontaine — Ohio's #1 beer bar"
+                     class="h-52 w-full object-cover cursor-zoom-in">
                 <div class="p-6 flex flex-col flex-grow">
                     <span class="text-xs font-semibold uppercase tracking-wide text-accent-600 mb-1">Ohio's #1 beer bar</span>
                     <h3 class="text-xl font-bold text-theme-primary mb-2">Craft Beer & Taproom</h3>
