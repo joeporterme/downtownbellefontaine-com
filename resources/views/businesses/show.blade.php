@@ -3,7 +3,7 @@
 @section('title', $business->name)
 @section('description', $business->description ? Str::limit(strip_tags($business->description), 160) : 'Learn more about ' . $business->name . ' in Downtown Bellefontaine, Ohio.')
 @if($business->listingImageUrl)
-    @section('og_image', $business->listingImageUrl)
+    @section('og_image', \App\Support\Media::url($business->featured_image))
 @endif
 
 @push('head')

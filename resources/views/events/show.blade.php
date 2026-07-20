@@ -4,7 +4,7 @@
 @section('description', Str::limit(strip_tags($event->description), 160))
 @section('og_type', 'event')
 @if($event->featured_image)
-    @section('og_image', Storage::url($event->featured_image))
+    @section('og_image', \App\Support\Media::url($event->featured_image))
 @endif
 
 @push('head')
