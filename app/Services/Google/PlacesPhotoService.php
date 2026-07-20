@@ -42,7 +42,12 @@ class PlacesPhotoService
             // The URL host is allowlisted to Google above; Places photo media
             // URLs redirect to Google's image CDN, so redirects are followed
             // (they stay within Google, so this is not an SSRF vector).
+            //
+            // The new Places API media URL carries our referrer-restricted browser
+            // key, so we send a matching Referer header — otherwise the key's HTTP
+            // referrer restriction rejects this server-side request.
             $response = Http::timeout(30)
+                ->withHeaders(['Referer' => rtrim(config('app.url'), '/').'/'])
                 ->withOptions(['allow_redirects' => ['max' => 5, 'strict' => true]])
                 ->get($url);
 
