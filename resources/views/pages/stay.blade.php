@@ -47,7 +47,7 @@
                      class="rounded-2xl shadow-xl w-full object-cover aspect-[4/3] cursor-zoom-in">
             </div>
             <div>
-                <span class="font-display text-2xl sm:text-3xl text-accent-500">Lofts <span class="font-sans font-normal">&amp;</span> flats downtown</span>
+                <span class="font-display text-2xl sm:text-3xl text-accent-500">Lofts and flats downtown</span>
                 <h2 class="text-2xl sm:text-3xl font-bold text-theme-primary mt-1 mb-4">Steps from everything</h2>
                 <p class="text-theme-secondary text-lg leading-relaxed mb-6">Above the storefronts and along the brick side streets, historic buildings have been transformed into stylish, fully furnished lofts and flats — exposed brick, soaring ceilings, thoughtfully designed spaces with full kitchens and every modern comfort. Each one has its own personality, and each one is steps from everything downtown has to offer.</p>
                 <div class="grid grid-cols-2 gap-3 text-theme-secondary">
