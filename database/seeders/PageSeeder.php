@@ -62,10 +62,10 @@ class PageSeeder extends Seeder
                 'seo_description' => 'Explore Downtown Bellefontaine on our interactive map - find shops, restaurants, lodging, parking, and things to do.',
             ],
             [
-                'key' => 'first-fridays', 'title' => 'First Fridays', 'nav_label' => 'First Fridays', 'sort' => 70,
-                'hero_eyebrow' => 'Downtown Bellefontaine', 'hero_heading' => 'First Fridays',
+                'key' => 'first-fridays', 'title' => 'Downtown Days', 'nav_label' => 'Downtown Days', 'sort' => 70,
+                'hero_eyebrow' => 'Downtown Bellefontaine', 'hero_heading' => 'Downtown Days',
                 'hero_image' => 'pages/heroes/first-fridays.jpg',
-                'seo_description' => 'Join us for First Fridays in Downtown Bellefontaine - monthly community events celebrating local shops, food, music, and entertainment.',
+                'seo_description' => 'Join us for Downtown Days in Downtown Bellefontaine - monthly community events celebrating local shops, food, music, and entertainment.',
             ],
             [
                 'key' => 'meeting-spaces', 'title' => 'Meeting Spaces', 'nav_label' => 'Meeting Spaces', 'sort' => 80,

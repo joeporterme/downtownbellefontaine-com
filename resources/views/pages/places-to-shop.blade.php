@@ -40,24 +40,19 @@
 {{-- What you'll find --}}
 <section class="py-16 bg-theme-secondary">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl mb-10">
-            <span class="font-display text-2xl sm:text-3xl text-accent-500">Aisle after aisle of one-of-a-kind</span>
-            <p class="text-theme-secondary text-lg mt-2 leading-relaxed">You'll find on-trend fashion for women and kids, graphic tees that let you wear your Ohio pride, handcrafted bath and body goods, gourmet chocolates, curated gifts you won't see anywhere else, and antique shops stacked with treasures that reward the patient hunter. There's even a retail craft beer shop where you can browse the shelves with a pint in hand — because this is that kind of town.</p>
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            @foreach([
-                ['fa-shirt', 'Fashion'],
-                ['fa-gift', 'Gifts'],
-                ['fa-pump-soap', 'Bath & Body'],
-                ['fa-candy-bar', 'Chocolates'],
-                ['fa-treasure-chest', 'Antiques'],
-                ['fa-beer-mug', 'Craft Beer'],
-            ] as [$icon, $label])
-                <div class="bg-theme-primary rounded-xl border border-theme p-5 text-center card-hover">
-                    <i class="fa-duotone fa-light {{ $icon }} text-3xl text-primary-500 mb-3"></i>
-                    <p class="font-semibold text-theme-primary text-sm">{{ $label }}</p>
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div>
+                <span class="font-display text-2xl sm:text-3xl text-accent-500">Aisle after aisle of one-of-a-kind</span>
+                <div class="space-y-4 text-theme-secondary text-lg mt-3 leading-relaxed">
+                    <p>You'll find on-trend fashion for women and kids and graphic tees that let you wear your Ohio pride, handcrafted bath and body goods, gourmet chocolates, and curated gifts you won't see anywhere else.</p>
+                    <p>Antique shops stacked with treasures reward the patient hunter — and there's even a retail craft beer shop where you can browse the shelves with a pint in hand. Because this is that kind of town.</p>
                 </div>
-            @endforeach
+            </div>
+            <div class="relative">
+                <img src="{{ \App\Support\Media::url('gallery/shopping.jpg') }}" alt="Shopping local in Downtown Bellefontaine"
+                     data-lightbox data-lightbox-group="shop" data-lightbox-caption="One-of-a-kind finds in Downtown Bellefontaine"
+                     class="rounded-2xl shadow-xl w-full object-cover aspect-[4/3] cursor-zoom-in">
+            </div>
         </div>
     </div>
 </section>

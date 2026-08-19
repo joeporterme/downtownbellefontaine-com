@@ -42,7 +42,7 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-3xl mb-10">
             <span class="font-display text-2xl sm:text-3xl text-accent-500">Start downtown</span>
-            <p class="text-theme-secondary text-lg mt-2 leading-relaxed">The entertainment lineup reads like a city ten times our size — plus public art around every corner, including a growing mural trail that's made our brick walls Instagram famous.</p>
+            <p class="text-theme-secondary text-lg mt-2 leading-relaxed">The entertainment lineup reads like a city ten times our size — plus public art, photo ops, and a story around every corner.</p>
         </div>
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
             @foreach([
@@ -50,9 +50,10 @@
                 ['fa-door-closed', 'Escape Room'],
                 ['fa-golf-flag-hole', 'Indoor Mini Golf'],
                 ['fa-crosshairs', 'Laser Tag'],
-                ['fa-vr-cardboard', 'Virtual Reality'],
-                ['fa-candle-holder', 'Candle Making'],
-                ['fa-palette', 'Mural Trail'],
+                ['fa-bowling-ball-pin', 'Duckpin Bowling'],
+                ['fa-camera-retro', 'Photo Ops'],
+                ['fa-landmark-dome', 'History Museum'],
+                ['fa-person-walking', 'Historic Walking Tour'],
                 ['fa-masks-theater', 'Live Shows'],
             ] as [$icon, $label])
                 <div class="bg-theme-primary rounded-xl border border-theme p-5 text-center card-hover">
@@ -69,7 +70,7 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div class="relative">
-                <img src="{{ \App\Support\Media::url('gallery/courthouse-holland-night.jpg') }}" alt="The Holland Theatre marquee lit at night"
+                <img src="{{ \App\Support\Media::url('gallery/holland-theatre.jpg') }}" alt="The Holland Theatre lit at night"
                      data-lightbox data-lightbox-group="play" data-lightbox-caption="The Holland Theatre — the only atmospheric Dutch-style theater in America"
                      class="rounded-2xl shadow-2xl w-full object-cover aspect-[4/3] cursor-zoom-in">
             </div>
@@ -196,6 +197,78 @@
                     <p class="text-xs text-accent-600 font-semibold uppercase tracking-wide mb-2">~15 min · West Liberty</p>
                     <p class="text-theme-secondary text-sm leading-relaxed flex-grow">Tour Mac-A-Cheek and Mac-O-Chee — 19th-century homes full of towers, hand-carved woodwork, and stained glass.</p>
                     <a href="https://www.piattcastles.org" target="_blank" rel="noopener" class="mt-4 inline-flex items-center gap-1.5 text-primary-600 dark:text-primary-400 font-medium text-sm hover:underline">Visit site <i class="fa-duotone fa-light fa-arrow-up-right-from-square text-xs"></i></a>
+                </div>
+            </div>
+
+            {{-- Campbell Hill --}}
+            <div class="bg-theme-secondary rounded-xl shadow border border-theme overflow-hidden flex flex-col">
+                <div class="h-28 bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center">
+                    <i class="fa-duotone fa-light fa-mountain text-4xl text-white/90"></i>
+                </div>
+                <div class="p-5 flex flex-col flex-grow">
+                    <h3 class="text-lg font-semibold text-theme-primary mb-1">Campbell Hill</h3>
+                    <p class="text-xs text-accent-600 font-semibold uppercase tracking-wide mb-2">~5 min · Bellefontaine</p>
+                    <p class="text-theme-secondary text-sm leading-relaxed flex-grow">The highest point in Ohio at 1,549 feet — a quick drive from downtown for the classic "top of the state" photo.</p>
+                </div>
+            </div>
+
+            {{-- Simon Kenton Trail --}}
+            <div class="bg-theme-secondary rounded-xl shadow border border-theme overflow-hidden flex flex-col">
+                <div class="h-28 bg-gradient-to-br from-success-400 to-success-600 flex items-center justify-center">
+                    <i class="fa-duotone fa-light fa-person-biking text-4xl text-white/90"></i>
+                </div>
+                <div class="p-5 flex flex-col flex-grow">
+                    <h3 class="text-lg font-semibold text-theme-primary mb-1">Simon Kenton Trail</h3>
+                    <p class="text-xs text-accent-600 font-semibold uppercase tracking-wide mb-2">In &amp; around town</p>
+                    <p class="text-theme-secondary text-sm leading-relaxed flex-grow">A paved rail-trail for biking, walking, and running that threads right through Bellefontaine and out into the countryside.</p>
+                </div>
+            </div>
+
+            {{-- Mary Rutan Park --}}
+            <div class="bg-theme-secondary rounded-xl shadow border border-theme overflow-hidden flex flex-col">
+                <div class="h-28 bg-gradient-to-br from-success-400 to-success-600 flex items-center justify-center">
+                    <i class="fa-duotone fa-light fa-tree text-4xl text-white/90"></i>
+                </div>
+                <div class="p-5 flex flex-col flex-grow">
+                    <h3 class="text-lg font-semibold text-theme-primary mb-1">Mary Rutan Park</h3>
+                    <p class="text-xs text-accent-600 font-semibold uppercase tracking-wide mb-2">~5 min · Bellefontaine</p>
+                    <p class="text-theme-secondary text-sm leading-relaxed flex-grow">A local favorite for playgrounds, ball fields, shelters, and summer concerts — easy green space minutes from downtown.</p>
+                </div>
+            </div>
+
+            {{-- YMCA Camp Willson --}}
+            <div class="bg-theme-secondary rounded-xl shadow border border-theme overflow-hidden flex flex-col">
+                <div class="h-28 bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center">
+                    <i class="fa-duotone fa-light fa-campground text-4xl text-white/90"></i>
+                </div>
+                <div class="p-5 flex flex-col flex-grow">
+                    <h3 class="text-lg font-semibold text-theme-primary mb-1">YMCA Camp Willson</h3>
+                    <p class="text-xs text-accent-600 font-semibold uppercase tracking-wide mb-2">~15 min · Bellefontaine</p>
+                    <p class="text-theme-secondary text-sm leading-relaxed flex-grow">Overnight and day camps, horseback riding, and outdoor adventure on hundreds of acres of Logan County countryside.</p>
+                </div>
+            </div>
+
+            {{-- Camp Myeerah --}}
+            <div class="bg-theme-secondary rounded-xl shadow border border-theme overflow-hidden flex flex-col">
+                <div class="h-28 bg-gradient-to-br from-success-400 to-success-600 flex items-center justify-center">
+                    <i class="fa-duotone fa-light fa-campfire text-4xl text-white/90"></i>
+                </div>
+                <div class="p-5 flex flex-col flex-grow">
+                    <h3 class="text-lg font-semibold text-theme-primary mb-1">Camp Myeerah</h3>
+                    <p class="text-xs text-accent-600 font-semibold uppercase tracking-wide mb-2">~15 min · Zanesfield</p>
+                    <p class="text-theme-secondary text-sm leading-relaxed flex-grow">A wooded retreat for youth camps, group getaways, and outdoor learning tucked into the hills east of town.</p>
+                </div>
+            </div>
+
+            {{-- Golf: Liberty Hills & Cherokee Hills --}}
+            <div class="bg-theme-secondary rounded-xl shadow border border-theme overflow-hidden flex flex-col">
+                <div class="h-28 bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center">
+                    <i class="fa-duotone fa-light fa-golf-ball-tee text-4xl text-white/90"></i>
+                </div>
+                <div class="p-5 flex flex-col flex-grow">
+                    <h3 class="text-lg font-semibold text-theme-primary mb-1">Liberty Hills &amp; Cherokee Hills Golf</h3>
+                    <p class="text-xs text-accent-600 font-semibold uppercase tracking-wide mb-2">~10 min · Logan County</p>
+                    <p class="text-theme-secondary text-sm leading-relaxed flex-grow">Two scenic public courses just outside town — rolling fairways and honest small-town green fees for a relaxed round.</p>
                 </div>
             </div>
         </div>

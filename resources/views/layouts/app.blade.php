@@ -209,7 +209,7 @@
                                 </a>
                                 <a href="{{ route('pages.first-fridays') }}" class="flex items-center gap-3 px-4 py-2.5 text-sm text-theme-secondary hover:bg-theme-tertiary hover:text-primary-500 transition-colors">
                                     <i class="fa-duotone fa-light fa-calendar-star w-4 text-primary-500"></i>
-                                    <span>First Fridays</span>
+                                    <span>Downtown Days</span>
                                 </a>
                                 <a href="{{ route('pages.dora') }}" class="flex items-center gap-3 px-4 py-2.5 text-sm text-theme-secondary hover:bg-theme-tertiary hover:text-primary-500 transition-colors">
                                     <i class="fa-duotone fa-light fa-martini-glass-citrus w-4 text-primary-500"></i>
@@ -222,6 +222,10 @@
                             </div>
                         </div>
                     </div>
+                    <a href="{{ route('pages.contact') }}" class="flex items-center gap-1.5 text-theme-secondary hover:text-primary-500 dark:hover:text-primary-400 transition-colors font-medium text-[15px]">
+                        <i class="fa-duotone fa-light fa-envelope text-primary-500"></i>
+                        <span>Contact</span>
+                    </a>
                     <a href="{{ route('pages.map') }}" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accent-500 hover:bg-accent-600 text-white transition-colors font-semibold text-[15px]">
                         <i class="fa-duotone fa-light fa-map-location-dot"></i>
                         <span>Map</span>
@@ -297,7 +301,7 @@
                     </a>
                     <a href="{{ route('pages.first-fridays') }}" class="flex items-center gap-3 py-2 text-sm text-theme-tertiary hover:text-primary-500">
                         <i class="fa-duotone fa-light fa-calendar-star w-4 text-center text-primary-400"></i>
-                        <span>First Fridays</span>
+                        <span>Downtown Days</span>
                     </a>
                     <a href="{{ route('pages.dora') }}" class="flex items-center gap-3 py-2 text-sm text-theme-tertiary hover:text-primary-500">
                         <i class="fa-duotone fa-light fa-martini-glass-citrus w-4 text-center text-primary-400"></i>
@@ -311,6 +315,10 @@
                 <a href="{{ route('pages.map') }}" class="flex items-center gap-3 py-2.5 text-theme-secondary hover:text-primary-500">
                     <i class="fa-duotone fa-light fa-map-location-dot w-5 text-center text-primary-500"></i>
                     <span>Map</span>
+                </a>
+                <a href="{{ route('pages.contact') }}" class="flex items-center gap-3 py-2.5 text-theme-secondary hover:text-primary-500">
+                    <i class="fa-duotone fa-light fa-envelope w-5 text-center text-primary-500"></i>
+                    <span>Contact Us</span>
                 </a>
                 <div class="border-t border-theme pt-2 mt-2">
                     @auth
@@ -642,5 +650,8 @@
 
     {{-- Sitewide photo lightbox --}}
     <x-lightbox />
+
+    {{-- Dismissible newsletter slide-up (first visit only) --}}
+    @include('partials.newsletter-popup')
 </body>
 </html>

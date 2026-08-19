@@ -1,17 +1,17 @@
 @extends('layouts.app')
 
-@section('title', 'First Fridays')
-@section('description', 'Join us for First Fridays in Downtown Bellefontaine - monthly community events celebrating local shops, food, music, and entertainment.')
+@section('title', 'Downtown Days')
+@section('description', 'Join us for Downtown Days in Downtown Bellefontaine - monthly community events celebrating local shops, food, music, and entertainment.')
 
 @section('content')
 {{-- Hero --}}
 <x-page-hero
     eyebrow="Downtown Bellefontaine"
-    title="First Fridays"
+    title="Downtown Days"
     subtitle="Once a month, the whole square comes alive. Shop, eat, explore -- and repeat."
     image="/images/pages/first-fridays.jpg" />
 
-<x-breadcrumbs :items="[['label' => 'Home', 'url' => url('/')], ['label' => 'First Fridays']]" />
+<x-breadcrumbs :items="[['label' => 'Home', 'url' => url('/')], ['label' => 'Downtown Days']]" />
 
 {{-- Story Section --}}
 <section class="py-16 bg-theme-primary">
@@ -20,13 +20,13 @@
             <div>
                 <h2 class="text-2xl sm:text-3xl font-bold text-theme-primary mb-4">A Standing Date with Downtown</h2>
                 <div class="space-y-4 text-theme-secondary leading-relaxed">
-                    <p>You gotta love a good Friday. And the <strong class="text-theme-primary">Downtown Bellefontaine Partnership</strong> -- a nonprofit organization -- has committed to make every first Friday of the month one for the books.</p>
+                    <p>You gotta love a good downtown day. And the <strong class="text-theme-primary">Downtown Bellefontaine Partnership</strong> -- a nonprofit organization -- has committed to make each month's Downtown Days one for the books.</p>
                     <p>Their mission: make Bellefontaine the place to be by improving the quality and quantity of commerce, unifying public and private sectors, and promoting historic preservation to enrich the cultural life of our community.</p>
                     <p>How do they do it? By hosting monthly downtown events that encourage people to come and support local shops in Logan County.</p>
                 </div>
             </div>
             <div class="relative">
-                <img src="/images/pages/first-fridays.jpg" alt="First Fridays evening on the square" class="rounded-xl shadow-lg w-full object-cover aspect-[4/3]">
+                <img src="/images/pages/first-fridays.jpg" alt="Downtown Days evening on the square" class="rounded-xl shadow-lg w-full object-cover aspect-[4/3]">
                 <div class="absolute -bottom-4 -right-4 bg-accent-500 text-white rounded-lg px-5 py-3 shadow-lg hidden sm:block">
                     <p class="font-display text-lg">Shop. Eat. Repeat.</p>
                 </div>
@@ -79,11 +79,14 @@
     </div>
 </section>
 
-{{-- Upcoming First Fridays --}}
+{{-- Upcoming Downtown Days (matches the new name and legacy "First Friday" titles) --}}
 @php
     $upcomingFirstFridays = \App\Models\Event::approved()
         ->upcoming()
-        ->where('title', 'like', '%First Friday%')
+        ->where(function ($q) {
+            $q->where('title', 'like', '%Downtown Days%')
+              ->orWhere('title', 'like', '%First Friday%');
+        })
         ->orderBy('event_date')
         ->take(3)
         ->get();
@@ -94,7 +97,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
             <span class="font-display text-2xl text-accent-500">Coming Up</span>
-            <h2 class="text-2xl sm:text-3xl font-bold text-theme-primary mt-2">Upcoming First Fridays</h2>
+            <h2 class="text-2xl sm:text-3xl font-bold text-theme-primary mt-2">Upcoming Downtown Days</h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">

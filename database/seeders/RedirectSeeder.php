@@ -23,6 +23,10 @@ class RedirectSeeder extends Seeder
             $this->upsert(['from_path' => $from, 'to_url' => $to, 'notes' => 'pages']);
         }
 
+        foreach ($this->renameRules() as $from => $to) {
+            $this->upsert(['from_path' => $from, 'to_url' => $to, 'notes' => 'rename']);
+        }
+
         $this->eventRules();
         $this->mediaRules();
 
@@ -73,6 +77,18 @@ class RedirectSeeder extends Seeder
             '/thank-you' => '/',
             '/qa-event-creation-page' => '/',
             '/dev-page1' => '/',
+        ];
+    }
+
+    /**
+     * Internal page renames (not WordPress) — keep old links working.
+     *
+     * @return array<string,string>
+     */
+    protected function renameRules(): array
+    {
+        return [
+            '/first-fridays' => '/downtown-days',
         ];
     }
 

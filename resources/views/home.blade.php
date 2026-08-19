@@ -302,8 +302,7 @@
             <span class="gradient-text">Bellefontaine</span>
         </h1>
         <p class="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto reveal active delay-200">
-            Discover the heart of Logan County. Where small-town charm meets<br class="hidden md:inline">
-            vibrant community spirit in Ohio's highest city.
+            Discover the heart of Logan County. Where <span class="whitespace-nowrap">small-town charm meets</span> vibrant community spirit in Ohio's highest city.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center reveal active delay-300">
             <a href="#explore-downtown" class="inline-flex items-center justify-center px-8 py-4 bg-accent-500 hover:bg-accent-400 text-white font-semibold rounded-full transition-all pulse-glow text-lg">

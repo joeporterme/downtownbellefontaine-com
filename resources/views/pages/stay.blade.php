@@ -47,7 +47,7 @@
                      class="rounded-2xl shadow-xl w-full object-cover aspect-[4/3] cursor-zoom-in">
             </div>
             <div>
-                <span class="font-display text-2xl sm:text-3xl text-accent-500">Lofts & flats downtown</span>
+                <span class="font-display text-2xl sm:text-3xl text-accent-500">Lofts <span class="font-sans font-normal">&amp;</span> flats downtown</span>
                 <h2 class="text-2xl sm:text-3xl font-bold text-theme-primary mt-1 mb-4">Steps from everything</h2>
                 <p class="text-theme-secondary text-lg leading-relaxed mb-6">Above the storefronts and along the brick side streets, historic buildings have been transformed into stylish, fully furnished lofts and flats — exposed brick, soaring ceilings, thoughtfully designed spaces with full kitchens and every modern comfort. Each one has its own personality, and each one is steps from everything downtown has to offer.</p>
                 <div class="grid grid-cols-2 gap-3 text-theme-secondary">
@@ -82,12 +82,13 @@
             <span class="font-display text-2xl sm:text-3xl text-accent-500">The perfect basecamp</span>
             <h2 class="text-2xl sm:text-3xl font-bold text-theme-primary mt-1">Close to the action, far from ordinary</h2>
         </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             @foreach([
                 ['fa-briefcase', 'Work Trips', 'Extended-stay options with real kitchens and real workspace beat a highway hotel room every time.'],
                 ['fa-champagne-glasses', 'Girls\' Weekend', 'Shops, dinner, drinks, and a stylish loft to call home base — all within a walk.'],
                 ['fa-person-skiing', 'Ski Trips', 'The slopes are just twenty minutes away — stay downtown and warm up in style.'],
                 ['fa-water', 'Lake Getaways', 'A summer lake escape with downtown\'s food and nightlife minutes from the water.'],
+                ['fa-mountains', 'Local Attractions', 'From Marmon Valley Farm to Ohio Caverns and more, make downtown your home base for a whole region of adventures.'],
             ] as [$icon, $title, $body])
                 <div class="bg-theme-secondary rounded-2xl border border-theme p-6 card-hover">
                     <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-accent-400 to-accent-600 flex items-center justify-center mb-4">

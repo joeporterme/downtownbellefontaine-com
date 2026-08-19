@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
 @section('title', 'Events')
-@section('description', 'Discover upcoming events in Downtown Bellefontaine, Ohio - festivals, community gatherings, First Fridays, and more.')
+@section('description', 'Discover upcoming events in Downtown Bellefontaine, Ohio - festivals, community gatherings, Downtown Days, and more.')
 
 @section('content')
 {{-- Hero --}}
 <x-page-hero
     eyebrow="Downtown Bellefontaine"
     title="Events"
-    subtitle="From First Fridays and festivals to live music, markets, and holiday magic — there's always something happening in Ohio's most loveable downtown."
+    subtitle="From Downtown Days and festivals to live music, markets, and holiday magic — there's always something happening in Ohio's most loveable downtown."
     image="/images/pages/events-fountain-holland.jpg"
     credit="Photo: Mac McGinnis" />
 

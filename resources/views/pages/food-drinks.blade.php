@@ -69,30 +69,18 @@
                     <p class="text-theme-tertiary text-xs mt-3 italic">Brewfontaine</p>
                 </div>
             </div>
-            {{-- Fine dining --}}
+            {{-- Tacos & tequila --}}
             <div class="bg-theme-primary rounded-2xl overflow-hidden border border-theme shadow-sm flex flex-col card-hover">
-                <img src="/images/pages/bella-vino.jpg" alt="Elegant downtown dining"
-                     data-lightbox data-lightbox-group="eat" data-lightbox-caption="Elevated dining in a restored downtown space"
-                     class="h-52 w-full object-cover cursor-zoom-in">
+                <div class="h-52 bg-gradient-to-br from-accent-400 to-accent-600 flex items-center justify-center">
+                    <i class="fa-duotone fa-light fa-pepper-hot text-6xl text-white/90"></i>
+                </div>
                 <div class="p-6 flex flex-col flex-grow">
-                    <span class="text-xs font-semibold uppercase tracking-wide text-accent-600 mb-1">Elevated dining</span>
-                    <h3 class="text-xl font-bold text-theme-primary mb-2">White-Tablecloth Warmth</h3>
-                    <p class="text-theme-secondary text-sm leading-relaxed flex-grow">A former newsstand reborn as an elegant dinner spot where big-city dining meets small-town warmth — complete with a bar built from salvaged glass and walls lined with vintage local newspapers.</p>
+                    <span class="text-xs font-semibold uppercase tracking-wide text-accent-600 mb-1">Taco &amp; tequila bar</span>
+                    <h3 class="text-xl font-bold text-theme-primary mb-2">Flying Pepper</h3>
+                    <p class="text-theme-secondary text-sm leading-relaxed flex-grow">An award-winning taco and tequila bar bringing bold, colorful flavor to downtown — creative street-style tacos, a deep tequila and mezcal list, and a mural-splashed space that's as fun as the menu.</p>
+                    <p class="text-theme-tertiary text-xs mt-3 italic">Flying Pepper</p>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-
-{{-- And that's just the beginning --}}
-<section class="py-16 bg-theme-primary">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <span class="font-display text-2xl sm:text-3xl text-accent-500">And that's just the beginning</span>
-        <p class="text-theme-secondary text-lg mt-2 mb-8 max-w-3xl mx-auto leading-relaxed">Slow-smoked barbecue. Classic diner burgers and milkshakes made the old-fashioned way. Colorful Mexican cantina fare with curated tequila flights. Fresh-caught fish. A brunch spot so delightfully weird you'll be talking about it for weeks.</p>
-        <div class="flex flex-wrap justify-center gap-3">
-            @foreach(['Barbecue', 'Diner Classics', 'Mexican Cantina', 'Fresh Fish', 'Brunch', 'Tequila Flights'] as $chip)
-                <span class="px-4 py-2 rounded-full bg-theme-secondary border border-theme text-theme-secondary text-sm font-medium">{{ $chip }}</span>
-            @endforeach
         </div>
     </div>
 </section>
@@ -109,9 +97,9 @@
             <div>
                 <span class="font-display text-2xl sm:text-3xl text-accent-500">Save room</span>
                 <h2 class="text-2xl sm:text-3xl font-bold text-theme-primary mt-1 mb-4">Dessert is a whole category</h2>
-                <p class="text-theme-secondary text-lg leading-relaxed mb-6">Scratch-made donuts, homemade ice cream in rotating flavors, frozen custard, Parisian-style macarons, and coffee shops where the latte comes with a side of conversation.</p>
+                <p class="text-theme-secondary text-lg leading-relaxed mb-6">Hand-dipped chocolates and truffles, scratch-made donuts, homemade ice cream in rotating flavors, frozen custard, Parisian-style macarons, and coffee shops where the latte comes with a side of conversation.</p>
                 <div class="grid grid-cols-2 gap-3 text-theme-secondary">
-                    @foreach([['fa-donut','Donuts'], ['fa-ice-cream','Ice Cream'], ['fa-cup-togo','Coffee'], ['fa-cookie-bite','Macarons']] as [$icon,$label])
+                    @foreach([['fa-candy-bar','Chocolates & Truffles'], ['fa-donut','Donuts'], ['fa-ice-cream','Ice Cream'], ['fa-cup-togo','Frozen Custard'], ['fa-mug-hot','Coffee'], ['fa-cookie-bite','Macarons']] as [$icon,$label])
                         <div class="flex items-center gap-2.5">
                             <i class="fa-duotone fa-light {{ $icon }} text-primary-500"></i>
                             <span class="text-sm font-medium">{{ $label }}</span>

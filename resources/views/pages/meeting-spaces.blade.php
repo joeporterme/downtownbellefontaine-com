@@ -50,6 +50,24 @@
             'gradient' => 'from-success-400 to-success-600',
             'icon' => 'fa-flag',
         ],
+        [
+            'name' => 'BUILD Exchange Room',
+            'url' => 'https://buildcowork.com/',
+            'tagline' => 'Flexible meeting room',
+            'description' => 'A versatile downtown room for workshops, trainings, and team gatherings -- flexible seating, presentation-ready A/V, and a walkable location in the heart of downtown.',
+            'image' => null,
+            'gradient' => 'from-sky-400 to-sky-600',
+            'icon' => 'fa-people-group',
+        ],
+        [
+            'name' => 'Axe Quacks',
+            'url' => null,
+            'tagline' => 'Parties + group events',
+            'description' => 'A lively spot for private parties, team-building, and group events downtown -- axe throwing and games make for a memorable, hands-on gathering.',
+            'image' => null,
+            'gradient' => 'from-primary-400 to-primary-600',
+            'icon' => 'fa-axe',
+        ],
     ];
 @endphp
 
@@ -59,7 +77,7 @@
     eyebrow="Downtown Bellefontaine"
     title="Meeting Spaces"
     subtitle="Weddings, board meetings, birthday parties, all-day workshops -- downtown has a room for it."
-    image="/images/home/downtown-bellefontaine-3.jpg" />
+    image="/images/pages/bella-vino.jpg" />
 
 <x-breadcrumbs :items="[['label' => 'Home', 'url' => url('/')], ['label' => 'Meeting Spaces']]" />
 
@@ -97,10 +115,12 @@
                         <p class="text-xs uppercase tracking-wider font-semibold text-accent-600 mb-2">{{ $venue['tagline'] }}</p>
                         <h3 class="text-xl font-bold text-theme-primary mb-2">{{ $venue['name'] }}</h3>
                         <p class="text-theme-secondary text-sm leading-relaxed flex-1">{{ $venue['description'] }}</p>
-                        <a href="{{ $venue['url'] }}" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 mt-4 text-accent-600 hover:text-accent-700 font-semibold text-sm">
-                            Visit website
-                            <i class="fa-duotone fa-light fa-arrow-up-right-from-square text-xs"></i>
-                        </a>
+                        @if(!empty($venue['url']))
+                            <a href="{{ $venue['url'] }}" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 mt-4 text-accent-600 hover:text-accent-700 font-semibold text-sm">
+                                Visit website
+                                <i class="fa-duotone fa-light fa-arrow-up-right-from-square text-xs"></i>
+                            </a>
+                        @endif
                     </div>
                 </div>
             @endforeach

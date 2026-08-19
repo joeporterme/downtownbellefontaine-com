@@ -25,7 +25,7 @@ class GallerySeeder extends Seeder
             ['gallery/custard.jpg', "Sweet treats at Whit's"],
             ['gallery/bella-vino.jpg', 'Bella Vino Events & Wine Room'],
             ['gallery/transportation-museum.jpg', 'The Transportation Museum'],
-            ['gallery/first-fridays.jpg', 'First Fridays downtown'],
+            ['gallery/first-fridays.jpg', 'Downtown Days downtown'],
             ['gallery/mckinley-street.jpg', "McKinley Street — America's shortest street"],
         ];
 

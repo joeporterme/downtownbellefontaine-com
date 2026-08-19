@@ -58,8 +58,8 @@ class PageSeoSeeder extends Seeder
                 'Explore our interactive Downtown Bellefontaine map — find local shops, restaurants, lodging, parking, and things to do across the historic district.',
             ],
             'first-fridays' => [
-                'First Fridays in Downtown Bellefontaine, Ohio',
-                'First Fridays in Downtown Bellefontaine — monthly live music, extended shop and restaurant hours, DORA drinks, and family fun on the historic square.',
+                'Downtown Days in Downtown Bellefontaine, Ohio',
+                'Downtown Days in Downtown Bellefontaine — monthly live music, extended shop and restaurant hours, DORA drinks, and family fun on the historic square.',
             ],
             'meeting-spaces' => [
                 'Meeting & Event Spaces in Downtown Bellefontaine',

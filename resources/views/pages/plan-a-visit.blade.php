@@ -78,13 +78,13 @@
                     <i class="fa-duotone fa-light fa-party-horn text-5xl text-white"></i>
                 </div>
                 <div class="p-6">
-                    <h3 class="text-xl font-bold text-theme-primary mb-3">First Friday Night</h3>
+                    <h3 class="text-xl font-bold text-theme-primary mb-3">Downtown Days Night</h3>
                     <ul class="space-y-2 text-theme-secondary text-sm">
                         <li class="flex gap-2"><i class="fa-duotone fa-light fa-clock text-violet-500 mt-1"></i><span>Arrive early -- the square fills up fast</span></li>
                         <li class="flex gap-2"><i class="fa-duotone fa-light fa-music text-violet-500 mt-1"></i><span>Live music and entertainment</span></li>
                         <li class="flex gap-2"><i class="fa-duotone fa-light fa-wine-glass text-violet-500 mt-1"></i><span>DORA cup in hand, stroll the shops</span></li>
                         <li class="flex gap-2"><i class="fa-duotone fa-light fa-store text-violet-500 mt-1"></i><span>Extended retail and restaurant hours</span></li>
-                        <li class="flex gap-2"><i class="fa-duotone fa-light fa-link text-violet-500 mt-1"></i><a href="{{ route('pages.first-fridays') }}" class="hover:underline">Learn more about First Fridays</a></li>
+                        <li class="flex gap-2"><i class="fa-duotone fa-light fa-link text-violet-500 mt-1"></i><a href="{{ route('pages.first-fridays') }}" class="hover:underline">Learn more about Downtown Days</a></li>
                     </ul>
                 </div>
             </div>
@@ -122,7 +122,7 @@
                 <div class="w-14 h-14 mx-auto mb-4 bg-gradient-to-br from-violet-400 to-violet-600 rounded-xl flex items-center justify-center">
                     <i class="fa-duotone fa-light fa-party-horn text-2xl text-white"></i>
                 </div>
-                <h3 class="font-semibold text-theme-primary group-hover:text-violet-600 transition-colors mb-1">First Fridays</h3>
+                <h3 class="font-semibold text-theme-primary group-hover:text-violet-600 transition-colors mb-1">Downtown Days</h3>
                 <p class="text-sm text-theme-tertiary">Monthly downtown celebrations</p>
             </a>
 
