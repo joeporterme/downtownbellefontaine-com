@@ -32,14 +32,14 @@ class PageSeeder extends Seeder
             [
                 'key' => 'food-drinks', 'title' => 'Food & Drinks', 'nav_label' => 'Eat', 'sort' => 20,
                 'hero_eyebrow' => 'Downtown Bellefontaine', 'hero_heading' => 'Food & Drinks',
-                'hero_image' => 'pages/heroes/bella-vino.jpg',
+                'hero_image' => 'pages/heroes/eat-hero.jpg',
                 'seo_description' => 'Discover the best food and drinks in Downtown Bellefontaine, Ohio - from award-winning pizza to craft beer, coffee, and sweet treats.',
             ],
             [
                 'key' => 'stay', 'title' => 'Stay', 'nav_label' => 'Stay', 'sort' => 30,
                 'hero_eyebrow' => 'Downtown Bellefontaine', 'hero_heading' => 'Stay Awhile',
                 'hero_subheading' => "One day isn't enough. Make a weekend of it with a stay in Logan County's most loveable small town.",
-                'hero_image' => 'pages/heroes/downtown-bellefontaine-2.jpg',
+                'hero_image' => 'pages/heroes/stay-hero.jpg',
                 'seo_description' => 'Where to stay in and around Downtown Bellefontaine, Ohio - hotels, inns, and lodging for your visit to the most loveable downtown.',
             ],
             [
@@ -70,13 +70,13 @@ class PageSeeder extends Seeder
             [
                 'key' => 'meeting-spaces', 'title' => 'Meeting Spaces', 'nav_label' => 'Meeting Spaces', 'sort' => 80,
                 'hero_eyebrow' => 'Downtown Bellefontaine', 'hero_heading' => 'Meeting Spaces',
-                'hero_image' => 'pages/heroes/downtown-bellefontaine-3.jpg',
+                'hero_image' => 'pages/heroes/bella-vino.jpg',
                 'seo_description' => 'Find the perfect meeting space in Downtown Bellefontaine - The Syndicate, Bella Vino, Build Cowork, and more unique venues for your event.',
             ],
             [
                 'key' => 'dora', 'title' => 'DORA District', 'nav_label' => 'DORA', 'sort' => 90,
                 'hero_eyebrow' => 'Designated Outdoor Refreshment Area', 'hero_heading' => 'DORA District',
-                'hero_image' => 'pages/heroes/downtown-bellefontaine-2.jpg',
+                'hero_image' => 'pages/heroes/dora-hero.jpg',
                 'seo_description' => 'Learn about Downtown Bellefontaine\'s DORA - the Designated Outdoor Refreshment Area where you can enjoy a drink while you stroll and shop.',
             ],
             [

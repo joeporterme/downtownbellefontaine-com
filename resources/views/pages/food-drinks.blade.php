@@ -9,7 +9,7 @@
     eyebrow="Downtown Bellefontaine"
     title="Food & Drinks"
     subtitle="Around here, we treat everyone like a regular. Customer service is kind of our thing. Pull up a chair and stay a while."
-    image="/images/pages/bella-vino.jpg" />
+    image="/images/pages/eat-hero.jpg" />
 
 <x-breadcrumbs :items="[['label' => 'Home', 'url' => url('/')], ['label' => 'Food & Drinks']]" />
 
@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="relative order-1 lg:order-2">
-                <img src="/images/pages/six-hundred-pizza.jpg" alt="World-champion brick-oven pizza downtown"
+                <img src="/images/pages/six-hundred-taste.jpg" alt="World-champion pizza at Six Hundred Downtown"
                      data-lightbox data-lightbox-group="eat" data-lightbox-caption="World-champion brick-oven pizza, made fresh downtown"
                      class="rounded-2xl shadow-xl w-full object-cover aspect-[4/5] cursor-zoom-in">
                 <div class="absolute -bottom-5 -left-5 bg-accent-500 text-white rounded-xl px-5 py-3 shadow-lg hidden sm:block">
@@ -71,9 +71,9 @@
             </div>
             {{-- Tacos & tequila --}}
             <div class="bg-theme-primary rounded-2xl overflow-hidden border border-theme shadow-sm flex flex-col card-hover">
-                <div class="h-52 bg-gradient-to-br from-accent-400 to-accent-600 flex items-center justify-center">
-                    <i class="fa-duotone fa-light fa-pepper-hot text-6xl text-white/90"></i>
-                </div>
+                <img src="/images/pages/flying-pepper.jpg" alt="Tacos at Flying Pepper"
+                     data-lightbox data-lightbox-group="eat" data-lightbox-caption="Flying Pepper — award-winning taco &amp; tequila bar"
+                     class="h-52 w-full object-cover cursor-zoom-in">
                 <div class="p-6 flex flex-col flex-grow">
                     <span class="text-xs font-semibold uppercase tracking-wide text-accent-600 mb-1">Taco &amp; tequila bar</span>
                     <h3 class="text-xl font-bold text-theme-primary mb-2">Flying Pepper</h3>

@@ -9,7 +9,7 @@
     eyebrow="Designated Outdoor Refreshment Area"
     title="DORA District"
     subtitle="For special events, a designated cup, a drink in hand, and 46 acres of historic downtown to explore."
-    image="/images/home/downtown-bellefontaine-2.jpg" />
+    image="/images/pages/dora-hero.jpg" />
 
 <x-breadcrumbs :items="[['label' => 'Home', 'url' => url('/')], ['label' => 'DORA District']]" />
 

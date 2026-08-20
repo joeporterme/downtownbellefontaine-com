@@ -40,9 +40,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             {{-- Perfect Saturday --}}
             <div class="bg-theme-primary rounded-2xl border border-theme overflow-hidden">
-                <div class="h-44 bg-gradient-to-br from-accent-400 to-accent-600 flex items-center justify-center">
-                    <i class="fa-duotone fa-light fa-sun text-5xl text-white"></i>
-                </div>
+                <img src="/images/pages/itinerary-saturday.jpg" alt="A perfect Saturday in Downtown Bellefontaine" class="h-44 w-full object-cover">
                 <div class="p-6">
                     <h3 class="text-xl font-bold text-theme-primary mb-3">The Perfect Saturday</h3>
                     <ul class="space-y-2 text-theme-secondary text-sm">
@@ -57,9 +55,7 @@
 
             {{-- Family Day --}}
             <div class="bg-theme-primary rounded-2xl border border-theme overflow-hidden">
-                <div class="h-44 bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center">
-                    <i class="fa-duotone fa-light fa-family text-5xl text-white"></i>
-                </div>
+                <img src="/images/pages/itinerary-family.jpg" alt="A family day out in Downtown Bellefontaine" class="h-44 w-full object-cover">
                 <div class="p-6">
                     <h3 class="text-xl font-bold text-theme-primary mb-3">Family Day Out</h3>
                     <ul class="space-y-2 text-theme-secondary text-sm">
@@ -74,9 +70,7 @@
 
             {{-- First Friday --}}
             <div class="bg-theme-primary rounded-2xl border border-theme overflow-hidden">
-                <div class="h-44 bg-gradient-to-br from-violet-400 to-violet-600 flex items-center justify-center">
-                    <i class="fa-duotone fa-light fa-party-horn text-5xl text-white"></i>
-                </div>
+                <img src="/images/pages/itinerary-downtown-days.jpg" alt="Downtown Days night on the square" class="h-44 w-full object-cover">
                 <div class="p-6">
                     <h3 class="text-xl font-bold text-theme-primary mb-3">Downtown Days Night</h3>
                     <ul class="space-y-2 text-theme-secondary text-sm">

@@ -9,7 +9,7 @@
     eyebrow="Downtown Bellefontaine"
     title="Stay Awhile"
     subtitle="One day isn't enough. Make a weekend of it with a stay in Logan County's most loveable small town."
-    image="/images/home/downtown-bellefontaine-2.jpg" />
+    image="/images/pages/stay-hero.jpg" />
 
 <x-breadcrumbs :items="[['label' => 'Home', 'url' => url('/')], ['label' => 'Stay']]" />
 
@@ -42,7 +42,7 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div class="relative">
-                <img src="{{ \App\Support\Media::url('gallery/empire-block-day.jpg') }}" alt="Historic buildings with lofts above the storefronts"
+                <img src="/images/pages/stay-lofts.jpg" alt="Historic buildings with lofts above the storefronts"
                      data-lightbox data-lightbox-group="stay" data-lightbox-caption="Historic lofts and flats sit above the downtown storefronts"
                      class="rounded-2xl shadow-xl w-full object-cover aspect-[4/3] cursor-zoom-in">
             </div>
