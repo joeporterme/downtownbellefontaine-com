@@ -526,6 +526,11 @@
                             </a>
                         @endif
                     </div>
+
+                    {{-- Ohio's Christmas Capital (year-round) --}}
+                    <a href="https://ohiochristmascapital.com/" target="_blank" rel="noopener" aria-label="Ohio's Christmas Capital — Downtown Bellefontaine" class="inline-block mt-8 hover:opacity-90 transition-opacity">
+                        <img src="{{ asset('images/ohio-christmas-capital.png') }}" alt="Ohio's Christmas Capital — Downtown Bellefontaine" class="h-24 w-24" width="96" height="96" loading="lazy">
+                    </a>
                 </div>
 
                 {{-- Explore --}}
