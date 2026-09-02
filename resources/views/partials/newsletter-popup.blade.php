@@ -100,7 +100,7 @@
             });
         });
 
-        // Appear after a short delay on the first visit.
-        setTimeout(show, 6000);
+        // Appear shortly after landing on the first visit.
+        setTimeout(show, 2500);
     })();
 </script>

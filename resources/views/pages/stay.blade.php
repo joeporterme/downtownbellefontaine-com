@@ -9,7 +9,7 @@
     eyebrow="Downtown Bellefontaine"
     title="Stay Awhile"
     subtitle="One day isn't enough. Make a weekend of it with a stay in Logan County's most loveable small town."
-    image="/images/pages/stay-hero.jpg" />
+    image="/images/home/downtown-bellefontaine-2.jpg" />
 
 <x-breadcrumbs :items="[['label' => 'Home', 'url' => url('/')], ['label' => 'Stay']]" />
 
@@ -26,8 +26,8 @@
                 </div>
             </div>
             <div class="relative order-1 lg:order-2">
-                <img src="/images/home/downtown-bellefontaine-3.jpg" alt="Downtown Bellefontaine after dark"
-                     data-lightbox data-lightbox-group="stay" data-lightbox-caption="Downtown Bellefontaine after dark"
+                <img src="/images/pages/stay-resteasy.jpg" alt="Wake up in the heart of Downtown Bellefontaine"
+                     data-lightbox data-lightbox-group="stay" data-lightbox-caption="Wake up right in the heart of downtown"
                      class="rounded-2xl shadow-xl w-full object-cover aspect-[4/5] cursor-zoom-in">
                 <div class="absolute -bottom-5 -left-5 bg-accent-500 text-white rounded-xl px-5 py-3 shadow-lg hidden sm:block">
                     <span class="font-display text-xl">Rest Easy</span>

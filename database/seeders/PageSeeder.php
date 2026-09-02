@@ -39,7 +39,7 @@ class PageSeeder extends Seeder
                 'key' => 'stay', 'title' => 'Stay', 'nav_label' => 'Stay', 'sort' => 30,
                 'hero_eyebrow' => 'Downtown Bellefontaine', 'hero_heading' => 'Stay Awhile',
                 'hero_subheading' => "One day isn't enough. Make a weekend of it with a stay in Logan County's most loveable small town.",
-                'hero_image' => 'pages/heroes/stay-hero.jpg',
+                'hero_image' => 'pages/heroes/downtown-bellefontaine-2.jpg',
                 'seo_description' => 'Where to stay in and around Downtown Bellefontaine, Ohio - hotels, inns, and lodging for your visit to the most loveable downtown.',
             ],
             [
