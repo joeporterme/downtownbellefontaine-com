@@ -12,7 +12,7 @@
         <div id="nlp-body">
             <div class="flex items-center gap-2 mb-1">
                 <i class="fa-duotone fa-light fa-envelope-open-text text-accent-500 text-xl"></i>
-                <h3 class="font-display text-2xl text-primary-700 dark:text-accent-300">Stay in the loop</h3>
+                <h3 class="font-display text-2xl text-primary-700 dark:text-accent-300">The 43311</h3>
             </div>
             <p class="text-sm text-theme-secondary mb-4">Downtown events, new openings, and happenings — straight to your inbox.</p>
 
@@ -35,7 +35,7 @@
 
         <div id="nlp-success" class="hidden text-center py-3">
             <i class="fa-duotone fa-light fa-circle-check text-4xl text-accent-500 mb-2"></i>
-            <p class="font-semibold text-theme-primary">You&rsquo;re subscribed!</p>
+            <p class="font-semibold text-theme-primary">Welcome to The 43311!</p>
             <p class="text-sm text-theme-secondary">Keep an eye on your inbox for downtown news.</p>
         </div>
     </div>

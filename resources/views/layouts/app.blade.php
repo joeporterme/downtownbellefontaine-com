@@ -373,8 +373,8 @@
         <div class="border-b border-primary-700">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid md:grid-cols-2 gap-6 md:gap-12 items-center">
                 <div>
-                    <h3 class="font-display text-2xl sm:text-3xl text-accent-300 mb-1">Stay in the loop</h3>
-                    <p class="text-primary-200 text-sm">Downtown events, new openings, and happenings — straight to your inbox.</p>
+                    <h3 class="font-display text-2xl sm:text-3xl text-accent-300 mb-1">The 43311</h3>
+                    <p class="text-primary-200 text-sm">Our newsletter — downtown events, new openings, and happenings, straight to your inbox.</p>
                 </div>
                 {{-- Newsletter → HubSpot (AJAX, no native HTML validation). --}}
                 <div>
@@ -403,7 +403,7 @@
                     <div id="newsletter-success" class="hidden items-center gap-3 bg-white/10 border border-white/20 rounded-lg px-5 py-4">
                         <i class="fa-duotone fa-light fa-circle-check text-3xl text-accent-300"></i>
                         <div>
-                            <p class="font-semibold text-white">You&rsquo;re subscribed!</p>
+                            <p class="font-semibold text-white">Welcome to The 43311!</p>
                             <p class="text-primary-200 text-sm">Thanks &mdash; keep an eye on your inbox for downtown news.</p>
                         </div>
                     </div>
