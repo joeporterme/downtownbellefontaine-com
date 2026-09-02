@@ -109,6 +109,64 @@
     </div>
 </section>
 
+{{-- Preferred hotel partner: Cobblestone Hotel & Suites --}}
+<section class="py-16 bg-theme-primary">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-theme-secondary rounded-2xl overflow-hidden border border-theme shadow-sm grid md:grid-cols-5">
+            {{-- Details --}}
+            <div class="md:col-span-3 p-8 lg:p-10">
+                <span class="text-xs font-semibold uppercase tracking-wide text-accent-600 mb-3 block">Our Preferred Hotel Partner</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-theme-primary mb-1">Cobblestone Hotel &amp; Suites</h2>
+                <p class="text-sm text-theme-tertiary mb-6">Bellefontaine, Ohio</p>
+                <p class="text-theme-secondary leading-relaxed mb-8">Reserve your room at the Cobblestone Hotel &amp; Suites and enjoy a special preferred rate for visitors to Downtown Bellefontaine. Book online with the link below — the rate is applied automatically — or reference the code when reserving by phone.</p>
+
+                <div class="mb-8">
+                    <p class="text-sm text-theme-tertiary mb-2">Booking code (applied automatically via the link)</p>
+                    <div class="flex items-center gap-3">
+                        <code id="cobblestone-code" class="flex-1 px-4 py-3 rounded-lg bg-theme-primary border border-theme font-mono text-lg tracking-widest text-center text-theme-primary select-all">MAXWELL</code>
+                        <button type="button" id="cobblestone-copy" aria-label="Copy booking code"
+                                class="w-12 h-12 flex-shrink-0 rounded-lg bg-primary-50 dark:bg-primary-900/40 text-primary-600 dark:text-primary-300 hover:bg-primary-100 dark:hover:bg-primary-900/60 flex items-center justify-center transition-colors">
+                            <i class="fa-duotone fa-light fa-copy text-lg"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <a href="https://be.synxis.com/?Hotel=47214&amp;Chain=7721&amp;promo=MAXWELL" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg transition-colors shadow-sm">
+                    Book Your Stay
+                    <i class="fa-duotone fa-light fa-arrow-right"></i>
+                </a>
+            </div>
+
+            {{-- Rate highlight --}}
+            <div class="md:col-span-2 bg-primary-600 text-white p-8 lg:p-10 flex flex-col justify-center">
+                <i class="fa-duotone fa-light fa-hotel text-4xl mb-6 text-white/90"></i>
+                <h3 class="text-xl font-bold mb-3">Preferred Guest Rate</h3>
+                <p class="text-primary-100 mb-6 leading-relaxed">Use our direct link to lock in the negotiated rate — no extra steps required.</p>
+                <p class="text-sm font-semibold mb-1">Cobblestone locations nearby:</p>
+                <p class="text-sm text-primary-100">Bellefontaine · Indian Lake · Urbana</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+@push('scripts')
+<script>
+    (function () {
+        var btn = document.getElementById('cobblestone-copy');
+        if (!btn) return;
+        btn.addEventListener('click', function () {
+            navigator.clipboard.writeText('MAXWELL').then(function () {
+                var i = btn.querySelector('i');
+                var prev = i.className;
+                i.className = 'fa-duotone fa-light fa-check text-lg';
+                setTimeout(function () { i.className = prev; }, 2000);
+            });
+        });
+    })();
+</script>
+@endpush
+
 {{-- Businesses Grid --}}
 @if($businesses->isNotEmpty())
 <section class="py-16 bg-theme-secondary">
