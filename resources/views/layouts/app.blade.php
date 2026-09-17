@@ -186,14 +186,6 @@
                         <i class="fa-duotone fa-light fa-calendar-star text-primary-500"></i>
                         <span>Events</span>
                     </a>
-                    <a href="{{ route('blog.index') }}" class="flex items-center gap-1.5 text-theme-secondary hover:text-primary-500 dark:hover:text-primary-400 transition-colors font-medium text-[15px]">
-                        <i class="fa-duotone fa-light fa-newspaper text-primary-500"></i>
-                        <span>Blog</span>
-                    </a>
-                    <a href="{{ route('pages.revitalization') }}" class="flex items-center gap-1.5 text-theme-secondary hover:text-primary-500 dark:hover:text-primary-400 transition-colors font-medium text-[15px]">
-                        <i class="fa-duotone fa-light fa-seedling text-primary-500"></i>
-                        <span>Revitalization</span>
-                    </a>
                     {{-- Plan a Visit dropdown (itineraries + secondary pages) --}}
                     <div class="relative group">
                         <button type="button" class="flex items-center gap-1.5 text-theme-secondary hover:text-primary-500 dark:hover:text-primary-400 transition-colors font-medium text-[15px]" aria-haspopup="true" aria-expanded="false">
@@ -226,6 +218,26 @@
                                 <a href="{{ route('day-agendas.index') }}" class="flex items-center gap-3 px-4 py-2.5 text-sm text-theme-secondary hover:bg-theme-tertiary hover:text-primary-500 transition-colors">
                                     <i class="fa-duotone fa-light fa-map-location-dot w-4 text-primary-500"></i>
                                     <span>Day Agendas</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- More dropdown (Blog + Revitalization) --}}
+                    <div class="relative group">
+                        <button type="button" class="flex items-center gap-1.5 text-theme-secondary hover:text-primary-500 dark:hover:text-primary-400 transition-colors font-medium text-[15px]" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa-duotone fa-light fa-ellipsis text-primary-500"></i>
+                            <span>More</span>
+                            <i class="fa-duotone fa-light fa-chevron-down text-[10px] transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        <div class="absolute right-0 top-full pt-3 w-56 hidden group-hover:block group-focus-within:block z-50">
+                            <div class="bg-theme-primary border border-theme rounded-xl shadow-lg overflow-hidden py-2">
+                                <a href="{{ route('blog.index') }}" class="flex items-center gap-3 px-4 py-2.5 text-sm text-theme-secondary hover:bg-theme-tertiary hover:text-primary-500 transition-colors">
+                                    <i class="fa-duotone fa-light fa-newspaper w-4 text-primary-500"></i>
+                                    <span>Blog</span>
+                                </a>
+                                <a href="{{ route('pages.revitalization') }}" class="flex items-center gap-3 px-4 py-2.5 text-sm text-theme-secondary hover:bg-theme-tertiary hover:text-primary-500 transition-colors">
+                                    <i class="fa-duotone fa-light fa-seedling w-4 text-primary-500"></i>
+                                    <span>Revitalization</span>
                                 </a>
                             </div>
                         </div>
@@ -294,14 +306,6 @@
                     <i class="fa-duotone fa-light fa-calendar-star w-5 text-center text-primary-500"></i>
                     <span>Events</span>
                 </a>
-                <a href="{{ route('blog.index') }}" class="flex items-center gap-3 py-2.5 text-theme-secondary hover:text-primary-500">
-                    <i class="fa-duotone fa-light fa-newspaper w-5 text-center text-primary-500"></i>
-                    <span>Blog</span>
-                </a>
-                <a href="{{ route('pages.revitalization') }}" class="flex items-center gap-3 py-2.5 text-theme-secondary hover:text-primary-500">
-                    <i class="fa-duotone fa-light fa-seedling w-5 text-center text-primary-500"></i>
-                    <span>Revitalization</span>
-                </a>
                 <a href="{{ route('pages.plan-a-visit') }}" class="flex items-center gap-3 py-2.5 text-theme-secondary hover:text-primary-500">
                     <i class="fa-duotone fa-light fa-compass w-5 text-center text-primary-500"></i>
                     <span>Plan a Visit</span>
@@ -326,6 +330,20 @@
                     <a href="{{ route('day-agendas.index') }}" class="flex items-center gap-3 py-2 text-sm text-theme-tertiary hover:text-primary-500">
                         <i class="fa-duotone fa-light fa-map-location-dot w-4 text-center text-primary-400"></i>
                         <span>Day Agendas</span>
+                    </a>
+                </div>
+                <div class="flex items-center gap-3 py-2.5 text-theme-secondary">
+                    <i class="fa-duotone fa-light fa-ellipsis w-5 text-center text-primary-500"></i>
+                    <span>More</span>
+                </div>
+                <div class="pl-8 space-y-1">
+                    <a href="{{ route('blog.index') }}" class="flex items-center gap-3 py-2 text-sm text-theme-tertiary hover:text-primary-500">
+                        <i class="fa-duotone fa-light fa-newspaper w-4 text-center text-primary-400"></i>
+                        <span>Blog</span>
+                    </a>
+                    <a href="{{ route('pages.revitalization') }}" class="flex items-center gap-3 py-2 text-sm text-theme-tertiary hover:text-primary-500">
+                        <i class="fa-duotone fa-light fa-seedling w-4 text-center text-primary-400"></i>
+                        <span>Revitalization</span>
                     </a>
                 </div>
                 <a href="{{ route('pages.map') }}" class="flex items-center gap-3 py-2.5 text-theme-secondary hover:text-primary-500">
