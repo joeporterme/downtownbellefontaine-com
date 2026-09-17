@@ -57,6 +57,10 @@ Route::get('/events/{event:slug}', [EventController::class, 'show'])->name('even
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/blog/{post:slug}', [BlogController::class, 'show'])->name('blog.show');
 
+// Day Agendas (itineraries) — same URLs as the old WordPress site
+Route::get('/day-agendas', [App\Http\Controllers\Public\DayAgendaController::class, 'index'])->name('day-agendas.index');
+Route::get('/day-agenda/{dayAgenda:slug}', [App\Http\Controllers\Public\DayAgendaController::class, 'show'])->name('day-agendas.show');
+
 // Public Business Directory
 Route::get('/businesses', [PublicBusinessController::class, 'index'])->name('businesses.index');
 Route::get('/businesses/category/{category:slug}', [PublicBusinessController::class, 'category'])->name('businesses.category');

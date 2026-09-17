@@ -43,8 +43,6 @@ class RedirectSeeder extends Seeder
             ['from_path' => '^/\d{4}/\d{2}/\d{2}/([^/]+)$', 'to_url' => '/blog/$1', 'priority' => 100, 'notes' => 'blog'],
             // Historic walking tour: landing + 14 stop pages → the single new page
             ['from_path' => '^/historictour(/.*)?$', 'to_url' => '/historic-walking-tour', 'priority' => 90, 'notes' => 'tour'],
-            // Day agendas CPT → events
-            ['from_path' => '^/day-agenda/.+$', 'to_url' => '/events', 'priority' => 80, 'notes' => 'events'],
             // Category & author archives → blog
             ['from_path' => '^/category/.+$', 'to_url' => '/blog', 'priority' => 70, 'notes' => 'archives'],
             ['from_path' => '^/author/.+$', 'to_url' => '/blog', 'priority' => 70, 'notes' => 'archives'],
@@ -65,7 +63,6 @@ class RedirectSeeder extends Seeder
             '/downtown-map' => '/map',
             '/place-to-shop' => '/places-to-shop',
             '/contact-us' => '/contact',
-            '/day-agendas' => '/events',
             '/create-event' => '/events',
             '/restaurantweek' => '/events',
             '/loftandhiddenspacestour' => '/events',

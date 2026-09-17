@@ -219,6 +219,10 @@
                                     <i class="fa-duotone fa-light fa-handshake w-4 text-primary-500"></i>
                                     <span>Meeting Spaces</span>
                                 </a>
+                                <a href="{{ route('day-agendas.index') }}" class="flex items-center gap-3 px-4 py-2.5 text-sm text-theme-secondary hover:bg-theme-tertiary hover:text-primary-500 transition-colors">
+                                    <i class="fa-duotone fa-light fa-map-location-dot w-4 text-primary-500"></i>
+                                    <span>Day Agendas</span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -310,6 +314,10 @@
                     <a href="{{ route('pages.meeting-spaces') }}" class="flex items-center gap-3 py-2 text-sm text-theme-tertiary hover:text-primary-500">
                         <i class="fa-duotone fa-light fa-handshake w-4 text-center text-primary-400"></i>
                         <span>Meeting Spaces</span>
+                    </a>
+                    <a href="{{ route('day-agendas.index') }}" class="flex items-center gap-3 py-2 text-sm text-theme-tertiary hover:text-primary-500">
+                        <i class="fa-duotone fa-light fa-map-location-dot w-4 text-center text-primary-400"></i>
+                        <span>Day Agendas</span>
                     </a>
                 </div>
                 <a href="{{ route('pages.map') }}" class="flex items-center gap-3 py-2.5 text-theme-secondary hover:text-primary-500">

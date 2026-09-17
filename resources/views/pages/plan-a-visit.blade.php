@@ -83,6 +83,15 @@
                 </div>
             </div>
         </div>
+
+        {{-- Browse the full day-agenda library --}}
+        <div class="text-center mt-12">
+            <p class="text-theme-secondary mb-4">Want more? We've mapped out dozens of ready-made days — kids' outings, girls' weekends, foodie tours, cave trips, and more.</p>
+            <a href="{{ route('day-agendas.index') }}" class="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg transition-colors shadow-sm">
+                <i class="fa-duotone fa-light fa-map-location-dot"></i>
+                Browse all day agendas
+            </a>
+        </div>
     </div>
 </section>
 

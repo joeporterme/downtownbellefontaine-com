@@ -79,6 +79,17 @@ class SitemapController extends Controller
             ];
         });
 
+        // Day-agenda itineraries.
+        $urls[] = ['loc' => route('day-agendas.index'), 'changefreq' => 'monthly', 'priority' => '0.6'];
+        \App\Models\DayAgenda::published()->get(['slug', 'updated_at'])->each(function ($a) use (&$urls) {
+            $urls[] = [
+                'loc' => route('day-agendas.show', $a->slug),
+                'lastmod' => $a->updated_at?->toAtomString(),
+                'changefreq' => 'monthly',
+                'priority' => '0.5',
+            ];
+        });
+
         return response()
             ->view('sitemap', ['urls' => $urls])
             ->header('Content-Type', 'application/xml');
