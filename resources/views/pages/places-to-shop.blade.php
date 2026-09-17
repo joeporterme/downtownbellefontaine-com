@@ -28,7 +28,7 @@
             <div class="relative order-1 lg:order-2">
                 <img src="/images/pages/shopping-2.jpg" alt="Inside a Downtown Bellefontaine boutique"
                      data-lightbox data-lightbox-group="shop" data-lightbox-caption="Locally owned boutiques line Downtown Bellefontaine"
-                     class="rounded-2xl shadow-xl w-full object-cover aspect-[4/5] cursor-zoom-in">
+                     class="rounded-2xl shadow-xl w-full object-cover aspect-[4/5] max-h-[440px] lg:max-h-none cursor-zoom-in">
                 <div class="absolute -bottom-5 -left-5 bg-accent-500 text-white rounded-xl px-5 py-3 shadow-lg hidden sm:block">
                     <span class="font-display text-xl">Shop Local</span>
                 </div>
@@ -51,7 +51,7 @@
             <div class="relative">
                 <img src="{{ \App\Support\Media::url('gallery/shopping.jpg') }}" alt="Shopping local in Downtown Bellefontaine"
                      data-lightbox data-lightbox-group="shop" data-lightbox-caption="One-of-a-kind finds in Downtown Bellefontaine"
-                     class="rounded-2xl shadow-xl w-full object-cover aspect-[4/3] cursor-zoom-in">
+                     class="rounded-2xl shadow-xl w-full object-cover aspect-[4/3] max-h-[440px] lg:max-h-none cursor-zoom-in">
             </div>
         </div>
     </div>

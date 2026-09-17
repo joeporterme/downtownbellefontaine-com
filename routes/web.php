@@ -28,6 +28,7 @@ Route::get('/map', [App\Http\Controllers\Public\MapController::class, 'index'])-
 Route::get('/downtown-days', fn() => view('pages.first-fridays'))->name('pages.first-fridays');
 Route::get('/meeting-spaces', fn() => view('pages.meeting-spaces'))->name('pages.meeting-spaces');
 Route::get('/dora', fn() => view('pages.dora'))->name('pages.dora');
+Route::get('/revitalization', fn() => view('pages.revitalization'))->name('pages.revitalization');
 Route::get('/media', function () {
     $pressItems = \App\Models\PressItem::active()
         ->orderByDesc('published_date')

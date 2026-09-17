@@ -331,6 +331,7 @@
             {{-- Image --}}
             <div class="relative order-2 md:order-1 reveal-left active">
                 <img src="{{ asset('images/home/welcome-courthouse.jpg') }}" alt="The Logan County Courthouse and pineapple fountain at sunset in Downtown Bellefontaine" class="rounded-2xl shadow-xl w-full aspect-square object-cover" loading="lazy">
+                <p class="absolute bottom-3 left-3 text-[11px] text-white/70 tracking-wide drop-shadow-md">Photo: Mac McGinnis</p>
                 <div class="absolute -bottom-5 -right-5 bg-accent-500 text-white rounded-xl px-5 py-3 shadow-lg hidden sm:block">
                     <span class="font-display text-lg">Ohio's most loveable downtown</span>
                 </div>
@@ -438,7 +439,7 @@
 
             {{-- Stay --}}
             <a href="{{ route('pages.stay') }}" class="bento-tile">
-                <img src="{{ asset('images/home/cat-stay.jpg') }}" alt="Places to stay in Downtown Bellefontaine" class="bento-img" loading="lazy">
+                <img src="{{ asset('images/pages/stay-resteasy.jpg') }}" alt="Places to stay in Downtown Bellefontaine" class="bento-img" loading="lazy">
                 <div class="bento-scrim"></div>
                 <div class="bento-content">
                     <span class="bento-label"><i class="fa-duotone fa-light fa-bed-front text-accent-300"></i> Stay</span>

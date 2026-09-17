@@ -121,7 +121,7 @@
             <li><strong>Downtown Bellefontaine Partnership</strong></li>
             <li>Bellefontaine, Ohio</li>
             <li>Email: <a href="mailto:info@downtownbellefontaine.com" class="text-primary-600 dark:text-primary-400 hover:underline">info@downtownbellefontaine.com</a></li>
-            <li>Phone: <a href="tel:9374412681" class="text-primary-600 dark:text-primary-400 hover:underline">937-441-2681</a></li>
+            <li>Phone: <a href="tel:9375654580" class="text-primary-600 dark:text-primary-400 hover:underline">937-565-4580</a></li>
         </ul>
     </div>
 </section>

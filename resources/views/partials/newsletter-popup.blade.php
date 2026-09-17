@@ -12,7 +12,7 @@
         <div id="nlp-body">
             <div class="flex items-center gap-2 mb-1">
                 <i class="fa-duotone fa-light fa-envelope-open-text text-accent-500 text-xl"></i>
-                <h3 class="font-display text-2xl text-primary-700 dark:text-accent-300">The 43311</h3>
+                <h3 class="font-display text-2xl text-primary-700 dark:text-accent-300">The <span class="font-sans font-bold">43311</span></h3>
             </div>
             <p class="text-sm text-theme-secondary mb-4">Downtown events, new openings, and happenings — straight to your inbox.</p>
 

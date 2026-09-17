@@ -190,6 +190,10 @@
                         <i class="fa-duotone fa-light fa-newspaper text-primary-500"></i>
                         <span>Blog</span>
                     </a>
+                    <a href="{{ route('pages.revitalization') }}" class="flex items-center gap-1.5 text-theme-secondary hover:text-primary-500 dark:hover:text-primary-400 transition-colors font-medium text-[15px]">
+                        <i class="fa-duotone fa-light fa-seedling text-primary-500"></i>
+                        <span>Revitalization</span>
+                    </a>
                     {{-- Plan a Visit dropdown (itineraries + secondary pages) --}}
                     <div class="relative group">
                         <button type="button" class="flex items-center gap-1.5 text-theme-secondary hover:text-primary-500 dark:hover:text-primary-400 transition-colors font-medium text-[15px]" aria-haspopup="true" aria-expanded="false">
@@ -294,6 +298,10 @@
                     <i class="fa-duotone fa-light fa-newspaper w-5 text-center text-primary-500"></i>
                     <span>Blog</span>
                 </a>
+                <a href="{{ route('pages.revitalization') }}" class="flex items-center gap-3 py-2.5 text-theme-secondary hover:text-primary-500">
+                    <i class="fa-duotone fa-light fa-seedling w-5 text-center text-primary-500"></i>
+                    <span>Revitalization</span>
+                </a>
                 <a href="{{ route('pages.plan-a-visit') }}" class="flex items-center gap-3 py-2.5 text-theme-secondary hover:text-primary-500">
                     <i class="fa-duotone fa-light fa-compass w-5 text-center text-primary-500"></i>
                     <span>Plan a Visit</span>
@@ -381,7 +389,7 @@
         <div class="border-b border-primary-700">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid md:grid-cols-2 gap-6 md:gap-12 items-center">
                 <div>
-                    <h3 class="font-display text-2xl sm:text-3xl text-accent-300 mb-1">The 43311</h3>
+                    <h3 class="font-display text-2xl sm:text-3xl text-accent-300 mb-1">The <span class="font-sans font-bold">43311</span></h3>
                     <p class="text-primary-200 text-sm">Our newsletter — downtown events, new openings, and happenings, straight to your inbox.</p>
                 </div>
                 {{-- Newsletter → HubSpot (AJAX, no native HTML validation). --}}

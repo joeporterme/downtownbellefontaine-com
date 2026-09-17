@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Contact Us')
-@section('description', 'Get in touch with the Downtown Bellefontaine Partnership - questions about visiting, business listings, events, or partnerships.')
+@section('description', 'Get in touch with Downtown Bellefontaine - questions about visiting, business listings, events, or getting involved downtown.')
 
 @section('content')
 {{-- Hero --}}
@@ -136,27 +136,17 @@
                 <div class="bg-theme-secondary rounded-2xl border border-theme overflow-hidden">
                     <div class="bg-gradient-to-br from-primary-600 to-primary-800 text-white p-6">
                         <p class="text-accent-300 font-display text-lg">Get in Touch</p>
-                        <h3 class="font-bold text-xl mt-1">Downtown Bellefontaine Partnership</h3>
-                        <p class="text-primary-100 text-sm mt-2">A nonprofit dedicated to the most loveable downtown in Ohio.</p>
+                        <h3 class="font-bold text-xl mt-1">Downtown Bellefontaine</h3>
+                        <p class="text-primary-100 text-sm mt-2">Ohio's most loveable downtown.</p>
                     </div>
                     <div class="p-6 space-y-5">
-                        <div class="flex items-start gap-3">
-                            <div class="w-9 h-9 rounded-lg bg-accent-100 dark:bg-accent-900/40 flex items-center justify-center flex-shrink-0">
-                                <i class="fa-duotone fa-light fa-user-tie text-accent-600"></i>
-                            </div>
-                            <div>
-                                <p class="text-xs uppercase tracking-wider text-theme-tertiary font-semibold">Executive Director</p>
-                                <p class="font-semibold text-theme-primary">Olivia Covey</p>
-                            </div>
-                        </div>
-
                         <div class="flex items-start gap-3">
                             <div class="w-9 h-9 rounded-lg bg-primary-100 dark:bg-primary-900/40 flex items-center justify-center flex-shrink-0">
                                 <i class="fa-duotone fa-light fa-phone text-primary-600"></i>
                             </div>
                             <div>
                                 <p class="text-xs uppercase tracking-wider text-theme-tertiary font-semibold">Phone</p>
-                                <a href="tel:937-441-2681" class="font-semibold text-theme-primary hover:text-accent-600 transition-colors">937-441-2681</a>
+                                <a href="tel:937-565-4580" class="font-semibold text-theme-primary hover:text-accent-600 transition-colors">937-565-4580</a>
                             </div>
                         </div>
 
@@ -181,7 +171,7 @@
                         <a href="https://www.instagram.com/downtownbellefontaine" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-theme-primary border border-theme flex items-center justify-center text-theme-secondary hover:text-pink-600 hover:border-pink-400 transition-colors" aria-label="Instagram">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
-                        <a href="https://twitter.com/dtbellefontaine" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-theme-primary border border-theme flex items-center justify-center text-theme-secondary hover:text-theme-primary hover:border-gray-400 transition-colors" aria-label="X (Twitter)">
+                        <a href="https://x.com/mostloveableoh" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-theme-primary border border-theme flex items-center justify-center text-theme-secondary hover:text-theme-primary hover:border-gray-400 transition-colors" aria-label="X (Twitter)">
                             <i class="fa-brands fa-x-twitter"></i>
                         </a>
                     </div>
@@ -191,62 +181,4 @@
     </div>
 </section>
 
-{{-- Quick-route cards --}}
-<section class="py-16 bg-theme-secondary">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-            <span class="font-display text-2xl text-accent-500">Or Skip Ahead</span>
-            <h2 class="text-2xl sm:text-3xl font-bold text-theme-primary mt-2">Maybe You're Looking For…</h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <a href="{{ route('register') }}" class="group block bg-theme-primary rounded-2xl border border-theme p-6 hover:border-accent-400 transition-all text-center">
-                <div class="w-14 h-14 mx-auto mb-4 bg-gradient-to-br from-accent-400 to-accent-600 rounded-xl flex items-center justify-center">
-                    <i class="fa-duotone fa-light fa-store text-2xl text-white"></i>
-                </div>
-                <h3 class="font-semibold text-theme-primary group-hover:text-accent-600 transition-colors mb-1">List Your Business</h3>
-                <p class="text-sm text-theme-tertiary">Register and join the directory</p>
-            </a>
-            <a href="{{ route('login') }}" class="group block bg-theme-primary rounded-2xl border border-theme p-6 hover:border-accent-400 transition-all text-center">
-                <div class="w-14 h-14 mx-auto mb-4 bg-gradient-to-br from-primary-400 to-primary-600 rounded-xl flex items-center justify-center">
-                    <i class="fa-duotone fa-light fa-calendar-plus text-2xl text-white"></i>
-                </div>
-                <h3 class="font-semibold text-theme-primary group-hover:text-primary-600 transition-colors mb-1">Submit an Event</h3>
-                <p class="text-sm text-theme-tertiary">Sign in to post community events</p>
-            </a>
-            <a href="{{ route('pages.media') }}" class="group block bg-theme-primary rounded-2xl border border-theme p-6 hover:border-accent-400 transition-all text-center">
-                <div class="w-14 h-14 mx-auto mb-4 bg-gradient-to-br from-violet-400 to-violet-600 rounded-xl flex items-center justify-center">
-                    <i class="fa-duotone fa-light fa-newspaper text-2xl text-white"></i>
-                </div>
-                <h3 class="font-semibold text-theme-primary group-hover:text-violet-600 transition-colors mb-1">Media & Press</h3>
-                <p class="text-sm text-theme-tertiary">Coverage of downtown</p>
-            </a>
-        </div>
-    </div>
-</section>
-
-{{-- Mission & Vision --}}
-<section class="py-16 bg-theme-primary">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <div class="bg-theme-secondary rounded-2xl border border-theme p-8">
-                <div class="w-12 h-12 mb-4 rounded-xl bg-gradient-to-br from-accent-400 to-accent-600 flex items-center justify-center">
-                    <i class="fa-duotone fa-light fa-bullseye text-xl text-white"></i>
-                </div>
-                <h3 class="text-xl font-bold text-theme-primary mb-3">Our Mission</h3>
-                <p class="text-theme-secondary leading-relaxed">
-                    The Downtown Bellefontaine Partnership is dedicated to making the downtown attractive for merchants to do business and individuals to shop, while improving the quality and quantity of commerce, unifying the public and private sectors, and promoting historic preservation to enrich the cultural life of our community.
-                </p>
-            </div>
-            <div class="bg-theme-secondary rounded-2xl border border-theme p-8">
-                <div class="w-12 h-12 mb-4 rounded-xl bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center">
-                    <i class="fa-duotone fa-light fa-eye text-xl text-white"></i>
-                </div>
-                <h3 class="text-xl font-bold text-theme-primary mb-3">Our Vision</h3>
-                <p class="text-theme-secondary leading-relaxed">
-                    Downtown Bellefontaine will be the Midwest's premier small-town destination for local food, unique shopping, and meaningful experiences year-round.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
 @endsection

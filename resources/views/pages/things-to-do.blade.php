@@ -28,7 +28,7 @@
             <div class="relative order-1 lg:order-2">
                 <img src="/images/pages/transportation-museum.jpg" alt="Things to do in Downtown Bellefontaine"
                      data-lightbox data-lightbox-group="play" data-lightbox-caption="There's a good time around every corner downtown"
-                     class="rounded-2xl shadow-xl w-full object-cover aspect-[4/5] cursor-zoom-in">
+                     class="rounded-2xl shadow-xl w-full object-cover aspect-[4/5] max-h-[440px] lg:max-h-none cursor-zoom-in">
                 <div class="absolute -bottom-5 -left-5 bg-accent-500 text-white rounded-xl px-5 py-3 shadow-lg hidden sm:block">
                     <span class="font-display text-xl">Adventure Awaits</span>
                 </div>
@@ -72,7 +72,7 @@
             <div class="relative">
                 <img src="{{ \App\Support\Media::url('gallery/holland-theatre.jpg') }}" alt="The Holland Theatre lit at night"
                      data-lightbox data-lightbox-group="play" data-lightbox-caption="The Holland Theatre — the only atmospheric Dutch-style theater in America"
-                     class="rounded-2xl shadow-2xl w-full object-cover aspect-[4/3] cursor-zoom-in">
+                     class="rounded-2xl shadow-2xl w-full object-cover aspect-[4/3] max-h-[440px] lg:max-h-none cursor-zoom-in">
             </div>
             <div>
                 <span class="font-display text-2xl sm:text-3xl text-accent-300">The crown jewel</span>
@@ -105,7 +105,7 @@
             <div class="relative">
                 <img src="{{ \App\Support\Media::url('gallery/empire-block-day.jpg') }}" alt="Court Avenue — America's first concrete street"
                      data-lightbox data-lightbox-group="play" data-lightbox-caption="Court Avenue — America's oldest concrete street, poured in the 1890s"
-                     class="rounded-2xl shadow-xl w-full object-cover aspect-[4/3] cursor-zoom-in">
+                     class="rounded-2xl shadow-xl w-full object-cover aspect-[4/3] max-h-[440px] lg:max-h-none cursor-zoom-in">
             </div>
         </div>
     </div>

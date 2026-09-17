@@ -80,6 +80,14 @@ class PageSeeder extends Seeder
                 'seo_description' => 'Learn about Downtown Bellefontaine\'s DORA - the Designated Outdoor Refreshment Area where you can enjoy a drink while you stroll and shop.',
             ],
             [
+                'key' => 'revitalization', 'title' => 'Revitalization', 'nav_label' => 'Revitalization', 'sort' => 95,
+                'hero_eyebrow' => 'Our Story', 'hero_heading' => 'The Transformation of Downtown Bellefontaine',
+                'hero_subheading' => "A Main Street that had all but gone dark — and the people who brought it roaring back to life.",
+                'hero_image' => 'pages/heroes/downtown-bellefontaine-1.jpg',
+                'seo_title' => 'The Transformation of Downtown Bellefontaine',
+                'seo_description' => 'How a fading Main Street became Ohio\'s most loveable downtown — the story of Downtown Bellefontaine\'s revitalization.',
+            ],
+            [
                 'key' => 'historic-walking-tour', 'title' => 'Historic Walking Tour', 'nav_label' => 'Historic Walking Tour', 'sort' => 100,
                 'hero_eyebrow' => 'Downtown Bellefontaine', 'hero_heading' => 'Historic Walking Tour',
                 'hero_image' => 'pages/heroes/mckinley-street.jpg',
