@@ -20,19 +20,10 @@
         @if($showFeatured && $featured)
             <a href="{{ route('blog.show', $featured) }}" class="group grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16 pb-16 border-b border-theme">
                 <div class="relative overflow-hidden rounded-2xl shadow-xl aspect-[16/10]">
-                    @if($featured->featured_image)
-                        <img src="{{ \App\Support\Media::url($featured->featured_image) }}" alt="{{ $featured->title }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                    @elseif($featured->featured_video)
-                        <img src="{{ \App\Support\Media::url(\App\Models\BlogPost::DEFAULT_VIDEO_HERO) }}" alt="{{ $featured->title }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                        <span class="absolute inset-0 flex items-center justify-center">
-                            <span class="w-16 h-16 rounded-full bg-black/55 backdrop-blur-sm flex items-center justify-center text-white"><i class="fa-duotone fa-light fa-play text-2xl ml-1"></i></span>
-                        </span>
-                    @else
-                        <div class="w-full h-full bg-gradient-to-br from-accent-100 to-accent-200 dark:from-accent-800 dark:to-accent-900 flex items-center justify-center">
-                            <i class="fa-duotone fa-light fa-newspaper text-5xl text-accent-300 dark:text-accent-600"></i>
-                        </div>
-                    @endif
-                    <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-accent-500 text-white text-xs font-semibold uppercase tracking-wide">Latest</span>
+                    <x-blog-thumbnail :post="$featured"
+                        media="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        fallback="w-full h-full" icon="text-5xl" />
+                    <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-accent-500 text-white text-xs font-semibold uppercase tracking-wide z-10">Latest</span>
                 </div>
                 <div>
                     <div class="flex items-center gap-3 text-sm text-theme-tertiary mb-3">
@@ -63,20 +54,11 @@
                     <article class="group">
                         <a href="{{ route('blog.show', $post) }}" class="block bg-theme-secondary rounded-2xl border border-theme overflow-hidden card-hover h-full flex flex-col">
                             <div class="relative overflow-hidden">
-                                @if($post->featured_image)
-                                    <img src="{{ \App\Support\Media::url($post->featured_image) }}" alt="{{ $post->title }}" loading="lazy" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-105">
-                                @elseif($post->featured_video)
-                                    <img src="{{ \App\Support\Media::url(\App\Models\BlogPost::DEFAULT_VIDEO_HERO) }}" alt="{{ $post->title }}" loading="lazy" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-105">
-                                    <span class="absolute inset-0 flex items-center justify-center">
-                                        <span class="w-14 h-14 rounded-full bg-black/55 backdrop-blur-sm flex items-center justify-center text-white"><i class="fa-duotone fa-light fa-play text-xl ml-0.5"></i></span>
-                                    </span>
-                                @else
-                                    <div class="w-full h-52 bg-gradient-to-br from-accent-100 to-accent-200 dark:from-accent-800 dark:to-accent-900 flex items-center justify-center">
-                                        <i class="fa-duotone fa-light fa-newspaper text-4xl text-accent-300 dark:text-accent-600"></i>
-                                    </div>
-                                @endif
+                                <x-blog-thumbnail :post="$post"
+                                    media="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-105"
+                                    fallback="w-full h-52" icon="text-4xl" />
                                 @if($post->category)
-                                    <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-sm text-white text-xs font-medium">{{ $post->category->name }}</span>
+                                    <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-sm text-white text-xs font-medium z-10">{{ $post->category->name }}</span>
                                 @endif
                             </div>
                             <div class="p-6 flex flex-col flex-grow">

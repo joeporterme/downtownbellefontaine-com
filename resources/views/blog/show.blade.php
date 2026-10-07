@@ -146,18 +146,9 @@
                 @foreach($related as $post)
                     <a href="{{ route('blog.show', $post) }}" class="group block bg-theme-primary rounded-2xl border border-theme overflow-hidden card-hover">
                         <div class="relative overflow-hidden">
-                            @if($post->featured_image)
-                                <img src="{{ \App\Support\Media::url($post->featured_image) }}" alt="{{ $post->title }}" loading="lazy" class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-105">
-                            @elseif($post->featured_video)
-                                <img src="{{ \App\Support\Media::url(\App\Models\BlogPost::DEFAULT_VIDEO_HERO) }}" alt="{{ $post->title }}" loading="lazy" class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-105">
-                                <span class="absolute inset-0 flex items-center justify-center">
-                                    <span class="w-12 h-12 rounded-full bg-black/55 backdrop-blur-sm flex items-center justify-center text-white"><i class="fa-duotone fa-light fa-play text-lg ml-0.5"></i></span>
-                                </span>
-                            @else
-                                <div class="w-full h-44 bg-gradient-to-br from-accent-100 to-accent-200 dark:from-accent-800 dark:to-accent-900 flex items-center justify-center">
-                                    <i class="fa-duotone fa-light fa-newspaper text-4xl text-accent-300 dark:text-accent-600"></i>
-                                </div>
-                            @endif
+                            <x-blog-thumbnail :post="$post"
+                                media="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-105"
+                                fallback="w-full h-44" icon="text-4xl" />
                         </div>
                         <div class="p-5">
                             <p class="text-xs text-theme-tertiary mb-1">{{ $post->published_at->format('M j, Y') }}</p>

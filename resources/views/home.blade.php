@@ -539,13 +539,9 @@
             @forelse($latestPosts as $index => $post)
                 <a href="{{ route('blog.show', $post) }}" class="group block bg-theme-primary rounded-2xl border border-theme overflow-hidden card-hover reveal delay-{{ ($index + 1) * 100 }}">
                     <div class="relative overflow-hidden">
-                        @if($post->featured_image)
-                            <img src="{{ \App\Support\Media::url($post->featured_image) }}" alt="{{ $post->title }}" loading="lazy" decoding="async" width="400" height="192" class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500">
-                        @else
-                            <div class="w-full h-48 bg-gradient-to-br from-accent-100 to-accent-200 dark:from-accent-800 dark:to-accent-900 flex items-center justify-center">
-                                <i class="fa-duotone fa-light fa-newspaper text-4xl text-accent-300 dark:text-accent-600"></i>
-                            </div>
-                        @endif
+                        <x-blog-thumbnail :post="$post"
+                            media="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                            fallback="w-full h-48" icon="text-4xl" />
                     </div>
 
                     <div class="p-6">
