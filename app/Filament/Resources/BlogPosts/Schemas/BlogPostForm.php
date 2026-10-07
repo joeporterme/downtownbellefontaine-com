@@ -77,6 +77,13 @@ class BlogPostForm
                             ->imageResizeTargetHeight('1080')
                             ->maxSize(5120)
                             ->helperText('Recommended: 1920x1080px'),
+                        FileUpload::make('featured_video')
+                            ->label('Featured Video (optional)')
+                            ->disk('public')
+                            ->directory('blog/videos')
+                            ->acceptedFileTypes(['video/mp4'])
+                            ->maxSize(102400)
+                            ->helperText('MP4 only. When set, the hero uses a default Downtown photo and this video plays in the article.'),
                         Select::make('blog_category_id')
                             ->label('Category')
                             ->options(BlogCategory::active()->ordered()->pluck('name', 'id'))

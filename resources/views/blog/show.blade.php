@@ -2,8 +2,12 @@
 
 @section('title', $post->seo_title ?: $post->title)
 @section('description', $post->seo_description ?: \Illuminate\Support\Str::limit(strip_tags($post->content), 160))
-@if($post->featured_image)
-    @section('og_image', \App\Support\Media::url($post->featured_image))
+@php
+    // Share image: the featured image, else the default Downtown photo when a video is present.
+    $ogImageRef = $post->featured_image ?: ($post->featured_video ? \App\Models\BlogPost::DEFAULT_VIDEO_HERO : null);
+@endphp
+@if($ogImageRef)
+    @section('og_image', \App\Support\Media::url($ogImageRef))
     @section('og_type', 'article')
 @endif
 
@@ -16,7 +20,15 @@
         'datePublished' => $post->published_at?->toIso8601String(),
         'dateModified' => $post->updated_at?->toIso8601String(),
         'author' => $post->author ? ['@type' => 'Person', 'name' => $post->author->name] : null,
-        'image' => $post->featured_image ? \App\Support\Media::absoluteUrl($post->featured_image) : null,
+        'image' => $ogImageRef ? \App\Support\Media::absoluteUrl($ogImageRef) : null,
+        'video' => $post->featured_video ? array_filter([
+            '@type' => 'VideoObject',
+            'name' => $post->title,
+            'description' => $post->seo_description ?: \Illuminate\Support\Str::limit(strip_tags($post->content), 160),
+            'thumbnailUrl' => \App\Support\Media::absoluteUrl(\App\Models\BlogPost::DEFAULT_VIDEO_HERO),
+            'contentUrl' => \App\Support\Media::absoluteUrl($post->featured_video),
+            'uploadDate' => $post->published_at?->toIso8601String(),
+        ]) : null,
         'mainEntityOfPage' => url()->current(),
     ]);
 @endphp
@@ -45,12 +57,20 @@
 <x-breadcrumbs :items="[['label' => 'Home', 'url' => url('/')], ['label' => 'Blog', 'url' => route('blog.index')], ['label' => $post->title]]" />
 
 <article class="bg-theme-primary">
-    @php $minutes = max(1, (int) ceil(str_word_count(strip_tags($post->content)) / 200)); @endphp
-    {{-- Header — the featured image becomes the hero background when present --}}
-    <header class="relative overflow-hidden {{ $post->featured_image ? 'bg-primary-800 dark:bg-primary-950 py-24 md:py-36' : 'py-12 md:py-16' }}">
-        @if($post->featured_image)
+    @php
+        $minutes = max(1, (int) ceil(str_word_count(strip_tags($post->content)) / 200));
+        // Hero media: featured image, else the default Downtown photo when a video is present.
+        $hasVideo  = (bool) $post->featured_video;
+        $heroImage = $post->featured_image
+            ? \App\Support\Media::url($post->featured_image)
+            : ($hasVideo ? \App\Support\Media::url(\App\Models\BlogPost::DEFAULT_VIDEO_HERO) : null);
+        $hasHero   = $heroImage !== null;
+    @endphp
+    {{-- Header — the featured image (or default photo for video posts) becomes the hero background --}}
+    <header class="relative overflow-hidden {{ $hasHero ? 'bg-primary-800 dark:bg-primary-950 py-24 md:py-36' : 'py-12 md:py-16' }}">
+        @if($hasHero)
             <div class="absolute inset-0 overflow-hidden">
-                <img src="{{ \App\Support\Media::url($post->featured_image) }}" alt="{{ $post->title }}"
+                <img src="{{ $heroImage }}" alt="{{ $post->title }}"
                      data-parallax data-parallax-speed="0.25"
                      class="parallax-img absolute inset-0 w-full h-full object-cover opacity-40">
                 <div class="absolute inset-0 bg-gradient-to-b from-primary-900/55 via-primary-900/40 to-primary-900/80"></div>
@@ -58,10 +78,10 @@
         @endif
         <div class="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             @if($post->category)
-                <span class="inline-block {{ $post->featured_image ? 'text-accent-300' : 'text-accent-600 dark:text-accent-400' }} font-semibold uppercase tracking-wide text-sm mb-3">{{ $post->category->name }}</span>
+                <span class="inline-block {{ $hasHero ? 'text-accent-300' : 'text-accent-600 dark:text-accent-400' }} font-semibold uppercase tracking-wide text-sm mb-3">{{ $post->category->name }}</span>
             @endif
-            <h1 class="text-3xl md:text-5xl font-bold {{ $post->featured_image ? 'text-white' : 'text-theme-primary' }} leading-tight">{{ $post->title }}</h1>
-            <div class="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-sm {{ $post->featured_image ? 'text-primary-100' : 'text-theme-tertiary' }} mt-5">
+            <h1 class="text-3xl md:text-5xl font-bold {{ $hasHero ? 'text-white' : 'text-theme-primary' }} leading-tight">{{ $post->title }}</h1>
+            <div class="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-sm {{ $hasHero ? 'text-primary-100' : 'text-theme-tertiary' }} mt-5">
                 <span><i class="fa-duotone fa-light fa-calendar mr-1.5"></i>{{ $post->published_at->format('F j, Y') }}</span>
                 @if($post->author)
                     <span class="opacity-40">•</span>
@@ -73,8 +93,15 @@
         </div>
     </header>
 
-    {{-- Featured image (clear), overlapping the hero --}}
-    @if($post->featured_image)
+    {{-- Featured media (clear), overlapping the hero: video player if present, else the image --}}
+    @if($hasVideo)
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 -mt-20 md:-mt-28">
+            <video controls preload="metadata" poster="{{ $heroImage }}"
+                   class="w-full aspect-[16/9] object-cover rounded-2xl shadow-xl ring-1 ring-black/5 bg-black">
+                <source src="{{ \App\Support\Media::url($post->featured_video) }}" type="video/mp4">
+            </video>
+        </div>
+    @elseif($post->featured_image)
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 -mt-20 md:-mt-28">
             <img src="{{ \App\Support\Media::url($post->featured_image) }}" alt="{{ $post->title }}" class="w-full aspect-[16/9] object-cover rounded-2xl shadow-xl ring-1 ring-black/5">
         </div>
@@ -118,9 +145,14 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 @foreach($related as $post)
                     <a href="{{ route('blog.show', $post) }}" class="group block bg-theme-primary rounded-2xl border border-theme overflow-hidden card-hover">
-                        <div class="overflow-hidden">
+                        <div class="relative overflow-hidden">
                             @if($post->featured_image)
                                 <img src="{{ \App\Support\Media::url($post->featured_image) }}" alt="{{ $post->title }}" loading="lazy" class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-105">
+                            @elseif($post->featured_video)
+                                <img src="{{ \App\Support\Media::url(\App\Models\BlogPost::DEFAULT_VIDEO_HERO) }}" alt="{{ $post->title }}" loading="lazy" class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-105">
+                                <span class="absolute inset-0 flex items-center justify-center">
+                                    <span class="w-12 h-12 rounded-full bg-black/55 backdrop-blur-sm flex items-center justify-center text-white"><i class="fa-duotone fa-light fa-play text-lg ml-0.5"></i></span>
+                                </span>
                             @else
                                 <div class="w-full h-44 bg-gradient-to-br from-accent-100 to-accent-200 dark:from-accent-800 dark:to-accent-900 flex items-center justify-center">
                                     <i class="fa-duotone fa-light fa-newspaper text-4xl text-accent-300 dark:text-accent-600"></i>

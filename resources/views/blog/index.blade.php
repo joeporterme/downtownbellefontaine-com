@@ -22,6 +22,11 @@
                 <div class="relative overflow-hidden rounded-2xl shadow-xl aspect-[16/10]">
                     @if($featured->featured_image)
                         <img src="{{ \App\Support\Media::url($featured->featured_image) }}" alt="{{ $featured->title }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    @elseif($featured->featured_video)
+                        <img src="{{ \App\Support\Media::url(\App\Models\BlogPost::DEFAULT_VIDEO_HERO) }}" alt="{{ $featured->title }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <span class="absolute inset-0 flex items-center justify-center">
+                            <span class="w-16 h-16 rounded-full bg-black/55 backdrop-blur-sm flex items-center justify-center text-white"><i class="fa-duotone fa-light fa-play text-2xl ml-1"></i></span>
+                        </span>
                     @else
                         <div class="w-full h-full bg-gradient-to-br from-accent-100 to-accent-200 dark:from-accent-800 dark:to-accent-900 flex items-center justify-center">
                             <i class="fa-duotone fa-light fa-newspaper text-5xl text-accent-300 dark:text-accent-600"></i>
@@ -60,6 +65,11 @@
                             <div class="relative overflow-hidden">
                                 @if($post->featured_image)
                                     <img src="{{ \App\Support\Media::url($post->featured_image) }}" alt="{{ $post->title }}" loading="lazy" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-105">
+                                @elseif($post->featured_video)
+                                    <img src="{{ \App\Support\Media::url(\App\Models\BlogPost::DEFAULT_VIDEO_HERO) }}" alt="{{ $post->title }}" loading="lazy" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-105">
+                                    <span class="absolute inset-0 flex items-center justify-center">
+                                        <span class="w-14 h-14 rounded-full bg-black/55 backdrop-blur-sm flex items-center justify-center text-white"><i class="fa-duotone fa-light fa-play text-xl ml-0.5"></i></span>
+                                    </span>
                                 @else
                                     <div class="w-full h-52 bg-gradient-to-br from-accent-100 to-accent-200 dark:from-accent-800 dark:to-accent-900 flex items-center justify-center">
                                         <i class="fa-duotone fa-light fa-newspaper text-4xl text-accent-300 dark:text-accent-600"></i>

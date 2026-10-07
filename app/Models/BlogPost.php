@@ -12,6 +12,12 @@ use Symfony\Component\HtmlSanitizer\HtmlSanitizerConfig;
 
 class BlogPost extends Model
 {
+    /**
+     * Fallback hero background used when a post has a featured video but no
+     * featured image (a video can't serve as a static hero background).
+     */
+    public const DEFAULT_VIDEO_HERO = '/images/home/downtown-bellefontaine-1.jpg';
+
     protected $fillable = [
         'title',
         'slug',
@@ -19,6 +25,7 @@ class BlogPost extends Model
         'blog_category_id',
         'author_id',
         'featured_image',
+        'featured_video',
         'status',
         'published_at',
         'seo_title',
