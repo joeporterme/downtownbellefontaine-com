@@ -46,6 +46,9 @@ class RedirectSeeder extends Seeder
             // Category & author archives → blog
             ['from_path' => '^/category/.+$', 'to_url' => '/blog', 'priority' => 70, 'notes' => 'archives'],
             ['from_path' => '^/author/.+$', 'to_url' => '/blog', 'priority' => 70, 'notes' => 'archives'],
+            // Event-category archives → events index (the first-fridays one is
+            // mapped more specifically in pageRules; exact matches win first)
+            ['from_path' => '^/event_cat/.+$', 'to_url' => '/events', 'priority' => 70, 'notes' => 'archives'],
             // Old static "things to do" microsite → new page
             ['from_path' => '^/thingstodo(/.*)?$', 'to_url' => '/things-to-do', 'priority' => 60, 'notes' => 'pages'],
             // Catch-all for every remaining old event page (exact event rules win first)
@@ -74,6 +77,8 @@ class RedirectSeeder extends Seeder
             '/thank-you' => '/',
             '/qa-event-creation-page' => '/',
             '/dev-page1' => '/',
+            // Event-category archive that maps to a specific page (First Fridays → Downtown Days)
+            '/event_cat/first-fridays' => '/downtown-days',
         ];
     }
 
