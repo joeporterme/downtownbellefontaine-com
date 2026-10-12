@@ -69,9 +69,16 @@ class SiteSettings extends Page
                     ]),
                 Section::make('Analytics')
                     ->schema([
+                        TextInput::make('gtm_container_id')
+                            ->label('Google Tag Manager Container ID')
+                            ->placeholder('GTM-XXXXXXX')
+                            ->helperText('Loads the GTM container site-wide (manage GA4 and other tags inside Tag Manager). Leave the GA4 field below blank when using GTM to avoid double-counting.')
+                            ->maxLength(50),
                         TextInput::make('google_analytics_id')
-                            ->label('Google Analytics ID')
-                            ->placeholder('G-XXXXXXXXXX')->maxLength(50),
+                            ->label('Google Analytics 4 ID (direct gtag)')
+                            ->placeholder('G-XXXXXXXXXX')
+                            ->helperText('Optional. Use only for a direct GA4 tag when NOT using GTM above.')
+                            ->maxLength(50),
                     ]),
             ])
             ->statePath('data');

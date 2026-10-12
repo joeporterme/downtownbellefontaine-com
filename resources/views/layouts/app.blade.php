@@ -125,7 +125,16 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    {{-- Google Analytics (from Site Settings) --}}
+    {{-- Google Tag Manager (from Site Settings) --}}
+    @if(!empty($settings?->gtm_container_id))
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','{{ $settings->gtm_container_id }}');</script>
+    @endif
+
+    {{-- Google Analytics 4 — direct gtag (from Site Settings; use only without GTM) --}}
     @if(!empty($settings?->google_analytics_id))
         <script async src="https://www.googletagmanager.com/gtag/js?id={{ $settings->google_analytics_id }}"></script>
         <script>
@@ -149,6 +158,11 @@
     @stack('styles')
 </head>
 <body class="bg-theme-secondary text-theme-primary min-h-screen flex flex-col">
+    {{-- Google Tag Manager (noscript) --}}
+    @if(!empty($settings?->gtm_container_id))
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ $settings->gtm_container_id }}"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    @endif
     {{-- Skip to content (keyboard / screen-reader users) --}}
     <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:top-3 focus:left-3 focus:px-4 focus:py-2 focus:rounded-lg focus:bg-primary-600 focus:text-white focus:shadow-lg">
         Skip to main content

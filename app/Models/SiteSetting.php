@@ -24,6 +24,7 @@ class SiteSetting extends Model
         'tiktok_url',
         'youtube_url',
         'google_analytics_id',
+        'gtm_container_id',
     ];
 
     protected static function booted(): void
