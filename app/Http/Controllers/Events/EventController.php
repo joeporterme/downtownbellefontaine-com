@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\Events;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\EventRequest;
 use App\Models\Business;
 use App\Models\Event;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Laravel\Facades\Image;
 
@@ -39,25 +39,9 @@ class EventController extends Controller
         return view('events.create', compact('businesses'));
     }
 
-    public function store(Request $request)
+    public function store(EventRequest $request)
     {
-        $validated = $request->validate([
-            'title' => 'required|string|max:255',
-            'description' => 'nullable|string',
-            'featured_image' => 'nullable|image|max:10240',
-            'business_id' => 'nullable|exists:businesses,id',
-            'event_date' => 'required|date|after_or_equal:today',
-            'start_time' => 'nullable|date_format:H:i',
-            'end_time' => 'nullable|date_format:H:i|after:start_time',
-            'more_info_url' => 'nullable|url|max:255',
-            'location_name' => 'nullable|string|max:255',
-            'address' => 'nullable|string|max:255',
-            'city' => 'nullable|string|max:100',
-            'state' => 'nullable|string|max:2',
-            'zip' => 'nullable|string|max:10',
-            'latitude' => 'nullable|numeric|between:-90,90',
-            'longitude' => 'nullable|numeric|between:-180,180',
-        ]);
+        $validated = $request->validated();
 
         // Handle image upload with resizing
         if ($request->hasFile('featured_image')) {
@@ -93,30 +77,10 @@ class EventController extends Controller
         return view('events.edit', compact('event', 'businesses'));
     }
 
-    public function update(Request $request, Event $event)
+    public function update(EventRequest $request, Event $event)
     {
-        // Ensure user owns this event
-        if ($event->submitted_by !== auth()->id()) {
-            abort(403);
-        }
-
-        $validated = $request->validate([
-            'title' => 'required|string|max:255',
-            'description' => 'nullable|string',
-            'featured_image' => 'nullable|image|max:10240',
-            'business_id' => 'nullable|exists:businesses,id',
-            'event_date' => 'required|date',
-            'start_time' => 'nullable|date_format:H:i',
-            'end_time' => 'nullable|date_format:H:i|after:start_time',
-            'more_info_url' => 'nullable|url|max:255',
-            'location_name' => 'nullable|string|max:255',
-            'address' => 'nullable|string|max:255',
-            'city' => 'nullable|string|max:100',
-            'state' => 'nullable|string|max:2',
-            'zip' => 'nullable|string|max:10',
-            'latitude' => 'nullable|numeric|between:-90,90',
-            'longitude' => 'nullable|numeric|between:-180,180',
-        ]);
+        // Ownership is enforced by EventRequest::authorize().
+        $validated = $request->validated();
 
         // Handle image upload with resizing
         if ($request->hasFile('featured_image')) {
