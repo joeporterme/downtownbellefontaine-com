@@ -50,7 +50,7 @@
         var form = document.getElementById('nlp-form');
         var errEl = document.getElementById('nlp-error');
         var submitBtn = document.getElementById('nlp-submit');
-        var endpoint = 'https://api.hsforms.com/submissions/v3/integration/submit/20109775/b1fe3e78-e462-49cc-b1d9-0ea2ed95f6de';
+        var endpoint = window.DTB_HUBSPOT_ENDPOINT;
 
         function dismiss(save) {
             el.classList.add('translate-y-[160%]', 'opacity-0');

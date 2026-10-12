@@ -123,6 +123,9 @@
     ], JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_UNESCAPED_UNICODE) !!}
     </script>
 
+    {{-- Single source of truth for the HubSpot newsletter endpoint (footer + popup forms read this). --}}
+    <script>window.DTB_HUBSPOT_ENDPOINT = @js('https://api.hsforms.com/submissions/v3/integration/submit/'.config('services.hubspot.portal_id').'/'.config('services.hubspot.newsletter_form_id'));</script>
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     {{-- Google Tag Manager (from Site Settings) --}}
@@ -462,9 +465,7 @@
             (function () {
                 var form = document.getElementById('newsletter-form');
                 if (!form) return;
-                var PORTAL = '20109775';
-                var FORM_ID = 'b1fe3e78-e462-49cc-b1d9-0ea2ed95f6de';
-                var endpoint = 'https://api.hsforms.com/submissions/v3/integration/submit/' + PORTAL + '/' + FORM_ID;
+                var endpoint = window.DTB_HUBSPOT_ENDPOINT;
                 var successEl = document.getElementById('newsletter-success');
                 var formErr = document.getElementById('nl-form-error');
                 var submitBtn = document.getElementById('nl-submit');
