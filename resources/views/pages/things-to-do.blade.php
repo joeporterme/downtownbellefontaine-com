@@ -124,7 +124,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {{-- Logan County Farmer's Market (downtown, seasonal) --}}
             <div class="bg-theme-secondary rounded-xl shadow border border-theme overflow-hidden flex flex-col">
-                <div class="h-28">
+                <div class="h-52">
                     <img src="/images/pages/attractions/farmers-market.jpg" alt="Logan County Farmer's Market" class="w-full h-full object-cover">
                 </div>
                 <div class="p-5 flex flex-col flex-grow">
@@ -137,7 +137,7 @@
 
             {{-- Mad River Mountain --}}
             <div class="bg-theme-secondary rounded-xl shadow border border-theme overflow-hidden flex flex-col">
-                <div class="h-28">
+                <div class="h-52">
                     <img src="/images/pages/attractions/mad-river.jpg" alt="Mad River Mountain" class="w-full h-full object-cover">
                 </div>
                 <div class="p-5 flex flex-col flex-grow">
@@ -150,7 +150,7 @@
 
             {{-- Indian Lake --}}
             <div class="bg-theme-secondary rounded-xl shadow border border-theme overflow-hidden flex flex-col">
-                <div class="h-28">
+                <div class="h-52">
                     <img src="/images/pages/attractions/indian-lake.jpg" alt="Indian Lake" class="w-full h-full object-cover">
                 </div>
                 <div class="p-5 flex flex-col flex-grow">
@@ -163,7 +163,7 @@
 
             {{-- Ohio Caverns --}}
             <div class="bg-theme-secondary rounded-xl shadow border border-theme overflow-hidden flex flex-col">
-                <div class="h-28">
+                <div class="h-52">
                     <img src="/images/pages/attractions/ohio-caverns.jpg" alt="Ohio Caverns" class="w-full h-full object-cover">
                 </div>
                 <div class="p-5 flex flex-col flex-grow">
@@ -176,7 +176,7 @@
 
             {{-- Marmon Valley Farm --}}
             <div class="bg-theme-secondary rounded-xl shadow border border-theme overflow-hidden flex flex-col">
-                <div class="h-28">
+                <div class="h-52">
                     <img src="/images/pages/attractions/marmon-valley.jpg" alt="Marmon Valley Farm" class="w-full h-full object-cover">
                 </div>
                 <div class="p-5 flex flex-col flex-grow">
@@ -189,7 +189,7 @@
 
             {{-- Piatt Castles --}}
             <div class="bg-theme-secondary rounded-xl shadow border border-theme overflow-hidden flex flex-col">
-                <div class="h-28">
+                <div class="h-52">
                     <img src="/images/pages/attractions/piatt-castles.jpg" alt="The Piatt Castles" class="w-full h-full object-cover">
                 </div>
                 <div class="p-5 flex flex-col flex-grow">
@@ -202,7 +202,7 @@
 
             {{-- Campbell Hill --}}
             <div class="bg-theme-secondary rounded-xl shadow border border-theme overflow-hidden flex flex-col">
-                <div class="h-28">
+                <div class="h-52">
                     <img src="/images/pages/attractions/campbell-hill.jpg" alt="Campbell Hill" class="w-full h-full object-cover">
                 </div>
                 <div class="p-5 flex flex-col flex-grow">
@@ -214,7 +214,7 @@
 
             {{-- Simon Kenton Trail --}}
             <div class="bg-theme-secondary rounded-xl shadow border border-theme overflow-hidden flex flex-col">
-                <div class="h-28 bg-gradient-to-br from-success-400 to-success-600 flex items-center justify-center">
+                <div class="h-52 bg-gradient-to-br from-success-400 to-success-600 flex items-center justify-center">
                     <i class="fa-duotone fa-light fa-person-biking text-4xl text-white/90"></i>
                 </div>
                 <div class="p-5 flex flex-col flex-grow">
@@ -226,7 +226,7 @@
 
             {{-- Mary Rutan Park --}}
             <div class="bg-theme-secondary rounded-xl shadow border border-theme overflow-hidden flex flex-col">
-                <div class="h-28">
+                <div class="h-52">
                     <img src="/images/pages/attractions/mary-rutan-park.jpg" alt="Mary Rutan Park" class="w-full h-full object-cover">
                 </div>
                 <div class="p-5 flex flex-col flex-grow">
@@ -238,7 +238,7 @@
 
             {{-- YMCA Camp Willson --}}
             <div class="bg-theme-secondary rounded-xl shadow border border-theme overflow-hidden flex flex-col">
-                <div class="h-28 bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center">
+                <div class="h-52 bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center">
                     <i class="fa-duotone fa-light fa-campground text-4xl text-white/90"></i>
                 </div>
                 <div class="p-5 flex flex-col flex-grow">
@@ -250,7 +250,7 @@
 
             {{-- Camp Myeerah --}}
             <div class="bg-theme-secondary rounded-xl shadow border border-theme overflow-hidden flex flex-col">
-                <div class="h-28 bg-gradient-to-br from-success-400 to-success-600 flex items-center justify-center">
+                <div class="h-52 bg-gradient-to-br from-success-400 to-success-600 flex items-center justify-center">
                     <i class="fa-duotone fa-light fa-campfire text-4xl text-white/90"></i>
                 </div>
                 <div class="p-5 flex flex-col flex-grow">
@@ -262,7 +262,7 @@
 
             {{-- Golf: Liberty Hills & Cherokee Hills --}}
             <div class="bg-theme-secondary rounded-xl shadow border border-theme overflow-hidden flex flex-col">
-                <div class="h-28">
+                <div class="h-52">
                     <img src="/images/pages/attractions/liberty-cherokee-golf.jpg" alt="Liberty Hills &amp; Cherokee Hills Golf" class="w-full h-full object-cover">
                 </div>
                 <div class="p-5 flex flex-col flex-grow">
