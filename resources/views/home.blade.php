@@ -297,7 +297,7 @@
         <div class="reveal active">
             <span class="font-display text-3xl md:text-4xl text-accent-300 block mb-4">Welcome to</span>
         </div>
-        <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 reveal active delay-100">
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight mb-6 reveal active delay-100">
             Downtown<br>
             <span class="gradient-text">Bellefontaine</span>
         </h1>
@@ -340,9 +340,11 @@
             {{-- Copy --}}
             <div class="order-1 md:order-2 reveal-right active">
                 <span class="font-display text-2xl text-accent-500">Welcome to</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-theme-primary mt-1 mb-5">Downtown Bellefontaine</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-theme-primary mt-1 mb-2">Ohio's Most Loveable Downtown</h2>
+                <p class="text-lg font-semibold text-accent-600 dark:text-accent-400 mb-5">Small Town. Big Personality. Worth the Drive.</p>
                 <div class="space-y-4 text-theme-secondary leading-relaxed">
-                    <p>Tucked into the heart of Ohio, Downtown Bellefontaine is a charming small-town destination filled with historic character, locally owned shops, and unforgettable food and drinks. Whether you're wandering our brick-lined streets, catching a show at the historic Holland Theatre, or sipping coffee on a sunny corner, downtown invites you to slow down, explore, and stay awhile.</p>
+                    <p>Discover award-winning dining, locally owned coffee shops, charming boutiques, vintage treasures, antique shops, and delicious dessert destinations, all in one walkable, award-winning Ohio historic downtown. Just 60 minutes or less from Columbus, Dayton, and Lima, Downtown Bellefontaine is your perfect weekend day trip.</p>
+                    <p class="font-medium text-theme-primary">Come explore. Stay awhile. Fall in love with Bellefontaine.</p>
                 </div>
 
                 {{-- Landmark highlights --}}
