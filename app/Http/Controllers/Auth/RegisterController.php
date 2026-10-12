@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -31,8 +32,13 @@ class RegisterController extends Controller
             'role' => 'business_owner',
         ]);
 
+        // Fires SendEmailVerificationNotification (User implements MustVerifyEmail).
+        event(new Registered($user));
+
         Auth::login($user);
 
-        return redirect()->route('business.dashboard');
+        // Portal is gated by the `verified` middleware; send them to the
+        // "check your email" notice until they confirm their address.
+        return redirect()->route('verification.notice');
     }
 }
