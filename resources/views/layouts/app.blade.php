@@ -576,10 +576,27 @@
                         @endif
                     </div>
 
-                    {{-- Ohio's Christmas Capital (year-round) --}}
-                    <a href="https://ohiochristmascapital.com/" target="_blank" rel="noopener" aria-label="Ohio's Christmas Capital — Downtown Bellefontaine" class="inline-block mt-8 hover:opacity-90 transition-opacity">
-                        <img src="{{ asset('images/ohio-christmas-capital.png') }}" alt="Ohio's Christmas Capital — Downtown Bellefontaine" class="h-24 w-24" width="96" height="96" loading="lazy">
-                    </a>
+                    {{-- Community partners + Ohio's Christmas Capital --}}
+                    <div class="mt-8">
+                        <p class="text-xs uppercase tracking-wider text-primary-300 font-semibold mb-3">Proud Community Partners</p>
+                        <div class="flex flex-wrap items-center gap-3">
+                            <a href="https://ohiochristmascapital.com/" target="_blank" rel="noopener" aria-label="Ohio's Christmas Capital — Downtown Bellefontaine" class="hover:opacity-90 transition-opacity">
+                                <img src="{{ asset('images/ohio-christmas-capital.png') }}" alt="Ohio's Christmas Capital — Downtown Bellefontaine" class="h-16 w-16" width="64" height="64" loading="lazy">
+                            </a>
+                            <a href="{{ url('/') }}" aria-label="Downtown Bellefontaine Partnership" class="bg-white rounded-lg px-3 h-16 flex items-center hover:opacity-90 transition-opacity">
+                                <img src="{{ asset('images/partners/downtown-bellefontaine.svg') }}" alt="Downtown Bellefontaine Partnership" class="h-11 w-auto max-w-[150px]" loading="lazy">
+                            </a>
+                            <a href="https://smallnation.com" target="_blank" rel="noopener" aria-label="Small Nation" class="bg-white rounded-lg px-3 h-16 flex items-center hover:opacity-90 transition-opacity">
+                                <img src="{{ asset('images/partners/small-nation.svg') }}" alt="Small Nation" class="h-12 w-auto" loading="lazy">
+                            </a>
+                            <a href="https://www.logancountyohio.com/" target="_blank" rel="noopener" aria-label="Logan County Chamber of Commerce" class="bg-white rounded-lg px-3 h-16 flex items-center hover:opacity-90 transition-opacity">
+                                <img src="{{ asset('images/partners/logan-county-chamber.png') }}" alt="Logan County Chamber of Commerce" class="h-10 w-auto max-w-[150px]" loading="lazy">
+                            </a>
+                            <a href="https://www.experiencelogancounty.com/" target="_blank" rel="noopener" aria-label="Logan County Visitors Bureau" class="bg-white rounded-lg px-3 h-16 flex items-center hover:opacity-90 transition-opacity">
+                                <img src="{{ asset('images/partners/logan-county-visitors-bureau.png') }}" alt="Logan County Visitors Bureau" class="h-14 w-auto" loading="lazy">
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
                 {{-- Explore --}}
