@@ -10,7 +10,10 @@ use App\Observers\BusinessObserver;
 use App\Services\AI\AIService;
 use App\Services\BusinessImportService;
 use App\Services\Google\GeocodingService;
+use Illuminate\Cache\RateLimiting\Limit;
+use Illuminate\Http\Request;
 use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
@@ -54,6 +57,17 @@ class AppServiceProvider extends ServiceProvider
 
         // Branded pagination bar sitewide.
         Paginator::defaultView('vendor.pagination.downtown');
+
+        // Login throttle: 5/min per email+IP (stops password-spray on one
+        // account) AND 20/min per IP (stops distributed spray from one host).
+        RateLimiter::for('login', function (Request $request) {
+            $email = (string) $request->input('email');
+
+            return [
+                Limit::perMinute(5)->by(mb_strtolower($email).'|'.$request->ip()),
+                Limit::perMinute(20)->by($request->ip()),
+            ];
+        });
 
         // Make global site settings available to every view.
         try {

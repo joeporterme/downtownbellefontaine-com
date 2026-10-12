@@ -28,3 +28,7 @@ Thumbs.db
 /resources/events.xml
 /resources/media.xml
 /resources/posts.xml
+/resources/sn_listing.sql
+/resources/sn_listing_images.sql
+/resources/sn_listing_category.sql
+/resources/sn_listing_assigned_cat.sql
