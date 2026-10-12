@@ -123,6 +123,12 @@
                                 placeholder="Tell us what's on your mind...">{{ old('message') }}</textarea>
                         </div>
 
+                        <label for="newsletter" class="flex items-center gap-2.5 cursor-pointer select-none">
+                            <input type="checkbox" id="newsletter" name="newsletter" value="1" @checked(old('newsletter', true))
+                                class="h-4 w-4 rounded border-theme text-accent-500 focus:ring-accent-400">
+                            <span class="text-sm text-theme-secondary">Subscribe me to The Downtown Download newsletter</span>
+                        </label>
+
                         <button type="submit" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition-colors shadow-sm">
                             <i class="fa-duotone fa-light fa-paper-plane"></i>
                             Send Message
@@ -150,15 +156,6 @@
                             </div>
                         </div>
 
-                        <div class="flex items-start gap-3">
-                            <div class="w-9 h-9 rounded-lg bg-success-100 dark:bg-success-900/40 flex items-center justify-center flex-shrink-0">
-                                <i class="fa-duotone fa-light fa-envelope text-success-600"></i>
-                            </div>
-                            <div class="min-w-0">
-                                <p class="text-xs uppercase tracking-wider text-theme-tertiary font-semibold">Email</p>
-                                <a href="mailto:info@downtownbellefontaine.com" class="font-semibold text-theme-primary hover:text-accent-600 transition-colors break-all">info@downtownbellefontaine.com</a>
-                            </div>
-                        </div>
                     </div>
                 </div>
 

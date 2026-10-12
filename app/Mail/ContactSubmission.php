@@ -14,8 +14,10 @@ class ContactSubmission extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public function __construct(public ContactMessage $contactMessage)
-    {
+    public function __construct(
+        public ContactMessage $contactMessage,
+        public bool $subscribedToNewsletter = false,
+    ) {
     }
 
     public function envelope(): Envelope

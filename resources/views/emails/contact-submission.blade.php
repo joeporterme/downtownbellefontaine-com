@@ -33,6 +33,10 @@
                 </tr>
                 @endif
                 <tr>
+                    <td style="padding:6px 0;color:#6b7280;">Newsletter</td>
+                    <td style="padding:6px 0;">{{ $subscribedToNewsletter ? 'Yes — added to The Downtown Download' : 'No' }}</td>
+                </tr>
+                <tr>
                     <td style="padding:6px 0;color:#6b7280;">Received</td>
                     <td style="padding:6px 0;">{{ $contactMessage->created_at->format('M j, Y g:i A') }}</td>
                 </tr>

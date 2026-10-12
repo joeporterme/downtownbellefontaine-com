@@ -57,4 +57,11 @@ return [
         'recipient' => env('CONTACT_FORM_RECIPIENT'),
     ],
 
+    'hubspot' => [
+        // Public form-submission endpoint (same portal/form the footer + popup
+        // newsletter signups use). Not secret — these IDs ship in the page JS.
+        'portal_id' => env('HUBSPOT_PORTAL_ID', '20109775'),
+        'newsletter_form_id' => env('HUBSPOT_NEWSLETTER_FORM_ID', 'b1fe3e78-e462-49cc-b1d9-0ea2ed95f6de'),
+    ],
+
 ];
