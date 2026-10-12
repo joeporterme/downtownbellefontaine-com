@@ -295,7 +295,7 @@
 
         {{-- Mobile Navigation --}}
         <div class="hidden lg:hidden" id="mobile-menu" data-mobile-menu>
-            <div class="px-4 pt-2 pb-4 space-y-1 border-t border-theme">
+            <div class="px-4 pt-2 pb-4 space-y-1 border-t border-theme max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain">
                 <a href="{{ url('/') }}" class="flex items-center gap-3 py-2.5 text-theme-secondary hover:text-primary-500">
                     <i class="fa-duotone fa-light fa-house w-5 text-center text-primary-500"></i>
                     <span>Home</span>
@@ -696,6 +696,8 @@
                     const isOpen = menu.classList.toggle('hidden') === false;
                     toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
                     toggleBtn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+                    // Lock the page behind the open menu so scrolling moves the menu, not the page.
+                    document.documentElement.classList.toggle('overflow-hidden', isOpen);
                 });
             }
         });
