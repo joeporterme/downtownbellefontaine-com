@@ -10,6 +10,7 @@ use Filament\Actions\EditAction;
 use Filament\Tables\Columns\BadgeColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
+use Filament\Tables\Filters\TernaryFilter;
 use Filament\Tables\Table;
 
 class ContactMessagesTable
@@ -47,10 +48,23 @@ class ContactMessagesTable
                         'success' => 'replied',
                         'gray' => 'archived',
                     ]),
+                TextColumn::make('spam_score')
+                    ->label('Spam')
+                    ->badge()
+                    ->formatStateUsing(fn ($state, $record) => $record->is_spam ? "Spam ({$state})" : ($state > 0 ? "Suspicious ({$state})" : 'Clean'))
+                    ->color(fn ($record) => $record->is_spam ? 'danger' : ($record->spam_score > 0 ? 'warning' : 'success'))
+                    ->tooltip(fn ($record) => $record->spam_reasons ? implode("\n", $record->spam_reasons) : null)
+                    ->toggleable(),
             ])
             ->filters([
                 SelectFilter::make('status')
                     ->options(ContactMessage::STATUSES),
+                TernaryFilter::make('is_spam')
+                    ->label('Spam')
+                    ->placeholder('Hide spam')
+                    ->trueLabel('Spam only')
+                    ->falseLabel('Not spam')
+                    ->default(false),
             ])
             ->recordActions([
                 Action::make('markReplied')

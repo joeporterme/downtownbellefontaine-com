@@ -13,6 +13,9 @@ class ContactMessage extends Model
         'subject',
         'message',
         'status',
+        'is_spam',
+        'spam_score',
+        'spam_reasons',
         'internal_notes',
         'replied_at',
         'ip_address',
@@ -21,7 +24,15 @@ class ContactMessage extends Model
 
     protected $casts = [
         'replied_at' => 'datetime',
+        'is_spam' => 'boolean',
+        'spam_score' => 'integer',
+        'spam_reasons' => 'array',
     ];
+
+    public function scopeNotSpam($query)
+    {
+        return $query->where('is_spam', false);
+    }
 
     public const STATUSES = [
         'new' => 'New',

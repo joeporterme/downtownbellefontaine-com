@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Public;
 use App\Http\Controllers\Controller;
 use App\Mail\ContactSubmission;
 use App\Models\ContactMessage;
+use App\Services\SpamDetectionService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
@@ -17,13 +18,8 @@ class ContactController extends Controller
         return view('pages.contact');
     }
 
-    public function store(Request $request)
+    public function store(Request $request, SpamDetectionService $spam)
     {
-        // Honeypot — bots fill the hidden field; humans don't see it.
-        if ($request->filled('website_url')) {
-            return redirect()->route('pages.contact')->with('success', "Thanks! We'll be in touch.");
-        }
-
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
@@ -32,37 +28,56 @@ class ContactController extends Controller
             'message' => 'required|string|max:5000',
         ]);
 
+        // Multi-signal spam scoring (honeypot + timing + content/email/phone/URL).
+        $spamResult = $spam->analyze($validated, [
+            'honeypot' => $request->input('website_url'),
+            'form_start_time' => $request->input('form_start_time'),
+        ]);
+
+        // Always store — spam is kept (flagged) in the admin inbox for review,
+        // never silently dropped.
         $contactMessage = ContactMessage::create([
             ...$validated,
             'status' => 'new',
+            'is_spam' => $spamResult['is_spam'],
+            'spam_score' => $spamResult['score'],
+            'spam_reasons' => $spamResult['reasons'],
             'ip_address' => $request->ip(),
             'user_agent' => $request->userAgent() ? substr($request->userAgent(), 0, 500) : null,
         ]);
 
         $subscribe = $request->boolean('newsletter');
 
-        // Notify the partnership. A mail failure must never block the submission —
-        // the DB record is the source of truth and the admin Filament inbox is the
-        // backstop. SMTP misconfigurations / transient failures stay invisible to
-        // the user.
-        try {
-            $recipient = config('services.contact.recipient', env('CONTACT_FORM_RECIPIENT'));
-            if ($recipient) {
-                Mail::to($recipient)->send(new ContactSubmission($contactMessage, $subscribe));
+        if (! $spamResult['is_spam']) {
+            // Notify the partnership. A mail failure must never block the submission —
+            // the DB record is the source of truth and the admin Filament inbox is
+            // the backstop.
+            try {
+                $recipient = config('services.contact.recipient', env('CONTACT_FORM_RECIPIENT'));
+                if ($recipient) {
+                    Mail::to($recipient)->send(new ContactSubmission($contactMessage, $subscribe));
+                }
+            } catch (\Throwable $e) {
+                Log::warning('Contact form mail dispatch failed', [
+                    'message_id' => $contactMessage->id,
+                    'error' => $e->getMessage(),
+                ]);
             }
-        } catch (\Throwable $e) {
-            Log::warning('Contact form mail dispatch failed', [
+
+            // Opt-in: push the submitter to the same HubSpot newsletter list the
+            // footer/popup forms use. Best-effort — never blocks the submission.
+            if ($subscribe) {
+                $this->subscribeToNewsletter($contactMessage, $request);
+            }
+        } else {
+            Log::info('Contact submission flagged as spam; stored but not notified', [
                 'message_id' => $contactMessage->id,
-                'error' => $e->getMessage(),
+                'spam_score' => $spamResult['score'],
+                'spam_reasons' => $spamResult['reasons'],
             ]);
         }
 
-        // Opt-in: push the submitter to the same HubSpot newsletter list the
-        // footer/popup forms use. Best-effort — never blocks the submission.
-        if ($subscribe) {
-            $this->subscribeToNewsletter($contactMessage, $request);
-        }
-
+        // Same response either way — never reveal the spam verdict to a bot.
         return redirect()->route('pages.contact')
             ->with('success', "Thanks for reaching out! We'll be in touch soon.");
     }

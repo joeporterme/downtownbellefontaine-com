@@ -53,11 +53,8 @@
                     <form method="POST" action="{{ route('contact.submit') }}" class="space-y-5">
                         @csrf
 
-                        {{-- Honeypot: hidden from humans, visible to most bots --}}
-                        <div class="hidden" aria-hidden="true">
-                            <label for="website_url">Website (leave blank)</label>
-                            <input type="text" name="website_url" id="website_url" tabindex="-1" autocomplete="off">
-                        </div>
+                        {{-- Spam protection: off-screen honeypot + submit-timing field --}}
+                        <x-form-spam-fields />
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                             <div>
@@ -178,4 +175,11 @@
     </div>
 </section>
 
+{{-- Stamp the form load time so the server can score bot-fast submissions --}}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var ts = Math.floor(Date.now() / 1000);
+        document.querySelectorAll('.form-start-time').forEach(function (f) { f.value = ts; });
+    });
+</script>
 @endsection
