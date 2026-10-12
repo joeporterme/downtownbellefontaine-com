@@ -54,7 +54,7 @@
                     <span class="text-xs font-semibold uppercase tracking-wide text-accent-600 mb-1">World-champion pizza</span>
                     <h3 class="text-xl font-bold text-theme-primary mb-2">Brick-Oven Pies</h3>
                     <p class="text-theme-secondary text-sm leading-relaxed flex-grow">Hand-spun, brick-oven pizza that's earned world championship titles and national television appearances. The dough is made fresh in-house daily and the ingredients sourced with obsessive care — worth the drive from anywhere.</p>
-                    <p class="text-theme-tertiary text-xs mt-3 italic">Six Hundred Downtown</p>
+                    <a href="{{ route('businesses.show', 'six-hundred-downtown') }}" class="mt-4 inline-flex items-center gap-1.5 text-primary-600 dark:text-primary-400 font-semibold text-sm hover:underline">Visit Six Hundred Downtown <i class="fa-duotone fa-light fa-arrow-right text-xs"></i></a>
                 </div>
             </div>
             {{-- Craft beer --}}
@@ -66,7 +66,7 @@
                     <span class="text-xs font-semibold uppercase tracking-wide text-accent-600 mb-1">Ohio's #1 beer bar</span>
                     <h3 class="text-xl font-bold text-theme-primary mb-2">Craft Beer & Taproom</h3>
                     <p class="text-theme-secondary text-sm leading-relaxed flex-grow">A lovingly restored 1950s diner-turned-taproom pours one of the best draft lineups in the state — voted Ohio's #1 beer bar — and the sandwiches hold their own against the taps.</p>
-                    <p class="text-theme-tertiary text-xs mt-3 italic">Brewfontaine</p>
+                    <a href="{{ route('businesses.show', 'brewfontaine') }}" class="mt-4 inline-flex items-center gap-1.5 text-primary-600 dark:text-primary-400 font-semibold text-sm hover:underline">Visit Brewfontaine <i class="fa-duotone fa-light fa-arrow-right text-xs"></i></a>
                 </div>
             </div>
             {{-- Tacos & tequila --}}
@@ -78,7 +78,7 @@
                     <span class="text-xs font-semibold uppercase tracking-wide text-accent-600 mb-1">Taco &amp; tequila bar</span>
                     <h3 class="text-xl font-bold text-theme-primary mb-2">Flying Pepper</h3>
                     <p class="text-theme-secondary text-sm leading-relaxed flex-grow">An award-winning taco and tequila bar bringing bold, colorful flavor to downtown — creative street-style tacos, a deep tequila and mezcal list, and a mural-splashed space that's as fun as the menu.</p>
-                    <p class="text-theme-tertiary text-xs mt-3 italic">Flying Pepper</p>
+                    <a href="{{ route('businesses.show', 'the-flying-pepper-cantina') }}" class="mt-4 inline-flex items-center gap-1.5 text-primary-600 dark:text-primary-400 font-semibold text-sm hover:underline">Visit The Flying Pepper Cantina <i class="fa-duotone fa-light fa-arrow-right text-xs"></i></a>
                 </div>
             </div>
         </div>
