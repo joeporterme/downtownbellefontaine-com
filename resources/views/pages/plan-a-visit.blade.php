@@ -12,7 +12,7 @@
     </div>
     <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 text-center">
         <p class="text-accent-400 font-display text-lg sm:text-xl mb-3">Downtown Bellefontaine</p>
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">Plan a Visit</h1>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-white mb-6">Plan a Visit</h1>
         <p class="text-primary-200 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed">
             Everything you need to make the most of a day -- or a whole weekend -- in Ohio's most loveable downtown.
         </p>
