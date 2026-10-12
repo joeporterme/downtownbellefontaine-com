@@ -21,30 +21,23 @@ Route::get('/things-to-do', [App\Http\Controllers\Public\PageController::class, 
 Route::get('/places-to-shop', [App\Http\Controllers\Public\PageController::class, 'placesToShop'])->name('pages.places-to-shop');
 Route::get('/food-drinks', [App\Http\Controllers\Public\PageController::class, 'foodDrinks'])->name('pages.food-drinks');
 Route::get('/stay', [App\Http\Controllers\Public\PageController::class, 'stay'])->name('pages.stay');
-Route::get('/plan-a-visit', fn() => view('pages.plan-a-visit'))->name('pages.plan-a-visit');
+Route::get('/plan-a-visit', [App\Http\Controllers\Public\PageController::class, 'planAVisit'])->name('pages.plan-a-visit');
 Route::get('/map', [App\Http\Controllers\Public\MapController::class, 'index'])->name('pages.map');
 // "Downtown Days" (formerly First Fridays). Route name/view/CMS key stay
 // `first-fridays` internally; only the public URL + display copy were renamed.
 // Old /first-fridays 301s to /downtown-days via the redirect system.
-Route::get('/downtown-days', fn() => view('pages.first-fridays'))->name('pages.first-fridays');
-Route::get('/meeting-spaces', fn() => view('pages.meeting-spaces'))->name('pages.meeting-spaces');
-Route::get('/dora', fn() => view('pages.dora'))->name('pages.dora');
-Route::get('/revitalization', fn() => view('pages.revitalization'))->name('pages.revitalization');
-Route::get('/media', function () {
-    $pressItems = \App\Models\PressItem::active()
-        ->orderByDesc('published_date')
-        ->get()
-        ->groupBy(fn ($item) => $item->published_date->format('Y'));
-
-    return view('pages.media', compact('pressItems'));
-})->name('pages.media');
+Route::get('/downtown-days', [App\Http\Controllers\Public\PageController::class, 'downtownDays'])->name('pages.first-fridays');
+Route::get('/meeting-spaces', [App\Http\Controllers\Public\PageController::class, 'meetingSpaces'])->name('pages.meeting-spaces');
+Route::get('/dora', [App\Http\Controllers\Public\PageController::class, 'dora'])->name('pages.dora');
+Route::get('/revitalization', [App\Http\Controllers\Public\PageController::class, 'revitalization'])->name('pages.revitalization');
+Route::get('/media', [App\Http\Controllers\Public\PageController::class, 'media'])->name('pages.media');
 Route::get('/contact', [App\Http\Controllers\Public\ContactController::class, 'show'])->name('pages.contact');
 Route::post('/contact', [App\Http\Controllers\Public\ContactController::class, 'store'])
     ->middleware('throttle:5,1')
     ->name('contact.submit');
 Route::get('/historic-walking-tour', [App\Http\Controllers\Public\WalkingTourController::class, 'index'])->name('pages.historic-walking-tour');
-Route::get('/privacy-policy', fn() => view('pages.privacy-policy'))->name('pages.privacy-policy');
-Route::get('/terms-of-service', fn() => view('pages.terms-of-service'))->name('pages.terms-of-service');
+Route::get('/privacy-policy', [App\Http\Controllers\Public\PageController::class, 'privacyPolicy'])->name('pages.privacy-policy');
+Route::get('/terms-of-service', [App\Http\Controllers\Public\PageController::class, 'termsOfService'])->name('pages.terms-of-service');
 
 // SEO / crawlers
 Route::get('/sitemap.xml', [App\Http\Controllers\Public\SitemapController::class, 'index'])->name('sitemap');
