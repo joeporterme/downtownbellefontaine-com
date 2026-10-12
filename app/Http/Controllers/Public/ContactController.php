@@ -29,7 +29,12 @@ class ContactController extends Controller
         ]);
 
         // Multi-signal spam scoring (honeypot + timing + content/email/phone/URL).
-        $spamResult = $spam->analyze($validated, [
+        // Split the single name field so the name-pattern heuristics engage.
+        $nameParts = preg_split('/\s+/', trim($validated['name']), 2);
+        $spamResult = $spam->analyze($validated + [
+            'first_name' => $nameParts[0] ?? '',
+            'last_name' => $nameParts[1] ?? '',
+        ], [
             'honeypot' => $request->input('website_url'),
             'form_start_time' => $request->input('form_start_time'),
         ]);
@@ -53,7 +58,7 @@ class ContactController extends Controller
             // the DB record is the source of truth and the admin Filament inbox is
             // the backstop.
             try {
-                $recipient = config('services.contact.recipient', env('CONTACT_FORM_RECIPIENT'));
+                $recipient = config('services.contact.recipient');
                 if ($recipient) {
                     Mail::to($recipient)->send(new ContactSubmission($contactMessage, $subscribe));
                 }

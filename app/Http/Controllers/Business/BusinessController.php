@@ -57,6 +57,13 @@ class BusinessController extends Controller
 
         [$businessData, $locationData, $categories] = $this->splitInput($validated);
 
+        // Re-enter moderation when an owner edits an already-approved listing,
+        // so changed names/links/descriptions don't publish without review.
+        if ($business->status === 'approved') {
+            $businessData['status'] = 'pending';
+            $businessData['approved_at'] = null;
+        }
+
         $business->update($businessData);
         $business->categories()->sync($categories);
 

@@ -15,6 +15,7 @@ class EventController extends Controller
     {
         $events = Event::approved()
             ->upcoming()
+            ->with('business')
             ->orderBy('event_date')
             ->orderBy('start_time')
             ->paginate(12);
