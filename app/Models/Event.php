@@ -2,15 +2,16 @@
 
 namespace App\Models;
 
+use App\Models\Concerns\SanitizesHtml;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Str;
-use Symfony\Component\HtmlSanitizer\HtmlSanitizer;
-use Symfony\Component\HtmlSanitizer\HtmlSanitizerConfig;
 
 class Event extends Model
 {
+    use SanitizesHtml;
+
     protected $fillable = [
         'business_id',
         'submitted_by',
@@ -68,20 +69,7 @@ class Event extends Model
      */
     protected function safeDescription(): Attribute
     {
-        return Attribute::make(
-            get: function () {
-                if (blank($this->description)) {
-                    return null;
-                }
-
-                $config = (new HtmlSanitizerConfig())
-                    ->allowSafeElements()
-                    ->allowRelativeLinks()
-                    ->allowLinkSchemes(['https', 'http', 'mailto']);
-
-                return (new HtmlSanitizer($config))->sanitize($this->description);
-            }
-        );
+        return Attribute::make(get: fn () => $this->sanitizeHtml($this->description, allowMedia: false));
     }
 
     public function business(): BelongsTo

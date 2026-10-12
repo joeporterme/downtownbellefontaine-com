@@ -2,16 +2,17 @@
 
 namespace App\Models;
 
+use App\Models\Concerns\SanitizesHtml;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Str;
-use Symfony\Component\HtmlSanitizer\HtmlSanitizer;
-use Symfony\Component\HtmlSanitizer\HtmlSanitizerConfig;
 
 class BlogPost extends Model
 {
+    use SanitizesHtml;
+
     /**
      * Fallback hero background used when a post has a featured video but no
      * featured image (a video can't serve as a static hero background).
@@ -68,22 +69,7 @@ class BlogPost extends Model
      */
     protected function safeContent(): Attribute
     {
-        return Attribute::make(
-            get: function () {
-                if (blank($this->content)) {
-                    return null;
-                }
-
-                $config = (new HtmlSanitizerConfig())
-                    ->allowSafeElements()
-                    ->allowRelativeLinks()
-                    ->allowRelativeMedias()
-                    ->allowLinkSchemes(['https', 'http', 'mailto'])
-                    ->allowMediaSchemes(['https', 'http', 'data']);
-
-                return (new HtmlSanitizer($config))->sanitize($this->content);
-            }
-        );
+        return Attribute::make(get: fn () => $this->sanitizeHtml($this->content));
     }
 
     public function category(): BelongsTo

@@ -2,14 +2,15 @@
 
 namespace App\Models;
 
+use App\Models\Concerns\SanitizesHtml;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
-use Symfony\Component\HtmlSanitizer\HtmlSanitizer;
-use Symfony\Component\HtmlSanitizer\HtmlSanitizerConfig;
 
 class DayAgenda extends Model
 {
+    use SanitizesHtml;
+
     protected $fillable = [
         'title',
         'slug',
@@ -57,22 +58,7 @@ class DayAgenda extends Model
      */
     protected function safeContent(): Attribute
     {
-        return Attribute::make(
-            get: function () {
-                if (blank($this->content)) {
-                    return null;
-                }
-
-                $config = (new HtmlSanitizerConfig())
-                    ->allowSafeElements()
-                    ->allowRelativeLinks()
-                    ->allowRelativeMedias()
-                    ->allowLinkSchemes(['https', 'http', 'mailto'])
-                    ->allowMediaSchemes(['https', 'http', 'data']);
-
-                return (new HtmlSanitizer($config))->sanitize($this->content);
-            }
-        );
+        return Attribute::make(get: fn () => $this->sanitizeHtml($this->content));
     }
 
     public function scopePublished($query)
