@@ -34,7 +34,7 @@
         @if($heroEyebrow)
             <p class="text-accent-300 font-display text-3xl sm:text-4xl mb-3">{{ $heroEyebrow }}</p>
         @endif
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">{{ $heroTitle }}</h1>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-white mb-6">{{ $heroTitle }}</h1>
         @if($heroSubtitle)
             <p class="text-primary-100 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed">{{ $heroSubtitle }}</p>
         @endif
