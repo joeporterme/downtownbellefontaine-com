@@ -238,8 +238,8 @@
 
             {{-- YMCA Camp Willson --}}
             <div class="bg-theme-secondary rounded-xl shadow border border-theme overflow-hidden flex flex-col">
-                <div class="h-52 bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center">
-                    <i class="fa-duotone fa-light fa-campground text-4xl text-white/90"></i>
+                <div class="h-52">
+                    <img src="/images/pages/attractions/ymca-camp-willson.jpg" alt="YMCA Camp Willson" class="w-full h-full object-cover">
                 </div>
                 <div class="p-5 flex flex-col flex-grow">
                     <h3 class="text-lg font-semibold text-theme-primary mb-1">YMCA Camp Willson</h3>
@@ -250,8 +250,8 @@
 
             {{-- Camp Myeerah --}}
             <div class="bg-theme-secondary rounded-xl shadow border border-theme overflow-hidden flex flex-col">
-                <div class="h-52 bg-gradient-to-br from-success-400 to-success-600 flex items-center justify-center">
-                    <i class="fa-duotone fa-light fa-campfire text-4xl text-white/90"></i>
+                <div class="h-52">
+                    <img src="/images/pages/attractions/camp-myeerah.jpg" alt="Camp Myeerah" class="w-full h-full object-cover">
                 </div>
                 <div class="p-5 flex flex-col flex-grow">
                     <h3 class="text-lg font-semibold text-theme-primary mb-1">Camp Myeerah</h3>
