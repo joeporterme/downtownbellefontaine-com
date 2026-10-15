@@ -583,9 +583,6 @@
                             <a href="https://ohiochristmascapital.com/" target="_blank" rel="noopener" aria-label="Ohio's Christmas Capital — Downtown Bellefontaine" class="hover:opacity-90 transition-opacity">
                                 <img src="{{ asset('images/ohio-christmas-capital.png') }}" alt="Ohio's Christmas Capital — Downtown Bellefontaine" class="h-16 w-16" width="64" height="64" loading="lazy">
                             </a>
-                            <a href="{{ url('/') }}" aria-label="Downtown Bellefontaine Partnership" class="bg-white rounded-lg px-3 h-16 flex items-center hover:opacity-90 transition-opacity">
-                                <img src="{{ asset('images/partners/downtown-bellefontaine.svg') }}" alt="Downtown Bellefontaine Partnership" class="h-11 w-auto max-w-[150px]" loading="lazy">
-                            </a>
                             <a href="https://smallnation.com" target="_blank" rel="noopener" aria-label="Small Nation" class="bg-white rounded-lg px-3 h-16 flex items-center hover:opacity-90 transition-opacity">
                                 <img src="{{ asset('images/partners/small-nation.svg') }}" alt="Small Nation" class="h-12 w-auto" loading="lazy">
                             </a>
