@@ -5,16 +5,19 @@
      class="fixed z-[80] bottom-4 left-4 right-4 sm:right-auto sm:max-w-sm translate-y-[160%] opacity-0 transition-all duration-500 ease-out">
     <div class="relative bg-white dark:bg-primary-900 rounded-2xl shadow-2xl border border-primary-100 dark:border-primary-700 p-5 pr-6">
         <button type="button" id="nlp-close" aria-label="Dismiss"
-                class="absolute top-2.5 right-2.5 w-8 h-8 rounded-full flex items-center justify-center text-primary-400 hover:text-primary-700 dark:hover:text-white hover:bg-primary-50 dark:hover:bg-primary-800 transition-colors">
+                class="absolute top-2.5 right-2.5 z-10 w-8 h-8 rounded-full flex items-center justify-center text-primary-400 hover:text-primary-700 dark:hover:text-white hover:bg-primary-50 dark:hover:bg-primary-800 transition-colors">
             <i class="fa-duotone fa-light fa-xmark text-lg"></i>
         </button>
 
         <div id="nlp-body">
-            <div class="flex items-center gap-2 mb-1">
-                <i class="fa-duotone fa-light fa-envelope-open-text text-accent-500 text-xl"></i>
-                <h3 class="font-display text-2xl text-primary-700 dark:text-accent-300">The Downtown Download</h3>
+            <div class="flex items-start gap-3 mb-4">
+                <div class="min-w-0">
+                    <h3 class="font-display text-2xl text-primary-700 dark:text-accent-300 leading-tight">The Downtown Download</h3>
+                    <p class="text-sm text-theme-secondary mt-1.5">Downtown events, new openings, and happenings — straight to your inbox.</p>
+                </div>
+                <img src="/images/newsletter/downtown-download-envelope.png" alt=""
+                     class="w-20 flex-shrink-0 self-center select-none" loading="lazy">
             </div>
-            <p class="text-sm text-theme-secondary mb-4">Downtown events, new openings, and happenings — straight to your inbox.</p>
 
             <form id="nlp-form" novalidate class="space-y-2.5">
                 <div class="grid grid-cols-2 gap-2">

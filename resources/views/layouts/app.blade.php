@@ -423,9 +423,14 @@
         {{-- Top band: full-width newsletter signup --}}
         <div class="border-b border-primary-700">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid md:grid-cols-2 gap-6 md:gap-12 items-center">
-                <div>
-                    <h3 class="font-display text-2xl sm:text-3xl text-accent-300 mb-1">The Downtown Download</h3>
-                    <p class="text-primary-200 text-sm">Our newsletter — downtown events, new openings, and happenings, straight to your inbox.</p>
+                <div class="flex items-center gap-4 sm:gap-5">
+                    <img src="/images/newsletter/downtown-download-envelope.png"
+                         alt="Open envelope with a downtown Bellefontaine postcard"
+                         class="w-24 sm:w-28 md:w-32 flex-shrink-0 select-none" loading="lazy">
+                    <div>
+                        <h3 class="font-display text-2xl sm:text-3xl text-accent-300 mb-1">The Downtown Download</h3>
+                        <p class="text-primary-200 text-sm">Our newsletter — downtown events, new openings, and happenings, straight to your inbox.</p>
+                    </div>
                 </div>
                 {{-- Newsletter → HubSpot (AJAX, no native HTML validation). --}}
                 <div>
