@@ -1,5 +1,6 @@
 @php
-    $ribbon = \App\Models\GalleryImage::active()->ordered()->get();
+    // Shuffle on every load so the ribbon shows a different mix each visit.
+    $ribbon = \App\Models\GalleryImage::active()->inRandomOrder()->get();
     $instagram = ($siteSettings ?? \App\Models\SiteSetting::current())->instagram_url
         ?: 'https://www.instagram.com/downtownbellefontaine/';
 @endphp
