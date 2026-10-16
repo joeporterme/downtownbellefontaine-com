@@ -51,6 +51,7 @@
             <div class="relative order-2 lg:order-1">
                 <img src="{{ asset('images/home/welcome-courthouse.jpg') }}" alt="Downtown Bellefontaine today"
                      class="rounded-2xl shadow-xl w-full object-cover aspect-[4/3] max-h-[440px] lg:max-h-none">
+                <p class="absolute bottom-2 right-2 z-10 text-[11px] text-white/90 bg-black/40 px-2 py-0.5 rounded-md tracking-wide">Photo &copy; Mac McGinnis</p>
             </div>
             <div class="order-1 lg:order-2">
                 <span class="font-display text-2xl sm:text-3xl text-accent-500">Downtown today</span>
