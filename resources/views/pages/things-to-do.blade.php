@@ -214,8 +214,8 @@
 
             {{-- Simon Kenton Trail --}}
             <div class="bg-theme-secondary rounded-xl shadow border border-theme overflow-hidden flex flex-col">
-                <div class="h-52 bg-gradient-to-br from-success-400 to-success-600 flex items-center justify-center">
-                    <i class="fa-duotone fa-light fa-person-biking text-4xl text-white/90"></i>
+                <div class="h-52">
+                    <img src="/images/pages/attractions/simon-kenton-trail.jpg" alt="Cyclists on the Simon Kenton Trail" class="w-full h-full object-cover">
                 </div>
                 <div class="p-5 flex flex-col flex-grow">
                     <h3 class="text-lg font-semibold text-theme-primary mb-1">Simon Kenton Trail</h3>
