@@ -243,7 +243,11 @@ class VisitorsGuide
         return substr(sha1(implode('|', [
             $this->lastUpdated()->toIso8601String(),
             Business::approved()->count(),
-            DB::table('business_business_category')->count(),
+            // Pivot rows have no timestamps, so checksum them: a category swap
+            // keeps the count the same but changes this.
+            DB::table('business_business_category')->selectRaw('COUNT(*) c, COALESCE(SUM(business_id * 1000 + business_category_id), 0) s')->first()?->s,
+            BusinessLocation::count(),
+            \App\Models\SiteSetting::max('updated_at'),
             SignatureEvent::count(),
             ScavengerClue::count(),
             DayAgenda::published()->count(),
