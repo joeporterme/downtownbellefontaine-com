@@ -656,6 +656,12 @@
                                 Interactive Map
                             </a>
                         </li>
+                        <li>
+                            <a href="{{ route('pages.visitors-guide') }}" class="hover:text-white transition-colors flex items-center gap-2">
+                                <i class="fa-duotone fa-light fa-book-open w-4 text-primary-400"></i>
+                                Visitors Guide
+                            </a>
+                        </li>
                     </ul>
                 </div>
 

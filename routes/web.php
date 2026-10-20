@@ -23,6 +23,10 @@ Route::get('/food-drinks', [App\Http\Controllers\Public\PageController::class, '
 Route::get('/stay', [App\Http\Controllers\Public\PageController::class, 'stay'])->name('pages.stay');
 Route::get('/plan-a-visit', [App\Http\Controllers\Public\PageController::class, 'planAVisit'])->name('pages.plan-a-visit');
 Route::get('/map', [App\Http\Controllers\Public\MapController::class, 'index'])->name('pages.map');
+Route::get('/visitors-guide', [App\Http\Controllers\Public\VisitorsGuideController::class, 'show'])->name('pages.visitors-guide');
+Route::get('/visitors-guide/download', [App\Http\Controllers\Public\VisitorsGuideController::class, 'download'])
+    ->middleware('throttle:20,1')
+    ->name('visitors-guide.download');
 // "Downtown Days" (formerly First Fridays). Route name/view/CMS key stay
 // `first-fridays` internally; only the public URL + display copy were renamed.
 // Old /first-fridays 301s to /downtown-days via the redirect system.

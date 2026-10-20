@@ -29,6 +29,10 @@ class AppServiceProvider extends ServiceProvider
             return new AIService();
         });
 
+        // One guide instance per request so the page, map, and PDF share the
+        // same numbered directory instead of rebuilding it.
+        $this->app->scoped(\App\Services\VisitorsGuide::class);
+
         $this->app->singleton(AIService::class, function ($app) {
             return new AIService();
         });

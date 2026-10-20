@@ -81,6 +81,10 @@ class PageSeoSeeder extends Seeder
                 'Historic Walking Tour of Downtown Bellefontaine',
                 'Take a self-guided historic walking tour of Downtown Bellefontaine — 14 stops, bronze plaques, and the stories behind our historic brick storefronts.',
             ],
+            'visitors-guide' => [
+                'Downtown Bellefontaine Visitors Guide | Map, Events & Itineraries',
+                'Your guide to exploring Downtown Bellefontaine like a local — an interactive map of every shop and restaurant, the annual events calendar, day itineraries, and a printable PDF.',
+            ],
             'privacy-policy' => [
                 'Privacy Policy | Downtown Bellefontaine',
                 'How the Downtown Bellefontaine Partnership collects, uses, and protects your personal information.',
