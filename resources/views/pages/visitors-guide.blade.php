@@ -454,12 +454,15 @@
             markers[p.id] = marker;
         });
 
-        // Frame the downtown core rather than every outlying pin.
+        // Frame the downtown core (same footprint as the printed map), not every outlying pin.
         const core = new google.maps.LatLngBounds();
         PINS.forEach(p => {
-            if (Math.abs(p.lat - 40.3614) < 0.004 && Math.abs(p.lng + 83.7596) < 0.005) core.extend({ lat: p.lat, lng: p.lng });
+            if (Math.abs(p.lat - 40.3614) < 0.0028 && Math.abs(p.lng + 83.7596) < 0.0038) core.extend({ lat: p.lat, lng: p.lng });
         });
-        if (!core.isEmpty()) map.fitBounds(core, 32);
+        if (!core.isEmpty()) {
+            map.fitBounds(core, 24);
+            google.maps.event.addListenerOnce(map, 'idle', () => { if (map.getZoom() < 16) map.setZoom(16); });
+        }
         applyFilters();
     };
 
