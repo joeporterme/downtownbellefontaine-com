@@ -435,6 +435,8 @@
                 {{-- Newsletter → HubSpot (AJAX, no native HTML validation). --}}
                 <div>
                     <form id="newsletter-form" novalidate class="w-full">
+                        {{-- Honeypot: bots that fill it get the success message, nothing is sent. --}}
+                        <div style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden;" aria-hidden="true"><label>Leave this field empty<input type="text" name="nl_website" value="" tabindex="-1" autocomplete="off"></label></div>
                         <div class="grid sm:grid-cols-2 gap-3">
                             <div>
                                 <input type="text" name="firstname" placeholder="First name" aria-label="First name" autocomplete="given-name" class="w-full px-4 py-3 rounded-lg text-primary-900 bg-white/95 border border-primary-600 focus:outline-none focus:ring-2 focus:ring-accent-400">
@@ -499,6 +501,12 @@
                 form.addEventListener('submit', function (e) {
                     e.preventDefault();
                     formErr.classList.add('hidden');
+                    if (field('nl_website').value) {
+                        form.classList.add('hidden');
+                        successEl.classList.remove('hidden');
+                        successEl.classList.add('flex');
+                        return;
+                    }
                     if (!validate()) return;
                     submitBtn.disabled = true;
                     var original = submitBtn.innerHTML;

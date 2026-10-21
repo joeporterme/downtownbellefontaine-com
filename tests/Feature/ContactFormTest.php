@@ -56,7 +56,7 @@ class ContactFormTest extends TestCase
             'email' => 'clean@example.com',
             'subject' => 'Hello',
             'message' => 'I would love to learn more about visiting downtown Bellefontaine this fall.',
-            'form_start_time' => time() - 60, // human pacing, no timing penalty
+            'form_token' => \Illuminate\Support\Facades\Crypt::encryptString((string) (time() - 60)), // human pacing, no timing penalty
         ]);
 
         $this->assertDatabaseHas('contact_messages', [

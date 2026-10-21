@@ -20,6 +20,8 @@
             </div>
 
             <form id="nlp-form" novalidate class="space-y-2.5">
+                {{-- Honeypot: bots that fill it get the success message, nothing is sent. --}}
+                <div style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden;" aria-hidden="true"><label>Leave this field empty<input type="text" name="nl_website" value="" tabindex="-1" autocomplete="off"></label></div>
                 <div class="grid grid-cols-2 gap-2">
                     <input type="text" name="firstname" placeholder="First name" aria-label="First name" autocomplete="given-name"
                            class="w-full px-3 py-2.5 text-sm rounded-lg text-primary-900 bg-primary-50 dark:bg-primary-800 dark:text-white border border-primary-200 dark:border-primary-600 focus:outline-none focus:ring-2 focus:ring-accent-400">
@@ -71,6 +73,12 @@
         form.addEventListener('submit', function (e) {
             e.preventDefault();
             errEl.classList.add('hidden');
+            if (val('nl_website')) {
+                document.getElementById('nlp-body').classList.add('hidden');
+                document.getElementById('nlp-success').classList.remove('hidden');
+                setTimeout(function () { dismiss(true); }, 3500);
+                return;
+            }
             var fn = val('firstname'), ln = val('lastname'), em = val('email');
             if (!fn || !ln || !em) { errEl.textContent = 'Please fill in all fields.'; errEl.classList.remove('hidden'); return; }
             if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)) { errEl.textContent = 'Enter a valid email address.'; errEl.classList.remove('hidden'); return; }

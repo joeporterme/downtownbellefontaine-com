@@ -2,6 +2,8 @@
 
 namespace App\Services;
 
+use App\Models\ContactMessage;
+
 class SpamDetectionService
 {
     protected array $reasons = [];
@@ -40,6 +42,12 @@ class SpamDetectionService
         // Check for suspicious URLs in message
         $this->checkUrls($data['message'] ?? '');
 
+        // Non-English / non-Latin-script messages (overseas spam campaigns)
+        $this->checkLanguage($data['message'] ?? '');
+
+        // Has this email or IP already been flagged recently?
+        $this->checkHistory($data['email'] ?? '', $meta['ip'] ?? null);
+
         return [
             'is_spam' => $this->score >= self::SPAM_THRESHOLD,
             'score' => min($this->score, 100),
@@ -62,6 +70,19 @@ class SpamDetectionService
      */
     protected function checkTiming(array $meta): void
     {
+        // The form carries a server-signed load timestamp. Bots that POST
+        // straight to the endpoint (or replay a scraped form) arrive without
+        // one or with a forged one; real browsers always have it.
+        $state = $meta['token_state'] ?? 'ok';
+        if ($state === 'missing') {
+            $this->addScore(40, 'Form timing token missing (form was not loaded normally)');
+            return;
+        }
+        if ($state === 'invalid') {
+            $this->addScore(60, 'Form timing token invalid or tampered');
+            return;
+        }
+
         $startTime = $meta['form_start_time'] ?? null;
 
         if ($startTime) {
@@ -117,12 +138,22 @@ class SpamDetectionService
             'website visits', 'skyrocket', 'boost your', 'ranking',
             'improve your seo', 'fast improve', 'daily backlinks',
             'discount code', 'promo code',
+            // Seen in the live inbox (Oct 2026)
+            'know your price', 'wanted to know your price', 'your price list',
+            'lead generation', 'more leads', 'qualified leads', 'book more appointments',
+            'first page of google', 'page 1 of google', 'rank higher', 'google maps ranking',
+            'are customers finding', 'quick wins', 'website redesign', 'web design services',
+            'one-man seo', 'seo army',
         ];
 
         foreach ($spamKeywords as $keyword) {
             if (str_contains($lowerText, $keyword)) {
                 $this->addScore(30, "Contains spam keyword: {$keyword}");
             }
+        }
+
+        if (preg_match('/\bseo\b/i', $text)) {
+            $this->addScore(25, 'Mentions SEO (unsolicited marketing pitch)');
         }
 
         // Check for fake/generic company names (single word mega-corps)
@@ -153,18 +184,10 @@ class SpamDetectionService
             $this->addScore(25, 'Repetitive characters detected');
         }
 
-        // Check for Cyrillic or other non-Latin scripts (unless specifically expected)
+        // Non-Latin scripts anywhere in the name/message (the "* * * $3,222"
+        // link-spam names are Cyrillic). Message language is scored in checkLanguage().
         if (preg_match('/[\x{0400}-\x{04FF}]/u', $text)) {
             $this->addScore(15, 'Contains Cyrillic characters');
-        }
-
-        // Check for non-English messages (Latin-script languages with diacritics)
-        $message = $data['message'] ?? '';
-        if ($message && preg_match('/[\x{0100}-\x{024F}\x{1E00}-\x{1EFF}]/u', $message)) {
-            $nonAsciiCount = preg_match_all('/[\x{0100}-\x{024F}\x{1E00}-\x{1EFF}]/u', $message);
-            if ($nonAsciiCount >= 3) {
-                $this->addScore(35, 'Message appears to be in a non-English language');
-            }
         }
 
         // Check for duplicate first/last name (common bot pattern)
@@ -282,6 +305,16 @@ class SpamDetectionService
             $this->addScore(40, 'Disposable email address');
         }
 
+        // Senders whose domain is itself a marketing pitch (blastleadgeneration.com, thesparkseo…)
+        if (preg_match('/(leadgen|lead-gen|leadgeneration|seo|backlink|marketing|growth|traffic)/', strtolower($domain).' '.substr($lowerEmail, 0, (int) strrpos($lowerEmail, '@')))) {
+            $this->addScore(25, 'Email address belongs to a marketing/SEO sender');
+        }
+
+        // Overseas freemail rarely writes to a small-town Ohio downtown
+        if (preg_match('/(\.(ru|ua|by|kz|cn|su)$|^(ukr\.net|mail\.ru|bk\.ru|inbox\.ru|list\.ru|rambler\.ru|yandex\.[a-z]+|qq\.com|163\.com)$)/', strtolower($domain))) {
+            $this->addScore(30, 'Overseas freemail domain');
+        }
+
         // Check for suspicious email patterns (random letters + numbers)
         if (preg_match('/^[a-z]{7,}[0-9]+@/', $lowerEmail)) {
             $this->addScore(20, 'Suspicious email pattern');
@@ -346,6 +379,76 @@ class SpamDetectionService
             if (str_contains($lowerMessage, $shortener)) {
                 $this->addScore(30, 'Contains URL shortener');
                 break;
+            }
+        }
+    }
+
+    /**
+     * Score messages that aren't in English. Visitors write in English; the
+     * "I wanted to know your price" bot cycles through dozens of languages.
+     */
+    protected function checkLanguage(string $message): void
+    {
+        $message = trim($message);
+        if ($message === '') {
+            return;
+        }
+
+        // Greek, Cyrillic, Armenian, Hebrew, Arabic, Indic, Thai, Georgian, CJK, Hangul…
+        if (preg_match('/[\x{0370}-\x{03FF}\x{0400}-\x{052F}\x{0530}-\x{058F}\x{0590}-\x{06FF}\x{0900}-\x{0DFF}\x{0E00}-\x{0E7F}\x{10A0}-\x{10FF}\x{3040}-\x{30FF}\x{3400}-\x{9FFF}\x{AC00}-\x{D7AF}]/u', $message)) {
+            $this->addScore(40, 'Message is written in a non-Latin script');
+            return;
+        }
+
+        // Accented Latin letters (æ ð þ ė ą ş ...), excluding × and ÷.
+        $accents = preg_match_all('/[\x{00C0}-\x{00D6}\x{00D8}-\x{00F6}\x{00F8}-\x{024F}\x{1E00}-\x{1EFF}]/u', $message);
+        if ($accents >= 2) {
+            $this->addScore(35, 'Message appears to be in a non-English language');
+            return;
+        }
+
+        // Several words but not one common English word ("Ciao, volevo sapere il tuo prezzo").
+        $words = preg_split('/[^a-z\']+/', strtolower($message), -1, PREG_SPLIT_NO_EMPTY);
+        $common = ['the', 'a', 'an', 'and', 'or', 'but', 'to', 'of', 'in', 'on', 'for', 'is', 'are', 'was', 'be',
+            'i', "i'm", 'you', 'we', 'my', 'our', 'your', 'me', 'it', 'this', 'that', 'with', 'at', 'do', 'does',
+            'can', 'would', 'will', 'have', 'has', 'what', 'when', 'where', 'how', 'hi', 'hello', 'hey', 'thanks',
+            'thank', 'please', 'there', 'about', 'if', 'not', 'any', 'from', 'love', 'just', 'like', 'know'];
+        if (count($words) >= 4 && ! array_intersect($words, $common)) {
+            $this->addScore(35, 'Message does not appear to be English');
+        }
+    }
+
+    /**
+     * Repeat offenders: the same email or IP already flagged as spam recently,
+     * or the same email submitting over and over.
+     */
+    protected function checkHistory(string $email, ?string $ip): void
+    {
+        if ($email === '' && ! $ip) {
+            return;
+        }
+
+        $flagged = ContactMessage::query()
+            ->where('is_spam', true)
+            ->where('created_at', '>=', now()->subDays(30))
+            ->where(function ($q) use ($email, $ip) {
+                if ($email !== '') {
+                    $q->orWhere('email', $email);
+                }
+                if ($ip) {
+                    $q->orWhere('ip_address', $ip);
+                }
+            })
+            ->exists();
+
+        if ($flagged) {
+            $this->addScore(50, 'Sender was already flagged as spam in the last 30 days');
+        }
+
+        if ($email !== '') {
+            $recent = ContactMessage::where('email', $email)->where('created_at', '>=', now()->subDays(7))->count();
+            if ($recent >= 2) {
+                $this->addScore(25, "Same email submitted {$recent} times this week");
             }
         }
     }

@@ -174,12 +174,4 @@
         </div>
     </div>
 </section>
-
-{{-- Stamp the form load time so the server can score bot-fast submissions --}}
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var ts = Math.floor(Date.now() / 1000);
-        document.querySelectorAll('.form-start-time').forEach(function (f) { f.value = ts; });
-    });
-</script>
 @endsection

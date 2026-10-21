@@ -6,7 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Mail\ContactSubmission;
 use App\Models\ContactMessage;
 use App\Services\SpamDetectionService;
+use Illuminate\Contracts\Encryption\DecryptException;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
@@ -36,7 +38,8 @@ class ContactController extends Controller
             'last_name' => $nameParts[1] ?? '',
         ], [
             'honeypot' => $request->input('website_url'),
-            'form_start_time' => $request->input('form_start_time'),
+            ...$this->formTiming($request->input('form_token')),
+            'ip' => $request->ip(),
         ]);
 
         // Always store — spam is kept (flagged) in the admin inbox for review,
@@ -85,6 +88,28 @@ class ContactController extends Controller
         // Same response either way — never reveal the spam verdict to a bot.
         return redirect()->route('pages.contact')
             ->with('success', "Thanks for reaching out! We'll be in touch soon.");
+    }
+
+    /**
+     * Decode the signed load-time token from <x-form-spam-fields>.
+     *
+     * @return array{token_state: 'ok'|'missing'|'invalid', form_start_time: ?int}
+     */
+    protected function formTiming(?string $token): array
+    {
+        if (! $token) {
+            return ['token_state' => 'missing', 'form_start_time' => null];
+        }
+
+        try {
+            $started = Crypt::decryptString($token);
+        } catch (DecryptException) {
+            return ['token_state' => 'invalid', 'form_start_time' => null];
+        }
+
+        return ctype_digit($started)
+            ? ['token_state' => 'ok', 'form_start_time' => (int) $started]
+            : ['token_state' => 'invalid', 'form_start_time' => null];
     }
 
     /**
