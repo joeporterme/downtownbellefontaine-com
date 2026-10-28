@@ -49,6 +49,45 @@ class ContactFormTest extends TestCase
         Mail::assertNotSent(ContactSubmission::class);
     }
 
+    private function cleanSubmission(array $overrides = []): array
+    {
+        return $overrides + [
+            'name' => 'Pat Visitor',
+            'email' => 'pat@example.com',
+            'subject' => 'Hello',
+            'message' => 'I would love to learn more about visiting downtown Bellefontaine this fall.',
+            'form_token' => \Illuminate\Support\Facades\Crypt::encryptString((string) (time() - 60)),
+        ];
+    }
+
+    public function test_notification_goes_to_every_address_set_in_admin(): void
+    {
+        Mail::fake();
+        config(['services.contact.recipient' => 'fallback@example.com']);
+        \App\Models\SiteSetting::current()->update([
+            'contact_form_recipients' => ['One@Example.com', 'two@example.com', 'not-an-email', 'one@example.com'],
+        ]);
+
+        $this->post('/contact', $this->cleanSubmission());
+
+        Mail::assertSent(ContactSubmission::class, function ($mail) {
+            return $mail->hasTo('one@example.com')
+                && $mail->hasTo('two@example.com')
+                && ! $mail->hasTo('fallback@example.com')
+                && count($mail->to) === 2; // invalid + duplicate entries dropped
+        });
+    }
+
+    public function test_notification_falls_back_to_env_recipient_when_none_set(): void
+    {
+        Mail::fake();
+        config(['services.contact.recipient' => 'fallback@example.com']);
+
+        $this->post('/contact', $this->cleanSubmission());
+
+        Mail::assertSent(ContactSubmission::class, fn ($mail) => $mail->hasTo('fallback@example.com'));
+    }
+
     public function test_clean_submission_is_not_flagged(): void
     {
         $this->post('/contact', [

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Public;
 use App\Http\Controllers\Controller;
 use App\Mail\ContactSubmission;
 use App\Models\ContactMessage;
+use App\Models\SiteSetting;
 use App\Services\SpamDetectionService;
 use Illuminate\Contracts\Encryption\DecryptException;
 use Illuminate\Http\Request;
@@ -61,9 +62,10 @@ class ContactController extends Controller
             // the DB record is the source of truth and the admin Filament inbox is
             // the backstop.
             try {
-                $recipient = config('services.contact.recipient');
-                if ($recipient) {
-                    Mail::to($recipient)->send(new ContactSubmission($contactMessage, $subscribe));
+                // Recipients are managed in Admin › Site Settings › Contact Form.
+                $recipients = SiteSetting::current()->contactRecipients();
+                if ($recipients) {
+                    Mail::to($recipients)->send(new ContactSubmission($contactMessage, $subscribe));
                 }
             } catch (\Throwable $e) {
                 Log::warning('Contact form mail dispatch failed', [

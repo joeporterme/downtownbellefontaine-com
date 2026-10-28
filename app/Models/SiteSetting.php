@@ -13,6 +13,7 @@ class SiteSetting extends Model
         'default_meta_description',
         'default_og_image',
         'contact_email',
+        'contact_form_recipients',
         'contact_phone',
         'address',
         'city',
@@ -26,6 +27,34 @@ class SiteSetting extends Model
         'google_analytics_id',
         'gtm_container_id',
     ];
+
+    protected $casts = [
+        'contact_form_recipients' => 'array',
+    ];
+
+    /**
+     * Where contact form notifications go: the addresses set in the admin, or
+     * the CONTACT_FORM_RECIPIENT env fallback when none are set.
+     *
+     * @return array<int, string>
+     */
+    public function contactRecipients(): array
+    {
+        $emails = collect($this->contact_form_recipients ?? [])
+            ->map(fn ($e) => strtolower(trim((string) $e)))
+            ->filter(fn ($e) => filter_var($e, FILTER_VALIDATE_EMAIL))
+            ->unique()
+            ->values()
+            ->all();
+
+        if ($emails) {
+            return $emails;
+        }
+
+        $fallback = config('services.contact.recipient');
+
+        return $fallback ? [$fallback] : [];
+    }
 
     protected static function booted(): void
     {

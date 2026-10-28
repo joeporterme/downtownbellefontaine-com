@@ -6,6 +6,7 @@ use App\Models\SiteSetting;
 use BackedEnum;
 use Filament\Actions\Action;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
@@ -57,6 +58,19 @@ class SiteSettings extends Page
                         TextInput::make('city')->maxLength(120),
                         TextInput::make('state')->maxLength(20),
                         TextInput::make('zip')->maxLength(20),
+                    ]),
+                Section::make('Contact Form')
+                    ->description('Who gets an email when someone sends a message through the Contact page.')
+                    ->schema([
+                        TagsInput::make('contact_form_recipients')
+                            ->label('Send contact form messages to')
+                            ->placeholder('Type an email and press Enter')
+                            ->splitKeys(['Tab', ',', ' '])
+                            ->nestedRecursiveRules(['email'])
+                            ->helperText(fn () => 'Add as many addresses as you like. Every message is also saved under Contact Messages. '
+                                .(config('services.contact.recipient')
+                                    ? 'If this is left empty, messages go to '.config('services.contact.recipient').'.'
+                                    : 'If this is left empty, no email is sent.')),
                     ]),
                 Section::make('Social Media')
                     ->columns(2)
