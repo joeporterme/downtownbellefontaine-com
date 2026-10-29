@@ -55,7 +55,7 @@ class CrawlerController extends Controller
             '',
             '> The official guide to Downtown Bellefontaine, Ohio — the historic, walkable heart of Bellefontaine in Logan County, with local shops, restaurants, breweries, lodging, events, and attractions. Published by the Downtown Bellefontaine Partnership.',
             '',
-            'Notable facts: Bellefontaine is Ohio\'s highest city (Campbell Hill, 1,549 ft) and home to America\'s first concrete street and America\'s shortest street. Downtown highlights include the historic Holland Theatre, monthly First Fridays, a DORA (Designated Outdoor Refreshment Area), and a self-guided historic walking tour.',
+            'Notable facts: Bellefontaine is Ohio\'s highest city (Campbell Hill, 1,549 ft) and home to America\'s first concrete street and America\'s shortest street. Downtown highlights include the historic Holland Theatre, year-round Downtown Days events (formerly First Fridays), a DORA (Designated Outdoor Refreshment Area), and a self-guided historic walking tour.',
             '',
             '## Explore',
             $link('Things to Do', '/things-to-do', 'Attractions, entertainment, the Holland Theatre, and nearby destinations like Mad River Mountain and Indian Lake.'),
@@ -63,11 +63,13 @@ class CrawlerController extends Controller
             $link('Food & Drinks', '/food-drinks', 'Restaurants, breweries, coffee, and dessert — including world-champion pizza and Brewfontaine craft beer.'),
             $link('Where to Stay', '/stay', 'Historic downtown lofts and nearby lodging.'),
             $link('Interactive Map', '/map', 'Find shops, dining, lodging, and parking across downtown.'),
-            $link('Plan a Visit', '/plan-a-visit', 'Sample itineraries, parking, and directions.'),
+            $link('Plan a Visit', '/plan-a-visit', 'Sample itineraries, parking, drive times, directions, and visitor FAQs.'),
+            $link('Downtown Visitors Guide', '/visitors-guide', 'Numbered downtown map, business directory, signature events, scavenger hunt, and an always-current printable PDF.'),
+            $link('Day Agendas', '/day-agendas', 'Ready-made itineraries for a day downtown.'),
             '',
             '## Events & Programs',
             $link('Events', '/events', 'Upcoming events in Downtown Bellefontaine.'),
-            $link('First Fridays', '/first-fridays', 'Monthly community celebration with music, shopping, and food.'),
+            $link('Downtown Days', '/downtown-days', 'Year-round themed downtown celebrations (formerly First Fridays), with FAQs.'),
             $link('DORA District', '/dora', 'Designated Outdoor Refreshment Area rules, hours, and map.'),
             $link('Historic Walking Tour', '/historic-walking-tour', 'Self-guided 14-stop tour of historic downtown buildings.'),
             $link('Meeting & Event Spaces', '/meeting-spaces', 'Bookable venues for weddings, meetings, and parties.'),
@@ -76,6 +78,7 @@ class CrawlerController extends Controller
             $link('Businesses', '/businesses', 'Full directory of downtown businesses.'),
             $link('Blog', '/blog', 'News and stories from downtown.'),
             $link('Media & Press', '/media', 'Press coverage and media mentions.'),
+            $link('The Transformation', '/revitalization', 'How downtown was revitalized, with historic photos and before-and-after storefronts.'),
             '',
             '## Contact',
             $link('Contact', '/contact', 'Reach the Downtown Bellefontaine Partnership.'),
@@ -85,6 +88,8 @@ class CrawlerController extends Controller
             $sections[] = '- Email: '.($s->contact_email ?: 'n/a').' · Phone: '.($s->contact_phone ?: 'n/a');
         }
 
+        $sections[] = '';
+        $sections[] = 'Pages with visitor FAQs (also published as FAQPage structured data): Plan a Visit, Food & Drinks, Downtown Days, DORA District.';
         $sections[] = '';
         $sections[] = '## Full URL Index';
         $sections[] = $link('XML Sitemap', '/sitemap.xml', 'Machine-readable list of every page.');

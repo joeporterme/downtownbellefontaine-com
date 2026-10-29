@@ -115,16 +115,8 @@
     </div>
 </section>
 
-{{-- FAQ --}}
-<section class="py-16 bg-theme-primary">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-            <span class="font-display text-2xl text-accent-500">Good Questions</span>
-            <h2 class="text-2xl sm:text-3xl font-bold text-theme-primary mt-2">Frequently Asked Questions</h2>
-        </div>
-
-        <div class="space-y-4">
-            @foreach([
+{{-- FAQ (renders FAQPage structured data) --}}
+<x-faq :items="[
                 ['q' => 'Can I walk anywhere with my DORA cup?', 'a' => 'No. DORA beverages may only be carried within the defined DORA boundaries and must remain in an approved DORA container. Individual businesses within the district may choose whether to allow DORA beverages inside their establishments.'],
                 ['q' => 'What is a DORA cup?', 'a' => 'A DORA cup is an approved, single-use plastic cup used by participating establishments to serve alcoholic beverages that may be carried within the DORA. DORA rules are provided with each cup.'],
                 ['q' => 'Can I take my DORA beverage into another establishment?', 'a' => 'It depends on the establishment. You cannot carry a DORA beverage into another business that sells DORA beverages. Businesses that do not serve alcohol may choose whether to allow DORA beverages inside.'],
@@ -133,19 +125,6 @@
                 ['q' => 'Can I pour my own alcohol into a DORA cup?', 'a' => 'No. Alcoholic beverages must be purchased from a participating DORA vendor and served in an approved DORA cup. Outside alcoholic beverages, cans and glass bottles are not permitted in public areas within the DORA. DORA beverages also cannot be taken outside the designated DORA boundaries.'],
                 ['q' => 'Can I bring alcohol purchased somewhere else into the DORA?', 'a' => 'No. Only alcoholic beverages purchased from participating DORA establishments or approved event vendors and served in an approved DORA cup may be carried in public areas within the district.'],
                 ['q' => 'Will the DORA create additional litter, noise or other issues downtown?', 'a' => 'The City of Bellefontaine has multiple trash receptacles throughout the DORA and may require event organizers to provide additional receptacles during special events. The Bellefontaine Police Department is available to address public safety concerns, and special events may be required to provide additional police, public works or other staffing when necessary. The City also retains the ability to suspend DORA operations when circumstances warrant.'],
-            ] as $faq)
-                <div class="bg-theme-secondary rounded-2xl border border-theme p-5">
-                    <div class="flex items-start gap-3">
-                        <i class="fa-duotone fa-light fa-circle-question text-xl text-accent-500 flex-shrink-0 mt-0.5"></i>
-                        <div>
-                            <h3 class="font-semibold text-theme-primary mb-1.5">{{ $faq['q'] }}</h3>
-                            <p class="text-theme-secondary text-sm leading-relaxed">{{ $faq['a'] }}</p>
-                        </div>
-                    </div>
-                </div>
-            @endforeach
-        </div>
-    </div>
-</section>
+            ]" />
 
 @endsection

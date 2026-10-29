@@ -18,11 +18,13 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div class="order-2 lg:order-1">
-                <span class="font-display text-2xl sm:text-3xl text-accent-500">Eat & Drink</span>
+                <span class="font-display text-2xl sm:text-3xl text-accent-500">Eat and Drink</span>
                 <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-theme-primary mt-2 mb-6 leading-tight">Come Hungry.<br>That's an Order.</h2>
                 <div class="space-y-5 text-theme-secondary text-lg leading-relaxed">
-                    <p class="text-xl text-theme-primary font-medium">For a town this size, Bellefontaine punches absurdly above its weight at the table — and we're not shy about saying it.</p>
-                    <p>Every kitchen downtown is locally owned. Every meal supports a neighbor. And every table comes with the kind of hospitality you can't franchise.</p>
+                    <p class="text-xl text-theme-primary font-medium">For a small town, Downtown Bellefontaine has a food scene that surprises people.</p>
+                    <p>Around here, local is the standard. Grab your <a href="{{ route('businesses.show', 'native-coffee-co') }}" class="text-primary-600 dark:text-primary-400 font-semibold hover:underline">morning coffee</a> from an independent shop, meet friends for lunch, settle in for dinner and stick around for a drink. From <a href="{{ route('businesses.show', 'six-hundred-downtown') }}" class="text-primary-600 dark:text-primary-400 font-semibold hover:underline">award-winning pizza</a> and <a href="{{ route('businesses.show', 'the-flying-pepper-cantina') }}" class="text-primary-600 dark:text-primary-400 font-semibold hover:underline">tacos</a> to <a href="{{ route('businesses.show', 'kiyomi-sushi-steakhouse') }}" class="text-primary-600 dark:text-primary-400 font-semibold hover:underline">sushi</a>, <a href="{{ route('businesses.show', '2gs-bbq') }}" class="text-primary-600 dark:text-primary-400 font-semibold hover:underline">barbecue</a>, burgers, <a href="{{ route('businesses.show', 'brewfontaine') }}" class="text-primary-600 dark:text-primary-400 font-semibold hover:underline">craft beer</a>, cocktails and plenty of reasons to <a href="#dessert" class="text-primary-600 dark:text-primary-400 font-semibold hover:underline">save room for dessert</a>, there's a lot packed into a few walkable blocks.</p>
+                    <p>And because these restaurants, bars and coffee shops are locally owned, there's a good chance the person behind the counter, behind the bar or in the kitchen has a story worth hearing.</p>
+                    <p class="text-xl font-bold text-accent-600 dark:text-accent-400">Come hungry. You'll have options.</p>
                 </div>
             </div>
             <div class="relative order-1 lg:order-2">
@@ -42,14 +44,15 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-2xl mx-auto mb-12">
             <span class="font-display text-2xl sm:text-3xl text-accent-500">Start here</span>
-            <h2 class="text-2xl sm:text-3xl font-bold text-theme-primary mt-1">Three tables worth the trip</h2>
+            <h2 class="text-2xl sm:text-3xl font-bold text-theme-primary mt-1 mb-4">Three tables worth the trip</h2>
+            <p class="text-theme-secondary text-lg leading-relaxed">Some places are worth planning a trip around. These three helped put Downtown Bellefontaine on the map, earning statewide and national attention while proving that some of the best food and drinks can be found in a small Ohio town. Consider these your starting point, then stick around and see what else downtown has cooking.</p>
         </div>
         <div class="grid md:grid-cols-3 gap-6">
             {{-- Pizza --}}
             <div class="bg-theme-primary rounded-2xl overflow-hidden border border-theme shadow-sm flex flex-col card-hover">
-                <img src="/images/pages/six-hundred-pizza.jpg" alt="Brick-oven pizza"
-                     data-lightbox data-lightbox-group="eat" data-lightbox-caption="Award-winning brick-oven pizza"
-                     class="h-52 w-full object-cover cursor-zoom-in">
+                <a href="{{ route('businesses.show', 'six-hundred-downtown') }}" class="block overflow-hidden">
+                    <img src="/images/pages/six-hundred-pizza.jpg" alt="Brick-oven pizza" loading="lazy" class="h-52 w-full object-cover transition-transform duration-500 hover:scale-105">
+                </a>
                 <div class="p-6 flex flex-col flex-grow">
                     <span class="text-xs font-semibold uppercase tracking-wide text-accent-600 mb-1">World-champion pizza</span>
                     <h3 class="text-xl font-bold text-theme-primary mb-2">Brick-Oven Pies</h3>
@@ -59,9 +62,9 @@
             </div>
             {{-- Craft beer --}}
             <div class="bg-theme-primary rounded-2xl overflow-hidden border border-theme shadow-sm flex flex-col card-hover">
-                <img src="/images/pages/brewfontaine-taproom.jpg" alt="Inside Brewfontaine, Ohio's #1 beer bar"
-                     data-lightbox data-lightbox-group="eat" data-lightbox-caption="Inside Brewfontaine — Ohio's #1 beer bar"
-                     class="h-52 w-full object-cover cursor-zoom-in">
+                <a href="{{ route('businesses.show', 'brewfontaine') }}" class="block overflow-hidden">
+                    <img src="/images/pages/brewfontaine-taproom.jpg" alt="Inside Brewfontaine, Ohio's #1 beer bar" loading="lazy" class="h-52 w-full object-cover transition-transform duration-500 hover:scale-105">
+                </a>
                 <div class="p-6 flex flex-col flex-grow">
                     <span class="text-xs font-semibold uppercase tracking-wide text-accent-600 mb-1">Ohio's #1 beer bar</span>
                     <h3 class="text-xl font-bold text-theme-primary mb-2">Craft Beer & Taproom</h3>
@@ -71,9 +74,9 @@
             </div>
             {{-- Tacos & tequila --}}
             <div class="bg-theme-primary rounded-2xl overflow-hidden border border-theme shadow-sm flex flex-col card-hover">
-                <img src="/images/pages/flying-pepper.jpg" alt="Tacos at Flying Pepper"
-                     data-lightbox data-lightbox-group="eat" data-lightbox-caption="Flying Pepper — award-winning taco &amp; tequila bar"
-                     class="h-52 w-full object-cover cursor-zoom-in">
+                <a href="{{ route('businesses.show', 'the-flying-pepper-cantina') }}" class="block overflow-hidden">
+                    <img src="/images/pages/flying-pepper.jpg" alt="Tacos at Flying Pepper" loading="lazy" class="h-52 w-full object-cover transition-transform duration-500 hover:scale-105">
+                </a>
                 <div class="p-6 flex flex-col flex-grow">
                     <span class="text-xs font-semibold uppercase tracking-wide text-accent-600 mb-1">Taco &amp; tequila bar</span>
                     <h3 class="text-xl font-bold text-theme-primary mb-2">Flying Pepper</h3>
@@ -86,18 +89,19 @@
 </section>
 
 {{-- Save room for dessert --}}
-<section class="py-16 bg-theme-secondary">
+<section id="dessert" class="scroll-mt-24 py-16 bg-theme-primary">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div class="relative">
-                <img src="/images/pages/whits-custard.jpg" alt="Frozen custard and sweet treats downtown"
-                     data-lightbox data-lightbox-group="eat" data-lightbox-caption="Save room — dessert is a whole category here"
-                     class="rounded-2xl shadow-xl w-full object-cover aspect-[4/3] max-h-[440px] lg:max-h-none cursor-zoom-in">
+                <a href="{{ route('businesses.show', 'whits-frozen-custard') }}" class="block rounded-2xl overflow-hidden shadow-xl">
+                    <img src="/images/pages/whits-custard.jpg" alt="Frozen custard at Whit's" loading="lazy"
+                         class="w-full object-cover aspect-[4/3] max-h-[440px] lg:max-h-none transition-transform duration-500 hover:scale-105">
+                </a>
             </div>
             <div>
                 <span class="font-display text-2xl sm:text-3xl text-accent-500">Save room</span>
                 <h2 class="text-2xl sm:text-3xl font-bold text-theme-primary mt-1 mb-4">Dessert is a whole category</h2>
-                <p class="text-theme-secondary text-lg leading-relaxed mb-6">Hand-dipped chocolates and truffles, scratch-made donuts, homemade ice cream in rotating flavors, frozen custard, Parisian-style macarons, and coffee shops where the latte comes with a side of conversation.</p>
+                <p class="text-theme-secondary text-lg leading-relaxed mb-6">Hand-dipped chocolates and truffles, scratch-made donuts, homemade ice cream at <a href="{{ route('businesses.show', 'city-sweets-and-creamery') }}" class="text-primary-600 dark:text-primary-400 font-semibold hover:underline">City Sweets</a>, frozen custard at <a href="{{ route('businesses.show', 'whits-frozen-custard') }}" class="text-primary-600 dark:text-primary-400 font-semibold hover:underline">Whit's</a>, cookies from <a href="{{ route('businesses.show', 'one-eyed-cookie-lab') }}" class="text-primary-600 dark:text-primary-400 font-semibold hover:underline">One-Eyed Cookie Lab</a>, and coffee shops where the latte comes with a side of conversation.</p>
                 <div class="grid grid-cols-2 gap-3 text-theme-secondary">
                     @foreach([['fa-candy-bar','Chocolates & Truffles'], ['fa-donut','Donuts'], ['fa-ice-cream','Ice Cream'], ['fa-cup-togo','Frozen Custard'], ['fa-mug-hot','Coffee'], ['fa-cookie-bite','Macarons']] as [$icon,$label])
                         <div class="flex items-center gap-2.5">
@@ -113,16 +117,25 @@
 
 {{-- Businesses Grid --}}
 @if($businesses->isNotEmpty())
-<section class="py-16 bg-theme-primary">
+<section class="py-16 bg-theme-secondary">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-            <h2 class="text-2xl sm:text-3xl font-bold text-theme-primary mb-3">Where to Eat & Drink</h2>
-            <p class="text-theme-tertiary max-w-xl mx-auto">From craft breweries to frozen custard, explore the restaurants and eateries that make Downtown Bellefontaine delicious.</p>
+        <div class="text-center mb-10 max-w-2xl mx-auto">
+            <span class="font-display text-2xl sm:text-3xl text-accent-500">Find your next favorite</span>
+            <h2 class="text-2xl sm:text-3xl font-bold text-theme-primary mt-1 mb-3">Where to Eat & Drink</h2>
+            <p class="text-theme-secondary text-lg">Coffee before shopping. A quick lunch. Dinner with friends. Drinks after work. Something sweet before heading home.</p>
+            <p class="text-theme-tertiary mt-2">Explore the locally owned restaurants, bars, breweries, coffee shops and sweet spots that make Downtown Bellefontaine worth coming hungry for.</p>
+        </div>
+
+        {{-- Quick links: every spot, one tap away --}}
+        <div class="flex flex-wrap justify-center gap-2 mb-10">
+            @foreach($businesses as $business)
+                <a href="{{ route('businesses.show', $business) }}" class="px-3.5 py-1.5 rounded-full text-sm font-medium bg-theme-primary border border-theme text-theme-secondary hover:border-primary-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">{{ $business->name }}</a>
+            @endforeach
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             @foreach($businesses as $business)
-                <x-business-card :business="$business" icon="fa-utensils" bg="bg-theme-secondary" />
+                <x-business-card :business="$business" icon="fa-utensils" bg="bg-theme-primary" />
             @endforeach
         </div>
 
@@ -135,5 +148,18 @@
     </div>
 </section>
 @endif
+
+{{-- FAQ (FAQPage structured data for search + AI answers) --}}
+@php
+    $faqs = [
+        ['q' => 'Where can I find the best food in Bellefontaine, Ohio?', 'a' => 'Start downtown. Within a few walkable blocks you will find world-champion pizza at Six Hundred Downtown, craft beer at Brewfontaine, tacos and tequila at The Flying Pepper Cantina, sushi at Kiyomi, barbecue at 2Gs BBQ, plus coffee shops, bars and dessert spots, all locally owned.'],
+        ['q' => 'Is the pizza at Six Hundred Downtown really world champion?', 'a' => 'Yes. Six Hundred Downtown\'s hand-spun, brick-oven pizza has earned world championship titles and national television appearances, and the dough is made fresh in house every day.'],
+        ['q' => 'What is Brewfontaine?', 'a' => 'Brewfontaine is a craft beer bar and restaurant in a restored 1950s diner downtown. It has been voted Ohio\'s #1 beer bar and pairs one of the best draft lists in the state with a full food menu.'],
+        ['q' => 'Where can I get dessert downtown?', 'a' => 'Try City Sweets and Creamery for ice cream, Whit\'s Frozen Custard, and One-Eyed Cookie Lab for cookies. Native Coffee Co and Sweet Aromas Coffee are great stops for coffee and a treat.'],
+        ['q' => 'Can I walk around downtown with a drink?', 'a' => 'Yes, inside the DORA. Downtown Bellefontaine has a Designated Outdoor Refreshment Area, so drinks bought in an approved DORA cup from a participating business can be carried within the district during DORA hours.'],
+        ['q' => 'Are the restaurants downtown locally owned?', 'a' => 'Yes. Downtown\'s restaurants, bars, breweries and coffee shops are independent and locally owned, so there is a good chance the person serving you has a story worth hearing.'],
+    ];
+@endphp
+<x-faq :items="$faqs" bg="bg-theme-primary" card="bg-theme-secondary" />
 
 @endsection

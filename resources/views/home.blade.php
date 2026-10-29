@@ -630,6 +630,9 @@
 
 {{-- Image gallery ribbon is now sitewide (components/photo-ribbon in the layout). --}}
 
+{{-- Where is Bellefontaine? (Close to Everything) --}}
+<x-where-is-bellefontaine />
+
 {{-- Pineapple Heritage Note --}}
 <section class="py-12 bg-accent-50 dark:bg-accent-950/30">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -19,7 +19,7 @@
         // Priority: the page's own image (business/post/event featured, or a CMS
         // page's og/hero) → the site-wide default share image.
         $ogImageRaw = trim((string) $__env->yieldContent('og_image'))
-            ?: ($page?->og_image ?: ($page?->hero_image ?: ($settings->default_og_image ?: '/images/og-default.jpg')));
+            ?: ($page?->og_image ?: ($page?->hero_image ?: (($settings->default_og_image ?? null) ?: '/images/og-default.jpg')));
         $ogImage = \App\Support\Media::absoluteUrl($ogImageRaw);
         $ogType = trim($__env->yieldContent('og_type', 'website')) ?: 'website';
         $socialLinks = array_values(array_filter([
@@ -216,6 +216,10 @@
                                     <i class="fa-duotone fa-light fa-compass w-4 mt-0.5 text-primary-500"></i>
                                     <span><span class="font-medium block">Plan a Visit</span><span class="text-xs text-theme-tertiary">Itineraries &amp; day agendas</span></span>
                                 </a>
+                                <a href="{{ route('pages.visitors-guide') }}" class="flex items-start gap-3 px-4 py-2.5 text-sm text-theme-secondary hover:bg-theme-tertiary hover:text-primary-500 transition-colors">
+                                    <i class="fa-duotone fa-light fa-book-open w-4 mt-0.5 text-primary-500"></i>
+                                    <span><span class="font-medium block">Visitors Guide</span><span class="text-xs text-theme-tertiary">Map, directory &amp; printable PDF</span></span>
+                                </a>
                                 <a href="{{ route('pages.historic-walking-tour') }}" class="flex items-center gap-3 px-4 py-2.5 text-sm text-theme-secondary hover:bg-theme-tertiary hover:text-primary-500 transition-colors">
                                     <i class="fa-duotone fa-light fa-person-walking w-4 text-primary-500"></i>
                                     <span>Historic Walking Tour</span>
@@ -328,6 +332,10 @@
                     <span>Plan a Visit</span>
                 </a>
                 <div class="pl-8 space-y-1">
+                    <a href="{{ route('pages.visitors-guide') }}" class="flex items-center gap-3 py-2 text-sm text-theme-tertiary hover:text-primary-500">
+                        <i class="fa-duotone fa-light fa-book-open w-4 text-center text-primary-400"></i>
+                        <span>Visitors Guide (PDF)</span>
+                    </a>
                     <a href="{{ route('pages.historic-walking-tour') }}" class="flex items-center gap-3 py-2 text-sm text-theme-tertiary hover:text-primary-500">
                         <i class="fa-duotone fa-light fa-person-walking w-4 text-center text-primary-400"></i>
                         <span>Historic Walking Tour</span>
@@ -595,6 +603,9 @@
                         <div class="flex flex-wrap items-center gap-3">
                             <a href="https://ohiochristmascapital.com/" target="_blank" rel="noopener" aria-label="Ohio's Christmas Capital — Downtown Bellefontaine" class="hover:opacity-90 transition-opacity">
                                 <img src="{{ asset('images/ohio-christmas-capital.png') }}" alt="Ohio's Christmas Capital — Downtown Bellefontaine" class="h-16 w-16" width="64" height="64" loading="lazy">
+                            </a>
+                            <a href="https://downtowndaysbtown.com/" target="_blank" rel="noopener" aria-label="Downtown Days Bellefontaine" class="bg-white rounded-lg px-2 h-16 flex items-center hover:opacity-90 transition-opacity">
+                                <img src="{{ asset('images/partners/downtown-days.jpg') }}" alt="Downtown Days Bellefontaine, Ohio" class="h-14 w-auto" width="66" height="56" loading="lazy">
                             </a>
                             <a href="https://smallnation.com" target="_blank" rel="noopener" aria-label="Small Nation" class="bg-white rounded-lg px-3 h-16 flex items-center hover:opacity-90 transition-opacity">
                                 <img src="{{ asset('images/partners/small-nation.svg') }}" alt="Small Nation" class="h-12 w-auto" loading="lazy">

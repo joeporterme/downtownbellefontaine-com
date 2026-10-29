@@ -156,15 +156,17 @@
     </div>
 </section>
 
+{{-- Where is Bellefontaine? --}}
+<x-where-is-bellefontaine bg="bg-theme-secondary" />
+
 {{-- Getting Here --}}
-<section class="py-16 bg-theme-secondary">
+<section class="py-16 bg-theme-primary">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div>
                 <span class="font-display text-2xl text-accent-500">Getting Here</span>
                 <h2 class="text-2xl sm:text-3xl font-bold text-theme-primary mt-2 mb-4">Easy to Find, Easy to Park</h2>
                 <div class="space-y-4 text-theme-secondary leading-relaxed">
-                    <p><strong class="text-theme-primary">Bellefontaine, Ohio</strong> is about <strong class="text-theme-primary">60 minutes</strong> from Columbus, <strong class="text-theme-primary">75 minutes</strong> from Dayton, and a straight shot up US-33.</p>
                     <p>Free parking surrounds the downtown square -- find a spot, then explore on foot. Most shops, restaurants, and the Holland Theatre are within a few blocks of each other.</p>
                     <p>Looking for the broader Logan County experience? Visit <a href="https://www.experiencelogancounty.com" target="_blank" rel="noopener" class="text-primary-600 dark:text-primary-400 hover:underline font-medium">experiencelogancounty.com</a>.</p>
                 </div>
@@ -178,5 +180,19 @@
         </div>
     </div>
 </section>
+
+{{-- FAQ (FAQPage structured data for search + AI answers) --}}
+@php
+    $faqs = [
+        ['q' => 'Where is Downtown Bellefontaine?', 'a' => 'Downtown Bellefontaine is the historic center of Bellefontaine, Ohio, the county seat of Logan County in west central Ohio. It is built around the Logan County Courthouse at Main Street and Columbus Avenue, just off US-33 and US-68.'],
+        ['q' => 'How far is Bellefontaine from Columbus and Dayton?', 'a' => 'About an hour from each. Bellefontaine is roughly 55 miles northwest of Columbus on US-33 and about 55 miles north of Dayton. Indian Lake and Mad River Mountain are about 15 minutes away.'],
+        ['q' => 'What is Bellefontaine known for?', 'a' => 'Bellefontaine is home to Campbell Hill, the highest point in Ohio, McKinley Street, known as the shortest street in America, and the first concrete street in America. Downtown is known for world-champion pizza, Ohio\'s #1 beer bar, the historic Holland Theatre and year-round Downtown Days events.'],
+        ['q' => 'Is there parking downtown?', 'a' => 'Yes. Public parking lots surround the downtown square, along with plenty of on-street parking. Park once and walk, since most shops, restaurants and the Holland Theatre are within a few blocks of each other.'],
+        ['q' => 'When is the best time to visit?', 'a' => 'Any weekend is a good bet. Downtown Days, summer evenings on the square and the holiday season, when Bellefontaine celebrates as Ohio\'s Christmas Capital, are especially lively. Check the events calendar before you go.'],
+        ['q' => 'What is there to do near downtown?', 'a' => 'Indian Lake, Mad River Mountain, Ohio Caverns, the Piatt Castles, Marmon Valley Farm and Campbell Hill are all within about a half hour of downtown, which makes Bellefontaine an easy home base for a weekend.'],
+        ['q' => 'Is there a printable visitors guide?', 'a' => 'Yes. The Downtown Visitors Guide has a numbered map, a full business directory, signature events and a scavenger hunt, and the PDF download is always up to date.'],
+    ];
+@endphp
+<x-faq :items="$faqs" bg="bg-theme-secondary" card="bg-theme-primary" />
 
 @endsection

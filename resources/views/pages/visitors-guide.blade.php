@@ -298,7 +298,8 @@
             </div>
         </div>
         <div>
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <x-ohio-map />
+            <div class="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-3">
                 @foreach ($driveTimes as $d)
                     <div class="bg-theme-primary rounded-xl border border-theme p-4 text-center">
                         <p class="text-2xl font-black text-accent-500 leading-none">{{ $d['time'] }}</p>
