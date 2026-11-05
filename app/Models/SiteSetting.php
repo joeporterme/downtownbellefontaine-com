@@ -14,6 +14,7 @@ class SiteSetting extends Model
         'default_og_image',
         'contact_email',
         'contact_form_recipients',
+        'event_submission_recipients',
         'contact_phone',
         'address',
         'city',
@@ -30,6 +31,7 @@ class SiteSetting extends Model
 
     protected $casts = [
         'contact_form_recipients' => 'array',
+        'event_submission_recipients' => 'array',
     ];
 
     /**
@@ -40,12 +42,7 @@ class SiteSetting extends Model
      */
     public function contactRecipients(): array
     {
-        $emails = collect($this->contact_form_recipients ?? [])
-            ->map(fn ($e) => strtolower(trim((string) $e)))
-            ->filter(fn ($e) => filter_var($e, FILTER_VALIDATE_EMAIL))
-            ->unique()
-            ->values()
-            ->all();
+        $emails = static::cleanEmails($this->contact_form_recipients);
 
         if ($emails) {
             return $emails;
@@ -54,6 +51,32 @@ class SiteSetting extends Model
         $fallback = config('services.contact.recipient');
 
         return $fallback ? [$fallback] : [];
+    }
+
+    /**
+     * Where new event submission notifications go: the addresses set in the
+     * admin, or the contact form recipients when none are set.
+     *
+     * @return array<int, string>
+     */
+    public function eventRecipients(): array
+    {
+        return static::cleanEmails($this->event_submission_recipients) ?: $this->contactRecipients();
+    }
+
+    /**
+     * Lowercased, valid, de-duplicated addresses from an admin email list.
+     *
+     * @return array<int, string>
+     */
+    protected static function cleanEmails(?array $emails): array
+    {
+        return collect($emails ?? [])
+            ->map(fn ($e) => strtolower(trim((string) $e)))
+            ->filter(fn ($e) => filter_var($e, FILTER_VALIDATE_EMAIL))
+            ->unique()
+            ->values()
+            ->all();
     }
 
     protected static function booted(): void

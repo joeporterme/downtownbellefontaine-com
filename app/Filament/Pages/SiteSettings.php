@@ -72,6 +72,16 @@ class SiteSettings extends Page
                                     ? 'If this is left empty, messages go to '.config('services.contact.recipient').'.'
                                     : 'If this is left empty, no email is sent.')),
                     ]),
+                Section::make('Event Submissions')
+                    ->description('Who gets an email when a business owner submits an event, or changes an approved one, so it can be reviewed.')
+                    ->schema([
+                        TagsInput::make('event_submission_recipients')
+                            ->label('Send event submissions to')
+                            ->placeholder('Type an email and press Enter')
+                            ->splitKeys(['Tab', ',', ' '])
+                            ->nestedRecursiveRules(['email'])
+                            ->helperText('Add as many addresses as you like. Every submission also waits under Events with a Pending status. If this is left empty, the Contact Form addresses above are used.'),
+                    ]),
                 Section::make('Social Media')
                     ->columns(2)
                     ->schema([

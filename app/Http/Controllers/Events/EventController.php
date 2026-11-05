@@ -5,7 +5,11 @@ namespace App\Http\Controllers\Events;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\EventRequest;
 use App\Models\Business;
+use App\Mail\EventSubmission;
 use App\Models\Event;
+use App\Models\SiteSetting;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Laravel\Facades\Image;
 
@@ -59,7 +63,9 @@ class EventController extends Controller
             }
         }
 
-        Event::create($validated);
+        $event = Event::create($validated);
+
+        $this->notifyReviewers($event);
 
         return redirect()->route('business.events.index')
             ->with('success', 'Event submitted successfully! It will be visible after admin approval.');
@@ -100,13 +106,19 @@ class EventController extends Controller
         }
 
         // Reset to pending if significant changes were made
-        if ($event->status === 'approved') {
+        $wasApproved = $event->status === 'approved';
+        if ($wasApproved) {
             $validated['status'] = 'pending';
             $validated['approved_at'] = null;
             $validated['approved_by'] = null;
         }
 
         $event->update($validated);
+
+        // An approved event just dropped off the calendar; let reviewers know.
+        if ($wasApproved) {
+            $this->notifyReviewers($event, isUpdate: true);
+        }
 
         return redirect()->route('business.events.index')
             ->with('success', 'Event updated successfully!');
@@ -137,6 +149,26 @@ class EventController extends Controller
             ->paginate(10);
 
         return view('events.my-events', compact('events'));
+    }
+
+    /**
+     * Email the reviewers set in Admin › Site Settings › Event Submissions.
+     * Mail failures are logged, never shown to the owner: the pending event in
+     * the admin is the source of truth.
+     */
+    protected function notifyReviewers(Event $event, bool $isUpdate = false): void
+    {
+        try {
+            $recipients = SiteSetting::current()->eventRecipients();
+            if ($recipients) {
+                Mail::to($recipients)->send(new EventSubmission($event->load('business', 'submittedBy'), $isUpdate));
+            }
+        } catch (\Throwable $e) {
+            Log::warning('Event submission mail dispatch failed', [
+                'event_id' => $event->id,
+                'error' => $e->getMessage(),
+            ]);
+        }
     }
 
     protected function processImage($file): string
