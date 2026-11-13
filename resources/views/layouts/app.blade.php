@@ -171,6 +171,8 @@
         Skip to main content
     </a>
 
+    @include('partials.christmas-banner')
+
     {{-- Header --}}
     <header class="bg-theme-primary shadow-sm border-b border-theme sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
