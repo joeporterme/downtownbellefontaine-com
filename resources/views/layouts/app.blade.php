@@ -216,9 +216,10 @@
                                     <i class="fa-duotone fa-light fa-compass w-4 mt-0.5 text-primary-500"></i>
                                     <span><span class="font-medium block">Plan a Visit</span><span class="text-xs text-theme-tertiary">Itineraries &amp; day agendas</span></span>
                                 </a>
-                                <a href="{{ route('pages.visitors-guide') }}" class="flex items-start gap-3 px-4 py-2.5 text-sm text-theme-secondary hover:bg-theme-tertiary hover:text-primary-500 transition-colors">
+                                {{-- Holiday 2026: menu points at the printed holiday guide; /visitors-guide stays live for later. --}}
+                                <a href="/files/holiday-shopping-guide-2026.pdf" target="_blank" rel="noopener" class="flex items-start gap-3 px-4 py-2.5 text-sm text-theme-secondary hover:bg-theme-tertiary hover:text-primary-500 transition-colors">
                                     <i class="fa-duotone fa-light fa-book-open w-4 mt-0.5 text-primary-500"></i>
-                                    <span><span class="font-medium block">Visitors Guide</span><span class="text-xs text-theme-tertiary">Map, directory &amp; printable PDF</span></span>
+                                    <span><span class="font-medium block">Visitors Guide</span><span class="text-xs text-theme-tertiary">Holiday shopping guide (PDF)</span></span>
                                 </a>
                                 <a href="{{ route('pages.historic-walking-tour') }}" class="flex items-center gap-3 px-4 py-2.5 text-sm text-theme-secondary hover:bg-theme-tertiary hover:text-primary-500 transition-colors">
                                     <i class="fa-duotone fa-light fa-person-walking w-4 text-primary-500"></i>
@@ -332,7 +333,7 @@
                     <span>Plan a Visit</span>
                 </a>
                 <div class="pl-8 space-y-1">
-                    <a href="{{ route('pages.visitors-guide') }}" class="flex items-center gap-3 py-2 text-sm text-theme-tertiary hover:text-primary-500">
+                    <a href="/files/holiday-shopping-guide-2026.pdf" target="_blank" rel="noopener" class="flex items-center gap-3 py-2 text-sm text-theme-tertiary hover:text-primary-500">
                         <i class="fa-duotone fa-light fa-book-open w-4 text-center text-primary-400"></i>
                         <span>Visitors Guide (PDF)</span>
                     </a>
