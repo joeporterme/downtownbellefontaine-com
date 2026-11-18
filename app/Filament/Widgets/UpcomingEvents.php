@@ -39,7 +39,7 @@ class UpcomingEvents extends BaseWidget
                     ->limit(30),
                 TextColumn::make('event_date')
                     ->label('Date')
-                    ->date('M j'),
+                    ->formatStateUsing(fn ($state, $record) => $record->date_range),
             ])
             ->recordActions([
                 Action::make('edit')

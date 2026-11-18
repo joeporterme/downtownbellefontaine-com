@@ -75,7 +75,7 @@
                                 </div>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
-                                <div class="text-sm text-theme-primary">{{ $event->event_date->format('M j, Y') }}</div>
+                                <div class="text-sm text-theme-primary">{{ $event->isMultiDay() ? $event->date_range : $event->event_date->format('M j, Y') }}</div>
                                 @if($event->start_time)
                                     <div class="text-sm text-theme-tertiary">{{ $event->formatted_time }}</div>
                                 @endif

@@ -79,12 +79,22 @@
             <hr class="my-6 border-theme">
             <h3 class="text-lg font-medium text-theme-primary">Date & Time</h3>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                    <label for="event_date" class="block text-sm font-medium text-theme-secondary">Event Date *</label>
+                    <label for="event_date" class="block text-sm font-medium text-theme-secondary">Start Date *</label>
                     <input type="date" name="event_date" id="event_date" value="{{ old('event_date', $event->event_date->format('Y-m-d')) }}" required
                         class="mt-1 block w-full rounded-md border-theme bg-theme-primary text-theme-primary shadow-sm focus:border-primary-500 focus:ring-primary-500 px-3 py-2 border">
                     @error('event_date')
+                        <p class="mt-1 text-sm text-danger-600 dark:text-danger-400">{{ $message }}</p>
+                    @enderror
+                </div>
+
+                <div>
+                    <label for="end_date" class="block text-sm font-medium text-theme-secondary">End Date</label>
+                    <input type="date" name="end_date" id="end_date" value="{{ old('end_date', $event->end_date?->format('Y-m-d')) }}"
+                        class="mt-1 block w-full rounded-md border-theme bg-theme-primary text-theme-primary shadow-sm focus:border-primary-500 focus:ring-primary-500 px-3 py-2 border">
+                    <p class="mt-1 text-xs text-theme-tertiary">Only for events that run several days. Leave empty for a one-day event.</p>
+                    @error('end_date')
                         <p class="mt-1 text-sm text-danger-600 dark:text-danger-400">{{ $message }}</p>
                     @enderror
                 </div>
@@ -106,6 +116,16 @@
                         <p class="mt-1 text-sm text-danger-600 dark:text-danger-400">{{ $message }}</p>
                     @enderror
                 </div>
+            </div>
+
+            <div>
+                <label for="schedule" class="block text-sm font-medium text-theme-secondary">Schedule / Hours</label>
+                <textarea name="schedule" id="schedule" rows="3" maxlength="1000" placeholder="Fri &amp; Sat 5 to 9 PM&#10;Sun 1 to 5 PM"
+                    class="mt-1 block w-full rounded-md border-theme bg-theme-primary text-theme-primary shadow-sm focus:border-primary-500 focus:ring-primary-500 px-3 py-2 border">{{ old('schedule', $event->schedule) }}</textarea>
+                <p class="mt-1 text-xs text-theme-tertiary">Optional. If the hours change from day to day, list them here and they'll show on the event card.</p>
+                @error('schedule')
+                    <p class="mt-1 text-sm text-danger-600 dark:text-danger-400">{{ $message }}</p>
+                @enderror
             </div>
 
             <hr class="my-6 border-theme">

@@ -20,8 +20,10 @@ class Event extends Model
         'description',
         'featured_image',
         'event_date',
+        'end_date',
         'start_time',
         'end_time',
+        'schedule',
         'more_info_url',
         'location_name',
         'address',
@@ -37,6 +39,7 @@ class Event extends Model
 
     protected $casts = [
         'event_date' => 'date',
+        'end_date' => 'date',
         'start_time' => 'datetime:H:i',
         'end_time' => 'datetime:H:i',
         'approved_at' => 'datetime',
@@ -97,14 +100,83 @@ class Event extends Model
         return $query->where('status', 'pending');
     }
 
+    /**
+     * Events that haven't finished yet. A multi-day event stays listed until
+     * its end date passes; ordering by event_date keeps one that's already
+     * running near the top.
+     */
     public function scopeUpcoming($query)
     {
-        return $query->where('event_date', '>=', now()->toDateString());
+        $today = now()->toDateString();
+
+        return $query->where(fn ($q) => $q
+            ->where('end_date', '>=', $today)
+            ->orWhere(fn ($q) => $q->whereNull('end_date')->where('event_date', '>=', $today)));
     }
 
     public function scopePast($query)
     {
-        return $query->where('event_date', '<', now()->toDateString());
+        $today = now()->toDateString();
+
+        return $query->where(fn ($q) => $q
+            ->where('end_date', '<', $today)
+            ->orWhere(fn ($q) => $q->whereNull('end_date')->where('event_date', '<', $today)));
+    }
+
+    public function isMultiDay(): bool
+    {
+        return $this->end_date && $this->event_date && $this->end_date->gt($this->event_date);
+    }
+
+    /** A multi-day event that started before today and hasn't ended. */
+    public function isHappeningNow(): bool
+    {
+        return $this->isMultiDay()
+            && $this->event_date->lt(today())
+            && $this->end_date->gte(today());
+    }
+
+    /**
+     * Short date for cards: "Dec 6", or "Nov 28 – Dec 20" for a run.
+     */
+    public function getDateRangeAttribute(): ?string
+    {
+        if (!$this->event_date) {
+            return null;
+        }
+        if (!$this->isMultiDay()) {
+            return $this->event_date->format('M j');
+        }
+        if ($this->event_date->year !== $this->end_date->year) {
+            return $this->event_date->format('M j, Y') . ' – ' . $this->end_date->format('M j, Y');
+        }
+
+        return $this->event_date->format('M j') . ' – ' . $this->end_date->format('M j');
+    }
+
+    /**
+     * Long date for detail views: "Saturday, December 6, 2026", or
+     * "November 28 – December 20, 2026" for a run.
+     */
+    public function getDateLabelAttribute(): ?string
+    {
+        if (!$this->event_date) {
+            return null;
+        }
+        if (!$this->isMultiDay()) {
+            return $this->event_date->format('l, F j, Y');
+        }
+        if ($this->event_date->year !== $this->end_date->year) {
+            return $this->event_date->format('F j, Y') . ' – ' . $this->end_date->format('F j, Y');
+        }
+
+        return $this->event_date->format('F j') . ' – ' . $this->end_date->format('F j, Y');
+    }
+
+    /** What to show for "when" on a card: the schedule text if set, else the time range. */
+    public function getHoursLabelAttribute(): ?string
+    {
+        return $this->schedule ? trim($this->schedule) : $this->formatted_time;
     }
 
     public function getFullAddressAttribute(): ?string

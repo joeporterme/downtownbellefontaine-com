@@ -210,8 +210,12 @@
                         <h3 class="text-lg font-semibold text-theme-primary mb-1">{{ $event->title }}</h3>
                         <p class="text-sm text-theme-tertiary flex items-center gap-1.5 mb-3">
                             <i class="fa-duotone fa-light fa-clock text-accent-500"></i>
-                            {{ $event->event_date->format('l, M j') }}
-                            @if($event->start_time) at {{ $event->formatted_time }} @endif
+                            @if($event->isMultiDay())
+                                {{ $event->date_range }}
+                            @else
+                                {{ $event->event_date->format('l, M j') }}
+                                @if($event->start_time) at {{ $event->formatted_time }} @endif
+                            @endif
                         </p>
 
                         <div class="flex items-center gap-2">

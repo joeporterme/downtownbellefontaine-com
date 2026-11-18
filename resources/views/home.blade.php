@@ -493,6 +493,9 @@
                         <div class="absolute top-4 left-4 bg-white dark:bg-gray-800 rounded-xl shadow-lg p-3 text-center min-w-[70px]">
                             <span class="block text-sm font-bold text-accent-600 uppercase">{{ $event->event_date->format('M') }}</span>
                             <span class="block text-2xl font-bold text-theme-primary">{{ $event->event_date->format('d') }}</span>
+                            @if($event->isMultiDay())
+                                <span class="block text-[10px] font-semibold uppercase tracking-wide text-theme-tertiary">thru {{ $event->end_date->format('M j') }}</span>
+                            @endif
                         </div>
                     </div>
 
@@ -501,11 +504,21 @@
 
                         <div class="flex items-center text-theme-tertiary text-sm mb-2">
                             <i class="fa-duotone fa-light fa-clock mr-2 text-accent-500"></i>
-                            {{ $event->event_date->format('l') }}
-                            @if($event->start_time)
-                                at {{ $event->formatted_time }}
+                            @if($event->isMultiDay())
+                                {{ $event->date_range }}
+                                @if($event->isHappeningNow())
+                                    <span class="ml-2 text-[10px] font-bold uppercase tracking-wider bg-accent-500 text-white px-2 py-0.5 rounded-full">Happening now</span>
+                                @endif
+                            @else
+                                {{ $event->event_date->format('l') }}
+                                @if(!$event->schedule && $event->start_time)
+                                    at {{ $event->formatted_time }}
+                                @endif
                             @endif
                         </div>
+                        @if($event->schedule)
+                            <p class="text-theme-tertiary text-sm mb-2 pl-6 whitespace-pre-line line-clamp-2">{{ $event->schedule }}</p>
+                        @endif
 
                         @if($event->location_name)
                             <div class="flex items-center text-theme-tertiary text-sm">

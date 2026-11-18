@@ -55,6 +55,7 @@ class SyncContentJson extends Command
         $events = Event::all()->map(fn (Event $e) => collect($e->getAttributes())
             ->only((new Event)->getFillable())
             ->put('event_date', optional($e->event_date)->toDateString())
+            ->put('end_date', optional($e->end_date)->toDateString())
             ->all());
 
         file_put_contents($file, json_encode([

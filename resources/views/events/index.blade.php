@@ -49,16 +49,26 @@
                         @endif
 
                         <div class="p-5">
-                            <div class="flex items-center text-sm text-primary-600 dark:text-primary-400 mb-2">
+                            <div class="flex flex-wrap items-center text-sm text-primary-600 dark:text-primary-400 mb-2">
                                 <svg class="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                 </svg>
-                                {{ $event->event_date->format('l, F j, Y') }}
-                                @if($event->start_time)
+                                @if($event->isMultiDay())
+                                    <span class="font-semibold">{{ $event->date_range }}</span>
+                                    @if($event->isHappeningNow())
+                                        <span class="ml-2 text-[11px] font-bold uppercase tracking-wider bg-accent-500 text-white px-2 py-0.5 rounded-full">Happening now</span>
+                                    @endif
+                                @else
+                                    {{ $event->event_date->format('l, F j, Y') }}
+                                @endif
+                                @if(!$event->schedule && $event->start_time)
                                     <span class="mx-2">|</span>
                                     {{ $event->formatted_time }}
                                 @endif
                             </div>
+                            @if($event->schedule)
+                                <p class="text-sm text-theme-secondary whitespace-pre-line line-clamp-3 mb-2"><i class="fa-duotone fa-light fa-clock text-primary-500 mr-1"></i>{{ $event->schedule }}</p>
+                            @endif
 
                             <h2 class="text-xl font-semibold text-theme-primary mb-2">{{ $event->title }}</h2>
 

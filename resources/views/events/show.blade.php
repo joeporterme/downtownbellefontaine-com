@@ -15,6 +15,7 @@
         'name' => $event->title,
         'url' => url()->current(),
         'startDate' => $event->event_date?->toDateString(),
+        'endDate' => $event->isMultiDay() ? $event->end_date->toDateString() : null,
         'description' => $event->description ? Str::limit(strip_tags($event->description), 300) : null,
         'image' => $event->featured_image ? Storage::url($event->featured_image) : null,
         'eventAttendanceMode' => 'https://schema.org/OfflineEventAttendanceMode',
@@ -62,12 +63,22 @@
                 <svg class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
-                <span class="font-medium">{{ $event->event_date->format('l, F j, Y') }}</span>
-                @if($event->start_time)
+                <span class="font-medium">{{ $event->date_label }}</span>
+                @if(!$event->schedule && $event->start_time)
                     <span class="mx-2">|</span>
                     <span>{{ $event->formatted_time }}</span>
                 @endif
+                @if($event->isHappeningNow())
+                    <span class="ml-3 text-[11px] font-bold uppercase tracking-wider bg-accent-500 text-white px-2 py-0.5 rounded-full">Happening now</span>
+                @endif
             </div>
+
+            @if($event->schedule)
+                <div class="mb-6 rounded-lg bg-theme-tertiary border border-theme px-4 py-3">
+                    <p class="text-xs font-bold uppercase tracking-wider text-theme-tertiary mb-1"><i class="fa-duotone fa-light fa-clock text-primary-500 mr-1"></i>Schedule / Hours</p>
+                    <p class="text-theme-primary whitespace-pre-line">{{ $event->schedule }}</p>
+                </div>
+            @endif
 
             <h1 class="text-3xl font-bold text-theme-primary mb-6">{{ $event->title }}</h1>
 

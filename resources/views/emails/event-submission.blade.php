@@ -25,8 +25,14 @@
                 </tr>
                 <tr>
                     <td style="padding:6px 0;color:#6b7280;">Date</td>
-                    <td style="padding:6px 0;">{{ $event->event_date->format('l, M j, Y') }}@if($event->formatted_time), {{ $event->formatted_time }}@endif</td>
+                    <td style="padding:6px 0;">{{ $event->date_label }}@if($event->formatted_time), {{ $event->formatted_time }}@endif</td>
                 </tr>
+                @if($event->schedule)
+                <tr>
+                    <td style="padding:6px 0;color:#6b7280;vertical-align:top;">Hours</td>
+                    <td style="padding:6px 0;white-space:pre-line;">{{ $event->schedule }}</td>
+                </tr>
+                @endif
                 @if($event->location_name || $event->full_address)
                 <tr>
                     <td style="padding:6px 0;color:#6b7280;">Where</td>

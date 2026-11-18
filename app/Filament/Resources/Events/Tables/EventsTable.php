@@ -31,7 +31,9 @@ class EventsTable
 
                 TextColumn::make('event_date')
                     ->label('Date')
-                    ->date('M d, Y')
+                    ->formatStateUsing(fn ($state, $record) => $record->isMultiDay()
+                        ? $record->date_range
+                        : $record->event_date->format('M d, Y'))
                     ->sortable(),
 
                 TextColumn::make('start_time')

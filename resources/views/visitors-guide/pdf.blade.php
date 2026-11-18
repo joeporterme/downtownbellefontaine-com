@@ -199,7 +199,7 @@
             <div class="script" style="color:{{ $teal }}; font-size:30pt; margin-top:3mm; line-height:1;">coming up next</div>
             @foreach ($upcoming as $event)
                 <div style="margin-top:1.2mm; font-size:7.2pt;">
-                    <b style="color:{{ $orange }};">{{ $event->event_date->format('M j') }}</b>
+                    <b style="color:{{ $orange }};">{{ $event->date_range }}</b>
                     &nbsp;{{ $event->title }}
                 </div>
             @endforeach

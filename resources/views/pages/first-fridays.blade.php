@@ -176,14 +176,23 @@
                         <div class="absolute top-3 left-3 bg-white dark:bg-gray-800 rounded-lg shadow px-3 py-2 text-center min-w-[60px]">
                             <span class="block text-xs font-bold text-accent-600 uppercase">{{ $event->event_date->format('M') }}</span>
                             <span class="block text-xl font-bold text-theme-primary leading-tight">{{ $event->event_date->format('d') }}</span>
+                            @if($event->isMultiDay())
+                                <span class="block text-[10px] font-semibold uppercase tracking-wide text-theme-tertiary">thru {{ $event->end_date->format('M j') }}</span>
+                            @endif
                         </div>
                     </div>
                     <div class="p-5">
                         <h3 class="text-lg font-bold text-theme-primary">{{ $event->title }}</h3>
-                        @if($event->start_time)
+                        @if($event->isMultiDay())
                             <p class="text-theme-tertiary text-sm mt-1 flex items-center gap-1.5">
-                                <i class="fa-duotone fa-light fa-clock text-accent-500"></i>
-                                {{ $event->formatted_time }}
+                                <i class="fa-duotone fa-light fa-calendar-range text-accent-500"></i>
+                                {{ $event->date_range }}
+                            </p>
+                        @endif
+                        @if($event->hours_label)
+                            <p class="text-theme-tertiary text-sm mt-1 flex items-start gap-1.5">
+                                <i class="fa-duotone fa-light fa-clock text-accent-500 mt-0.5"></i>
+                                <span class="whitespace-pre-line line-clamp-2">{{ $event->hours_label }}</span>
                             </p>
                         @endif
                     </div>

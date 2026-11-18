@@ -171,7 +171,7 @@
                             </div>
                             <div class="min-w-0">
                                 <p class="font-semibold text-theme-primary leading-tight">{{ $event->title }}</p>
-                                <p class="text-xs text-theme-tertiary mt-1">{{ $event->event_date->format('l') }}@if ($event->formatted_time) &middot; {{ $event->formatted_time }}@endif</p>
+                                <p class="text-xs text-theme-tertiary mt-1">@if ($event->isMultiDay()){{ $event->date_range }}@else{{ $event->event_date->format('l') }}@endif @if ($event->hours_label) &middot; {{ Str::limit(str_replace("\n", ', ', $event->hours_label), 60) }}@endif</p>
                             </div>
                         </a>
                     @endforeach

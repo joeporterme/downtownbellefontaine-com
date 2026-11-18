@@ -126,7 +126,7 @@
                                         </div>
                                     @endif
                                     <div>
-                                        <p class="text-sm text-primary-600 dark:text-primary-400">{{ $event->event_date->format('M j, Y') }}</p>
+                                        <p class="text-sm text-primary-600 dark:text-primary-400">{{ $event->isMultiDay() ? $event->date_range : $event->event_date->format('M j, Y') }}</p>
                                         <p class="font-medium text-theme-primary">{{ $event->title }}</p>
                                     </div>
                                 </a>

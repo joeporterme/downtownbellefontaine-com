@@ -6,10 +6,12 @@ use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\TimePicker;
 use Filament\Schemas\Components\Grid;
 use Filament\Schemas\Components\Section;
+use Filament\Schemas\Components\Utilities\Get;
 use Filament\Schemas\Components\View;
 use Filament\Schemas\Schema;
 
@@ -67,13 +69,21 @@ class EventForm
 
                 Section::make('Date & Time')
                     ->schema([
-                        DatePicker::make('event_date')
-                            ->label('Event Date')
-                            ->required()
-                            ->native(false),
-
                         Grid::make(2)
                             ->schema([
+                                DatePicker::make('event_date')
+                                    ->label('Start Date')
+                                    ->required()
+                                    ->live()
+                                    ->native(false),
+
+                                DatePicker::make('end_date')
+                                    ->label('End Date')
+                                    ->helperText('Only for events that run several days. Leave empty for a one-day event.')
+                                    ->afterOrEqual('event_date')
+                                    ->live()
+                                    ->native(false),
+
                                 TimePicker::make('start_time')
                                     ->label('Start Time')
                                     ->seconds(false),
@@ -81,8 +91,16 @@ class EventForm
                                 TimePicker::make('end_time')
                                     ->label('End Time')
                                     ->seconds(false)
-                                    ->after('start_time'),
+                                    // A multi-day event's end time is the last day's, so it can be earlier.
+                                    ->after(fn (Get $get) => filled($get('end_date')) && $get('end_date') !== $get('event_date') ? null : 'start_time'),
                             ]),
+
+                        Textarea::make('schedule')
+                            ->label('Schedule / Hours')
+                            ->rows(3)
+                            ->maxLength(1000)
+                            ->placeholder("Fri & Sat 5–9 PM\nSun 1–5 PM")
+                            ->helperText('Optional. Shows on the event card in place of the start and end time, for events whose hours change by day.'),
                     ]),
 
                 Section::make('Location')

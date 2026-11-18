@@ -26,8 +26,13 @@ class EventRequest extends FormRequest
             'business_id' => 'nullable|exists:businesses,id',
             // New events can't be back-dated; edits may touch past events.
             'event_date' => $this->isMethod('post') ? 'required|date|after_or_equal:today' : 'required|date',
+            'end_date' => 'nullable|date|after_or_equal:event_date',
             'start_time' => 'nullable|date_format:H:i',
-            'end_time' => 'nullable|date_format:H:i|after:start_time',
+            // On a multi-day event the end time is the last day's, so it can be earlier.
+            'end_time' => $this->filled('end_date') && $this->input('end_date') !== $this->input('event_date')
+                ? 'nullable|date_format:H:i'
+                : 'nullable|date_format:H:i|after:start_time',
+            'schedule' => 'nullable|string|max:1000',
             'more_info_url' => 'nullable|url|max:255',
             'location_name' => 'nullable|string|max:255',
             'address' => 'nullable|string|max:255',
