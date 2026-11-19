@@ -46,15 +46,21 @@ class EventForm
                             ])
                             ->columnSpanFull(),
 
+                        // Any shape is accepted: event flyers are rarely 16:9, and a
+                        // forced ratio rejected them ("invalid image dimensions").
+                        // Big images are scaled down; cards crop to fit on display.
                         FileUpload::make('featured_image')
                             ->image()
                             ->disk('public')
                             ->directory('events')
-                            ->imageResizeMode('cover')
-                            ->imageCropAspectRatio('16:9')
+                            ->imageEditor()
+                            ->imageEditorAspectRatios([null, '16:9'])
+                            ->imageResizeMode('contain')
                             ->imageResizeTargetWidth('1920')
-                            ->imageResizeTargetHeight('1080')
+                            ->imageResizeTargetHeight('1920')
+                            ->imageResizeUpscale(false)
                             ->maxSize(10240)
+                            ->helperText('Any size or shape works, including flyers. Wide images (16:9) fill the event cards best.')
                             ->columnSpanFull(),
 
                         Select::make('business_id')

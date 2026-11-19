@@ -31,7 +31,7 @@
 
             <div>
                 <label for="featured_image" class="block text-sm font-medium text-theme-secondary">Featured Image</label>
-                <p class="text-xs text-theme-tertiary mb-2">Will be cropped to 1920x1080 (16:9 aspect ratio)</p>
+                <p class="text-xs text-theme-tertiary mb-2">Any size or shape works, including flyers. Wide images (16:9) fill the event cards best.</p>
                 <input type="file" name="featured_image" id="featured_image" accept="image/*"
                     class="mt-1 block w-full text-theme-secondary file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-medium file:bg-primary-100 dark:file:bg-primary-900 file:text-primary-700 dark:file:text-primary-300 hover:file:bg-primary-200 dark:hover:file:bg-primary-800">
                 @error('featured_image')

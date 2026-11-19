@@ -177,8 +177,9 @@ class EventController extends Controller
 
         $image = Image::read($file);
 
-        // Resize and crop to 1920x1080 (16:9)
-        $image->cover(1920, 1080);
+        // Shrink big images to fit 1920px without cropping, so flyer text
+        // isn't cut off. Cards crop to fit on display.
+        $image->scaleDown(1920, 1920);
 
         // Save with compression (quality 80)
         $encoded = $image->toJpeg(80);

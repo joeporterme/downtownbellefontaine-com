@@ -42,7 +42,7 @@
 
             <div>
                 <label for="featured_image" class="block text-sm font-medium text-theme-secondary">Featured Image</label>
-                <p class="text-xs text-theme-tertiary mb-2">Will be cropped to 1920x1080 (16:9 aspect ratio)</p>
+                <p class="text-xs text-theme-tertiary mb-2">Any size or shape works, including flyers. Wide images (16:9) fill the event cards best.</p>
 
                 @if($event->featured_image)
                     <div class="mb-3">

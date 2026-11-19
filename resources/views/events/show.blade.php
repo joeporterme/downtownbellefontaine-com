@@ -55,7 +55,7 @@
         </a>
 
         @if($event->featured_image)
-            <img src="{{ Storage::url($event->featured_image) }}" alt="{{ $event->title }}" class="w-full h-64 md:h-96 object-cover rounded-lg mb-6">
+            <img src="{{ Storage::url($event->featured_image) }}" alt="{{ $event->title }}" class="w-full h-auto max-h-[40rem] object-contain bg-theme-tertiary rounded-lg mb-6">
         @endif
 
         <div class="bg-theme-secondary rounded-lg shadow border border-theme p-6 md:p-8">

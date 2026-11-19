@@ -71,8 +71,9 @@ class BlogPostForm
                             ->imageEditorAspectRatios([
                                 '16:9',
                             ])
+                            // No forced ratio: it rejected non-16:9 photos with
+                            // "invalid image dimensions". The editor still offers 16:9.
                             ->imageResizeMode('cover')
-                            ->imageCropAspectRatio('16:9')
                             ->imageResizeTargetWidth('1920')
                             ->imageResizeTargetHeight('1080')
                             ->maxSize(5120)
