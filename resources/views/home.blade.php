@@ -293,16 +293,16 @@
         <img src="/images/home/pineapple.svg" alt="" class="w-32 md:w-48 opacity-25 float-animation-delayed">
     </div>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white py-20">
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white py-20">
         <div class="reveal active">
             <span class="font-display text-3xl md:text-4xl text-accent-300 block mb-4">Welcome to</span>
         </div>
-        <h1 class="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight mb-6 reveal active delay-100">
+        <h1 class="text-[min(10vw,3rem)] leading-none md:text-7xl lg:text-8xl font-black uppercase tracking-tight mb-6 reveal active delay-100">
             Downtown<br>
             <span class="gradient-text">Bellefontaine</span>
         </h1>
-        <p class="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto reveal active delay-200">
-            Discover the heart of Logan County. Where <span class="whitespace-nowrap">small-town charm meets</span> vibrant community spirit in Ohio's highest city.
+        <p class="text-lg sm:text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto reveal active delay-200">
+            Discover the heart of Logan County. Where <span class="sm:whitespace-nowrap">small-town charm meets</span> vibrant community spirit in Ohio's highest city.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center reveal active delay-300">
             <a href="#explore-downtown" class="inline-flex items-center justify-center px-8 py-4 bg-accent-500 hover:bg-accent-400 text-white font-semibold rounded-full transition-all pulse-glow text-lg">
